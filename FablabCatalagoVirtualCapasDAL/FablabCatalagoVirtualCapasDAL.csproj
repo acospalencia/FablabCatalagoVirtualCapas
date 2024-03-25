@@ -43,5 +43,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FablabCatalagoVirtualCapasEN\FablabCatalagoVirtualCapasEN.csproj">
+      <Project>{b5444a84-2094-4c02-9132-cd9c5b5006bd}</Project>
+      <Name>FablabCatalagoVirtualCapasEN</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
