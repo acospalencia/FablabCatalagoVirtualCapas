@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="MaterialesBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FablabCatalagoVirtualCapasDAL\FablabCatalagoVirtualCapasDAL.csproj">
