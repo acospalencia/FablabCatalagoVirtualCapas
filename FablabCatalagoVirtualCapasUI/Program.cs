@@ -16,7 +16,7 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new formPrueba());
+			Application.Run(new ActualizarMateriales());
 		}
 	}
 }
