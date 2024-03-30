@@ -28,104 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblClave = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(67, 53);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // lblClave
-            // 
-            this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(76, 101);
-            this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(34, 13);
-            this.lblClave.TabIndex = 1;
-            this.lblClave.Text = "Clave";
-            this.lblClave.Click += new System.EventHandler(this.lblClave_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(176, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(176, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(35, 223);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Location = new System.Drawing.Point(260, 223);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.lblUsuario);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.lblClave);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(378, 127);
-            this.panel1.TabIndex = 6;
-            // 
-            // Login
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(375, 258);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.btnCancelar);
-            this.Name = "Login";
-            this.Text = "Login";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
+			this.btnRegresar = new System.Windows.Forms.Button();
+			this.btnIngresar = new System.Windows.Forms.Button();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.lblUsuario = new System.Windows.Forms.Label();
+			this.txtUsuario = new System.Windows.Forms.TextBox();
+			this.txtPassword = new System.Windows.Forms.TextBox();
+			this.lblClave = new System.Windows.Forms.Label();
+			this.panel1.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// btnRegresar
+			// 
+			this.btnRegresar.Location = new System.Drawing.Point(16, 247);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.Name = "btnRegresar";
+			this.btnRegresar.Size = new System.Drawing.Size(141, 55);
+			this.btnRegresar.TabIndex = 4;
+			this.btnRegresar.Text = "Regresar";
+			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+			// 
+			// btnIngresar
+			// 
+			this.btnIngresar.Location = new System.Drawing.Point(343, 247);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnIngresar.Name = "btnIngresar";
+			this.btnIngresar.Size = new System.Drawing.Size(141, 55);
+			this.btnIngresar.TabIndex = 5;
+			this.btnIngresar.Text = "Ingresar";
+			this.btnIngresar.UseVisualStyleBackColor = true;
+			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Margin = new System.Windows.Forms.Padding(4);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(504, 87);
+			this.panel1.TabIndex = 6;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(53, 11);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(383, 58);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Inciar sesion para poder modificar \r\nlos registros";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblUsuario
+			// 
+			this.lblUsuario.AutoSize = true;
+			this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsuario.Location = new System.Drawing.Point(72, 112);
+			this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblUsuario.Name = "lblUsuario";
+			this.lblUsuario.Size = new System.Drawing.Size(79, 25);
+			this.lblUsuario.TabIndex = 7;
+			this.lblUsuario.Text = "Usuario";
+			// 
+			// txtUsuario
+			// 
+			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtUsuario.Location = new System.Drawing.Point(227, 112);
+			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+			this.txtUsuario.Multiline = true;
+			this.txtUsuario.Name = "txtUsuario";
+			this.txtUsuario.Size = new System.Drawing.Size(211, 36);
+			this.txtUsuario.TabIndex = 9;
+			// 
+			// txtPassword
+			// 
+			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPassword.Location = new System.Drawing.Point(227, 171);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+			this.txtPassword.Multiline = true;
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.PasswordChar = '*';
+			this.txtPassword.Size = new System.Drawing.Size(211, 36);
+			this.txtPassword.TabIndex = 10;
+			// 
+			// lblClave
+			// 
+			this.lblClave.AutoSize = true;
+			this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblClave.Location = new System.Drawing.Point(72, 183);
+			this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblClave.Name = "lblClave";
+			this.lblClave.Size = new System.Drawing.Size(63, 25);
+			this.lblClave.TabIndex = 8;
+			this.lblClave.Text = "Clave";
+			// 
+			// Login
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.ClientSize = new System.Drawing.Size(500, 318);
+			this.Controls.Add(this.lblUsuario);
+			this.Controls.Add(this.txtUsuario);
+			this.Controls.Add(this.txtPassword);
+			this.Controls.Add(this.lblClave);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.btnIngresar);
+			this.Controls.Add(this.btnRegresar);
+			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
+			this.Name = "Login";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Login";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblClave;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Panel panel1;
-    }
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblUsuario;
+		private System.Windows.Forms.TextBox txtUsuario;
+		private System.Windows.Forms.TextBox txtPassword;
+		private System.Windows.Forms.Label lblClave;
+	}
 }
