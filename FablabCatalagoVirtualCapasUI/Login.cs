@@ -39,7 +39,7 @@ namespace FablabCatalagoVirtualCapasUI
                 MessageBox.Show("inicio de sesion existoso");
                 var formAgregar = new AgregarPrototipo();
                 formAgregar.Show();
-                this.Close();
+                this.Hide();
 
             }
             else
@@ -48,5 +48,17 @@ namespace FablabCatalagoVirtualCapasUI
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+            var formPrincipal = new PantallaPrincipal();
+            formPrincipal.Show();
+            this.Hide();
+		}
+
+		private void Login_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }
