@@ -79,6 +79,7 @@
 			// 
 			// txtUsuario
 			// 
+			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.Location = new System.Drawing.Point(170, 91);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
@@ -87,9 +88,11 @@
 			// 
 			// txtPassword
 			// 
+			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPassword.Location = new System.Drawing.Point(170, 139);
 			this.txtPassword.Multiline = true;
 			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.PasswordChar = '*';
 			this.txtPassword.Size = new System.Drawing.Size(159, 30);
 			this.txtPassword.TabIndex = 10;
 			// 
@@ -107,7 +110,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(37, 9);
+			this.label1.Location = new System.Drawing.Point(40, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(298, 48);
 			this.label1.TabIndex = 0;
@@ -127,7 +130,9 @@
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnIngresar);
 			this.Controls.Add(this.btnRegresar);
+			this.MaximizeBox = false;
 			this.Name = "Login";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();

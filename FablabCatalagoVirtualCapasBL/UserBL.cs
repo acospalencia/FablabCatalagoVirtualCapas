@@ -19,5 +19,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			UserDAL.eliminarUsuario(pUser);
 		}
+		public List<User> regresarLista()
+		{
+			return UserDAL.regresarLista();
+		}
 	}
 }

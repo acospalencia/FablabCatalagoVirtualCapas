@@ -11,7 +11,8 @@ namespace FablabCatalagoVirtualCapasDAL
 	{
 		private static List<User> listUsers = new List<User>()
 		{
-			new User {Name = "Ulises", Password = "12345"}
+			new User {Name = "", Password = ""},
+			new User {Name = "Carlos", Password = "loco1245"}
 		};
 		
 		public void guardarNuevoUser(User pUser)
@@ -21,6 +22,10 @@ namespace FablabCatalagoVirtualCapasDAL
 		public void eliminarUsuario (User pUser)
 		{
 			listUsers.Remove(pUser);
+		}
+		public List<User> regresarLista()
+		{
+			return listUsers;
 		}
 	}
 }
