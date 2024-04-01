@@ -49,34 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualizarMateriales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ActualizarMateriales.Designer.cs">
-      <DependentUpon>ActualizarMateriales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InformacionPrototipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InformacionPrototipos.Designer.cs">
-      <DependentUpon>InformacionPrototipos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaPrototipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaPrototipos.Designer.cs">
-      <DependentUpon>ListaPrototipos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ActualizarMateriales.resx">
-      <DependentUpon>ActualizarMateriales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InformacionPrototipos.resx">
-      <DependentUpon>InformacionPrototipos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaPrototipos.resx">
-      <DependentUpon>ListaPrototipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +83,9 @@
       <Project>{b5444a84-2094-4c02-9132-cd9c5b5006bd}</Project>
       <Name>FablabCatalagoVirtualCapasEN</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FABLABlogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
