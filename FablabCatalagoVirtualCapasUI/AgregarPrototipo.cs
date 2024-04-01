@@ -28,5 +28,10 @@ namespace FablabCatalagoVirtualCapasUI
             var formModified = new ModificarPrototipo();
             formModified.Show();
 		}
+
+		private void AgregarPrototipo_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
