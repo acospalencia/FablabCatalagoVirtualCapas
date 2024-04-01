@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-	internal static class Program
+	public static class Program
 	{
 		/// <summary>
 		/// Punto de entrada principal para la aplicación.
@@ -16,7 +16,7 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Login());
+			Application.Run(new ModificarPrototipo());
 		}
 	
 	}
