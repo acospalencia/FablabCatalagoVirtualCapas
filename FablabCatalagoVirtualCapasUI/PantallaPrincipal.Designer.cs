@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblVer = new System.Windows.Forms.Label();
             this.btnVer = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(806, 157);
             this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Serif Armenian", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Location = new System.Drawing.Point(44, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(713, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenido al catalogo digital de prototipos de Fablab ESFE";
             // 
             // lblAdmin
             // 
@@ -85,16 +95,6 @@
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Serif Armenian", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(44, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(713, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido al catalogo digital de prototipos de Fablab ESFE";
             // 
             // PantallaPrincipal
             // 
