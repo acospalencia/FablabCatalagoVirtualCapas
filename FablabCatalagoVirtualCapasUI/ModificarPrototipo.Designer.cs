@@ -38,27 +38,26 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnRegresar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(44, 304);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Location = new System.Drawing.Point(41, 211);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.Size = new System.Drawing.Size(881, 222);
+			this.dataGridView1.Size = new System.Drawing.Size(661, 180);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// lblNombre
 			// 
 			this.lblNombre.AutoSize = true;
 			this.lblNombre.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblNombre.Location = new System.Drawing.Point(148, 225);
-			this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblNombre.Location = new System.Drawing.Point(119, 147);
 			this.lblNombre.Name = "lblNombre";
-			this.lblNombre.Size = new System.Drawing.Size(155, 20);
+			this.lblNombre.Size = new System.Drawing.Size(128, 17);
 			this.lblNombre.TabIndex = 1;
 			this.lblNombre.Text = "Nombre del Prototipo";
 			// 
@@ -66,10 +65,9 @@
 			// 
 			this.lblMaterial.AutoSize = true;
 			this.lblMaterial.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMaterial.Location = new System.Drawing.Point(148, 261);
-			this.lblMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblMaterial.Location = new System.Drawing.Point(119, 176);
 			this.lblMaterial.Name = "lblMaterial";
-			this.lblMaterial.Size = new System.Drawing.Size(160, 20);
+			this.lblMaterial.Size = new System.Drawing.Size(136, 17);
 			this.lblMaterial.TabIndex = 2;
 			this.lblMaterial.Text = "Tipo de material usado";
 			// 
@@ -77,10 +75,9 @@
 			// 
 			this.lblPrecio.AutoSize = true;
 			this.lblPrecio.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPrecio.Location = new System.Drawing.Point(148, 148);
-			this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblPrecio.Location = new System.Drawing.Point(119, 84);
 			this.lblPrecio.Name = "lblPrecio";
-			this.lblPrecio.Size = new System.Drawing.Size(50, 20);
+			this.lblPrecio.Size = new System.Drawing.Size(43, 17);
 			this.lblPrecio.TabIndex = 3;
 			this.lblPrecio.Text = "Precio";
 			this.lblPrecio.Click += new System.EventHandler(this.label3_Click);
@@ -89,60 +86,65 @@
 			// 
 			this.lblTiempo.AutoSize = true;
 			this.lblTiempo.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTiempo.Location = new System.Drawing.Point(148, 191);
-			this.lblTiempo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblTiempo.Location = new System.Drawing.Point(119, 119);
 			this.lblTiempo.Name = "lblTiempo";
-			this.lblTiempo.Size = new System.Drawing.Size(124, 20);
+			this.lblTiempo.Size = new System.Drawing.Size(103, 17);
 			this.lblTiempo.TabIndex = 4;
 			this.lblTiempo.Text = "Tiempo invertido";
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(387, 257);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox1.Location = new System.Drawing.Point(298, 173);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(132, 22);
+			this.textBox1.Size = new System.Drawing.Size(100, 20);
 			this.textBox1.TabIndex = 5;
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(387, 225);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox2.Location = new System.Drawing.Point(298, 147);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(132, 22);
+			this.textBox2.Size = new System.Drawing.Size(100, 20);
 			this.textBox2.TabIndex = 6;
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(387, 148);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox3.Location = new System.Drawing.Point(298, 84);
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(132, 22);
+			this.textBox3.Size = new System.Drawing.Size(100, 20);
 			this.textBox3.TabIndex = 7;
 			// 
 			// textBox4
 			// 
-			this.textBox4.Location = new System.Drawing.Point(387, 187);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox4.Location = new System.Drawing.Point(298, 116);
 			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(132, 22);
+			this.textBox4.Size = new System.Drawing.Size(100, 20);
 			this.textBox4.TabIndex = 0;
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
 			this.panel1.Location = new System.Drawing.Point(-1, 2);
-			this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(996, 87);
+			this.panel1.Size = new System.Drawing.Size(747, 71);
 			this.panel1.TabIndex = 8;
+			// 
+			// btnRegresar
+			// 
+			this.btnRegresar.Location = new System.Drawing.Point(12, 412);
+			this.btnRegresar.Name = "btnRegresar";
+			this.btnRegresar.Size = new System.Drawing.Size(127, 26);
+			this.btnRegresar.TabIndex = 9;
+			this.btnRegresar.Text = "Regresar";
+			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
 			// ModificarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.ClientSize = new System.Drawing.Size(988, 554);
+			this.ClientSize = new System.Drawing.Size(741, 450);
+			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.lblPrecio);
 			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.panel1);
@@ -153,7 +155,6 @@
 			this.Controls.Add(this.lblMaterial);
 			this.Controls.Add(this.lblNombre);
 			this.Controls.Add(this.dataGridView1);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.Name = "ModificarPrototipo";
 			this.Text = "ModificarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModificarPrototipo_FormClosing);
@@ -175,5 +176,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel1;
-    }
+		private System.Windows.Forms.Button btnRegresar;
+	}
 }
