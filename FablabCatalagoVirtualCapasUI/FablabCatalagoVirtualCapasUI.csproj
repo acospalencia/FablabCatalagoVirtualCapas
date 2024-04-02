@@ -49,17 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarMateriales.Designer.cs">
+      <DependentUpon>ActualizarMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarPrototipo.Designer.cs">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformacionPrototipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformacionPrototipos.Designer.cs">
+      <DependentUpon>InformacionPrototipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPrototipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPrototipos.Designer.cs">
+      <DependentUpon>ListaPrototipos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -81,11 +99,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarMateriales.resx">
+      <DependentUpon>ActualizarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformacionPrototipos.resx">
+      <DependentUpon>InformacionPrototipos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPrototipos.resx">
+      <DependentUpon>ListaPrototipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

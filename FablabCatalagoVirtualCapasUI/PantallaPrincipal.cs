@@ -28,5 +28,11 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.Exit();
 		}
+
+		private void btnVer_Click(object sender, EventArgs e)
+		{
+			var listaPrototipos = new ListaPrototipos();
+			listaPrototipos.Show();
+		}
 	}
 }
