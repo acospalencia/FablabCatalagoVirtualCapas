@@ -98,7 +98,6 @@
 			// 
 			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.Location = new System.Drawing.Point(227, 112);
-			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(211, 36);

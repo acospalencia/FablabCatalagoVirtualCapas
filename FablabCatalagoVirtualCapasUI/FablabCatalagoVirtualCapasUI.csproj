@@ -67,6 +67,12 @@
     <Compile Include="InformacionPrototipos.Designer.cs">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngresarPrototipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarPrototipo.Designer.cs">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarPrototipo.resx">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
