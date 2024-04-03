@@ -40,7 +40,7 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(456, 15);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(144, 108);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,7 +62,7 @@
 			// 
 			this.dgvlistaprototipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvlistaprototipos.Location = new System.Drawing.Point(280, 188);
-			this.dgvlistaprototipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dgvlistaprototipos.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvlistaprototipos.Name = "dgvlistaprototipos";
 			this.dgvlistaprototipos.RowHeadersWidth = 51;
 			this.dgvlistaprototipos.Size = new System.Drawing.Size(479, 217);
@@ -72,7 +72,7 @@
 			// 
 			this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btncancelar.Location = new System.Drawing.Point(280, 449);
-			this.btncancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
 			this.btncancelar.Name = "btncancelar";
 			this.btncancelar.Size = new System.Drawing.Size(127, 50);
 			this.btncancelar.TabIndex = 3;
@@ -84,7 +84,7 @@
 			// 
 			this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnsiguiente.Location = new System.Drawing.Point(659, 449);
-			this.btnsiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnsiguiente.Margin = new System.Windows.Forms.Padding(4);
 			this.btnsiguiente.Name = "btnsiguiente";
 			this.btnsiguiente.Size = new System.Drawing.Size(127, 50);
 			this.btnsiguiente.TabIndex = 4;
@@ -102,9 +102,10 @@
 			this.Controls.Add(this.dgvlistaprototipos);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "ListaPrototipos";
 			this.Text = "ListaPrototipos";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaPrototipos_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvlistaprototipos)).EndInit();
 			this.ResumeLayout(false);

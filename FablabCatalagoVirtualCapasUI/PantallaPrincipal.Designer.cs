@@ -41,19 +41,19 @@
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
 			this.panel1.Controls.Add(this.label1);
-			this.panel1.Location = new System.Drawing.Point(-4, -3);
+			this.panel1.Location = new System.Drawing.Point(-5, -4);
+			this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(806, 108);
+			this.panel1.Size = new System.Drawing.Size(1075, 133);
 			this.panel1.TabIndex = 1;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(44, 30);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label1.Location = new System.Drawing.Point(59, 37);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(733, 31);
+			this.label1.Size = new System.Drawing.Size(882, 38);
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Bienvenido al catalogo digital de prototipos de Fablab ESFE";
 			// 
@@ -61,9 +61,10 @@
 			// 
 			this.lblAdmin.AutoSize = true;
 			this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAdmin.Location = new System.Drawing.Point(513, 190);
+			this.lblAdmin.Location = new System.Drawing.Point(684, 234);
+			this.lblAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblAdmin.Name = "lblAdmin";
-			this.lblAdmin.Size = new System.Drawing.Size(183, 24);
+			this.lblAdmin.Size = new System.Drawing.Size(237, 29);
 			this.lblAdmin.TabIndex = 2;
 			this.lblAdmin.Text = "Administrar Catalogo";
 			// 
@@ -71,18 +72,20 @@
 			// 
 			this.lblVer.AutoSize = true;
 			this.lblVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblVer.Location = new System.Drawing.Point(111, 190);
+			this.lblVer.Location = new System.Drawing.Point(148, 234);
+			this.lblVer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblVer.Name = "lblVer";
-			this.lblVer.Size = new System.Drawing.Size(212, 24);
+			this.lblVer.Size = new System.Drawing.Size(275, 29);
 			this.lblVer.TabIndex = 3;
 			this.lblVer.Text = "Ver listado de prototipos";
 			// 
 			// btnVer
 			// 
 			this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnVer.Location = new System.Drawing.Point(131, 233);
+			this.btnVer.Location = new System.Drawing.Point(175, 287);
+			this.btnVer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnVer.Name = "btnVer";
-			this.btnVer.Size = new System.Drawing.Size(151, 49);
+			this.btnVer.Size = new System.Drawing.Size(201, 60);
 			this.btnVer.TabIndex = 4;
 			this.btnVer.Text = "Ingresar";
 			this.btnVer.UseVisualStyleBackColor = true;
@@ -91,9 +94,10 @@
 			// btnIngresar
 			// 
 			this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnIngresar.Location = new System.Drawing.Point(524, 233);
+			this.btnIngresar.Location = new System.Drawing.Point(699, 287);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnIngresar.Name = "btnIngresar";
-			this.btnIngresar.Size = new System.Drawing.Size(151, 49);
+			this.btnIngresar.Size = new System.Drawing.Size(201, 60);
 			this.btnIngresar.TabIndex = 5;
 			this.btnIngresar.Text = "Ingresar";
 			this.btnIngresar.UseVisualStyleBackColor = true;
@@ -101,20 +105,22 @@
 			// 
 			// PantallaPrincipal
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1067, 554);
 			this.Controls.Add(this.btnIngresar);
 			this.Controls.Add(this.btnVer);
 			this.Controls.Add(this.lblVer);
 			this.Controls.Add(this.lblAdmin);
 			this.Controls.Add(this.panel1);
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.MaximizeBox = false;
 			this.Name = "PantallaPrincipal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PantallaPrincipal";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PantallaPrincipal_FormClosing);
+			this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
