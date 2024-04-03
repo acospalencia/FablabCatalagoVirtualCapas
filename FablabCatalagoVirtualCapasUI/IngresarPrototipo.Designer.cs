@@ -38,6 +38,13 @@
 			this.btnSubir = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.btnConfirmar = new System.Windows.Forms.Button();
+			this.label7 = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -90,7 +97,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(44, 265);
+			this.label5.Location = new System.Drawing.Point(47, 283);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(79, 16);
 			this.label5.TabIndex = 5;
@@ -99,7 +106,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(44, 306);
+			this.label6.Location = new System.Drawing.Point(44, 353);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(161, 16);
 			this.label6.TabIndex = 6;
@@ -107,7 +114,7 @@
 			// 
 			// btnSubir
 			// 
-			this.btnSubir.Location = new System.Drawing.Point(47, 343);
+			this.btnSubir.Location = new System.Drawing.Point(47, 399);
 			this.btnSubir.Name = "btnSubir";
 			this.btnSubir.Size = new System.Drawing.Size(114, 52);
 			this.btnSubir.TabIndex = 7;
@@ -116,7 +123,7 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(266, 306);
+			this.pictureBox1.Location = new System.Drawing.Point(279, 325);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(182, 126);
 			this.pictureBox1.TabIndex = 8;
@@ -131,11 +138,71 @@
 			this.btnConfirmar.Text = "Confimar Datos";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
 			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(500, 106);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(86, 16);
+			this.label7.TabIndex = 10;
+			this.label7.Text = "Dimensiones";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(279, 99);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(100, 22);
+			this.textBox1.TabIndex = 11;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(635, 99);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(100, 22);
+			this.textBox2.TabIndex = 12;
+			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(279, 139);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(100, 22);
+			this.textBox3.TabIndex = 13;
+			// 
+			// textBox4
+			// 
+			this.textBox4.Location = new System.Drawing.Point(279, 216);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(100, 22);
+			this.textBox4.TabIndex = 14;
+			// 
+			// textBox5
+			// 
+			this.textBox5.Location = new System.Drawing.Point(279, 259);
+			this.textBox5.Multiline = true;
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(257, 60);
+			this.textBox5.TabIndex = 15;
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(279, 175);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(121, 24);
+			this.comboBox1.TabIndex = 16;
+			// 
 			// IngresarPrototipo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(904, 514);
+			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.textBox5);
+			this.Controls.Add(this.textBox4);
+			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnConfirmar);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.btnSubir);
@@ -167,5 +234,12 @@
 		private System.Windows.Forms.Button btnSubir;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Button btnConfirmar;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }
