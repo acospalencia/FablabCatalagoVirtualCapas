@@ -9,6 +9,7 @@ namespace FablabCatalagoVirtualCapasEN
 {
 	public class Prototipo
 	{
+		public int Id { get; set; }
 		public string NombrePrototipo { get; set; }
 		public string TipoMaterial { get; set;}
 		public double Dimensiones { get;set;}

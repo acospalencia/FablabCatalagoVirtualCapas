@@ -44,7 +44,8 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cbMaterial = new System.Windows.Forms.ComboBox();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -120,12 +121,14 @@
 			this.btnSubir.TabIndex = 7;
 			this.btnSubir.Text = "Subir Imagen";
 			this.btnSubir.UseVisualStyleBackColor = true;
+			this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(279, 325);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(182, 126);
+			this.pictureBox1.Size = new System.Drawing.Size(216, 177);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -137,11 +140,12 @@
 			this.btnConfirmar.TabIndex = 9;
 			this.btnConfirmar.Text = "Confimar Datos";
 			this.btnConfirmar.UseVisualStyleBackColor = true;
+			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(500, 106);
+			this.label7.Location = new System.Drawing.Point(497, 106);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(86, 16);
 			this.label7.TabIndex = 10;
@@ -156,7 +160,7 @@
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(635, 99);
+			this.textBox2.Location = new System.Drawing.Point(634, 103);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(100, 22);
 			this.textBox2.TabIndex = 12;
@@ -183,20 +187,24 @@
 			this.textBox5.Size = new System.Drawing.Size(257, 60);
 			this.textBox5.TabIndex = 15;
 			// 
-			// comboBox1
+			// cbMaterial
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(279, 175);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 24);
-			this.comboBox1.TabIndex = 16;
+			this.cbMaterial.FormattingEnabled = true;
+			this.cbMaterial.Location = new System.Drawing.Point(279, 175);
+			this.cbMaterial.Name = "cbMaterial";
+			this.cbMaterial.Size = new System.Drawing.Size(121, 24);
+			this.cbMaterial.TabIndex = 16;
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
 			// IngresarPrototipo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(904, 514);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.cbMaterial);
 			this.Controls.Add(this.textBox5);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.textBox3);
@@ -216,6 +224,7 @@
 			this.Name = "IngresarPrototipo";
 			this.Text = "IngresarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IngresarPrototipo_FormClosing);
+			this.Load += new System.EventHandler(this.IngresarPrototipo_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -240,6 +249,7 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cbMaterial;
+		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 	}
 }
