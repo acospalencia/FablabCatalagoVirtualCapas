@@ -16,5 +16,10 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
+
+        private void EliminarPrototipo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
