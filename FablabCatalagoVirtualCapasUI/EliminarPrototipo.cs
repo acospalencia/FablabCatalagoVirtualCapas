@@ -21,5 +21,22 @@ namespace FablabCatalagoVirtualCapasUI
         {
 
         }
-    }
+
+		private void txtBuscar_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void EliminarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
+		{
+            Application.Exit();
+		}
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+			var anteriorForm = new AgregarPrototipo();
+			anteriorForm.Show();
+			this.Hide();
+		}
+	}
 }

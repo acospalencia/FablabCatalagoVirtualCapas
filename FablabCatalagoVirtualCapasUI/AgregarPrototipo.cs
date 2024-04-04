@@ -38,5 +38,12 @@ namespace FablabCatalagoVirtualCapasUI
 
 
 		}
+
+		private void btnEliminar_Click(object sender, EventArgs e)
+		{
+            var formEliminar = new EliminarPrototipo();
+            formEliminar.Show();
+            this.Hide();
+		}
 	}
 }

@@ -214,5 +214,11 @@
   <ItemGroup>
     <None Include="Resources\lupa2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton submit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
