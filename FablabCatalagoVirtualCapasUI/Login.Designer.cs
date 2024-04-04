@@ -50,14 +50,14 @@
 			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
 			// 
 			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Margin = new System.Windows.Forms.Padding(4);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(504, 87);
-			this.panel1.TabIndex = 6;
+			//// 
+			//this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+			//this.panel1.Controls.Add(this.label1);
+			//this.panel1.Location = new System.Drawing.Point(0, 0);
+			//this.panel1.Margin = new System.Windows.Forms.Padding(4);
+			//this.panel1.Name = "panel1";
+			//this.panel1.Size = new System.Drawing.Size(504, 87);
+			//this.panel1.TabIndex = 6;
 			// 
 			// label1
 			// 
@@ -115,7 +115,7 @@
 			this.txtPassword.TabIndex = 10;
 			this.txtPassword.Text = "Contraseña";
 			this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
-			this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+			//this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
 			// 
 			// Login
 			// 
@@ -128,8 +128,8 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.txtPassword);
-			this.Controls.Add(this.lblClave);
-			this.Controls.Add(this.panel1);
+			//this.Controls.Add(this.lblClave);
+			//this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnIngresar);
 			this.Controls.Add(this.btnRegresar);
 			this.DoubleBuffered = true;
@@ -140,8 +140,8 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
+			//this.panel1.ResumeLayout(false);
+			//this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
