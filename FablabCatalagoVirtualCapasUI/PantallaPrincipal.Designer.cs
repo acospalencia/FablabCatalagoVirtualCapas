@@ -49,7 +49,6 @@
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Bienvenido al catalogo \r\ndigital de prototipos\r\n de FabLab ESFE.";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// btnIngresar
 			// 
@@ -81,7 +80,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(555, 548);
 			this.panel1.TabIndex = 7;
-			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
 			// btnVer
 			// 

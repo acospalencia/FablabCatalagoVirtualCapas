@@ -55,9 +55,10 @@ namespace FablabCatalagoVirtualCapasUI
 			lblPrecio.BackColor = System.Drawing.Color.Transparent;
 			lblPrecio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			lblPrecio.Location = new System.Drawing.Point(12, 193);
+			lblPrecio.Location = new System.Drawing.Point(16, 238);
+			lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			lblPrecio.Name = "lblPrecio";
-			lblPrecio.Size = new System.Drawing.Size(48, 19);
+			lblPrecio.Size = new System.Drawing.Size(62, 22);
 			lblPrecio.TabIndex = 3;
 			lblPrecio.Text = "Precio";
 			lblPrecio.Click += new System.EventHandler(this.label3_Click);
@@ -68,9 +69,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblNombre.BackColor = System.Drawing.Color.Transparent;
 			this.lblNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblNombre.Location = new System.Drawing.Point(8, 110);
+			this.lblNombre.Location = new System.Drawing.Point(11, 135);
+			this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblNombre.Name = "lblNombre";
-			this.lblNombre.Size = new System.Drawing.Size(143, 19);
+			this.lblNombre.Size = new System.Drawing.Size(183, 22);
 			this.lblNombre.TabIndex = 1;
 			this.lblNombre.Text = "Nombre del Prototipo";
 			// 
@@ -80,9 +82,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblMaterial.BackColor = System.Drawing.Color.Transparent;
 			this.lblMaterial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblMaterial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblMaterial.Location = new System.Drawing.Point(9, 153);
+			this.lblMaterial.Location = new System.Drawing.Point(12, 188);
+			this.lblMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblMaterial.Name = "lblMaterial";
-			this.lblMaterial.Size = new System.Drawing.Size(146, 19);
+			this.lblMaterial.Size = new System.Drawing.Size(192, 22);
 			this.lblMaterial.TabIndex = 2;
 			this.lblMaterial.Text = "Tipo de material usado";
 			// 
@@ -92,39 +95,44 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblTiempo.BackColor = System.Drawing.Color.Transparent;
 			this.lblTiempo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTiempo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.lblTiempo.Location = new System.Drawing.Point(12, 232);
+			this.lblTiempo.Location = new System.Drawing.Point(16, 286);
+			this.lblTiempo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblTiempo.Name = "lblTiempo";
-			this.lblTiempo.Size = new System.Drawing.Size(110, 19);
+			this.lblTiempo.Size = new System.Drawing.Size(147, 22);
 			this.lblTiempo.TabIndex = 4;
 			this.lblTiempo.Text = "Tiempo invertido";
 			// 
 			// txtTiempo
 			// 
-			this.txtTiempo.Location = new System.Drawing.Point(204, 231);
+			this.txtTiempo.Location = new System.Drawing.Point(272, 284);
+			this.txtTiempo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtTiempo.Name = "txtTiempo";
-			this.txtTiempo.Size = new System.Drawing.Size(100, 20);
+			this.txtTiempo.Size = new System.Drawing.Size(132, 22);
 			this.txtTiempo.TabIndex = 5;
 			// 
 			// txtPrecio
 			// 
-			this.txtPrecio.Location = new System.Drawing.Point(204, 194);
+			this.txtPrecio.Location = new System.Drawing.Point(272, 239);
+			this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+			this.txtPrecio.Size = new System.Drawing.Size(132, 22);
 			this.txtPrecio.TabIndex = 6;
 			// 
 			// txtNombre
 			// 
-			this.txtNombre.Location = new System.Drawing.Point(204, 111);
+			this.txtNombre.Location = new System.Drawing.Point(272, 137);
+			this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(100, 20);
+			this.txtNombre.Size = new System.Drawing.Size(132, 22);
 			this.txtNombre.TabIndex = 7;
 			// 
 			// lblRegresar
 			// 
 			this.lblRegresar.AutoSize = true;
-			this.lblRegresar.Location = new System.Drawing.Point(90, 61);
+			this.lblRegresar.Location = new System.Drawing.Point(120, 75);
+			this.lblRegresar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblRegresar.Name = "lblRegresar";
-			this.lblRegresar.Size = new System.Drawing.Size(0, 13);
+			this.lblRegresar.Size = new System.Drawing.Size(0, 16);
 			this.lblRegresar.TabIndex = 8;
 			// 
 			// btnRegresar
@@ -137,9 +145,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-			this.btnRegresar.Location = new System.Drawing.Point(1, 3);
+			this.btnRegresar.Location = new System.Drawing.Point(1, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(37, 32);
+			this.btnRegresar.Size = new System.Drawing.Size(49, 39);
 			this.btnRegresar.TabIndex = 9;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
@@ -154,9 +163,11 @@ namespace FablabCatalagoVirtualCapasUI
 			// dgListado
 			// 
 			this.dgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgListado.Location = new System.Drawing.Point(343, 80);
+			this.dgListado.Location = new System.Drawing.Point(457, 98);
+			this.dgListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.dgListado.Name = "dgListado";
-			this.dgListado.Size = new System.Drawing.Size(351, 308);
+			this.dgListado.RowHeadersWidth = 51;
+			this.dgListado.Size = new System.Drawing.Size(468, 379);
 			this.dgListado.TabIndex = 10;
 			// 
 			// btnModificar
@@ -170,18 +181,20 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnModificar.Location = new System.Drawing.Point(93, 281);
+			this.btnModificar.Location = new System.Drawing.Point(124, 346);
+			this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(132, 48);
+			this.btnModificar.Size = new System.Drawing.Size(176, 59);
 			this.btnModificar.TabIndex = 11;
 			this.btnModificar.UseVisualStyleBackColor = false;
 			// 
 			// cbMaterial
 			// 
 			this.cbMaterial.FormattingEnabled = true;
-			this.cbMaterial.Location = new System.Drawing.Point(204, 154);
+			this.cbMaterial.Location = new System.Drawing.Point(272, 190);
+			this.cbMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.cbMaterial.Name = "cbMaterial";
-			this.cbMaterial.Size = new System.Drawing.Size(100, 21);
+			this.cbMaterial.Size = new System.Drawing.Size(132, 24);
 			this.cbMaterial.TabIndex = 12;
 			// 
 			// label1
@@ -190,29 +203,31 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.label1.Location = new System.Drawing.Point(339, 35);
+			this.label1.Location = new System.Drawing.Point(452, 43);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(131, 19);
+			this.label1.Size = new System.Drawing.Size(166, 22);
 			this.label1.TabIndex = 13;
 			this.label1.Text = "Buscar por Nombre";
 			// 
 			// txtbuscar
 			// 
-			this.txtbuscar.Location = new System.Drawing.Point(494, 34);
+			this.txtbuscar.Location = new System.Drawing.Point(659, 42);
+			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtbuscar.Multiline = true;
 			this.txtbuscar.Name = "txtbuscar";
-			this.txtbuscar.Size = new System.Drawing.Size(154, 20);
+			this.txtbuscar.Size = new System.Drawing.Size(204, 24);
 			this.txtbuscar.TabIndex = 14;
 			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
 			// 
 			// ModificarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul1;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.ClientSize = new System.Drawing.Size(706, 400);
+			this.ClientSize = new System.Drawing.Size(941, 492);
 			this.Controls.Add(this.txtbuscar);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.cbMaterial);
@@ -228,7 +243,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.Controls.Add(this.lblMaterial);
 			this.Controls.Add(this.lblNombre);
 			this.DoubleBuffered = true;
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.MaximizeBox = false;
 			this.Name = "ModificarPrototipo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ModificarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModificarPrototipo_FormClosing);
 			this.Load += new System.EventHandler(this.ModificarPrototipo_Load);

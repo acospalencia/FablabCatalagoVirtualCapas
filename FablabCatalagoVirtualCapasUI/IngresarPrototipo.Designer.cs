@@ -44,15 +44,20 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cbMaterial = new System.Windows.Forms.ComboBox();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
 			// 
-			this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+			this.button1.BackColor = System.Drawing.Color.Transparent;
 			this.button1.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.flecha;
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Location = new System.Drawing.Point(1, 0);
 			this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.button1.Name = "button1";
@@ -84,7 +89,6 @@
 			this.label2.Size = new System.Drawing.Size(289, 22);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Tiempo necesitado para fabricarlo:";
-			this.label2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// label3
 			// 
@@ -144,6 +148,7 @@
 			this.btnSubir.TabIndex = 7;
 			this.btnSubir.Text = "Subir Imagen";
 			this.btnSubir.UseVisualStyleBackColor = true;
+			this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
 			// 
 			// pictureBox1
 			// 
@@ -151,6 +156,7 @@
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(181, 126);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -165,6 +171,7 @@
 			this.btnConfirmar.TabIndex = 9;
 			this.btnConfirmar.Text = "Confimar Datos";
 			this.btnConfirmar.UseVisualStyleBackColor = false;
+			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
 			// 
 			// label7
 			// 
@@ -177,7 +184,6 @@
 			this.label7.Size = new System.Drawing.Size(118, 22);
 			this.label7.TabIndex = 10;
 			this.label7.Text = "Dimensiones:";
-			this.label7.Click += new System.EventHandler(this.label7_Click);
 			// 
 			// textBox1
 			// 
@@ -221,14 +227,18 @@
 			this.textBox5.Size = new System.Drawing.Size(179, 104);
 			this.textBox5.TabIndex = 15;
 			// 
-			// comboBox1
+			// cbMaterial
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(383, 279);
-			this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(179, 24);
-			this.comboBox1.TabIndex = 16;
+			this.cbMaterial.FormattingEnabled = true;
+			this.cbMaterial.Location = new System.Drawing.Point(383, 279);
+			this.cbMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cbMaterial.Name = "cbMaterial";
+			this.cbMaterial.Size = new System.Drawing.Size(179, 24);
+			this.cbMaterial.TabIndex = 16;
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
 			// IngresarPrototipo
 			// 
@@ -237,7 +247,7 @@
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul__2_;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(904, 476);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.cbMaterial);
 			this.Controls.Add(this.textBox5);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.textBox3);
@@ -256,9 +266,12 @@
 			this.Controls.Add(this.button1);
 			this.DoubleBuffered = true;
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.MaximizeBox = false;
 			this.Name = "IngresarPrototipo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "IngresarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IngresarPrototipo_FormClosing);
+			this.Load += new System.EventHandler(this.IngresarPrototipo_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -283,6 +296,7 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cbMaterial;
+		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 	}
 }

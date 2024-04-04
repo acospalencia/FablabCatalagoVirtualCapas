@@ -75,7 +75,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FABLABlogo;
+            this.pictureBox1.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.logoFablab1;
             this.pictureBox1.Location = new System.Drawing.Point(238, 178);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(335, 248);

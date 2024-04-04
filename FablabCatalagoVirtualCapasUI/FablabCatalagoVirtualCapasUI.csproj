@@ -80,6 +80,16 @@
     <Compile Include="IngresarPrototipo.Designer.cs">
       <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarPrototipo.Designer.cs">
+      <DependentUpon>EliminarPrototipo.cs</DependentUpon>
+
+    </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
