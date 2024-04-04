@@ -1,4 +1,6 @@
-﻿namespace FablabCatalagoVirtualCapasUI
+﻿using System.Windows.Forms;
+
+namespace FablabCatalagoVirtualCapasUI
 {
     partial class PantallaPrincipal
     {
@@ -208,6 +210,7 @@
         private System.Windows.Forms.Label lblVer;
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Button btnIngresar;
+		private Panel panel1;
 		private System.Windows.Forms.Label label1;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }

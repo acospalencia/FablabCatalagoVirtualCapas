@@ -62,19 +62,14 @@
     <Compile Include="AgregarPrototipo.Designer.cs">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </Compile>
-
     <Compile Include="EliminarPrototipo.cs">
+      <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="InformacionPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformacionPrototipos.Designer.cs">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InicioSesion.cs">
-
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="EliminarPrototipo.Designer.cs">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
@@ -111,16 +106,11 @@
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="EliminarPrototipo.resx">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>

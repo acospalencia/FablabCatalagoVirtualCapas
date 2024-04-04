@@ -36,9 +36,6 @@ namespace FablabCatalagoVirtualCapasUI
             var menuprincipal = new PantallaPrincipal();
             menuprincipal.Show();
 
-		private void AgregarPrototipo_Load(object sender, EventArgs e)
-		{
-
 
 		}
 	}
