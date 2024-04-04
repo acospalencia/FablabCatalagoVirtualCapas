@@ -74,6 +74,12 @@
     <Compile Include="EliminarPrototipo.Designer.cs">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngresarPrototipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarPrototipo.Designer.cs">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarPrototipo.resx">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>
@@ -234,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagelogin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

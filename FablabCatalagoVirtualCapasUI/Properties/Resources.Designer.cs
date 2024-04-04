@@ -303,6 +303,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul1 {
             get {
                 object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul1", resourceCulture);

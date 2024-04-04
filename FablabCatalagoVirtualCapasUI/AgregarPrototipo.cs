@@ -45,5 +45,12 @@ namespace FablabCatalagoVirtualCapasUI
             formEliminar.Show();
             this.Hide();
 		}
+
+		private void btnIngresar_Click(object sender, EventArgs e)
+		{
+            var formIngresar = new IngresarPrototipo();
+            formIngresar.Show();
+            this.Hide();
+		}
 	}
 }
