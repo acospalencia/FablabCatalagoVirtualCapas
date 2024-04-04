@@ -55,6 +55,12 @@
     <Compile Include="ActualizarMateriales.Designer.cs">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMateriales.Designer.cs">
+      <DependentUpon>AgregarMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActualizarMateriales.resx">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMateriales.resx">
+      <DependentUpon>AgregarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
@@ -158,6 +167,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FABLABlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

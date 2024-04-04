@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-    public partial class ListaPrototipos : Form
+    public partial class AgregarMateriales : Form
     {
-        public ListaPrototipos()
+        public AgregarMateriales()
         {
             InitializeComponent();
         }
-
-       
     }
 }
