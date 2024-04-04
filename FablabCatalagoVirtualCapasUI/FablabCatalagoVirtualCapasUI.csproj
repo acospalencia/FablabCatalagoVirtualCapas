@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,17 +68,23 @@
     <Compile Include="AgregarPrototipo.Designer.cs">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarPrototipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InformacionPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformacionPrototipos.Designer.cs">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioSesion.cs">
+    <Compile Include="EliminarPrototipo.Designer.cs">
+      <DependentUpon>EliminarPrototipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
+    <Compile Include="IngresarPrototipo.Designer.cs">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
@@ -114,11 +121,14 @@
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPrototipo.resx">
+      <DependentUpon>EliminarPrototipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
+    <EmbeddedResource Include="IngresarPrototipo.resx">
+      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>
@@ -176,6 +186,83 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG3.png" />
+    <None Include="Resources\hola..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azulmar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azulmar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton submit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imageback.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoFablab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImage1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagelogin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
