@@ -71,22 +71,8 @@
     <Compile Include="InformacionPrototipos.Designer.cs">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="IngresarPrototipo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IngresarPrototipo.Designer.cs">
-      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="EliminarPrototipo.Designer.cs">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
-
     </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
@@ -125,13 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
-    </EmbeddedResource>
-
-    <EmbeddedResource Include="IngresarPrototipo.resx">
-      <DependentUpon>IngresarPrototipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>
@@ -240,6 +219,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imageback.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoFablab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImage1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagelogin.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

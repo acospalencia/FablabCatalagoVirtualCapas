@@ -103,6 +103,26 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnImage {
+            get {
+                object obj = ResourceManager.GetObject("btnImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnImage1 {
+            get {
+                object obj = ResourceManager.GetObject("btnImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Capa_2 {
             get {
                 object obj = ResourceManager.GetObject("Capa 2", resourceCulture);
@@ -163,16 +183,6 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FABLABlogo {
-            get {
-                object obj = ResourceManager.GetObject("FABLABlogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap flecha {
             get {
                 object obj = ResourceManager.GetObject("flecha", resourceCulture);
@@ -226,6 +236,46 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         internal static System.Drawing.Bitmap hola_ {
             get {
                 object obj = ResourceManager.GetObject("hola.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imageback {
+            get {
+                object obj = ResourceManager.GetObject("Imageback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagelogin {
+            get {
+                object obj = ResourceManager.GetObject("imagelogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoFablab {
+            get {
+                object obj = ResourceManager.GetObject("logoFablab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoFablab1 {
+            get {
+                object obj = ResourceManager.GetObject("logoFablab1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

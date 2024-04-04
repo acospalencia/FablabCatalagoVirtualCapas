@@ -29,16 +29,24 @@ namespace FablabCatalagoVirtualCapasUI
 			Application.Exit();
 		}
 
-		private void btnVer_Click(object sender, EventArgs e)
-		{
-			var listaPrototipos = new ListaPrototipos();
-			listaPrototipos.Show();
-			this.Hide();
-		}
+        private void PantallaPrincipal_Load(object sender, EventArgs e)
+        {
 
-		private void PantallaPrincipal_Load(object sender, EventArgs e)
-		{
+        }
 
-		}
-	}
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

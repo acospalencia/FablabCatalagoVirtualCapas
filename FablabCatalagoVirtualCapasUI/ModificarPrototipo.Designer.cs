@@ -57,7 +57,7 @@ namespace FablabCatalagoVirtualCapasUI
 			lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
 			lblPrecio.Location = new System.Drawing.Point(12, 193);
 			lblPrecio.Name = "lblPrecio";
-			lblPrecio.Size = new System.Drawing.Size(62, 22);
+			lblPrecio.Size = new System.Drawing.Size(48, 19);
 			lblPrecio.TabIndex = 3;
 			lblPrecio.Text = "Precio";
 			lblPrecio.Click += new System.EventHandler(this.label3_Click);
@@ -70,7 +70,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
 			this.lblNombre.Location = new System.Drawing.Point(8, 110);
 			this.lblNombre.Name = "lblNombre";
-			this.lblNombre.Size = new System.Drawing.Size(183, 22);
+			this.lblNombre.Size = new System.Drawing.Size(143, 19);
 			this.lblNombre.TabIndex = 1;
 			this.lblNombre.Text = "Nombre del Prototipo";
 			// 
@@ -82,7 +82,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblMaterial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
 			this.lblMaterial.Location = new System.Drawing.Point(9, 153);
 			this.lblMaterial.Name = "lblMaterial";
-			this.lblMaterial.Size = new System.Drawing.Size(192, 22);
+			this.lblMaterial.Size = new System.Drawing.Size(146, 19);
 			this.lblMaterial.TabIndex = 2;
 			this.lblMaterial.Text = "Tipo de material usado";
 			// 
@@ -94,7 +94,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblTiempo.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.lblTiempo.Location = new System.Drawing.Point(12, 232);
 			this.lblTiempo.Name = "lblTiempo";
-			this.lblTiempo.Size = new System.Drawing.Size(147, 22);
+			this.lblTiempo.Size = new System.Drawing.Size(110, 19);
 			this.lblTiempo.TabIndex = 4;
 			this.lblTiempo.Text = "Tiempo invertido";
 			// 
@@ -102,21 +102,21 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			this.txtTiempo.Location = new System.Drawing.Point(204, 231);
 			this.txtTiempo.Name = "txtTiempo";
-			this.txtTiempo.Size = new System.Drawing.Size(100, 22);
+			this.txtTiempo.Size = new System.Drawing.Size(100, 20);
 			this.txtTiempo.TabIndex = 5;
 			// 
 			// txtPrecio
 			// 
 			this.txtPrecio.Location = new System.Drawing.Point(204, 194);
 			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(100, 22);
+			this.txtPrecio.Size = new System.Drawing.Size(100, 20);
 			this.txtPrecio.TabIndex = 6;
 			// 
 			// txtNombre
 			// 
 			this.txtNombre.Location = new System.Drawing.Point(204, 111);
 			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(100, 22);
+			this.txtNombre.Size = new System.Drawing.Size(100, 20);
 			this.txtNombre.TabIndex = 7;
 			// 
 			// lblRegresar
@@ -124,7 +124,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.lblRegresar.AutoSize = true;
 			this.lblRegresar.Location = new System.Drawing.Point(90, 61);
 			this.lblRegresar.Name = "lblRegresar";
-			this.lblRegresar.Size = new System.Drawing.Size(0, 16);
+			this.lblRegresar.Size = new System.Drawing.Size(0, 13);
 			this.lblRegresar.TabIndex = 8;
 			// 
 			// btnRegresar
@@ -156,7 +156,6 @@ namespace FablabCatalagoVirtualCapasUI
 			this.dgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgListado.Location = new System.Drawing.Point(343, 80);
 			this.dgListado.Name = "dgListado";
-			this.dgListado.RowHeadersWidth = 51;
 			this.dgListado.Size = new System.Drawing.Size(351, 308);
 			this.dgListado.TabIndex = 10;
 			// 
@@ -182,7 +181,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.cbMaterial.FormattingEnabled = true;
 			this.cbMaterial.Location = new System.Drawing.Point(204, 154);
 			this.cbMaterial.Name = "cbMaterial";
-			this.cbMaterial.Size = new System.Drawing.Size(100, 24);
+			this.cbMaterial.Size = new System.Drawing.Size(100, 21);
 			this.cbMaterial.TabIndex = 12;
 			// 
 			// label1
@@ -191,9 +190,9 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.label1.Location = new System.Drawing.Point(322, 34);
+			this.label1.Location = new System.Drawing.Point(339, 35);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(166, 22);
+			this.label1.Size = new System.Drawing.Size(131, 19);
 			this.label1.TabIndex = 13;
 			this.label1.Text = "Buscar por Nombre";
 			// 
@@ -208,7 +207,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// ModificarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul1;
