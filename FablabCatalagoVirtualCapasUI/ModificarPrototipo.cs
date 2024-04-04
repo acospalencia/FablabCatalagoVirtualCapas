@@ -27,11 +27,23 @@ namespace FablabCatalagoVirtualCapasUI
 			Application.Exit();
 		}
 
-		private void btnRegresar_Click(object sender, EventArgs e)
+        private void ModificarPrototipo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+		private void btnRegresar_Click_1(object sender, EventArgs e)
 		{
-            var anteriorForm = new AgregarPrototipo();
-            anteriorForm.Show();
-            this.Hide();
+			var anteriorForm = new AgregarPrototipo();
+			anteriorForm.Show();
+			this.Hide();
+		}
+
+		private void txtbuscar_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
+
+

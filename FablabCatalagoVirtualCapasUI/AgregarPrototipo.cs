@@ -36,10 +36,14 @@ namespace FablabCatalagoVirtualCapasUI
             var menuprincipal = new PantallaPrincipal();
             menuprincipal.Show();
 
-		private void AgregarPrototipo_Load(object sender, EventArgs e)
+
+		}
+
+		private void btnEliminar_Click(object sender, EventArgs e)
 		{
-
-
+            var formEliminar = new EliminarPrototipo();
+            formEliminar.Show();
+            this.Hide();
 		}
 	}
 }
