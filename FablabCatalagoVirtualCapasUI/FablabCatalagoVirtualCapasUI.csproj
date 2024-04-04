@@ -64,6 +64,7 @@
     </Compile>
 
     <Compile Include="EliminarPrototipo.cs">
+    </Compile>
 
     <Compile Include="InformacionPrototipos.cs">
       <SubType>Form</SubType>
