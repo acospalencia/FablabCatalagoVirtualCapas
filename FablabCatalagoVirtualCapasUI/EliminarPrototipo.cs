@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-    public partial class InicioSesion : Form
+    public partial class EliminarPrototipo : Form
     {
-        public InicioSesion()
+        public EliminarPrototipo()
         {
             InitializeComponent();
+        }
+
+        private void EliminarPrototipo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

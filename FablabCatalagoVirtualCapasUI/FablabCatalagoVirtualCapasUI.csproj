@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +62,9 @@
     <Compile Include="AgregarPrototipo.Designer.cs">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="EliminarPrototipo.cs">
+
     <Compile Include="InformacionPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,10 +72,11 @@
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioSesion.cs">
+
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
+    <Compile Include="EliminarPrototipo.Designer.cs">
+      <DependentUpon>EliminarPrototipo.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
@@ -105,11 +110,16 @@
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="EliminarPrototipo.resx">
+      <DependentUpon>EliminarPrototipo.cs</DependentUpon>
+
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>
@@ -158,6 +168,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FABLABlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hola..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azulmar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azulmar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
