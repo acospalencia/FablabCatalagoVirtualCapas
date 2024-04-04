@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,6 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+
+  <data name="IMG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FABLABlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FABLABlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
   <data name="Presentación Proyecto de Negocios Moderno Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,5 +211,6 @@
   </data>
   <data name="Presentación Proyecto de Negocios Moderno Azul (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
   </data>
 </root>

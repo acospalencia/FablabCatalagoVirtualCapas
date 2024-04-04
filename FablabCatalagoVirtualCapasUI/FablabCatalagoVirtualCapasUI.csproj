@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -56,6 +56,12 @@
     <Compile Include="ActualizarMateriales.Designer.cs">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMateriales.Designer.cs">
+      <DependentUpon>AgregarMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActualizarMateriales.resx">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMateriales.resx">
+      <DependentUpon>AgregarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
@@ -170,6 +179,13 @@
     <None Include="Resources\FABLABlogo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\IMG11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG3.png" />
     <None Include="Resources\hola..png" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
