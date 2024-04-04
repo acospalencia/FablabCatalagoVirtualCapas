@@ -27,6 +27,7 @@ namespace FablabCatalagoVirtualCapasUI
 			Application.Exit();
 		}
 
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
 
@@ -37,4 +38,13 @@ namespace FablabCatalagoVirtualCapasUI
 
         }
     }
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+            var anteriorForm = new AgregarPrototipo();
+            anteriorForm.Show();
+            this.Hide();
+		}
+	}
+
 }

@@ -150,6 +150,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AgregarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_FormClosing);
+			this.Load += new System.EventHandler(this.AgregarPrototipo_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
