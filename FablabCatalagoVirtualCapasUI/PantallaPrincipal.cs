@@ -33,6 +33,12 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			var listaPrototipos = new ListaPrototipos();
 			listaPrototipos.Show();
+			this.Hide();
+		}
+
+		private void PantallaPrincipal_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

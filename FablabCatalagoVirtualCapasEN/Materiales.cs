@@ -14,9 +14,9 @@ namespace FablabCatalagoVirtualCapasEN
         public string nombreMaterial {  get; set; }
         public string tipoMaterial { get; set; }
         public double precio { get; set; }
-        public double dimesiones { get; set; }
+        public double Ancho { get; set; }
+        public double Altura { get; set; }
         public string proveedor { get; set; }
-        public Image imagenMaterial { get; set; }
 
     }
 }

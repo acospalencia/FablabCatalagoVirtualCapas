@@ -16,5 +16,18 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-    }
+
+		private void btncancelar_Click(object sender, EventArgs e)
+		{
+            this.Hide();
+            var formRegresar = new PantallaPrincipal();
+            formRegresar.Show();
+
+		}
+
+		private void ListaPrototipos_FormClosing(object sender, FormClosingEventArgs e)
+		{
+            Application.Exit();
+		}
+	}
 }
