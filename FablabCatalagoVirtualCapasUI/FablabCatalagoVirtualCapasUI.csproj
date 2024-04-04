@@ -83,7 +83,7 @@
     </Compile>
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="EliminarPrototipo.Designer.cs">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
 
