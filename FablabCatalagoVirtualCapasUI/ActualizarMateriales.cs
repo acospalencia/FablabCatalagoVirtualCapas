@@ -40,5 +40,10 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
         }
-	}
+
+        private void ActualizarMateriales_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
