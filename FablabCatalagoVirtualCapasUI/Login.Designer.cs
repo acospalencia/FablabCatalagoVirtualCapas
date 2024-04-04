@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.btnIngresar = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -149,12 +150,12 @@
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+
         }
 
         #endregion
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblUsuario;
 		private System.Windows.Forms.TextBox txtUsuario;

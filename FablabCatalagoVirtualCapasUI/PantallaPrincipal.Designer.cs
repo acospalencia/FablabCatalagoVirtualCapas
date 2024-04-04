@@ -1,4 +1,6 @@
-﻿namespace FablabCatalagoVirtualCapasUI
+﻿using System.Windows.Forms;
+
+namespace FablabCatalagoVirtualCapasUI
 {
     partial class PantallaPrincipal
     {
@@ -28,30 +30,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblAdmin = new System.Windows.Forms.Label();
 			this.lblVer = new System.Windows.Forms.Label();
 			this.btnVer = new System.Windows.Forms.Button();
 			this.btnIngresar = new System.Windows.Forms.Button();
+			this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.Location = new System.Drawing.Point(-5, -4);
-			this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1075, 133);
-			this.panel1.TabIndex = 1;
-			// 
+
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(59, 37);
+
+			this.label1.Location = new System.Drawing.Point(37, 23);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(882, 38);
 			this.label1.TabIndex = 6;
@@ -103,6 +100,15 @@
 			this.btnIngresar.UseVisualStyleBackColor = true;
 			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
 			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Location = new System.Drawing.Point(-4, -3);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(806, 108);
+			this.panel1.TabIndex = 1;
+			// 
 			// PantallaPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,11 +135,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Label lblVer;
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Button btnIngresar;
+		private Panel panel1;
 		private System.Windows.Forms.Label label1;
-	}
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
+    }
 }
