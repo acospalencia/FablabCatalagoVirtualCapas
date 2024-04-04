@@ -26,5 +26,10 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.Exit();
 		}
-	}
+
+        private void ModificarPrototipo_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -60,5 +60,22 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.Exit();
 		}
-	}
+
+        private void txtUsuario_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtUsuario.ForeColor = SystemColors.WindowText;
+        }
+
+        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPassword.Text = "";
+            txtPassword.ForeColor = SystemColors.WindowText;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

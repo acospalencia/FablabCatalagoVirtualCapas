@@ -63,9 +63,19 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FABLABlogo {
+        internal static System.Drawing.Bitmap logoFablab {
             get {
-                object obj = ResourceManager.GetObject("FABLABlogo", resourceCulture);
+                object obj = ResourceManager.GetObject("logoFablab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
