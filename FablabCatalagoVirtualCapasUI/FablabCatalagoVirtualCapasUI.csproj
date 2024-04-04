@@ -113,7 +113,7 @@
 
     <EmbeddedResource Include="EliminarPrototipo.resx">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </EmbeddedResource>
