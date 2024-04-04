@@ -27,18 +27,6 @@ namespace FablabCatalagoVirtualCapasUI
 			Application.Exit();
 		}
 
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModificarPrototipo_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
-
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
             var anteriorForm = new AgregarPrototipo();
@@ -46,5 +34,4 @@ namespace FablabCatalagoVirtualCapasUI
             this.Hide();
 		}
 	}
-
 }
