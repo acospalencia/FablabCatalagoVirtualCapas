@@ -33,19 +33,19 @@
 			this.lblBuscarPrototipo = new System.Windows.Forms.Label();
 			this.btnLupa = new System.Windows.Forms.Button();
 			this.btnRegresar = new System.Windows.Forms.Button();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.dgVer = new System.Windows.Forms.DataGridView();
+			this.txtId = new System.Windows.Forms.TextBox();
+			((System.ComponentModel.ISupportInitialize)(this.dgVer)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtBuscar
 			// 
 			this.txtBuscar.Location = new System.Drawing.Point(260, 62);
-			this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.txtBuscar.Multiline = true;
 			this.txtBuscar.Name = "txtBuscar";
 			this.txtBuscar.Size = new System.Drawing.Size(287, 30);
 			this.txtBuscar.TabIndex = 1;
-			this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
 			// 
 			// btnEliminar
 			// 
@@ -59,11 +59,12 @@
 			this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.Transparent;
 			this.btnEliminar.Location = new System.Drawing.Point(716, 202);
-			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(77, 85);
 			this.btnEliminar.TabIndex = 2;
 			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
 			// 
 			// lblBuscarPrototipo
 			// 
@@ -88,7 +89,7 @@
 			this.btnLupa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnLupa.Location = new System.Drawing.Point(559, 57);
-			this.btnLupa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnLupa.Margin = new System.Windows.Forms.Padding(4);
 			this.btnLupa.Name = "btnLupa";
 			this.btnLupa.Size = new System.Drawing.Size(56, 39);
 			this.btnLupa.TabIndex = 4;
@@ -104,22 +105,31 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.Location = new System.Drawing.Point(0, 2);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(49, 39);
 			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
-			// dataGridView1
+			// dgVer
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(16, 100);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.Size = new System.Drawing.Size(692, 306);
-			this.dataGridView1.TabIndex = 6;
+			this.dgVer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgVer.Location = new System.Drawing.Point(16, 100);
+			this.dgVer.Margin = new System.Windows.Forms.Padding(4);
+			this.dgVer.Name = "dgVer";
+			this.dgVer.RowHeadersWidth = 51;
+			this.dgVer.Size = new System.Drawing.Size(692, 306);
+			this.dgVer.TabIndex = 6;
+			this.dgVer.SelectionChanged += new System.EventHandler(this.dgVer_SelectionChanged);
+			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(683, 19);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(100, 22);
+			this.txtId.TabIndex = 7;
+			this.txtId.Visible = false;
 			// 
 			// EliminarPrototipo
 			// 
@@ -128,20 +138,21 @@
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul2;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(809, 421);
-			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.txtId);
+			this.Controls.Add(this.dgVer);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnLupa);
 			this.Controls.Add(this.lblBuscarPrototipo);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.txtBuscar);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "EliminarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "EliminarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EliminarPrototipo_FormClosing);
 			this.Load += new System.EventHandler(this.EliminarPrototipo_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgVer)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -153,6 +164,7 @@
         private System.Windows.Forms.Label lblBuscarPrototipo;
         private System.Windows.Forms.Button btnLupa;
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-    }
+        private System.Windows.Forms.DataGridView dgVer;
+		private System.Windows.Forms.TextBox txtId;
+	}
 }

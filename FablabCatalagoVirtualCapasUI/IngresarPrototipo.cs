@@ -36,19 +36,42 @@ namespace FablabCatalagoVirtualCapasUI
 			var materialBL = new MaterialesBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.SelectedIndex = 0;
 		}
 
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			var Guardardatos = new Prototipo
+			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtPrecio.Text == "" && txtDescripcion.Text == ""
+				&& imgPrototipo.Image == null)
 			{
-				NombrePrototipo = textBox1.Text,
-				TipoMaterial = cbMaterial.Text,
-				TiempoTranscurrido = double.Parse(textBox3.Text),
-				Precio = double.Parse(textBox4.Text),
-				Descripcion = textBox5.Text,
-				ImagenPrototipo = pictureBox1.Image
-			};
+				MessageBox.Show("Porfavor rellene todos los campos con la informacion que se le pide");
+			}
+			else
+			{
+				var Guardardatos = new Prototipo
+				{
+					NombrePrototipo = txtNombre.Text,
+					TipoMaterial = cbMaterial.Text,
+					TiempoTranscurrido = double.Parse(txtTiempo.Text),
+					Precio = double.Parse(txtPrecio.Text),
+					Descripcion = txtDescripcion.Text,
+					ImagenPrototipo = imgPrototipo.Image
+				};
+				if (Guardardatos != null)
+				{
+					var guardarInfo = new PrototipoBL();
+					guardarInfo.Guardar(Guardardatos);
+					txtDescripcion.Text = null;
+					txtDimensiones.Text = null;
+					txtNombre.Text = null;
+					txtPrecio.Text = null;
+					txtTiempo.Text = null;
+					
+				}
+			}
+
+
+
 		}
 
 		private void btnSubir_Click(object sender, EventArgs e)
@@ -62,8 +85,7 @@ namespace FablabCatalagoVirtualCapasUI
 
 				try
 				{
-					// Cargar la imagen en el PictureBox
-					pictureBox1.Image = Image.FromFile(rutaImagen);
+					imgPrototipo.Image = Image.FromFile(rutaImagen);
 
 				}
 				catch (Exception ex)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FablabCatalagoVirtualCapasBL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,8 @@ namespace FablabCatalagoVirtualCapasUI
 
         private void ModificarPrototipo_Load(object sender, EventArgs e)
         {
-
+			var regresarlista = new PrototipoBL();
+			dgListado.DataSource = regresarlista.regresarlista();
         }
 
 		private void btnRegresar_Click_1(object sender, EventArgs e)

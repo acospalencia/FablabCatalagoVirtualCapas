@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FablabCatalagoVirtualCapasBL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,6 @@ namespace FablabCatalagoVirtualCapasUI
             InitializeComponent();
         }
 
-		private void btncancelar_Click(object sender, EventArgs e)
-		{
-            this.Hide();
-            var formRegresar = new PantallaPrincipal();
-            formRegresar.Show();
-
-		}
-
 		private void ListaPrototipos_FormClosing(object sender, FormClosingEventArgs e)
 		{
             Application.Exit();
@@ -35,6 +28,12 @@ namespace FablabCatalagoVirtualCapasUI
 			var formregresar = new PantallaPrincipal();
 			formregresar.Show();
 			this.Hide();
+		}
+
+		private void ListaPrototipos_Load(object sender, EventArgs e)
+		{
+			var regresarLista = new PrototipoBL();
+			dgvlistaprototipos.DataSource = regresarLista.regresarlista();
 		}
 	}
 }

@@ -36,17 +36,17 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.btnSubir = new System.Windows.Forms.Button();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.imgPrototipo = new System.Windows.Forms.PictureBox();
 			this.btnConfirmar = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.txtNombre = new System.Windows.Forms.TextBox();
+			this.txtDimensiones = new System.Windows.Forms.TextBox();
+			this.txtTiempo = new System.Windows.Forms.TextBox();
+			this.txtPrecio = new System.Windows.Forms.TextBox();
+			this.txtDescripcion = new System.Windows.Forms.TextBox();
 			this.cbMaterial = new System.Windows.Forms.ComboBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.imgPrototipo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -150,15 +150,15 @@
 			this.btnSubir.UseVisualStyleBackColor = true;
 			this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
 			// 
-			// pictureBox1
+			// imgPrototipo
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(664, 107);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(181, 126);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 8;
-			this.pictureBox1.TabStop = false;
+			this.imgPrototipo.Location = new System.Drawing.Point(664, 107);
+			this.imgPrototipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.imgPrototipo.Name = "imgPrototipo";
+			this.imgPrototipo.Size = new System.Drawing.Size(181, 126);
+			this.imgPrototipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.imgPrototipo.TabIndex = 8;
+			this.imgPrototipo.TabStop = false;
 			// 
 			// btnConfirmar
 			// 
@@ -185,47 +185,47 @@
 			this.label7.TabIndex = 10;
 			this.label7.Text = "Dimensiones:";
 			// 
-			// textBox1
+			// txtNombre
 			// 
-			this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(383, 53);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(179, 26);
-			this.textBox1.TabIndex = 11;
+			this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNombre.Location = new System.Drawing.Point(383, 53);
+			this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.Size = new System.Drawing.Size(179, 26);
+			this.txtNombre.TabIndex = 11;
 			// 
-			// textBox2
+			// txtDimensiones
 			// 
-			this.textBox2.Location = new System.Drawing.Point(383, 107);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(179, 22);
-			this.textBox2.TabIndex = 12;
+			this.txtDimensiones.Location = new System.Drawing.Point(383, 107);
+			this.txtDimensiones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtDimensiones.Name = "txtDimensiones";
+			this.txtDimensiones.Size = new System.Drawing.Size(179, 22);
+			this.txtDimensiones.TabIndex = 12;
 			// 
-			// textBox3
+			// txtTiempo
 			// 
-			this.textBox3.Location = new System.Drawing.Point(383, 217);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(179, 22);
-			this.textBox3.TabIndex = 13;
+			this.txtTiempo.Location = new System.Drawing.Point(383, 217);
+			this.txtTiempo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtTiempo.Name = "txtTiempo";
+			this.txtTiempo.Size = new System.Drawing.Size(179, 22);
+			this.txtTiempo.TabIndex = 13;
 			// 
-			// textBox4
+			// txtPrecio
 			// 
-			this.textBox4.Location = new System.Drawing.Point(383, 164);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(179, 22);
-			this.textBox4.TabIndex = 14;
+			this.txtPrecio.Location = new System.Drawing.Point(383, 164);
+			this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtPrecio.Name = "txtPrecio";
+			this.txtPrecio.Size = new System.Drawing.Size(179, 22);
+			this.txtPrecio.TabIndex = 14;
 			// 
-			// textBox5
+			// txtDescripcion
 			// 
-			this.textBox5.Location = new System.Drawing.Point(383, 341);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox5.Multiline = true;
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(179, 104);
-			this.textBox5.TabIndex = 15;
+			this.txtDescripcion.Location = new System.Drawing.Point(383, 341);
+			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtDescripcion.Multiline = true;
+			this.txtDescripcion.Name = "txtDescripcion";
+			this.txtDescripcion.Size = new System.Drawing.Size(179, 104);
+			this.txtDescripcion.TabIndex = 15;
 			// 
 			// cbMaterial
 			// 
@@ -248,14 +248,14 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(904, 476);
 			this.Controls.Add(this.cbMaterial);
-			this.Controls.Add(this.textBox5);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtDescripcion);
+			this.Controls.Add(this.txtPrecio);
+			this.Controls.Add(this.txtTiempo);
+			this.Controls.Add(this.txtDimensiones);
+			this.Controls.Add(this.txtNombre);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnConfirmar);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.imgPrototipo);
 			this.Controls.Add(this.btnSubir);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
@@ -272,7 +272,7 @@
 			this.Text = "IngresarPrototipo";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IngresarPrototipo_FormClosing);
 			this.Load += new System.EventHandler(this.IngresarPrototipo_Load);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.imgPrototipo)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -288,14 +288,14 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnSubir;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox imgPrototipo;
 		private System.Windows.Forms.Button btnConfirmar;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox txtNombre;
+		private System.Windows.Forms.TextBox txtDimensiones;
+		private System.Windows.Forms.TextBox txtTiempo;
+		private System.Windows.Forms.TextBox txtPrecio;
+		private System.Windows.Forms.TextBox txtDescripcion;
 		private System.Windows.Forms.ComboBox cbMaterial;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 	}
