@@ -41,12 +41,13 @@
 			// dgvlistaprototipos
 			// 
 			this.dgvlistaprototipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvlistaprototipos.Location = new System.Drawing.Point(127, 123);
+			this.dgvlistaprototipos.Location = new System.Drawing.Point(5, 127);
 			this.dgvlistaprototipos.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvlistaprototipos.Name = "dgvlistaprototipos";
 			this.dgvlistaprototipos.RowHeadersWidth = 51;
-			this.dgvlistaprototipos.Size = new System.Drawing.Size(812, 304);
+			this.dgvlistaprototipos.Size = new System.Drawing.Size(1058, 315);
 			this.dgvlistaprototipos.TabIndex = 2;
+			this.dgvlistaprototipos.SelectionChanged += new System.EventHandler(this.dgvlistaprototipos_SelectionChanged);
 			// 
 			// panel1
 			// 
@@ -81,16 +82,22 @@
 			this.btnSiguiente.TabIndex = 30;
 			this.btnSiguiente.Text = "Siguiente";
 			this.btnSiguiente.UseVisualStyleBackColor = false;
+			this.btnSiguiente.Visible = false;
+			this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.BackColor = System.Drawing.Color.Gray;
+			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegresar.BackgroundImage")));
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnRegresar.Location = new System.Drawing.Point(3, 4);
+			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRegresar.Location = new System.Drawing.Point(5, 4);
 			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(65, 41);
+			this.btnRegresar.Size = new System.Drawing.Size(59, 46);
 			this.btnRegresar.TabIndex = 31;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btncancelar_Click_1);

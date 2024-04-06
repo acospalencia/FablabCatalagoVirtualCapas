@@ -16,5 +16,9 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-    }
+
+		private void InformacionPrototipos_Load(object sender, EventArgs e)
+		{
+		}
+	}
 }

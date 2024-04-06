@@ -45,6 +45,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.cbMaterial = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtbuscar = new System.Windows.Forms.TextBox();
+			this.txtId = new System.Windows.Forms.TextBox();
 			lblPrecio = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgListado)).BeginInit();
 			this.SuspendLayout();
@@ -105,7 +106,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtTiempo
 			// 
 			this.txtTiempo.Location = new System.Drawing.Point(272, 284);
-			this.txtTiempo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtTiempo.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTiempo.Name = "txtTiempo";
 			this.txtTiempo.Size = new System.Drawing.Size(132, 22);
 			this.txtTiempo.TabIndex = 5;
@@ -113,7 +114,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtPrecio
 			// 
 			this.txtPrecio.Location = new System.Drawing.Point(272, 239);
-			this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPrecio.Name = "txtPrecio";
 			this.txtPrecio.Size = new System.Drawing.Size(132, 22);
 			this.txtPrecio.TabIndex = 6;
@@ -121,7 +122,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtNombre
 			// 
 			this.txtNombre.Location = new System.Drawing.Point(272, 137);
-			this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(132, 22);
 			this.txtNombre.TabIndex = 7;
@@ -146,7 +147,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
 			this.btnRegresar.Location = new System.Drawing.Point(1, 4);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(49, 39);
 			this.btnRegresar.TabIndex = 9;
@@ -164,11 +165,12 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			this.dgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgListado.Location = new System.Drawing.Point(457, 98);
-			this.dgListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dgListado.Margin = new System.Windows.Forms.Padding(4);
 			this.dgListado.Name = "dgListado";
 			this.dgListado.RowHeadersWidth = 51;
 			this.dgListado.Size = new System.Drawing.Size(468, 379);
 			this.dgListado.TabIndex = 10;
+			this.dgListado.SelectionChanged += new System.EventHandler(this.dgListado_SelectionChanged);
 			// 
 			// btnModificar
 			// 
@@ -182,17 +184,18 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnModificar.Location = new System.Drawing.Point(124, 346);
-			this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(176, 59);
 			this.btnModificar.TabIndex = 11;
 			this.btnModificar.UseVisualStyleBackColor = false;
+			this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
 			// 
 			// cbMaterial
 			// 
 			this.cbMaterial.FormattingEnabled = true;
 			this.cbMaterial.Location = new System.Drawing.Point(272, 190);
-			this.cbMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cbMaterial.Margin = new System.Windows.Forms.Padding(4);
 			this.cbMaterial.Name = "cbMaterial";
 			this.cbMaterial.Size = new System.Drawing.Size(132, 24);
 			this.cbMaterial.TabIndex = 12;
@@ -213,12 +216,20 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtbuscar
 			// 
 			this.txtbuscar.Location = new System.Drawing.Point(659, 42);
-			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.txtbuscar.Multiline = true;
 			this.txtbuscar.Name = "txtbuscar";
 			this.txtbuscar.Size = new System.Drawing.Size(204, 24);
 			this.txtbuscar.TabIndex = 14;
-			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(1, 455);
+			this.txtId.Margin = new System.Windows.Forms.Padding(4);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(132, 22);
+			this.txtId.TabIndex = 15;
+			this.txtId.Visible = false;
 			// 
 			// ModificarPrototipo
 			// 
@@ -228,6 +239,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul1;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(941, 492);
+			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.txtbuscar);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.cbMaterial);
@@ -243,7 +255,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.Controls.Add(this.lblMaterial);
 			this.Controls.Add(this.lblNombre);
 			this.DoubleBuffered = true;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "ModificarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -271,6 +283,7 @@ namespace FablabCatalagoVirtualCapasUI
 		private ComboBox cbMaterial;
 		private Label label1;
 		private TextBox txtbuscar;
+		private TextBox txtId;
 	}
 
         //private System.Windows.Forms.Panel panel1;

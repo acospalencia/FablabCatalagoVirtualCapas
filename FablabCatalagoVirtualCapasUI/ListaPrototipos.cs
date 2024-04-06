@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-
+		public InformacionPrototipos formInfo = new InformacionPrototipos();
 		private void ListaPrototipos_FormClosing(object sender, FormClosingEventArgs e)
 		{
             Application.Exit();
@@ -34,6 +35,17 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			var regresarLista = new PrototipoBL();
 			dgvlistaprototipos.DataSource = regresarLista.regresarlista();
+		}
+
+		private void dgvlistaprototipos_SelectionChanged(object sender, EventArgs e)
+		{
+			btnSiguiente.Visible = true;
+		}
+
+		private void btnSiguiente_Click(object sender, EventArgs e)
+		{
+			formInfo.Show();
+			this.Hide();
 		}
 	}
 }
