@@ -33,7 +33,7 @@ namespace FablabCatalagoVirtualCapasUI
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
             this.Hide();
-            var menuprincipal = new PantallaPrincipal();
+            var menuprincipal = new ElegirAccion();
             menuprincipal.Show();
 		}
 

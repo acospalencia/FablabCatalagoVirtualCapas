@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccionMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccionMaterial.Designer.cs">
+      <DependentUpon>AccionMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="AgregarPrototipo.Designer.cs">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElegirAccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElegirAccion.Designer.cs">
+      <DependentUpon>ElegirAccion.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarPrototipo.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccionMaterial.resx">
+      <DependentUpon>AccionMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarMateriales.resx">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPrototipo.resx">
       <DependentUpon>AgregarPrototipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElegirAccion.resx">
+      <DependentUpon>ElegirAccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarPrototipo.resx">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
