@@ -37,7 +37,7 @@ namespace FablabCatalagoVirtualCapasUI
             if (verificarUsuario != null)
 			{
                 MessageBox.Show("inicio de sesion existoso");
-                var formAgregar = new AgregarPrototipo();
+                var formAgregar = new ElegirAccion();
                 formAgregar.Show();
                 this.Hide();
 

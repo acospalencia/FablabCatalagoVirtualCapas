@@ -18,32 +18,21 @@ namespace FablabCatalagoVirtualCapasUI
 
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			OpenFileDialog openFileDialog = new OpenFileDialog();
-			openFileDialog.Title = "Seleccionar imagen";
-			openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-				string rutaImagen = openFileDialog.FileName;
-
-				try
-				{
-					// Cargar la imagen en el PictureBox
-					pictureBox2.Image = Image.FromFile(rutaImagen);
-
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("Error al cargar la imagen: " + ex.Message);
-				}
-			}
-        }
-
         private void ActualizarMateriales_Load(object sender, EventArgs e)
         {
 
         }
-    }
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			var formRegresar = new AccionMaterial();
+			formRegresar.Show();
+		}
+
+		private void ActualizarMateriales_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
+	}
 }

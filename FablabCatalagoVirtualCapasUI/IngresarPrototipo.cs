@@ -36,19 +36,44 @@ namespace FablabCatalagoVirtualCapasUI
 			var materialBL = new MaterialesBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.SelectedIndex = 0;
 		}
 
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			var Guardardatos = new Prototipo
+			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtAlto.Text == "" && txtDescripcion.Text == ""
+				&& imgPrototipo.Image == null)
 			{
-				NombrePrototipo = textBox1.Text,
-				TipoMaterial = cbMaterial.Text,
-				TiempoTranscurrido = double.Parse(textBox3.Text),
-				Precio = double.Parse(textBox4.Text),
-				Descripcion = textBox5.Text,
-				ImagenPrototipo = pictureBox1.Image
-			};
+				MessageBox.Show("Porfavor rellene todos los campos con la informacion que se le pide");
+			}
+			else
+			{
+				var Guardardatos = new Prototipo
+				{
+					NombrePrototipo = txtNombre.Text,
+					TipoMaterial = cbMaterial.Text,
+					Ancho = double.Parse(txtAncho.Text),
+					Alto = double.Parse(txtAlto.Text),
+					Descripcion = txtDescripcion.Text,
+					ImagenPrototipo = imgPrototipo.Image,
+					TiempoDiseñado = (txtTiempo.Text),
+					TiempoArmado = (txtArmarlo.Text),
+					TiempoFabricado = (txtFabricarlo.Text)
+				};
+				if (Guardardatos != null)
+				{
+					var guardarInfo = new PrototipoBL();
+					guardarInfo.Guardar(Guardardatos);
+					txtDescripcion.Text = null;
+					txtAncho.Text = null;
+					txtNombre.Text = null;
+					txtAlto.Text = null;
+					txtTiempo.Text = null;
+					txtArmarlo.Text = null;
+					txtFabricarlo.Text = null;
+					imgPrototipo.Image = null;
+				}
+			}
 		}
 
 		private void btnSubir_Click(object sender, EventArgs e)
@@ -62,8 +87,7 @@ namespace FablabCatalagoVirtualCapasUI
 
 				try
 				{
-					// Cargar la imagen en el PictureBox
-					pictureBox1.Image = Image.FromFile(rutaImagen);
+					imgPrototipo.Image = Image.FromFile(rutaImagen);
 
 				}
 				catch (Exception ex)
@@ -72,5 +96,7 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
+
+
 	}
 }

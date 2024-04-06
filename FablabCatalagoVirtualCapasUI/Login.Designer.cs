@@ -40,24 +40,16 @@
 			// 
 			this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatAppearance.BorderSize = 0;
+			this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnIngresar.Location = new System.Drawing.Point(351, 361);
-			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnIngresar.Location = new System.Drawing.Point(351, 358);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
 			this.btnIngresar.Size = new System.Drawing.Size(349, 42);
 			this.btnIngresar.TabIndex = 5;
 			this.btnIngresar.UseVisualStyleBackColor = false;
 			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-			// 
-			// panel1
-			//// 
-			//this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-			//this.panel1.Controls.Add(this.label1);
-			//this.panel1.Location = new System.Drawing.Point(0, 0);
-			//this.panel1.Margin = new System.Windows.Forms.Padding(4);
-			//this.panel1.Name = "panel1";
-			//this.panel1.Size = new System.Drawing.Size(504, 87);
-			//this.panel1.TabIndex = 6;
 			// 
 			// label1
 			// 
@@ -78,7 +70,7 @@
 			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
 			this.txtUsuario.Location = new System.Drawing.Point(351, 229);
-			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(348, 47);
@@ -93,10 +85,12 @@
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnRegresar.Location = new System.Drawing.Point(4, 10);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(49, 32);
 			this.btnRegresar.TabIndex = 4;
@@ -107,7 +101,7 @@
 			// 
 			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPassword.Location = new System.Drawing.Point(351, 295);
-			this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPassword.Multiline = true;
 			this.txtPassword.Name = "txtPassword";
 			this.txtPassword.PasswordChar = '*';
@@ -115,7 +109,6 @@
 			this.txtPassword.TabIndex = 10;
 			this.txtPassword.Text = "Contraseña";
 			this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
-			//this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
 			// 
 			// Login
 			// 
@@ -128,20 +121,16 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.txtPassword);
-			//this.Controls.Add(this.lblClave);
-			//this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnIngresar);
 			this.Controls.Add(this.btnRegresar);
 			this.DoubleBuffered = true;
 			this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "Login";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
-			//this.panel1.ResumeLayout(false);
-			//this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
