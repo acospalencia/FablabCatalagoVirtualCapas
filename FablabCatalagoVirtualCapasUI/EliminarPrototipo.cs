@@ -12,22 +12,22 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-    public partial class EliminarPrototipo : Form
-    {
-        public EliminarPrototipo()
-        {
-            InitializeComponent();
-        }
+	public partial class EliminarPrototipo : Form
+	{
+		public EliminarPrototipo()
+		{
+			InitializeComponent();
+		}
 
-        private void EliminarPrototipo_Load(object sender, EventArgs e)
-        {
+		private void EliminarPrototipo_Load(object sender, EventArgs e)
+		{
 			var regresarLista = new PrototipoBL();
 			dgVer.DataSource = regresarLista.regresarlista();
 		}
 
 		private void EliminarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
-            Application.Exit();
+			Application.Exit();
 		}
 
 		private void btnRegresar_Click(object sender, EventArgs e)
@@ -39,15 +39,15 @@ namespace FablabCatalagoVirtualCapasUI
 
 		private void dgVer_SelectionChanged(object sender, EventArgs e)
 		{
-            if (dgVer != null && dgVer.SelectedRows.Count > 0)
-            {
+			if (dgVer != null && dgVer.SelectedRows.Count > 0)
+			{
 				DataGridViewRow row = dgVer.SelectedRows[0];
-                if (row != null)
-                {
-                    txtId.Text = row.Cells[0].Value.ToString();
-                }
-            }
-        }
+				if (row != null)
+				{
+					txtId.Text = row.Cells[0].Value.ToString();
+				}
+			}
+		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
@@ -55,14 +55,19 @@ namespace FablabCatalagoVirtualCapasUI
 			{
 				Id = int.Parse(txtId.Text)
 			};
-            if (borrarProto != null)
-            {
+			if (borrarProto != null)
+			{
 				var eliminarProto = new PrototipoBL();
 				eliminarProto.Eliminar(borrarProto);
 				var actuaLista = new PrototipoBL();
 				dgVer.DataSource = null;
 				dgVer.DataSource = actuaLista.regresarlista();
 			}
-        }
+		}
+		private void btnLupa_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("esta es una funcion que pronto estara disponible");
+		}
 	}
 }
+

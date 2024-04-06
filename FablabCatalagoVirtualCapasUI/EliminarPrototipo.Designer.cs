@@ -40,11 +40,10 @@
 			// 
 			// txtBuscar
 			// 
-			this.txtBuscar.Location = new System.Drawing.Point(260, 62);
-			this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+			this.txtBuscar.Location = new System.Drawing.Point(195, 50);
 			this.txtBuscar.Multiline = true;
 			this.txtBuscar.Name = "txtBuscar";
-			this.txtBuscar.Size = new System.Drawing.Size(287, 30);
+			this.txtBuscar.Size = new System.Drawing.Size(216, 25);
 			this.txtBuscar.TabIndex = 1;
 			// 
 			// btnEliminar
@@ -58,10 +57,9 @@
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.Transparent;
-			this.btnEliminar.Location = new System.Drawing.Point(716, 202);
-			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnEliminar.Location = new System.Drawing.Point(537, 164);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(77, 85);
+			this.btnEliminar.Size = new System.Drawing.Size(58, 69);
 			this.btnEliminar.TabIndex = 2;
 			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -72,10 +70,9 @@
 			this.lblBuscarPrototipo.BackColor = System.Drawing.Color.Transparent;
 			this.lblBuscarPrototipo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblBuscarPrototipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.lblBuscarPrototipo.Location = new System.Drawing.Point(241, 30);
-			this.lblBuscarPrototipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblBuscarPrototipo.Location = new System.Drawing.Point(181, 24);
 			this.lblBuscarPrototipo.Name = "lblBuscarPrototipo";
-			this.lblBuscarPrototipo.Size = new System.Drawing.Size(319, 31);
+			this.lblBuscarPrototipo.Size = new System.Drawing.Size(245, 23);
 			this.lblBuscarPrototipo.TabIndex = 3;
 			this.lblBuscarPrototipo.Text = "Buscar prototipo a eliminar:";
 			// 
@@ -88,12 +85,12 @@
 			this.btnLupa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnLupa.Location = new System.Drawing.Point(559, 57);
-			this.btnLupa.Margin = new System.Windows.Forms.Padding(4);
+			this.btnLupa.Location = new System.Drawing.Point(419, 46);
 			this.btnLupa.Name = "btnLupa";
-			this.btnLupa.Size = new System.Drawing.Size(56, 39);
+			this.btnLupa.Size = new System.Drawing.Size(42, 32);
 			this.btnLupa.TabIndex = 4;
 			this.btnLupa.UseVisualStyleBackColor = false;
+			this.btnLupa.Click += new System.EventHandler(this.btnLupa_Click);
 			// 
 			// btnRegresar
 			// 
@@ -105,9 +102,8 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.Location = new System.Drawing.Point(0, 2);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(49, 39);
+			this.btnRegresar.Size = new System.Drawing.Size(37, 32);
 			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -115,29 +111,29 @@
 			// dgVer
 			// 
 			this.dgVer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgVer.Location = new System.Drawing.Point(16, 100);
-			this.dgVer.Margin = new System.Windows.Forms.Padding(4);
+			this.dgVer.Location = new System.Drawing.Point(12, 81);
 			this.dgVer.Name = "dgVer";
 			this.dgVer.RowHeadersWidth = 51;
-			this.dgVer.Size = new System.Drawing.Size(692, 306);
+			this.dgVer.Size = new System.Drawing.Size(519, 249);
 			this.dgVer.TabIndex = 6;
 			this.dgVer.SelectionChanged += new System.EventHandler(this.dgVer_SelectionChanged);
 			// 
 			// txtId
 			// 
-			this.txtId.Location = new System.Drawing.Point(683, 19);
+			this.txtId.Location = new System.Drawing.Point(563, 2);
+			this.txtId.Margin = new System.Windows.Forms.Padding(2);
 			this.txtId.Name = "txtId";
-			this.txtId.Size = new System.Drawing.Size(100, 22);
+			this.txtId.Size = new System.Drawing.Size(76, 20);
 			this.txtId.TabIndex = 7;
 			this.txtId.Visible = false;
 			// 
 			// EliminarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul2;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.ClientSize = new System.Drawing.Size(809, 421);
+			this.ClientSize = new System.Drawing.Size(607, 342);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.dgVer);
 			this.Controls.Add(this.btnRegresar);
@@ -145,7 +141,6 @@
 			this.Controls.Add(this.lblBuscarPrototipo);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.txtBuscar);
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "EliminarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

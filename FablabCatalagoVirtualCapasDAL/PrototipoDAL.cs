@@ -12,14 +12,22 @@ namespace FablabCatalagoVirtualCapasDAL
 		//crear la lista donde se ingresaran los nuevos prototipos
 		public static List<Prototipo> listaPrototipos = new List<Prototipo>()
 		{
-			new Prototipo {Id = 1, NombrePrototipo = "Robot de 3 ruedas", Dimensiones = 12*10, Descripcion = "pequeño robot de tres ruedas funcional",
-			TipoMaterial = "plastico"}
+			new Prototipo {Id = 1, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
+			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas"},
+			new Prototipo {Id = 2, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
+			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas"},
+			new Prototipo {Id = 3, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
+			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas"},
+			new Prototipo {Id = 4, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
+			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas"},
+			new Prototipo {Id = 5, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
+			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas"}
 		};
 
 		//metodo para agregar un nuevo prototipo a la lista
 		public void guardarNuevoPrototipo(Prototipo pPrototipo)
 		{
-			pPrototipo.Id = listaPrototipos.Select(listaPrototipos => listaPrototipos.Id).DefaultIfEmpty(0).Max() + 1 ;
+			pPrototipo.Id = listaPrototipos.Select(listaPrototipos => listaPrototipos.Id).DefaultIfEmpty(0).Max() + 1;
 			listaPrototipos.Add(pPrototipo);
 		}
 		//metodo para modificar un prototipo en la lista

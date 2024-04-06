@@ -55,9 +55,13 @@ namespace FablabCatalagoVirtualCapasUI
                 {
 					txtId.Text = row.Cells[0].Value.ToString();
                     txtNombre.Text = row.Cells[1].Value.ToString();
-                    txtPrecio.Text = row.Cells[3].Value.ToString();
-					txtTiempo.Text = row.Cells[7].Value.ToString();
-                }
+                    txtAlto.Text = row.Cells[3].Value.ToString();
+					txtAncho.Text = row.Cells[4].Value.ToString();
+					txtDescripcion.Text = row.Cells[5].Value.ToString();
+					txtDesign.Text = row.Cells[7].Value.ToString();
+					txtArmarlo.Text = row.Cells[8].Value.ToString();
+					txtFabricarlo.Text = row.Cells[9].Value.ToString();
+				}
             }
         }
 
@@ -68,8 +72,12 @@ namespace FablabCatalagoVirtualCapasUI
 				Id = int.Parse(txtId.Text),
 				NombrePrototipo = txtNombre.Text,
 				TipoMaterial = cbMaterial.Text,
-				TiempoTranscurrido = double.Parse(txtTiempo.Text),
-				Precio = double.Parse(txtTiempo.Text)
+				Ancho = double.Parse(txtAncho.Text),
+				Alto = double.Parse(txtAlto.Text),
+				TiempoArmado = txtArmarlo.Text,
+				TiempoDiseñado = txtDesign.Text,
+				TiempoFabricado = txtFabricarlo.Text,
+				Descripcion = txtDescripcion.Text
 			};
             if (modificar != null)
             {
@@ -78,8 +86,20 @@ namespace FablabCatalagoVirtualCapasUI
 				var Actualiazar = new PrototipoBL();
 				dgListado.DataSource = null;
 				dgListado.DataSource = Actualiazar.regresarlista();
+				txtDescripcion.Text = null;
+				txtAncho.Text = null;
+				txtNombre.Text = null;
+				txtAlto.Text = null;
+				txtDesign.Text = null;
+				txtArmarlo.Text = null;
+				txtFabricarlo.Text = null;
 			}
         }
+
+		private void btnLupa_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("esta es una funcion que pronto estara disponible");
+		}
 	}
 }
 

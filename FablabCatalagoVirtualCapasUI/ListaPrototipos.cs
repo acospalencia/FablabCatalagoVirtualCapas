@@ -40,7 +40,18 @@ namespace FablabCatalagoVirtualCapasUI
 		private void dgvlistaprototipos_SelectionChanged(object sender, EventArgs e)
 		{
 			btnSiguiente.Visible = true;
-		}
+
+            if (dgvlistaprototipos != null && dgvlistaprototipos.SelectedRows.Count > 0)
+            {
+				DataGridViewRow row = dgvlistaprototipos.SelectedRows[0];
+                if (row != null)
+                {
+                    formInfo.lblNombre.Text += row.Cells[1].Value.ToString();
+					formInfo.lblMaterial.Text += row.Cells[2].Value.ToString();
+					formInfo.lblDescripcion.Text += row.Cells[5].Value.ToString();
+				}
+            }
+        }
 
 		private void btnSiguiente_Click(object sender, EventArgs e)
 		{

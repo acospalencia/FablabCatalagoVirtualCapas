@@ -41,7 +41,7 @@ namespace FablabCatalagoVirtualCapasUI
 
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtPrecio.Text == "" && txtDescripcion.Text == ""
+			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtAlto.Text == "" && txtDescripcion.Text == ""
 				&& imgPrototipo.Image == null)
 			{
 				MessageBox.Show("Porfavor rellene todos los campos con la informacion que se le pide");
@@ -52,26 +52,28 @@ namespace FablabCatalagoVirtualCapasUI
 				{
 					NombrePrototipo = txtNombre.Text,
 					TipoMaterial = cbMaterial.Text,
-					TiempoTranscurrido = double.Parse(txtTiempo.Text),
-					Precio = double.Parse(txtPrecio.Text),
+					Ancho = double.Parse(txtAncho.Text),
+					Alto = double.Parse(txtAlto.Text),
 					Descripcion = txtDescripcion.Text,
-					ImagenPrototipo = imgPrototipo.Image
+					ImagenPrototipo = imgPrototipo.Image,
+					TiempoDiseñado = (txtTiempo.Text),
+					TiempoArmado = (txtArmarlo.Text),
+					TiempoFabricado = (txtFabricarlo.Text)
 				};
 				if (Guardardatos != null)
 				{
 					var guardarInfo = new PrototipoBL();
 					guardarInfo.Guardar(Guardardatos);
 					txtDescripcion.Text = null;
-					txtDimensiones.Text = null;
+					txtAncho.Text = null;
 					txtNombre.Text = null;
-					txtPrecio.Text = null;
+					txtAlto.Text = null;
 					txtTiempo.Text = null;
-					
+					txtArmarlo.Text = null;
+					txtFabricarlo.Text = null;
+					imgPrototipo.Image = null;
 				}
 			}
-
-
-
 		}
 
 		private void btnSubir_Click(object sender, EventArgs e)
@@ -94,5 +96,7 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
+
+
 	}
 }
