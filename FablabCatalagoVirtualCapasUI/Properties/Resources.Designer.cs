@@ -83,6 +83,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backimagenagregar {
+            get {
+                object obj = ResourceManager.GetObject("backimagenagregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_submit {
             get {
                 object obj = ResourceManager.GetObject("Boton submit", resourceCulture);
@@ -116,6 +126,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         internal static System.Drawing.Bitmap btnImage1 {
             get {
                 object obj = ResourceManager.GetObject("btnImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnprototipo {
+            get {
+                object obj = ResourceManager.GetObject("btnprototipo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +183,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Capa_24 {
+            get {
+                object obj = ResourceManager.GetObject("Capa 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eliminar {
             get {
                 object obj = ResourceManager.GetObject("eliminar", resourceCulture);
@@ -183,29 +213,9 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FABLABlogo {
-            get {
-                object obj = ResourceManager.GetObject("FABLABlogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap flecha {
             get {
                 object obj = ResourceManager.GetObject("flecha", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap flecha1 {
-            get {
-                object obj = ResourceManager.GetObject("flecha1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +283,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagenpanel {
+            get {
+                object obj = ResourceManager.GetObject("imagenpanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG1 {
             get {
                 object obj = ResourceManager.GetObject("IMG1", resourceCulture);
@@ -296,6 +316,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         internal static System.Drawing.Bitmap IMG3 {
             get {
                 object obj = ResourceManager.GetObject("IMG3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingresar {
+            get {
+                object obj = ResourceManager.GetObject("ingresar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +363,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap papelera_de_reciclaje {
+            get {
+                object obj = ResourceManager.GetObject("papelera-de-reciclaje", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul {
             get {
                 object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul", resourceCulture);
@@ -346,6 +386,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul__2_ {
             get {
                 object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Presentación_Proyecto_de_Negocios_Moderno_Azul__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Presentación Proyecto de Negocios Moderno Azul (7)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

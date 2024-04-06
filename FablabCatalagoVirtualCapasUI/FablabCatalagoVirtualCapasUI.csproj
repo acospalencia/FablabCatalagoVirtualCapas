@@ -285,7 +285,31 @@
     <None Include="Resources\imagelogin.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnprototipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimagenagregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelera-de-reciclaje.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
