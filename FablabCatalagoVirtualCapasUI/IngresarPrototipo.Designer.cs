@@ -73,6 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(11, 34);
@@ -86,6 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(11, 202);
@@ -94,11 +96,13 @@
             this.label2.Size = new System.Drawing.Size(260, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tiempo requerido para diseñarlo:";
+
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(288, 34);
@@ -108,17 +112,20 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Tipo de material usado:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(11, 147);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(257, 19);
+
             this.label4.TabIndex = 4;
             this.label4.Text = "Altura de el prototipo finalizado: ";
             // 
@@ -126,6 +133,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(292, 202);
@@ -135,11 +143,14 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Descripcion:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // btnSubir
             // 
             this.btnSubir.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.btnSubir.Location = new System.Drawing.Point(662, 336);
+
             this.btnSubir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(136, 33);
@@ -150,10 +161,12 @@
             // 
             // imgPrototipo
             // 
+
             this.imgPrototipo.Location = new System.Drawing.Point(571, 5);
             this.imgPrototipo.Margin = new System.Windows.Forms.Padding(2);
             this.imgPrototipo.Name = "imgPrototipo";
             this.imgPrototipo.Size = new System.Drawing.Size(305, 321);
+
             this.imgPrototipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgPrototipo.TabIndex = 8;
             this.imgPrototipo.TabStop = false;
@@ -162,12 +175,16 @@
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.CadetBlue;
             this.btnConfirmar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.btnConfirmar.Location = new System.Drawing.Point(793, 385);
+
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(93, 44);
             this.btnConfirmar.TabIndex = 9;
+
             this.btnConfirmar.Text = "Confirmar Datos";
+
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
@@ -175,64 +192,78 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(11, 93);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(251, 19);
+
             this.label7.TabIndex = 10;
             this.label7.Text = "Ancho de el prototipo finalizado:";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtNombre.Location = new System.Drawing.Point(15, 55);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(247, 22);
+
             this.txtNombre.TabIndex = 11;
             // 
             // txtAncho
             // 
+
             this.txtAncho.Location = new System.Drawing.Point(15, 117);
             this.txtAncho.Margin = new System.Windows.Forms.Padding(2);
             this.txtAncho.Name = "txtAncho";
             this.txtAncho.Size = new System.Drawing.Size(247, 20);
+
             this.txtAncho.TabIndex = 12;
             // 
             // txtTiempo
             // 
+
             this.txtTiempo.Location = new System.Drawing.Point(15, 235);
             this.txtTiempo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTiempo.Name = "txtTiempo";
             this.txtTiempo.Size = new System.Drawing.Size(247, 20);
+
             this.txtTiempo.TabIndex = 13;
             // 
             // txtAlto
             // 
+
             this.txtAlto.Location = new System.Drawing.Point(15, 173);
             this.txtAlto.Margin = new System.Windows.Forms.Padding(2);
             this.txtAlto.Name = "txtAlto";
             this.txtAlto.Size = new System.Drawing.Size(247, 20);
+
             this.txtAlto.TabIndex = 14;
             // 
             // txtDescripcion
             // 
+
             this.txtDescripcion.Location = new System.Drawing.Point(292, 235);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(251, 114);
+
             this.txtDescripcion.TabIndex = 15;
             // 
             // cbMaterial
             // 
             this.cbMaterial.FormattingEnabled = true;
+
             this.cbMaterial.Location = new System.Drawing.Point(292, 56);
             this.cbMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.cbMaterial.Name = "cbMaterial";
             this.cbMaterial.Size = new System.Drawing.Size(251, 21);
+
             this.cbMaterial.TabIndex = 16;
             // 
             // openFileDialog1
@@ -243,6 +274,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
+
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(288, 93);
@@ -260,11 +292,13 @@
             this.txtArmarlo.Size = new System.Drawing.Size(247, 20);
             this.txtArmarlo.TabIndex = 18;
             this.txtArmarlo.TextChanged += new System.EventHandler(this.txtArmarlo_TextChanged);
+
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
+
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(288, 147);
@@ -280,6 +314,7 @@
             this.txtFabricarlo.Margin = new System.Windows.Forms.Padding(2);
             this.txtFabricarlo.Name = "txtFabricarlo";
             this.txtFabricarlo.Size = new System.Drawing.Size(247, 20);
+
             this.txtFabricarlo.TabIndex = 20;
             // 
             // IngresarPrototipo
@@ -288,7 +323,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.ClientSize = new System.Drawing.Size(887, 428);
+
             this.Controls.Add(this.txtFabricarlo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtArmarlo);
