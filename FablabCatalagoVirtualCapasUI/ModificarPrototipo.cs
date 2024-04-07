@@ -100,7 +100,22 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			MessageBox.Show("esta es una funcion que pronto estara disponible");
 		}
-	}
+
+        private void txtDesign_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFabricarlo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 
 

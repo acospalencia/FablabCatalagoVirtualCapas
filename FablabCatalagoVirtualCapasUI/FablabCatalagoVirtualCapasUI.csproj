@@ -311,5 +311,8 @@
   <ItemGroup>
     <None Include="Resources\papelera-de-reciclaje.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
