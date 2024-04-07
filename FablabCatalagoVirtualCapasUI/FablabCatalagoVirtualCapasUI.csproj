@@ -287,5 +287,8 @@
   <ItemGroup>
     <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

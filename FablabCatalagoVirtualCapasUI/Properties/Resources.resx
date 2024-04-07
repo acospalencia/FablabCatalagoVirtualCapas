@@ -118,84 +118,62 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-
-  <data name="IMG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FABLABlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FABLABlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Presentación Proyecto de Negocios Moderno Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnImage.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Capa 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Capa 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnImage1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Capa 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Capa 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eliminar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Presentación Proyecto de Negocios Moderno Azul2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoFablab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FABLABlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="azulmar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\azulmar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Capa 22" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Capa 22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boton submit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boton submit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoFablab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoFablab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hola." type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hola..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagelogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagelogin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoFablab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FABLABlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Capa 23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Capa 23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hola." type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hola..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lupa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FABLABlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FABLABlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnImage1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eliminar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Presentación Proyecto de Negocios Moderno Azul (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagelogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagelogin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Presentación Proyecto de Negocios Moderno Azul2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Presentación Proyecto de Negocios Moderno Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boton submit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boton submit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capa 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capa 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imageback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imageback.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -203,14 +181,37 @@
   <data name="azulmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\azulmar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capa 22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capa 22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Presentación Proyecto de Negocios Moderno Azul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flecha2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Presentación Proyecto de Negocios Moderno Azul (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  <data name="Capa 23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capa 23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoFablab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoFablab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lupa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnImage.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Presentación Proyecto de Negocios Moderno Azul3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
