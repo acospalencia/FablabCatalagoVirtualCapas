@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			this.txtBuscar = new System.Windows.Forms.TextBox();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.lblBuscarPrototipo = new System.Windows.Forms.Label();
@@ -150,6 +151,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgVer)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 
         }
 

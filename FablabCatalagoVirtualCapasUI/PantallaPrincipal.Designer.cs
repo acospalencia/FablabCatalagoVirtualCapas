@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnIngresar = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -135,7 +136,7 @@
         private System.Windows.Forms.Button btnIngresar;
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnVer;
     }
 }
