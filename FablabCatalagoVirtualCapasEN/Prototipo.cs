@@ -19,6 +19,6 @@ namespace FablabCatalagoVirtualCapasEN
 		public string TiempoDiseñado { get; set;}
 		public string TiempoArmado { get; set; }
 		public string TiempoFabricado { get; set; }
-
+		public string Autor {  get; set; }
 	}
 }

@@ -72,7 +72,8 @@ namespace FablabCatalagoVirtualCapasUI
 				TiempoArmado = txtArmarlo.Text,
 				TiempoDiseñado = txtDesign.Text,
 				TiempoFabricado = txtFabricarlo.Text,
-				Descripcion = txtDescripcion.Text
+				Descripcion = txtDescripcion.Text,
+				Autor = txtAutor.Text
 			};
             if (modificar != null)
             {

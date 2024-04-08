@@ -56,9 +56,11 @@ namespace FablabCatalagoVirtualCapasUI
 					Alto = double.Parse(txtAlto.Text),
 					Descripcion = txtDescripcion.Text,
 					ImagenPrototipo = imgPrototipo.Image,
-					TiempoDiseñado = (txtTiempo.Text),
-					TiempoArmado = (txtArmarlo.Text),
-					TiempoFabricado = (txtFabricarlo.Text)
+					TiempoDiseñado = txtTiempo.Text,
+					TiempoArmado = txtArmarlo.Text,
+					TiempoFabricado = txtFabricarlo.Text,
+					Autor = txtAutor.Text
+
 				};
 				if (Guardardatos != null)
 				{
