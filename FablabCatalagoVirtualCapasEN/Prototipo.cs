@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace FablabCatalagoVirtualCapasEN
 {
 	public class Prototipo
-	{
+	{ 
+		//Crear atributos
 		public int Id { get; set; }
 		public string NombrePrototipo { get; set; }
 		public string TipoMaterial { get; set; }
@@ -19,6 +20,6 @@ namespace FablabCatalagoVirtualCapasEN
 		public string TiempoDiseñado { get; set;}
 		public string TiempoArmado { get; set; }
 		public string TiempoFabricado { get; set; }
-
+		public string Autor {  get; set; }
 	}
 }

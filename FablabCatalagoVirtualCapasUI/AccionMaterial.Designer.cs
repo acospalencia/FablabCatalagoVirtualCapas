@@ -68,7 +68,9 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+
             this.btnModificar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.editar__1_1;
+
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -85,7 +87,7 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.ingresar;
+            this.btnAgregar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnIngresar;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

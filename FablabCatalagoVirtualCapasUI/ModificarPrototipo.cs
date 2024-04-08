@@ -18,31 +18,26 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ModificarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
-
+		//metodo para que al cargar el formulario se actualice el datagrid con los datos de la lista
         private void ModificarPrototipo_Load(object sender, EventArgs e)
         {
 			var regresarlista = new PrototipoBL();
 			dgListado.DataSource = regresarlista.regresarlista();
 
 		}
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click_1(object sender, EventArgs e)
 		{
 			var anteriorForm = new AgregarPrototipo();
 			anteriorForm.Show();
 			this.Hide();
 		}
-
+		//metodo para que al seleccionar una fila en el datagrid la informacion se pase a los textbox
 		private void dgListado_SelectionChanged(object sender, EventArgs e)
 		{
 			var ingresar = new MaterialesBL();
@@ -64,7 +59,7 @@ namespace FablabCatalagoVirtualCapasUI
 				}
             }
         }
-
+		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
 			var modificar = new Prototipo
@@ -77,7 +72,8 @@ namespace FablabCatalagoVirtualCapasUI
 				TiempoArmado = txtArmarlo.Text,
 				TiempoDiseñado = txtDesign.Text,
 				TiempoFabricado = txtFabricarlo.Text,
-				Descripcion = txtDescripcion.Text
+				Descripcion = txtDescripcion.Text,
+				Autor = txtAutor.Text
 			};
             if (modificar != null)
             {
@@ -95,12 +91,30 @@ namespace FablabCatalagoVirtualCapasUI
 				txtFabricarlo.Text = null;
 			}
         }
-
+		//metodo para buscar un objeto en la lista dependiendo en su Id
 		private void btnLupa_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("esta es una funcion que pronto estara disponible");
+			//MessageBox.Show("esta es una funcion que pronto estara disponible");
+			{
+				if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
+				{
+					var regresarlista = new PrototipoBL();
+					dgListado.DataSource = regresarlista.regresarlista();
+				}
+
+				if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+				{
+					var Lista = new PrototipoBL();
+					var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
+					dgListado.DataSource = prototiposFiltrados;
+				}
+				else
+				{
+					MessageBox.Show("Ingrese un número válido en el campo para buscar.");
+				}
+			}
 		}
-	}
+    }
 }
 
 

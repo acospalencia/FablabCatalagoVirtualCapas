@@ -18,25 +18,27 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
+		//metodo para hacer referencia a los label y textbox de otro formulario
 		public InformacionPrototipos formInfo = new InformacionPrototipos();
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ListaPrototipos_FormClosing(object sender, FormClosingEventArgs e)
 		{
             Application.Exit();
 		}
-
+		//metodo para mostrar el formulario anterior
 		private void btncancelar_Click_1(object sender, EventArgs e)
 		{
 			var formregresar = new PantallaPrincipal();
 			formregresar.Show();
 			this.Hide();
 		}
-
+		//metodo para que el datagrid se actualice al cargar el formulario
 		private void ListaPrototipos_Load(object sender, EventArgs e)
 		{
 			var regresarLista = new PrototipoBL();
 			dgvlistaprototipos.DataSource = regresarLista.regresarlista();
 		}
-
+		//metodo para que al seleccionar una fila en el datagrid la informacion se pase a los textbox
 		private void dgvlistaprototipos_SelectionChanged(object sender, EventArgs e)
 		{
 			btnSiguiente.Visible = true;
@@ -52,11 +54,12 @@ namespace FablabCatalagoVirtualCapasUI
 				}
             }
         }
-
+		//metodo para mostrar el siguiente formulario
 		private void btnSiguiente_Click(object sender, EventArgs e)
 		{
 			formInfo.Show();
 			this.Hide();
 		}
+
 	}
 }

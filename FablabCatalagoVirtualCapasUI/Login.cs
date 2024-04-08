@@ -18,12 +18,7 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-
-        private void lblClave_Click(object sender, EventArgs e)
-        {
-
-        }
-
+		//metodo para verificar si la credenciales ingresadas son correctas
 		private void btnIngresar_Click(object sender, EventArgs e)
 		{
             var inicioSesion = new User   
@@ -48,30 +43,25 @@ namespace FablabCatalagoVirtualCapasUI
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
             var formPrincipal = new PantallaPrincipal();
             formPrincipal.Show();
             this.Hide();
 		}
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void Login_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //metodo para eliminar lo que hay dentro de el txtbox y cambiarle el color
 		private void txtUsuario_MouseClick(object sender, MouseEventArgs e)
 		{
             txtUsuario.Text = "";
             txtUsuario.ForeColor = SystemColors.WindowText;
 		}
-
+		//metodo para eliminar lo que hay dentro de el txtbox y cambiarle el color
 		private void txtPassword_MouseClick(object sender, MouseEventArgs e)
 		{
 			txtPassword.Text = "";
