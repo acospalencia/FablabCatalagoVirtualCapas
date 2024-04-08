@@ -28,5 +28,5 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.Exit();
 		}
-	}
+    }
 }
