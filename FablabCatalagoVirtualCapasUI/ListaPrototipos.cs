@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
+
     public partial class ListaPrototipos : Form
     {
+		DataGridViewRow test;
         public ListaPrototipos()
         {
             InitializeComponent();
@@ -41,16 +43,13 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para que al seleccionar una fila en el datagrid la informacion se pase a los textbox
 		private void dgvlistaprototipos_SelectionChanged(object sender, EventArgs e)
 		{
-			btnSiguiente.Visible = true;
-
             if (dgvlistaprototipos != null && dgvlistaprototipos.SelectedRows.Count > 0)
             {
 				DataGridViewRow row = dgvlistaprototipos.SelectedRows[0];
                 if (row != null)
                 {
-                    formInfo.lblNombre.Text += row.Cells[1].Value.ToString();
-					formInfo.lblMaterial.Text += row.Cells[2].Value.ToString();
-					formInfo.lblDescripcion.Text += row.Cells[5].Value.ToString();
+					test = row;
+					btnSiguiente.Visible = true;
 				}
             }
         }
@@ -59,7 +58,15 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			formInfo.Show();
 			this.Hide();
+			formInfo.lblNombre.Text += test.Cells[1].Value.ToString();
+			formInfo.lblMaterial.Text += test.Cells[2].Value.ToString();
+			formInfo.lblDescripcion.Text += test.Cells[5].Value.ToString();
+			formInfo.lblAlto.Text += test.Cells[3].Value.ToString();
+			formInfo.lblAncho.Text += test.Cells[4].Value.ToString();
+			formInfo.lblArmar.Text += test.Cells[8].Value.ToString();
+			formInfo.lblDesign.Text += test.Cells[7].Value.ToString();
+			formInfo.lblFab.Text += test.Cells[9].Value.ToString();
+			formInfo.lblAutor.Text += test.Cells[10].Value.ToString();
 		}
-
 	}
 }

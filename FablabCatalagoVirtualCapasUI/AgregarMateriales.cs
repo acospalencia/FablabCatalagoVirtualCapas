@@ -16,17 +16,22 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 			var formRegresar = new AccionMaterial();
 			formRegresar.Show();
 		}
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void AgregarMateriales_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
+		}
+		//metodo para agregar un nuevo material a la lista de materiales
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

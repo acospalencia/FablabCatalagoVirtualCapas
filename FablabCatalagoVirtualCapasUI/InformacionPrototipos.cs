@@ -16,21 +16,22 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
 		}
-
-		private void InformacionPrototipos_Load(object sender, EventArgs e)
-		{
-		}
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
 			var formRegresar = new ListaPrototipos();
 			formRegresar.Show();
 			this.Hide();
 		}
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void InformacionPrototipos_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

@@ -102,7 +102,6 @@
 			this.lblTitulo.Size = new System.Drawing.Size(357, 36);
 			this.lblTitulo.TabIndex = 0;
 			this.lblTitulo.Text = "Elija la opción  a realizar";
-			this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
 			// 
 			// btnRegresar
 			// 

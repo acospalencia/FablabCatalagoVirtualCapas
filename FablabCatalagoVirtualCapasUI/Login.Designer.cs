@@ -39,10 +39,14 @@
 			// 
 			this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatAppearance.BorderSize = 0;
+			this.btnIngresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+			this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnIngresar.Location = new System.Drawing.Point(263, 293);
+			this.btnIngresar.Location = new System.Drawing.Point(346, 356);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
-			this.btnIngresar.Size = new System.Drawing.Size(262, 34);
+			this.btnIngresar.Size = new System.Drawing.Size(349, 42);
 			this.btnIngresar.TabIndex = 5;
 			this.btnIngresar.UseVisualStyleBackColor = false;
 			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -53,9 +57,10 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label1.Location = new System.Drawing.Point(346, 140);
+			this.label1.Location = new System.Drawing.Point(461, 172);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(101, 20);
+			this.label1.Size = new System.Drawing.Size(125, 25);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Iniciar sesion";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,10 +69,11 @@
 			// 
 			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
-			this.txtUsuario.Location = new System.Drawing.Point(261, 185);
+			this.txtUsuario.Location = new System.Drawing.Point(348, 228);
+			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
-			this.txtUsuario.Size = new System.Drawing.Size(262, 39);
+			this.txtUsuario.Size = new System.Drawing.Size(348, 47);
 			this.txtUsuario.TabIndex = 9;
 			this.txtUsuario.Text = "Usuario";
 			this.txtUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsuario_MouseClick);
@@ -79,11 +85,15 @@
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(3, 8);
+			this.btnRegresar.Location = new System.Drawing.Point(-2, 7);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(37, 26);
+			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
 			this.btnRegresar.TabIndex = 4;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -91,23 +101,24 @@
 			// txtPassword
 			// 
 			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPassword.Location = new System.Drawing.Point(261, 239);
+			this.txtPassword.Location = new System.Drawing.Point(348, 294);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPassword.Multiline = true;
 			this.txtPassword.Name = "txtPassword";
 			this.txtPassword.PasswordChar = '*';
-			this.txtPassword.Size = new System.Drawing.Size(262, 39);
+			this.txtPassword.Size = new System.Drawing.Size(348, 47);
 			this.txtPassword.TabIndex = 10;
 			this.txtPassword.Text = "Contraseña";
 			this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
 			// 
 			// Login
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundLogin;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(800, 440);
+			this.ClientSize = new System.Drawing.Size(1067, 542);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.txtPassword);
@@ -115,6 +126,7 @@
 			this.Controls.Add(this.btnRegresar);
 			this.DoubleBuffered = true;
 			this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "Login";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
