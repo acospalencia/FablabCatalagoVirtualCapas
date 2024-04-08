@@ -58,5 +58,10 @@ namespace FablabCatalagoVirtualCapasUI
 			formInfo.Show();
 			this.Hide();
 		}
+
+		private void dgvlistaprototipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
 	}
 }

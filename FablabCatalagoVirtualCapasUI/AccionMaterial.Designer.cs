@@ -67,7 +67,7 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.papelera_de_reciclaje;
+            this.btnModificar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnElimnar2;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -84,7 +84,7 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.ingresar;
+            this.btnAgregar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnIngresar;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

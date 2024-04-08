@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionPrototipos));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnRegresar = new System.Windows.Forms.Button();
@@ -68,7 +67,7 @@
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
-			this.btnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegresar.BackgroundImage")));
+			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
 			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -199,7 +198,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.IMG3;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundInfo;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.txtArmar);

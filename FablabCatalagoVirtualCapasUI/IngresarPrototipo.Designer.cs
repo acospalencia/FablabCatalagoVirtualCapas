@@ -55,7 +55,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.flecha;
+            this.button1.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -321,7 +321,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul__2_;
+            this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundIngresar;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
             this.ClientSize = new System.Drawing.Size(887, 428);

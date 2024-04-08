@@ -47,6 +47,7 @@
 			this.dgvlistaprototipos.RowHeadersWidth = 51;
 			this.dgvlistaprototipos.Size = new System.Drawing.Size(794, 256);
 			this.dgvlistaprototipos.TabIndex = 2;
+			this.dgvlistaprototipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistaprototipos_CellContentClick);
 			this.dgvlistaprototipos.SelectionChanged += new System.EventHandler(this.dgvlistaprototipos_SelectionChanged);
 			// 
 			// panel1
@@ -103,7 +104,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.IMG2;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundLista;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.btnRegresar);

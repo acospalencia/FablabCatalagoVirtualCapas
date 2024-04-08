@@ -79,7 +79,7 @@
 			// btnLupa
 			// 
 			this.btnLupa.BackColor = System.Drawing.Color.Transparent;
-			this.btnLupa.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.lupa2;
+			this.btnLupa.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnBuscar;
 			this.btnLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnLupa.FlatAppearance.BorderSize = 0;
 			this.btnLupa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -95,7 +95,7 @@
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
-			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Capa_2;
+			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
 			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -131,7 +131,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Presentación_Proyecto_de_Negocios_Moderno_Azul2;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.backgroundEliminar;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(607, 342);
 			this.Controls.Add(this.txtId);
