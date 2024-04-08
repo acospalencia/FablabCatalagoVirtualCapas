@@ -311,5 +311,17 @@
   <ItemGroup>
     <None Include="Resources\papelera-de-reciclaje.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elejiraccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarmateriales.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

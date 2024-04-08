@@ -63,6 +63,16 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregarmateriales {
+            get {
+                object obj = ResourceManager.GetObject("agregarmateriales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap azulmar {
             get {
                 object obj = ResourceManager.GetObject("azulmar", resourceCulture);
@@ -186,6 +196,36 @@ namespace FablabCatalagoVirtualCapasUI.Properties {
         internal static System.Drawing.Bitmap Capa_24 {
             get {
                 object obj = ResourceManager.GetObject("Capa 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("editar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("editar (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elejiraccion {
+            get {
+                object obj = ResourceManager.GetObject("elejiraccion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
