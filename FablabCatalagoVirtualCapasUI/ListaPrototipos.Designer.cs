@@ -47,7 +47,6 @@
 			this.dgvlistaprototipos.RowHeadersWidth = 51;
 			this.dgvlistaprototipos.Size = new System.Drawing.Size(794, 256);
 			this.dgvlistaprototipos.TabIndex = 2;
-			this.dgvlistaprototipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistaprototipos_CellContentClick);
 			this.dgvlistaprototipos.SelectionChanged += new System.EventHandler(this.dgvlistaprototipos_SelectionChanged);
 			// 
 			// panel1

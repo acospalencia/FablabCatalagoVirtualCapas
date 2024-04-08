@@ -18,19 +18,20 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			InitializeComponent();
 		}
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void IngresarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
-
+		//metodo para mostrar el formulario anterior
 		private void button1_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 			var formRegresar = new AgregarPrototipo();
 			formRegresar.Show();
 		}
-
+		//metodo para que el combobox se actulice con los datos dentro de la lista de materiales al cargar 
+		//el formulario
 		private void IngresarPrototipo_Load(object sender, EventArgs e)
 		{
 			var materialBL = new MaterialesBL();
@@ -38,7 +39,7 @@ namespace FablabCatalagoVirtualCapasUI
 			cbMaterial.DisplayMember = "nombreMaterial";
 			cbMaterial.SelectedIndex = 0;
 		}
-
+		//metodo para agregar un nuevo prototipo a la lista de prototipos
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
 			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtAlto.Text == "" && txtDescripcion.Text == ""
@@ -77,7 +78,7 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
-
+		//metodo para subir una imagen al picturebox
 		private void imgPrototipo_Click(object sender, EventArgs e)
 		{
 			openFileDialog1 = new OpenFileDialog();
