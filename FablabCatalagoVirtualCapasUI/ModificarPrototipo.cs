@@ -19,11 +19,6 @@ namespace FablabCatalagoVirtualCapasUI
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
 		private void ModificarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
@@ -98,23 +93,26 @@ namespace FablabCatalagoVirtualCapasUI
 
 		private void btnLupa_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("esta es una funcion que pronto estara disponible");
+			//MessageBox.Show("esta es una funcion que pronto estara disponible");
+			{
+				if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
+				{
+					var regresarlista = new PrototipoBL();
+					dgListado.DataSource = regresarlista.regresarlista();
+				}
+
+				if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+				{
+					var Lista = new PrototipoBL();
+					var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
+					dgListado.DataSource = prototiposFiltrados;
+				}
+				else
+				{
+					MessageBox.Show("Ingrese un número válido en el campo para buscar.");
+				}
+			}
 		}
-
-        private void txtDesign_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbMaterial_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFabricarlo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

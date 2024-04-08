@@ -77,7 +77,6 @@ namespace FablabCatalagoVirtualCapasUI
 			lblAlto.Size = new System.Drawing.Size(63, 19);
 			lblAlto.TabIndex = 3;
 			lblAlto.Text = "Altura:";
-			lblAlto.Click += new System.EventHandler(this.label3_Click);
 			// 
 			// lblNombre
 			// 
@@ -204,7 +203,6 @@ namespace FablabCatalagoVirtualCapasUI
 			this.cbMaterial.Name = "cbMaterial";
 			this.cbMaterial.Size = new System.Drawing.Size(234, 21);
 			this.cbMaterial.TabIndex = 12;
-			this.cbMaterial.SelectedIndexChanged += new System.EventHandler(this.cbMaterial_SelectedIndexChanged);
 			// 
 			// txtbuscar
 			// 
@@ -230,7 +228,6 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtFabricarlo.Name = "txtFabricarlo";
 			this.txtFabricarlo.Size = new System.Drawing.Size(227, 20);
 			this.txtFabricarlo.TabIndex = 26;
-			this.txtFabricarlo.TextChanged += new System.EventHandler(this.txtFabricarlo_TextChanged);
 			// 
 			// label8
 			// 
@@ -273,7 +270,6 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtDesign.Name = "txtDesign";
 			this.txtDesign.Size = new System.Drawing.Size(234, 20);
 			this.txtDesign.TabIndex = 22;
-			this.txtDesign.TextChanged += new System.EventHandler(this.txtDesign_TextChanged);
 			// 
 			// label2
 			// 

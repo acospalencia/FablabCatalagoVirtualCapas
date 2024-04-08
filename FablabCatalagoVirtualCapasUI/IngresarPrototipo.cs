@@ -76,7 +76,7 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 		}
 
-		private void btnSubir_Click(object sender, EventArgs e)
+		private void imgPrototipo_Click(object sender, EventArgs e)
 		{
 			openFileDialog1 = new OpenFileDialog();
 			openFileDialog1.Title = "Seleccionar iamgen";
@@ -96,20 +96,5 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
-
-        private void txtArmarlo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }
