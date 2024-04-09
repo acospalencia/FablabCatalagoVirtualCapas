@@ -58,7 +58,7 @@
 			this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btnIngresar.FlatAppearance.BorderSize = 2;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnIngresar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnIngresar.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIngresar.Location = new System.Drawing.Point(96, 379);
 			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnIngresar.Name = "btnIngresar";
@@ -88,7 +88,7 @@
 			this.btnVer.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btnVer.FlatAppearance.BorderSize = 2;
 			this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnVer.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnVer.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnVer.ForeColor = System.Drawing.Color.Snow;
 			this.btnVer.Location = new System.Drawing.Point(96, 242);
 			this.btnVer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
