@@ -34,6 +34,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnVer = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -60,7 +61,7 @@
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnIngresar.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIngresar.Location = new System.Drawing.Point(96, 379);
-			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
 			this.btnIngresar.Size = new System.Drawing.Size(337, 50);
 			this.btnIngresar.TabIndex = 5;
@@ -76,7 +77,7 @@
 			this.panel1.Controls.Add(this.btnIngresar);
 			this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panel1.Location = new System.Drawing.Point(517, -1);
-			this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.panel1.Margin = new System.Windows.Forms.Padding(4);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(555, 548);
 			this.panel1.TabIndex = 7;
@@ -91,7 +92,7 @@
 			this.btnVer.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnVer.ForeColor = System.Drawing.Color.Snow;
 			this.btnVer.Location = new System.Drawing.Point(96, 242);
-			this.btnVer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnVer.Margin = new System.Windows.Forms.Padding(4);
 			this.btnVer.Name = "btnVer";
 			this.btnVer.Size = new System.Drawing.Size(337, 50);
 			this.btnVer.TabIndex = 5;
@@ -104,12 +105,29 @@
 			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
 			this.pictureBox1.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.logoFablab;
 			this.pictureBox1.Location = new System.Drawing.Point(96, 244);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(320, 233);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.Purple;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.button1.Location = new System.Drawing.Point(0, -1);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(20, 24);
+			this.button1.TabIndex = 7;
+			this.button1.Text = "?";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// PantallaPrincipal
 			// 
@@ -120,11 +138,12 @@
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundMain;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1067, 542);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.panel1);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "PantallaPrincipal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -144,5 +163,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVer;
-    }
+		private System.Windows.Forms.Button button1;
+	}
 }

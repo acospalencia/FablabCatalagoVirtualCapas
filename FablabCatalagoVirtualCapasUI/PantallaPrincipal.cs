@@ -45,5 +45,12 @@ namespace FablabCatalagoVirtualCapasUI
         {
 
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var formAbout = new AcercaNosotros();
+			formAbout.Show();
+			this.Hide();
+		}
+	}
 }

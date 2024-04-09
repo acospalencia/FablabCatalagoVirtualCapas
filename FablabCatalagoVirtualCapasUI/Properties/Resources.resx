@@ -133,8 +133,8 @@
   <data name="backgroundEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundEliminar.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagepicturebox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagepicturebox2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackgroundLista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundLista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackgroundAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackgroundAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,9 +148,6 @@
   <data name="btnIngresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnIngresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="papelera-de-reciclaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papelera-de-reciclaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnElimnar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnElimnar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +159,9 @@
   </data>
   <data name="BackgroundIngresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackgroundIngresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackgroundLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundLogin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregarmateriales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregarmateriales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +175,17 @@
   <data name="Boton submit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton submit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Presentación Proyecto de Negocios Moderno Azul (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul (2).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackgorundModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgorundModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capa 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capa 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editar (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capa 23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capa 23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackgroundInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackgroundInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +199,14 @@
   <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flecha1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Capa 23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Capa 23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Presentación Proyecto de Negocios Moderno Azul (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentación Proyecto de Negocios Moderno Azul (2).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoFablab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoFablab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BackgroundLista" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackgroundLista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="papelera-de-reciclaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papelera-de-reciclaje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FlechaAtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FlechaAtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,9 +229,6 @@
   <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Capa 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Capa 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="backimagenagregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backimagenagregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,10 +238,10 @@
   <data name="btnBuscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnBuscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BackgroundLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackgroundLogin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imagepicturebox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagepicturebox2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BackgorundModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackgorundModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
