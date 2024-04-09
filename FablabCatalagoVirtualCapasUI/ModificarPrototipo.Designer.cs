@@ -287,7 +287,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtDesign
 			// 
 			this.txtDesign.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDesign.Location = new System.Drawing.Point(29, 352);
+			this.txtDesign.Location = new System.Drawing.Point(29, 346);
 			this.txtDesign.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtDesign.Name = "txtDesign";
 			this.txtDesign.Size = new System.Drawing.Size(311, 27);
@@ -299,7 +299,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label2.Location = new System.Drawing.Point(24, 315);
+			this.label2.Location = new System.Drawing.Point(24, 309);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(303, 25);
 			this.label2.TabIndex = 21;

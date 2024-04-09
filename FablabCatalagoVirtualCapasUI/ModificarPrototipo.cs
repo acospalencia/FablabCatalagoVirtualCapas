@@ -18,6 +18,19 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			InitializeComponent();
 		}
+		//metodo para validar que todos los textbox esten llenos
+		private bool validar()
+		{
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+				!string.IsNullOrEmpty(cbMaterial.Text) &&
+				!string.IsNullOrEmpty(txtAlto.Text) &&
+				!string.IsNullOrEmpty(txtDesign.Text) &&
+				!string.IsNullOrEmpty(txtAutor.Text) &&
+				!string.IsNullOrEmpty(txtArmarlo.Text) &&
+				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
+				!string.IsNullOrEmpty(txtDescripcion.Text) &&
+				!string.IsNullOrEmpty(txtAncho.Text);
+		}
 		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ModificarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -62,33 +75,42 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
-			var modificar = new Prototipo
+            if ( validar())
+            {
+				var modificar = new Prototipo
+				{
+					Id = int.Parse(txtId.Text),
+					NombrePrototipo = txtNombre.Text,
+					TipoMaterial = cbMaterial.Text,
+					Ancho = double.Parse(txtAncho.Text),
+					Alto = double.Parse(txtAlto.Text),
+					TiempoArmado = txtArmarlo.Text,
+					TiempoDiseñado = txtDesign.Text,
+					TiempoFabricado = txtFabricarlo.Text,
+					Descripcion = txtDescripcion.Text,
+					Autor = txtAutor.Text
+				};
+				if (modificar != null)
+				{
+					var modificarLista = new PrototipoBL();
+					modificarLista.Modificar(modificar);
+					var Actualiazar = new PrototipoBL();
+					dgListado.DataSource = null;
+					dgListado.DataSource = Actualiazar.regresarlista();
+					txtDescripcion.Text = null;
+					txtAncho.Text = null;
+					txtNombre.Text = null;
+					txtAlto.Text = null;
+					txtDesign.Text = null;
+					txtArmarlo.Text = null;
+					txtFabricarlo.Text = null;
+					MessageBox.Show("Los datos se han Actualizado con exito");
+				}
+            
+			}
+			else
 			{
-				Id = int.Parse(txtId.Text),
-				NombrePrototipo = txtNombre.Text,
-				TipoMaterial = cbMaterial.Text,
-				Ancho = double.Parse(txtAncho.Text),
-				Alto = double.Parse(txtAlto.Text),
-				TiempoArmado = txtArmarlo.Text,
-				TiempoDiseñado = txtDesign.Text,
-				TiempoFabricado = txtFabricarlo.Text,
-				Descripcion = txtDescripcion.Text,
-				Autor = txtAutor.Text
-			};
-			if (modificar != null)
-			{
-				var modificarLista = new PrototipoBL();
-				modificarLista.Modificar(modificar);
-				var Actualiazar = new PrototipoBL();
-				dgListado.DataSource = null;
-				dgListado.DataSource = Actualiazar.regresarlista();
-				txtDescripcion.Text = null;
-				txtAncho.Text = null;
-				txtNombre.Text = null;
-				txtAlto.Text = null;
-				txtDesign.Text = null;
-				txtArmarlo.Text = null;
-				txtFabricarlo.Text = null;
+				MessageBox.Show("porfavor rellene los correspondientees textboxx");
 			}
 		}
 		//metodo para buscar un objeto en la lista dependiendo en su Id

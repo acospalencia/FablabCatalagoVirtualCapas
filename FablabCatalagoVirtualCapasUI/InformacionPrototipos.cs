@@ -33,5 +33,10 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 
 		}
+
+		private void lblDescripcion_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

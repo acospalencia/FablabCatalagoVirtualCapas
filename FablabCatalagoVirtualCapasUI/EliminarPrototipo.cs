@@ -62,6 +62,7 @@ namespace FablabCatalagoVirtualCapasUI
 				var actuaLista = new PrototipoBL();
 				dgVer.DataSource = null;
 				dgVer.DataSource = actuaLista.regresarlista();
+				MessageBox.Show("Los datos se han Eliminado con exito");
 			}
 		}
 		//metodo para buscar un prototipo dentro de el datagrid por el ID

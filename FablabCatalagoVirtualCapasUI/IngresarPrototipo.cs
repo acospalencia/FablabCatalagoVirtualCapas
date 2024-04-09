@@ -18,6 +18,19 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			InitializeComponent();
 		}
+		//metodo para validar que todos los textbox esten llenos
+		private bool validar()
+		{
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+				!string.IsNullOrEmpty(cbMaterial.Text) &&
+				!string.IsNullOrEmpty(txtAlto.Text) &&
+				!string.IsNullOrEmpty(txtTiempo.Text) &&
+				!string.IsNullOrEmpty(txtAutor.Text) &&
+				!string.IsNullOrEmpty(txtArmarlo.Text) &&
+				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
+				!string.IsNullOrEmpty(txtDescripcion.Text) &&
+				!string.IsNullOrEmpty(txtAncho.Text);
+		}
 		//metodo para que la aplicacion se cierre al darle a la x 
 		private void IngresarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -42,12 +55,7 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para agregar un nuevo prototipo a la lista de prototipos
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtAlto.Text == "" && txtDescripcion.Text == ""
-				&& imgPrototipo.Image == null)
-			{
-				MessageBox.Show("Porfavor rellene todos los campos con la informacion que se le pide");
-			}
-			else
+			if (validar())
 			{
 				var Guardardatos = new Prototipo
 				{
@@ -75,9 +83,16 @@ namespace FablabCatalagoVirtualCapasUI
 					txtArmarlo.Text = null;
 					txtFabricarlo.Text = null;
 					imgPrototipo.Image = null;
+					MessageBox.Show("Los datos se han ingresado con exito");
 				}
 			}
+			else
+			{
+				MessageBox.Show("porfavor rellene los correspondientees textboxx");
+			}
+
 		}
+
 		//metodo para subir una imagen al picturebox
 		private void imgPrototipo_Click(object sender, EventArgs e)
 		{

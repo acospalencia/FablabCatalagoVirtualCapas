@@ -67,6 +67,8 @@ namespace FablabCatalagoVirtualCapasUI
 			formInfo.lblDesign.Text += test.Cells[7].Value.ToString();
 			formInfo.lblFab.Text += test.Cells[9].Value.ToString();
 			formInfo.lblAutor.Text += test.Cells[10].Value.ToString();
+			Image imagen = (Image)test.Cells[6].Value;
+			formInfo.imgProtoripo.Image = imagen;
 		}
 	}
 }

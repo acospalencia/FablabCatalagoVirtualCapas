@@ -72,6 +72,7 @@ namespace FablabCatalagoVirtualCapasUI
 				txtAncho.Text = null;
 				txtTipo.Text = null;
 				txtNombre.Text = null;
+				MessageBox.Show("Los datos se han ingresado con exito");
 			}
 			else
 			{

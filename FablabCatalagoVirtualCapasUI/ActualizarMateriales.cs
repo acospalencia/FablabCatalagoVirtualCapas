@@ -132,6 +132,7 @@ namespace FablabCatalagoVirtualCapasUI
 				txtTipo.Text = null;
 				txtNombre.Text = null;
 				btnModificar.Visible = false;
+				MessageBox.Show("Los datos se han Actualizado con exito");
 			}
 			else
 			{
