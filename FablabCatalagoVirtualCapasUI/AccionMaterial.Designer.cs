@@ -107,6 +107,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.AliceBlue;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.elejiraccion;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -116,6 +117,7 @@
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.label1);
 			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "AccionMaterial";

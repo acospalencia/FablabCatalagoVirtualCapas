@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-    public partial class InicioSesion : Form
-    {
-        public InicioSesion()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class AcercaNosotros : Form
+	{
+		public AcercaNosotros()
+		{
+			InitializeComponent();
+		}
+	}
 }

@@ -20,11 +20,7 @@ namespace FablabCatalagoVirtualCapasBL
         {
             materialesDAL.actualizarMaterial(pMateriales);
         }
-        public void eliminarMaterial (Materiales pMateriales)
-        {
-            materialesDAL.eliminarMateriales(pMateriales);
-        }
-        public List<Materiales> regresarLista ()
+           public List<Materiales> regresarLista ()
         {
             return materialesDAL.regresarLista();        
         }

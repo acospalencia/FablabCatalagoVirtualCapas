@@ -56,6 +56,12 @@
     <Compile Include="AccionMaterial.Designer.cs">
       <DependentUpon>AccionMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="AcercaNosotros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaNosotros.Designer.cs">
+      <DependentUpon>AcercaNosotros.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +104,6 @@
     <Compile Include="IngresarPrototipo.Designer.cs">
       <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +133,9 @@
     <EmbeddedResource Include="AccionMaterial.resx">
       <DependentUpon>AccionMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AcercaNosotros.resx">
+      <DependentUpon>AcercaNosotros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarMateriales.resx">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarPrototipo.resx">
       <DependentUpon>IngresarPrototipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPrototipos.resx">
       <DependentUpon>ListaPrototipos.cs</DependentUpon>
@@ -314,7 +314,6 @@
     <None Include="Resources\papelera-de-reciclaje.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\editar %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -386,7 +385,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagepicturebox2.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

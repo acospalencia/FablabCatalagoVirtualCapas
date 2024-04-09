@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPrototipos));
 			this.btnSiguiente = new System.Windows.Forms.Button();
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.dgvlistaprototipos = new System.Windows.Forms.DataGridView();
@@ -56,6 +57,7 @@
 			// 
 			// btnRegresar
 			// 
+			this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -113,6 +115,7 @@
 			this.Controls.Add(this.btnSiguiente);
 			this.Controls.Add(this.dgvlistaprototipos);
 			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "ListaPrototipos";

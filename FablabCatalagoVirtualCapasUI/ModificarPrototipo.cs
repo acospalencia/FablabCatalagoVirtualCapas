@@ -94,7 +94,7 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para buscar un objeto en la lista dependiendo en su Id
 		private void btnLupa_Click(object sender, EventArgs e)
 		{
-			//MessageBox.Show("esta es una funcion que pronto estara disponible");
+			
 
 			if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
 			{
