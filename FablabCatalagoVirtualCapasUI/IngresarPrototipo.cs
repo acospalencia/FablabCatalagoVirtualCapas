@@ -18,19 +18,33 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			InitializeComponent();
 		}
-
+		//metodo para validar que todos los textbox esten llenos
+		private bool validar()
+		{
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+				!string.IsNullOrEmpty(cbMaterial.Text) &&
+				!string.IsNullOrEmpty(txtAlto.Text) &&
+				!string.IsNullOrEmpty(txtTiempo.Text) &&
+				!string.IsNullOrEmpty(txtAutor.Text) &&
+				!string.IsNullOrEmpty(txtArmarlo.Text) &&
+				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
+				!string.IsNullOrEmpty(txtDescripcion.Text) &&
+				!string.IsNullOrEmpty(txtAncho.Text);
+		}
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void IngresarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
-
+		//metodo para mostrar el formulario anterior
 		private void button1_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 			var formRegresar = new AgregarPrototipo();
 			formRegresar.Show();
 		}
-
+		//metodo para que el combobox se actulice con los datos dentro de la lista de materiales al cargar 
+		//el formulario
 		private void IngresarPrototipo_Load(object sender, EventArgs e)
 		{
 			var materialBL = new MaterialesBL();
@@ -38,15 +52,10 @@ namespace FablabCatalagoVirtualCapasUI
 			cbMaterial.DisplayMember = "nombreMaterial";
 			cbMaterial.SelectedIndex = 0;
 		}
-
+		//metodo para agregar un nuevo prototipo a la lista de prototipos
 		private void btnConfirmar_Click(object sender, EventArgs e)
 		{
-			if (txtNombre.Text == "" && txtTiempo.Text == "" && txtAlto.Text == "" && txtDescripcion.Text == ""
-				&& imgPrototipo.Image == null)
-			{
-				MessageBox.Show("Porfavor rellene todos los campos con la informacion que se le pide");
-			}
-			else
+			if (validar())
 			{
 				var Guardardatos = new Prototipo
 				{
@@ -56,9 +65,11 @@ namespace FablabCatalagoVirtualCapasUI
 					Alto = double.Parse(txtAlto.Text),
 					Descripcion = txtDescripcion.Text,
 					ImagenPrototipo = imgPrototipo.Image,
-					TiempoDiseñado = (txtTiempo.Text),
-					TiempoArmado = (txtArmarlo.Text),
-					TiempoFabricado = (txtFabricarlo.Text)
+					TiempoDiseñado = txtTiempo.Text,
+					TiempoArmado = txtArmarlo.Text,
+					TiempoFabricado = txtFabricarlo.Text,
+					Autor = txtAutor.Text
+
 				};
 				if (Guardardatos != null)
 				{
@@ -72,15 +83,24 @@ namespace FablabCatalagoVirtualCapasUI
 					txtArmarlo.Text = null;
 					txtFabricarlo.Text = null;
 					imgPrototipo.Image = null;
+					txtAutor.Text = null;
+					imgPrototipo.Image = Properties.Resources.imagepicturebox;
+					MessageBox.Show("Los datos se han ingresado con exito");
 				}
 			}
+			else
+			{
+				MessageBox.Show("porfavor rellene los correspondientees textboxx");
+			}
+
 		}
 
-		private void btnSubir_Click(object sender, EventArgs e)
+		//metodo para subir una imagen al picturebox
+		private void imgPrototipo_Click(object sender, EventArgs e)
 		{
 			openFileDialog1 = new OpenFileDialog();
 			openFileDialog1.Title = "Seleccionar iamgen";
-			openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+			openFileDialog1.Filter = "Archivos de imagen *.jpg;*.jpeg;*.png;*.gif;*.bmp|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				string rutaImagen = openFileDialog1.FileName;
@@ -96,7 +116,5 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
-
-
 	}
 }

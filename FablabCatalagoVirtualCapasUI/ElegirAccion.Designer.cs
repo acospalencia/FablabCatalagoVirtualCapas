@@ -38,34 +38,40 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(201, 42);
+			this.label1.Location = new System.Drawing.Point(268, 52);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(261, 23);
+			this.label1.Size = new System.Drawing.Size(343, 31);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Que seccion desea administrar";
+			this.label1.Text = "Que sección desea administrar";
 			// 
 			// btnMaterial
 			// 
+			this.btnMaterial.BackColor = System.Drawing.Color.Transparent;
 			this.btnMaterial.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnMaterial.Location = new System.Drawing.Point(120, 171);
+			this.btnMaterial.Location = new System.Drawing.Point(121, 210);
+			this.btnMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnMaterial.Name = "btnMaterial";
-			this.btnMaterial.Size = new System.Drawing.Size(140, 56);
+			this.btnMaterial.Size = new System.Drawing.Size(260, 69);
 			this.btnMaterial.TabIndex = 1;
 			this.btnMaterial.Text = "Materiales";
-			this.btnMaterial.UseVisualStyleBackColor = true;
+			this.btnMaterial.UseVisualStyleBackColor = false;
 			this.btnMaterial.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// btnPrototipo
 			// 
+			this.btnPrototipo.BackColor = System.Drawing.Color.Transparent;
 			this.btnPrototipo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPrototipo.Location = new System.Drawing.Point(385, 171);
+			this.btnPrototipo.Location = new System.Drawing.Point(503, 210);
+			this.btnPrototipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnPrototipo.Name = "btnPrototipo";
-			this.btnPrototipo.Size = new System.Drawing.Size(140, 56);
+			this.btnPrototipo.Size = new System.Drawing.Size(260, 69);
 			this.btnPrototipo.TabIndex = 2;
 			this.btnPrototipo.Text = "Prototipos";
-			this.btnPrototipo.UseVisualStyleBackColor = true;
+			this.btnPrototipo.UseVisualStyleBackColor = false;
 			this.btnPrototipo.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// btnRegresar
@@ -79,23 +85,30 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(5, 7);
+			this.btnRegresar.Location = new System.Drawing.Point(7, 9);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(37, 26);
+			this.btnRegresar.Size = new System.Drawing.Size(49, 32);
 			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
 			// ElegirAccion
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.ClientSize = new System.Drawing.Size(692, 369);
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.BackColor = System.Drawing.Color.Cornsilk;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.elejiraccion;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(923, 454);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnPrototipo);
 			this.Controls.Add(this.btnMaterial);
 			this.Controls.Add(this.label1);
+			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.MaximizeBox = false;
 			this.Name = "ElegirAccion";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

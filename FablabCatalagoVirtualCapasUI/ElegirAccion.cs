@@ -16,26 +16,26 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			InitializeComponent();
 		}
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ElegirAccion_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
-
+		//metodo para mostrar el siguiente formulario
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var formMateriales = new AccionMaterial();
 			formMateriales.Show();
 			this.Hide();
 		}
-
+		//metodo para mostrar el siguiente formulario
 		private void button2_Click(object sender, EventArgs e)
 		{
 			var formAgregarProto = new AgregarPrototipo();
 			formAgregarProto.Show();
 			this.Hide();
 		}
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
 			this.Hide();

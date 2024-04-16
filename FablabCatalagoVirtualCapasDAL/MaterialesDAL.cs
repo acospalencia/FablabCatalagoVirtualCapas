@@ -12,7 +12,7 @@ namespace FablabCatalagoVirtualCapasDAL
         private static List<Materiales> listaMateriales = new List<Materiales>()
         {
             new Materiales{ Id = 1, nombreMaterial = "Plastico pvc", tipoMaterial = "plastico", Ancho = 12, Altura = 20, precio = 10, proveedor = "compañia de juanito", },
-			new Materiales{ Id = 1, nombreMaterial = "Playwood", tipoMaterial = "plastico", Ancho = 12, Altura = 20, precio = 10, proveedor = "compañia de juanito", }
+			new Materiales{ Id = 2, nombreMaterial = "Playwood", tipoMaterial = "plastico", Ancho = 12, Altura = 20, precio = 10, proveedor = "compañia de juanito", }
 		};
 
         public List<Materiales> regresarLista()

@@ -30,43 +30,23 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccionMaterial));
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnAgregar = new System.Windows.Forms.Button();
-			this.btnModificar = new System.Windows.Forms.Button();
 			this.btnRegresar = new System.Windows.Forms.Button();
+			this.btnModificar = new System.Windows.Forms.Button();
+			this.btnAgregar = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(321, 52);
+			this.label1.Location = new System.Drawing.Point(392, 55);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(97, 23);
+			this.label1.Size = new System.Drawing.Size(224, 51);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Materiales";
-			// 
-			// btnAgregar
-			// 
-			this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAgregar.Location = new System.Drawing.Point(154, 197);
-			this.btnAgregar.Name = "btnAgregar";
-			this.btnAgregar.Size = new System.Drawing.Size(155, 52);
-			this.btnAgregar.TabIndex = 1;
-			this.btnAgregar.Text = "Agregar";
-			this.btnAgregar.UseVisualStyleBackColor = true;
-			this.btnAgregar.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// btnModificar
-			// 
-			this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnModificar.Location = new System.Drawing.Point(464, 197);
-			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(155, 52);
-			this.btnModificar.TabIndex = 2;
-			this.btnModificar.Text = "Modificar";
-			this.btnModificar.UseVisualStyleBackColor = true;
-			this.btnModificar.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// btnRegresar
 			// 
@@ -79,23 +59,66 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(12, 12);
+			this.btnRegresar.Location = new System.Drawing.Point(16, 15);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(37, 26);
+			this.btnRegresar.Size = new System.Drawing.Size(49, 32);
 			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
+			// btnModificar
+			// 
+			this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+			this.btnModificar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.editar__1_1;
+			this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnModificar.FlatAppearance.BorderSize = 0;
+			this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnModificar.Location = new System.Drawing.Point(636, 215);
+			this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnModificar.Name = "btnModificar";
+			this.btnModificar.Size = new System.Drawing.Size(135, 112);
+			this.btnModificar.TabIndex = 2;
+			this.btnModificar.UseVisualStyleBackColor = false;
+			this.btnModificar.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// btnAgregar
+			// 
+			this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+			this.btnAgregar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnIngresar;
+			this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnAgregar.FlatAppearance.BorderSize = 0;
+			this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAgregar.Location = new System.Drawing.Point(203, 215);
+			this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnAgregar.Name = "btnAgregar";
+			this.btnAgregar.Size = new System.Drawing.Size(173, 112);
+			this.btnAgregar.TabIndex = 1;
+			this.btnAgregar.UseVisualStyleBackColor = false;
+			this.btnAgregar.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// AccionMaterial
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.BackColor = System.Drawing.Color.AliceBlue;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.elejiraccion;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(1067, 564);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.label1);
+			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "AccionMaterial";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

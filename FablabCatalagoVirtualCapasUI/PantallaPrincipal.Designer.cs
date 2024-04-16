@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnIngresar = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnVer = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -52,13 +54,12 @@
 			// 
 			// btnIngresar
 			// 
-			this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
-			this.btnIngresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnImage1;
+			this.btnIngresar.BackColor = System.Drawing.Color.MediumOrchid;
 			this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btnIngresar.FlatAppearance.BorderSize = 2;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnIngresar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnIngresar.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIngresar.Location = new System.Drawing.Point(96, 379);
 			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
@@ -83,13 +84,12 @@
 			// 
 			// btnVer
 			// 
-			this.btnVer.BackColor = System.Drawing.Color.Transparent;
-			this.btnVer.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnImage;
+			this.btnVer.BackColor = System.Drawing.Color.MediumOrchid;
 			this.btnVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnVer.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btnVer.FlatAppearance.BorderSize = 2;
 			this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnVer.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnVer.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnVer.ForeColor = System.Drawing.Color.Snow;
 			this.btnVer.Location = new System.Drawing.Point(96, 242);
 			this.btnVer.Margin = new System.Windows.Forms.Padding(4);
@@ -103,7 +103,7 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox1.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.logoFablab1;
+			this.pictureBox1.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.logoFablab;
 			this.pictureBox1.Location = new System.Drawing.Point(96, 244);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
@@ -112,17 +112,37 @@
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.Purple;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.button1.Location = new System.Drawing.Point(0, -1);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(20, 24);
+			this.button1.TabIndex = 7;
+			this.button1.Text = "?";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// PantallaPrincipal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Imageback;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundMain;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1067, 542);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.panel1);
 			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "PantallaPrincipal";
@@ -141,7 +161,8 @@
         private System.Windows.Forms.Button btnIngresar;
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.PictureBox pictureBox1;
-    }
+        private System.Windows.Forms.Button btnVer;
+		private System.Windows.Forms.Button button1;
+	}
 }

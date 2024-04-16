@@ -16,12 +16,12 @@ namespace FablabCatalagoVirtualCapasUI
         {
             InitializeComponent();
         }
-
+		//metodo para que la aplicacion se cierre al darle a la x 
 		private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
+		//metodo para mostrar el siguiente formulario
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
             this.Hide();
@@ -29,7 +29,7 @@ namespace FablabCatalagoVirtualCapasUI
             formModified.Show();
 		}
 
-
+		//metodo para mostrar el formulario anterior
 		private void btnRegresar_Click(object sender, EventArgs e)
 		{
             this.Hide();
@@ -37,16 +37,7 @@ namespace FablabCatalagoVirtualCapasUI
             menuprincipal.Show();
 		}
 
-
-		private void btnIngresar_Click(object sender, EventArgs e)
-		{
-            this.Hide();
-            var formIngresarprototipo = new IngresarPrototipo();
-            formIngresarprototipo.Show();
-
-
-		}
-
+		//metodo para mostrar el siguiente formulario
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
             var formEliminar = new EliminarPrototipo();
@@ -54,5 +45,12 @@ namespace FablabCatalagoVirtualCapasUI
             this.Hide();
 
 		}
-	}
+		//metodo para mostrar el siguiente formulario
+		private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formIngresarPrototipo = new IngresarPrototipo();
+            formIngresarPrototipo.Show();
+        }
+    }
 }

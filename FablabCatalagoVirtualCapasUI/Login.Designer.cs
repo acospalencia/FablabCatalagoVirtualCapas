@@ -40,10 +40,11 @@
 			// 
 			this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatAppearance.BorderSize = 0;
+			this.btnIngresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnIngresar.Location = new System.Drawing.Point(351, 358);
+			this.btnIngresar.Location = new System.Drawing.Point(346, 356);
 			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
 			this.btnIngresar.Size = new System.Drawing.Size(349, 42);
@@ -69,7 +70,7 @@
 			// 
 			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
-			this.txtUsuario.Location = new System.Drawing.Point(351, 229);
+			this.txtUsuario.Location = new System.Drawing.Point(348, 228);
 			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
@@ -81,18 +82,19 @@
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
-			this.btnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegresar.BackgroundImage")));
+			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(4, 10);
+			this.btnRegresar.Location = new System.Drawing.Point(-2, 7);
 			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(49, 32);
+			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
 			this.btnRegresar.TabIndex = 4;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -100,7 +102,7 @@
 			// txtPassword
 			// 
 			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPassword.Location = new System.Drawing.Point(351, 295);
+			this.txtPassword.Location = new System.Drawing.Point(348, 294);
 			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPassword.Multiline = true;
 			this.txtPassword.Name = "txtPassword";
@@ -114,10 +116,11 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.imagelogin;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundLogin;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1075, 546);
+			this.ClientSize = new System.Drawing.Size(1067, 542);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.txtPassword);
@@ -125,6 +128,7 @@
 			this.Controls.Add(this.btnRegresar);
 			this.DoubleBuffered = true;
 			this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "Login";

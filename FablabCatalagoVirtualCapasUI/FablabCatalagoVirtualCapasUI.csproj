@@ -56,6 +56,12 @@
     <Compile Include="AccionMaterial.Designer.cs">
       <DependentUpon>AccionMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="AcercaNosotros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaNosotros.Designer.cs">
+      <DependentUpon>AcercaNosotros.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +104,6 @@
     <Compile Include="IngresarPrototipo.Designer.cs">
       <DependentUpon>IngresarPrototipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AccionMaterial.resx">
       <DependentUpon>AccionMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcercaNosotros.resx">
+      <DependentUpon>AcercaNosotros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActualizarMateriales.resx">
       <DependentUpon>ActualizarMateriales.cs</DependentUpon>
@@ -169,17 +172,16 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -285,7 +287,107 @@
     <None Include="Resources\imagelogin.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.png" />
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capa 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnprototipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backimagenagregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelera-de-reciclaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elejiraccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarmateriales.png" />
+    <None Include="Resources\Presentación Proyecto de Negocios Moderno Azul1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundMain.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoFablab1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgorundModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Botonsubmit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundLogin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundLista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundIngresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBuscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundEliminar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnElimnar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIngresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagepicturebox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagepicturebox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagepicturebox2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoNosotros.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
