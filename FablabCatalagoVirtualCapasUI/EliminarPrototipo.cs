@@ -44,6 +44,7 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgVer.SelectedRows[0];
 				if (row != null)
 				{
+					btnEliminar.Enabled = true;
 					txtId.Text = row.Cells[0].Value.ToString();
 				}
 			}
@@ -62,18 +63,18 @@ namespace FablabCatalagoVirtualCapasUI
 				var actuaLista = new PrototipoBL();
 				dgVer.DataSource = null;
 				dgVer.DataSource = actuaLista.regresarlista();
+				txtId.Text = null;
+				btnEliminar.Enabled = false;
 				MessageBox.Show("Los datos se han Eliminado con exito");
 			}
 		}
 		//metodo para buscar un prototipo dentro de el datagrid por el ID
-		private void btnLupa_Click(object sender, EventArgs e)
+		private void txtbuscar_TextChanged(object sender, EventArgs e)
 		{
-			//MessageBox.Show("esta es una funcion que pronto estara disponible");
-
 			if (txtbuscar.Text == "" || txtbuscar.Text == null)
 			{
 				var regresarlista = new PrototipoBL();
-				dgVer.DataSource = regresarlista.regresarlista(); 
+				dgVer.DataSource = regresarlista.regresarlista();
 			}
 
 			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
@@ -81,10 +82,6 @@ namespace FablabCatalagoVirtualCapasUI
 				var Lista = new PrototipoBL();
 				var prototiposFiltrados = Lista.regresarlista().Where(i => i.Id == idBuscada).ToList();
 				dgVer.DataSource = prototiposFiltrados;
-			}
-			else
-			{
-				MessageBox.Show("Ingrese un número válido en el campo para buscar.");
 			}
 		}
 	}

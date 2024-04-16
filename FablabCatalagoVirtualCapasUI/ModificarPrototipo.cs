@@ -69,6 +69,11 @@ namespace FablabCatalagoVirtualCapasUI
 					txtDesign.Text = row.Cells[7].Value.ToString();
 					txtArmarlo.Text = row.Cells[8].Value.ToString();
 					txtFabricarlo.Text = row.Cells[9].Value.ToString();
+					txtAutor.Text = row.Cells[10].Value.ToString();
+					cbMaterial.Text = row.Cells[2].Value.ToString();
+					Image imagen  = (Image)row.Cells[6].Value;
+					img.Image = imagen;
+					
 				}
 			}
 		}
@@ -88,7 +93,8 @@ namespace FablabCatalagoVirtualCapasUI
 					TiempoDiseñado = txtDesign.Text,
 					TiempoFabricado = txtFabricarlo.Text,
 					Descripcion = txtDescripcion.Text,
-					Autor = txtAutor.Text
+					Autor = txtAutor.Text,
+					ImagenPrototipo = img.Image
 				};
 				if (modificar != null)
 				{
@@ -104,6 +110,8 @@ namespace FablabCatalagoVirtualCapasUI
 					txtDesign.Text = null;
 					txtArmarlo.Text = null;
 					txtFabricarlo.Text = null;
+					txtAutor.Text = null;
+					img.Image = null;
 					MessageBox.Show("Los datos se han Actualizado con exito");
 				}
             
@@ -114,10 +122,8 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 		}
 		//metodo para buscar un objeto en la lista dependiendo en su Id
-		private void btnLupa_Click(object sender, EventArgs e)
+		private void txtbuscar_TextChanged(object sender, EventArgs e)
 		{
-			
-
 			if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
 			{
 				var regresarlista = new PrototipoBL();
@@ -130,11 +136,7 @@ namespace FablabCatalagoVirtualCapasUI
 				var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgListado.DataSource = prototiposFiltrados;
 			}
-			else
-			{
-				MessageBox.Show("Ingrese un número válido en el campo para buscar.");
-			}
-
+			
 		}
 	}
 }

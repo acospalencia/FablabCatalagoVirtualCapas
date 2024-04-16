@@ -83,6 +83,8 @@ namespace FablabCatalagoVirtualCapasUI
 					txtArmarlo.Text = null;
 					txtFabricarlo.Text = null;
 					imgPrototipo.Image = null;
+					txtAutor.Text = null;
+					imgPrototipo.Image = Properties.Resources.imagepicturebox;
 					MessageBox.Show("Los datos se han ingresado con exito");
 				}
 			}
@@ -98,7 +100,7 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			openFileDialog1 = new OpenFileDialog();
 			openFileDialog1.Title = "Seleccionar iamgen";
-			openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+			openFileDialog1.Filter = "Archivos de imagen *.jpg;*.jpeg;*.png;*.gif;*.bmp|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				string rutaImagen = openFileDialog1.FileName;

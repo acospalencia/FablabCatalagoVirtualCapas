@@ -65,8 +65,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnLupa = new System.Windows.Forms.Button();
 			this.txtAutor = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
+			this.img = new System.Windows.Forms.PictureBox();
 			lblAlto = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgListado)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblAlto
@@ -232,6 +234,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtbuscar.Name = "txtbuscar";
 			this.txtbuscar.Size = new System.Drawing.Size(400, 32);
 			this.txtbuscar.TabIndex = 14;
+			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
 			// 
 			// txtId
 			// 
@@ -342,7 +345,6 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnLupa.Size = new System.Drawing.Size(56, 39);
 			this.btnLupa.TabIndex = 29;
 			this.btnLupa.UseVisualStyleBackColor = false;
-			this.btnLupa.Click += new System.EventHandler(this.btnLupa_Click);
 			// 
 			// txtAutor
 			// 
@@ -365,6 +367,15 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label9.TabIndex = 30;
 			this.label9.Text = "Autor:";
 			// 
+			// img
+			// 
+			this.img.Location = new System.Drawing.Point(1208, 566);
+			this.img.Name = "img";
+			this.img.Size = new System.Drawing.Size(43, 51);
+			this.img.TabIndex = 32;
+			this.img.TabStop = false;
+			this.img.Visible = false;
+			// 
 			// ModificarPrototipo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +385,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1237, 620);
+			this.Controls.Add(this.img);
 			this.Controls.Add(this.txtAutor);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.btnLupa);
@@ -409,6 +421,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModificarPrototipo_FormClosing);
 			this.Load += new System.EventHandler(this.ModificarPrototipo_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgListado)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -440,6 +453,7 @@ namespace FablabCatalagoVirtualCapasUI
 		private Button btnLupa;
 		private TextBox txtAutor;
 		private Label label9;
+		private PictureBox img;
 	}
 
         //private System.Windows.Forms.Panel panel1;

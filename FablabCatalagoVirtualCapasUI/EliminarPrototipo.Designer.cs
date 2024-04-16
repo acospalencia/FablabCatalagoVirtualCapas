@@ -46,12 +46,15 @@
 			this.txtbuscar.Name = "txtbuscar";
 			this.txtbuscar.Size = new System.Drawing.Size(287, 30);
 			this.txtbuscar.TabIndex = 1;
+			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
 			// 
 			// btnEliminar
 			// 
 			this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
 			this.btnEliminar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnEliminar;
 			this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnEliminar.Enabled = false;
 			this.btnEliminar.FlatAppearance.BorderSize = 0;
 			this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -81,7 +84,6 @@
 			this.btnLupa.Size = new System.Drawing.Size(56, 39);
 			this.btnLupa.TabIndex = 4;
 			this.btnLupa.UseVisualStyleBackColor = false;
-			this.btnLupa.Click += new System.EventHandler(this.btnLupa_Click);
 			// 
 			// btnRegresar
 			// 
