@@ -38,5 +38,6 @@ namespace FablabCatalagoVirtualCapasDAL
 			SqlDataReader reader = pComando.ExecuteReader(CommandBehavior.CloseConnection);
 			return reader;
 		}
+
 	}
 }
