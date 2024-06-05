@@ -5,49 +5,76 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using FablabCatalagoVirtualCapasEN;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+
 	public class PrototipoDAL
 	{
-		//crear la lista donde se ingresaran los nuevos prototipos
-		public static List<Prototipo> listaPrototipos = new List<Prototipo>()
-		{
-			new Prototipo {Id = 1, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
-			TipoMaterial = "Resina", TiempoArmado = "4 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas", Autor = "Carlos"},
-			new Prototipo {Id = 2, NombrePrototipo = "Sistema de regado", Ancho = 5 , Alto = 2, Descripcion = "Sistema de regado para jardines",
-			TipoMaterial = "Plastico pvc", TiempoArmado = "2 Horas", TiempoDiseñado = "5 Horas", TiempoFabricado = "5 Horas", Autor = "FabLab"},
-			new Prototipo {Id = 3, NombrePrototipo = "Barco de onepiece", Ancho = 25 , Alto = 20, Descripcion = "Barco hecho de playwood de la iconica serie onepiece",
-			TipoMaterial = "Playwood", TiempoArmado = "5 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "3 Horas", Autor = "Alejandra"},
-			new Prototipo {Id = 4, NombrePrototipo = "Lapicera de madera", Ancho = 5 , Alto = 9, Descripcion = "Lapicera de madera con el logo institucional grabado en playwood",
-			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas", Autor = "Nicole"},
-			new Prototipo {Id = 5, NombrePrototipo = "Robot de 3 ruedas", Ancho = 12 , Alto = 10, Descripcion = "pequeño robot de tres ruedas funcional",
-			TipoMaterial = "plastico", TiempoArmado = "2 Horas", TiempoDiseñado = "4 Horas", TiempoFabricado = "5 Horas", Autor = "Yulisa"}
-		};
-
 		//metodo para agregar un nuevo prototipo a la lista
-		public void guardarNuevoPrototipo(Prototipo pPrototipo)
+		public int guardarNuevoPrototipo(Prototipo pPrototipo)
 		{
-			pPrototipo.Id = listaPrototipos.Select(listaPrototipos => listaPrototipos.Id).DefaultIfEmpty(0).Max() + 1;
-			listaPrototipos.Add(pPrototipo);
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spAgregarPrototipo";
+			cmd.Parameters.AddWithValue("@NombrePrototipo", pPrototipo.NombrePrototipo);
+			cmd.Parameters.AddWithValue("@IdMaterial", pPrototipo.IdMaterial);
+			cmd.Parameters.AddWithValue("@X", pPrototipo.X);
+			cmd.Parameters.AddWithValue("@Y", pPrototipo.Y);
+			cmd.Parameters.AddWithValue("@Z", pPrototipo.Z);
+			cmd.Parameters.AddWithValue("@Descripcion", pPrototipo.Descripcion);
+			cmd.Parameters.AddWithValue("@Imagen", pPrototipo.Imagen);
+			cmd.Parameters.AddWithValue("@IdDuracion", pPrototipo.IdDuracion);
+			cmd.Parameters.AddWithValue("@IdEstado", pPrototipo.IdEstado);
+			cmd.Parameters.AddWithValue("@IdMaquinaria", pPrototipo.IdMaquinaria);
+			return ComunBD.EjecutarComand(cmd);
 		}
 		//metodo para modificar un prototipo en la lista
-		public void ModificarPrototipo(Prototipo pPrototipo)
+		public int ModificarPrototipo(Prototipo pPrototipo)
 		{
-			var modificar = listaPrototipos.FirstOrDefault(i => i.Id == pPrototipo.Id);
-			listaPrototipos.Add(pPrototipo);
-			listaPrototipos.Remove(modificar);
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spActualizarPrototipo";
+			cmd.Parameters.AddWithValue("@Id", pPrototipo.Id);
+			cmd.Parameters.AddWithValue("@NombrePrototipo", pPrototipo.NombrePrototipo);
+			cmd.Parameters.AddWithValue("@IdMaterial", pPrototipo.IdMaterial);
+			cmd.Parameters.AddWithValue("@X", pPrototipo.X);
+			cmd.Parameters.AddWithValue("@Y", pPrototipo.Y);
+			cmd.Parameters.AddWithValue("@Z", pPrototipo.Z);
+			cmd.Parameters.AddWithValue("@Descripcion", pPrototipo.Descripcion);
+			cmd.Parameters.AddWithValue("@Imagen", pPrototipo.Imagen);
+			cmd.Parameters.AddWithValue("@IdDuracion", pPrototipo.IdDuracion);
+			cmd.Parameters.AddWithValue("@IdEstado", pPrototipo.IdEstado);
+			cmd.Parameters.AddWithValue("@IdMaquinaria", pPrototipo.IdMaquinaria);
+			return ComunBD.EjecutarComand(cmd);
 		}
-		//Metodo para elimianar un prototipo de la lista 
-		public void EliminarPrototipo(Prototipo pPrototipo)
+		//Metodo para eliminar un prototipo de la lista 
+		public int EliminarPrototipo(Prototipo pPrototipo)
 		{
-			var Eliminar = listaPrototipos.FirstOrDefault(i => i.Id == pPrototipo.Id);
-			listaPrototipos.Remove(Eliminar);
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPEliminarPrototipo";
+			cmd.Parameters.AddWithValue("@Id", pPrototipo.Id);
+			return ComunBD.EjecutarComand(cmd);
 		}
 		//metodo para regresar la lista
 		public List<Prototipo> RegresarLista()
 		{
-			return listaPrototipos;
+			List<Prototipo> lista = new List<Prototipo>();//-- definicion de lista 
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPObtenerTodoPrototipos";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Prototipo Prototipo = new Prototipo();
+				Prototipo.NombrePrototipo = reader.GetString(0);
+				
+				lista.Add(Prototipo);
+			}
+			return lista;
 		}
 	}
 }

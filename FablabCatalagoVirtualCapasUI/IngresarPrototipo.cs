@@ -50,7 +50,7 @@ namespace FablabCatalagoVirtualCapasUI
 			var materialBL = new MaterialesBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
-			cbMaterial.SelectedIndex = 0;
+			
 		}
 		//metodo para agregar un nuevo prototipo a la lista de prototipos
 		private void btnConfirmar_Click(object sender, EventArgs e)
@@ -59,16 +59,16 @@ namespace FablabCatalagoVirtualCapasUI
 			{
 				var Guardardatos = new Prototipo
 				{
-					NombrePrototipo = txtNombre.Text,
-					TipoMaterial = cbMaterial.Text,
-					Ancho = double.Parse(txtAncho.Text),
-					Alto = double.Parse(txtAlto.Text),
-					Descripcion = txtDescripcion.Text,
-					ImagenPrototipo = imgPrototipo.Image,
-					TiempoDiseñado = txtTiempo.Text,
-					TiempoArmado = txtArmarlo.Text,
-					TiempoFabricado = txtFabricarlo.Text,
-					Autor = txtAutor.Text
+					//NombrePrototipo = txtNombre.Text,
+					//TipoMaterial = cbMaterial.Text,
+					//Ancho = double.Parse(txtAncho.Text),
+					//Alto = double.Parse(txtAlto.Text),
+					//Descripcion = txtDescripcion.Text,
+					//ImagenPrototipo = imgPrototipo.Image,
+					//TiempoDiseñado = txtTiempo.Text,
+					//TiempoArmado = txtArmarlo.Text,
+					//TiempoFabricado = txtFabricarlo.Text,
+					//Autor = txtAutor.Text
 
 				};
 				if (Guardardatos != null)

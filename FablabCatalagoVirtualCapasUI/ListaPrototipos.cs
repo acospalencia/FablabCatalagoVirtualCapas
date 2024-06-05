@@ -37,7 +37,8 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para que el datagrid se actualice al cargar el formulario
 		private void ListaPrototipos_Load(object sender, EventArgs e)
 		{
-			var regresarLista = new PrototipoBL();
+			PrototipoBL regresarLista = new PrototipoBL();
+			dgvlistaprototipos.DataSource = null;
 			dgvlistaprototipos.DataSource = regresarLista.regresarlista();
 		}
 		//metodo para que al seleccionar una fila en el datagrid la informacion se pase a los textbox

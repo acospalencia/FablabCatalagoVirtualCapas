@@ -11,19 +11,19 @@ namespace FablabCatalagoVirtualCapasBL
 	public class PrototipoBL
 	{
 		//se crea la instancia de la capa prototiposDAL
-		private PrototipoDAL PrototiposDAL = new PrototipoDAL();
+		PrototipoDAL PrototiposDAL = new PrototipoDAL();
 		
-		public void Guardar(Prototipo pPrototipo)
+		public int Guardar(Prototipo pPrototipo)
 		{
-			PrototiposDAL.guardarNuevoPrototipo(pPrototipo);
+			return PrototiposDAL.guardarNuevoPrototipo(pPrototipo);
 		}
-		public void Modificar(Prototipo pPrototipo)
+		public int Modificar(Prototipo pPrototipo)
 		{
-			PrototiposDAL.ModificarPrototipo(pPrototipo);
+			return PrototiposDAL.ModificarPrototipo(pPrototipo);
 		}
-		public void Eliminar (Prototipo pPrototipo)
+		public int Eliminar (Prototipo pPrototipo)
 		{
-			PrototiposDAL.EliminarPrototipo(pPrototipo);
+			return PrototiposDAL.EliminarPrototipo(pPrototipo);
 		}
 		public List<Prototipo> regresarlista()
 		{

@@ -82,38 +82,38 @@ namespace FablabCatalagoVirtualCapasUI
 		{
             if ( validar())
             {
-				var modificar = new Prototipo
-				{
-					Id = int.Parse(txtId.Text),
-					NombrePrototipo = txtNombre.Text,
-					TipoMaterial = cbMaterial.Text,
-					Ancho = double.Parse(txtAncho.Text),
-					Alto = double.Parse(txtAlto.Text),
-					TiempoArmado = txtArmarlo.Text,
-					TiempoDiseñado = txtDesign.Text,
-					TiempoFabricado = txtFabricarlo.Text,
-					Descripcion = txtDescripcion.Text,
-					Autor = txtAutor.Text,
-					ImagenPrototipo = img.Image
-				};
-				if (modificar != null)
-				{
-					var modificarLista = new PrototipoBL();
-					modificarLista.Modificar(modificar);
-					var Actualiazar = new PrototipoBL();
-					dgListado.DataSource = null;
-					dgListado.DataSource = Actualiazar.regresarlista();
-					txtDescripcion.Text = null;
-					txtAncho.Text = null;
-					txtNombre.Text = null;
-					txtAlto.Text = null;
-					txtDesign.Text = null;
-					txtArmarlo.Text = null;
-					txtFabricarlo.Text = null;
-					txtAutor.Text = null;
-					img.Image = null;
-					MessageBox.Show("Los datos se han Actualizado con exito");
-				}
+				//var modificar = new Prototipo
+				//{
+				//	Id = int.Parse(txtId.Text),
+				//	NombrePrototipo = txtNombre.Text,
+				//	TipoMaterial = cbMaterial.Text,
+				//	Ancho = double.Parse(txtAncho.Text),
+				//	Alto = double.Parse(txtAlto.Text),
+				//	TiempoArmado = txtArmarlo.Text,
+				//	TiempoDiseñado = txtDesign.Text,
+				//	TiempoFabricado = txtFabricarlo.Text,
+				//	Descripcion = txtDescripcion.Text,
+				//	Autor = txtAutor.Text,
+				//	ImagenPrototipo = img.Image
+				//};
+				//if (modificar != null)
+				//{
+				//	var modificarLista = new PrototipoBL();
+				//	modificarLista.Modificar(modificar);
+				//	var Actualiazar = new PrototipoBL();
+				//	dgListado.DataSource = null;
+				//	dgListado.DataSource = Actualiazar.regresarlista();
+				//	txtDescripcion.Text = null;
+				//	txtAncho.Text = null;
+				//	txtNombre.Text = null;
+				//	txtAlto.Text = null;
+				//	txtDesign.Text = null;
+				//	txtArmarlo.Text = null;
+				//	txtFabricarlo.Text = null;
+				//	txtAutor.Text = null;
+				//	img.Image = null;
+				//	MessageBox.Show("Los datos se han Actualizado con exito");
+				//}
             
 			}
 			else
