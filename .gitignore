@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Archivo de comunBD para que no haya problemas
+FablabCatalagoVirtualCapasDAL/ComunBD.cs
+
 # User-specific files
 *.rsuser
 *.suo
@@ -362,5 +365,3 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# Archivo de comunBD para que no haya problemas
-FablabCatalagoVirtualCapasDAL/ComunBD.cs
