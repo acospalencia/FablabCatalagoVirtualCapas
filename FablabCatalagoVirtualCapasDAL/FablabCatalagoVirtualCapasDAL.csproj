@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComunBD.cs" />
     <Compile Include="MaterialesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototipoDAL.cs" />
