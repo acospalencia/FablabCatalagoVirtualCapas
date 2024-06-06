@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estados.cs" />
     <Compile Include="Materiales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototipo.cs" />

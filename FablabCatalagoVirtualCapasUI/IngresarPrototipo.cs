@@ -23,13 +23,13 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			return !string.IsNullOrEmpty(txtNombre.Text) &&
 				!string.IsNullOrEmpty(cbMaterial.Text) &&
-				!string.IsNullOrEmpty(txtAlto.Text) &&
-				!string.IsNullOrEmpty(txtTiempo.Text) &&
-				!string.IsNullOrEmpty(txtAutor.Text) &&
+				!string.IsNullOrEmpty(txtZ.Text) &&
+				!string.IsNullOrEmpty(txtDesign.Text) &&
+				!string.IsNullOrEmpty(txtX.Text) &&
 				!string.IsNullOrEmpty(txtArmarlo.Text) &&
 				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
 				!string.IsNullOrEmpty(txtDescripcion.Text) &&
-				!string.IsNullOrEmpty(txtAncho.Text);
+				!string.IsNullOrEmpty(txtY.Text);
 		}
 		//metodo para que la aplicacion se cierre al darle a la x 
 		private void IngresarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,9 +48,13 @@ namespace FablabCatalagoVirtualCapasUI
 		private void IngresarPrototipo_Load(object sender, EventArgs e)
 		{
 			var materialBL = new MaterialesBL();
+			var EstadosBL = new EstadosBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
-			
+			cbIdEstado.DataSource = EstadosBL.RegresarEstadosPrototipos();
+			cbIdEstado.DisplayMember = "NombreEstado";
+
+
 		}
 		//metodo para agregar un nuevo prototipo a la lista de prototipos
 		private void btnConfirmar_Click(object sender, EventArgs e)
@@ -76,14 +80,14 @@ namespace FablabCatalagoVirtualCapasUI
 					var guardarInfo = new PrototipoBL();
 					guardarInfo.Guardar(Guardardatos);
 					txtDescripcion.Text = null;
-					txtAncho.Text = null;
+					txtY.Text = null;
 					txtNombre.Text = null;
-					txtAlto.Text = null;
-					txtTiempo.Text = null;
+					txtZ.Text = null;
+					txtDesign.Text = null;
 					txtArmarlo.Text = null;
 					txtFabricarlo.Text = null;
 					imgPrototipo.Image = null;
-					txtAutor.Text = null;
+					txtX.Text = null;
 					imgPrototipo.Image = Properties.Resources.imagepicturebox;
 					MessageBox.Show("Los datos se han ingresado con exito");
 				}

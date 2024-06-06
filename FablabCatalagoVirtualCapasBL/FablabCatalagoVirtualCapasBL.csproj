@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EstadosBL.cs" />
     <Compile Include="MaterialesBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototipoBL.cs" />
