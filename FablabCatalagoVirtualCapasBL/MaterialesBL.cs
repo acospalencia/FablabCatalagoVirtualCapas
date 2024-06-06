@@ -24,5 +24,9 @@ namespace FablabCatalagoVirtualCapasBL
         {
             return materialesDAL.regresarLista();        
         }
+        public void eliminarMaterial( Materiales pMateriales )
+        {
+            materialesDAL.eliminarMateriales(pMateriales);
+        }
     }
 }

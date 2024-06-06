@@ -86,6 +86,12 @@
     <Compile Include="ElegirAccion.Designer.cs">
       <DependentUpon>ElegirAccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMateriales.Designer.cs">
+      <DependentUpon>EliminarMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElegirAccion.resx">
       <DependentUpon>ElegirAccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarMateriales.resx">
+      <DependentUpon>EliminarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarPrototipo.resx">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
