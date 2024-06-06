@@ -49,10 +49,13 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			var materialBL = new MaterialesBL();
 			var EstadosBL = new EstadosBL();
+			var maquinariaBL = new MaquinariaBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
 			cbIdEstado.DataSource = EstadosBL.RegresarEstadosPrototipos();
 			cbIdEstado.DisplayMember = "NombreEstado";
+			cbMaquinaria.DataSource = maquinariaBL.MaquinariaList();
+			cbMaquinaria.DisplayMember = "Nombre";
 
 
 		}
