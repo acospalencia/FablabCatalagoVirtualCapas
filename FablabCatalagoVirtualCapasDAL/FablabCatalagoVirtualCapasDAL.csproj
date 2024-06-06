@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ComunBD.cs" />
     <Compile Include="EstadosDAL.cs" />
+    <Compile Include="MaquinariaDAL.cs" />
     <Compile Include="MaterialesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototipoDAL.cs" />
