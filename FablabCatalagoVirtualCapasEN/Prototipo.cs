@@ -17,7 +17,7 @@ namespace FablabCatalagoVirtualCapasEN
 		public string Y { get; set;}
 		public string Z { get; set; }
 		public string Descripcion { get; set;}
-		public Image Imagen { get; set;}
+		public byte[] Imagen { get; set;}
 		public int IdDuracion { get; set;}
 		public int IdEstado {  get; set; }
 		public int IdMaquinaria { get; set; }

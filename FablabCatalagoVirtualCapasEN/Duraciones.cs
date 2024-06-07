@@ -8,5 +8,9 @@ namespace FablabCatalagoVirtualCapasEN
 {
 	public class Duraciones
 	{
+		public int Id	{ get; set; }
+		public string TiempoDiseno { get; set; }
+		public string TiempoFabricado { get; set; }
+		public string TiempoArmado { get; set; }
 	}
 }

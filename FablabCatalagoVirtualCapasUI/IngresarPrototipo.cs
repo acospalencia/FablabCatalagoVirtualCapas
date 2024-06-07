@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,10 +55,13 @@ namespace FablabCatalagoVirtualCapasUI
 			var maquinariaBL = new MaquinariaBL();
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.ValueMember= "Id";
 			cbIdEstado.DataSource = EstadosBL.RegresarEstadosPrototipos();
 			cbIdEstado.DisplayMember = "NombreEstado";
+			cbIdEstado.ValueMember = "Id";
 			cbMaquinaria.DataSource = maquinariaBL.MaquinariaList();
 			cbMaquinaria.DisplayMember = "Nombre";
+			cbMaquinaria.ValueMember = "Id";
 
 
 		}
@@ -64,18 +70,36 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			if (validar())
 			{
+				var duracion = new Duraciones
+				{
+					TiempoDiseno = txtDesign.Text,
+					TiempoArmado = txtArmarlo.Text,
+					TiempoFabricado = txtFabricarlo.Text
+				};
+
+				var gurdarduraciones = new DuracionesBL();
+				gurdarduraciones.GuardarDuracion(duracion);
+
+				MemoryStream ms = new MemoryStream();
+				imgPrototipo.Image.Save(ms, ImageFormat.Jpeg);
+				byte[] abyte = ms.ToArray();
+
+
+			
+				var durabl = new DuracionesBL();
+
 				var Guardardatos = new Prototipo
 				{
-					//NombrePrototipo = txtNombre.Text,
-					//TipoMaterial = cbMaterial.Text,
-					//Ancho = double.Parse(txtAncho.Text),
-					//Alto = double.Parse(txtAlto.Text),
-					//Descripcion = txtDescripcion.Text,
-					//ImagenPrototipo = imgPrototipo.Image,
-					//TiempoDiseñado = txtTiempo.Text,
-					//TiempoArmado = txtArmarlo.Text,
-					//TiempoFabricado = txtFabricarlo.Text,
-					//Autor = txtAutor.Text
+					NombrePrototipo = txtNombre.Text,
+					IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
+					X = txtX.Text,
+					Y = txtY.Text,
+					Z = txtZ.Text,
+					Descripcion = txtDescripcion.Text,
+					Imagen = abyte,
+					IdDuracion = durabl.RegresarId(),
+					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
+					IdMaquinaria = Convert.ToInt32(cbMaquinaria.SelectedValue)
 
 				};
 				if (Guardardatos != null)
