@@ -21,15 +21,15 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para validar que todos los textbox esten llenos
 		private bool validar()
 		{
-			return !string.IsNullOrEmpty(txtNombre.Text) &&
-				!string.IsNullOrEmpty(cbMaterial.Text) &&
-				!string.IsNullOrEmpty(txtAlto.Text) &&
-				!string.IsNullOrEmpty(txtDesign.Text) &&
-				!string.IsNullOrEmpty(txtAutor.Text) &&
-				!string.IsNullOrEmpty(txtArmarlo.Text) &&
-				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
-				!string.IsNullOrEmpty(txtDescripcion.Text) &&
-				!string.IsNullOrEmpty(txtAncho.Text);
+			return !string.IsNullOrEmpty(txtNombre.Text);
+				//!string.IsNullOrEmpty(cbMaterial.Text) &&
+				//!string.IsNullOrEmpty(txtAlto.Text) &&
+				//!string.IsNullOrEmpty(txtDesign.Text) &&
+				//!string.IsNullOrEmpty(txtAutor.Text) &&
+				//!string.IsNullOrEmpty(txtArmarlo.Text) &&
+				//!string.IsNullOrEmpty(txtFabricarlo.Text) &&
+				//!string.IsNullOrEmpty(txtDescripcion.Text) &&
+				//!string.IsNullOrEmpty(txtAncho.Text);
 		}
 		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ModificarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
@@ -61,18 +61,18 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgListado.SelectedRows[0];
 				if (row != null)
 				{
-					txtId.Text = row.Cells[0].Value.ToString();
-					txtNombre.Text = row.Cells[1].Value.ToString();
-					txtAlto.Text = row.Cells[3].Value.ToString();
-					txtAncho.Text = row.Cells[4].Value.ToString();
-					txtDescripcion.Text = row.Cells[5].Value.ToString();
-					txtDesign.Text = row.Cells[7].Value.ToString();
-					txtArmarlo.Text = row.Cells[8].Value.ToString();
-					txtFabricarlo.Text = row.Cells[9].Value.ToString();
-					txtAutor.Text = row.Cells[10].Value.ToString();
-					cbMaterial.Text = row.Cells[2].Value.ToString();
-					Image imagen  = (Image)row.Cells[6].Value;
-					img.Image = imagen;
+					//txtId.Text = row.Cells[0].Value.ToString();
+					//txtNombre.Text = row.Cells[1].Value.ToString();
+					//txtAlto.Text = row.Cells[3].Value.ToString();
+					//txtAncho.Text = row.Cells[4].Value.ToString();
+					//txtDescripcion.Text = row.Cells[5].Value.ToString();
+					//txtDesign.Text = row.Cells[7].Value.ToString();
+					//txtArmarlo.Text = row.Cells[8].Value.ToString();
+					//txtFabricarlo.Text = row.Cells[9].Value.ToString();
+					//txtAutor.Text = row.Cells[10].Value.ToString();
+					//cbMaterial.Text = row.Cells[2].Value.ToString();
+					//Image imagen  = (Image)row.Cells[6].Value;
+					//img.Image = imagen;
 					
 				}
 			}
@@ -118,7 +118,7 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 			else
 			{
-				MessageBox.Show("porfavor rellene los correspondientees textboxx");
+				MessageBox.Show("porfavor rellene los correspondientees textbox");
 			}
 		}
 		//metodo para buscar un objeto en la lista dependiendo en su Id
