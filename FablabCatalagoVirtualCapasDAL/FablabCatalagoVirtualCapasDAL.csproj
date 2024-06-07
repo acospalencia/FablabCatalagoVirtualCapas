@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComunBD.cs" />
+    <Compile Include="DuracionesDAL.cs" />
     <Compile Include="EstadosDAL.cs" />
     <Compile Include="MaquinariaDAL.cs" />
     <Compile Include="MaterialesDAL.cs" />
