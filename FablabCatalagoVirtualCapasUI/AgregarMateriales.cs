@@ -56,12 +56,12 @@ namespace FablabCatalagoVirtualCapasUI
             {
 				var nuevomateria = new Materiales
 				{
-					nombreMaterial = txtNombre.Text,
-					precio = double.Parse(txtPrecio.Text),
-					proveedor = txtProveedor.Text,
-					tipoMaterial = txtTipo.Text,
-					Ancho = double.Parse(txtAncho.Text),
-					Altura = double.Parse(txtAlto.Text),
+					//NombreMaterial = txtNombre.Text,
+					//Precio = double.Parse(txtPrecio.Text),
+					//Z = txtProveedor.Text,
+					//IdTipoMaterial = txtTipo.Text,
+					//X = double.Parse(txtAncho.Text),
+					//Y = double.Parse(txtAlto.Text),
 				};
 
 				var guardar = new MaterialesBL();

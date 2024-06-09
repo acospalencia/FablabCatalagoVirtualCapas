@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using FablabCatalagoVirtualCapasDAL;
@@ -11,17 +12,21 @@ namespace FablabCatalagoVirtualCapasBL
 	public class UserBL
 	{
 		private UserDAL UserDAL = new UserDAL();
-		public void GuardarUser (User pUser)
+		public int GuardarUser (User pUser)
 		{
-			UserDAL.guardarNuevoUser(pUser);
+			return UserDAL.GuardarNuevoUser(pUser);
 		}
-		public void EliminarUsuario (User pUser)
+		public int EliminarUsuario (User pUser)
 		{
-			UserDAL.eliminarUsuario(pUser);
+			return UserDAL.EliminarUsuario(pUser);
+		}
+		public int ModificarUsuario (User pUser)
+		{
+			return UserDAL.ActualizarUsuarios(pUser);
 		}
 		public List<User> regresarLista()
 		{
-			return UserDAL.regresarLista();
+			return UserDAL.RegresarLista();
 		}
 	}
 }

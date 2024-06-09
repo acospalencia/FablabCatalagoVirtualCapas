@@ -49,19 +49,6 @@ namespace FablabCatalagoVirtualCapasUI
 			Application.Exit();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			var nuevomateria = new Materiales
-			{
-				nombreMaterial = txtNombre.Text,
-				precio = double.Parse(txtPrecio.Text),
-				proveedor = txtProveedor.Text,
-			};
-
-			var guardar = new MaterialesBL();
-			guardar.guardarMaterial(nuevomateria);
-		}
-
 		private void dgMaterial_SelectionChanged(object sender, EventArgs e)
 		{
 			if (dgMaterial != null && dgMaterial.SelectedRows.Count > 0)
@@ -108,13 +95,13 @@ namespace FablabCatalagoVirtualCapasUI
 			{
 				var actualizar = new Materiales
 				{
-					Id = int.Parse(txtId.Text),
-					nombreMaterial = txtNombre.Text,
-					precio = double.Parse(txtPrecio.Text),
-					proveedor = txtProveedor.Text,
-					tipoMaterial = txtTipo.Text,
-					Ancho = double.Parse(txtAncho.Text),
-					Altura = double.Parse(txtAlto.Text),
+					//Id = int.Parse(txtId.Text),
+					//NombreMaterial = txtNombre.Text,
+					//Precio = double.Parse(txtPrecio.Text),
+					//Z = txtProveedor.Text,
+					//IdTipoMaterial = txtTipo.Text,
+					//X = double.Parse(txtAncho.Text),
+					//Y = double.Parse(txtAlto.Text),
 
 				};
 				if (actualizar != null)

@@ -39,9 +39,9 @@
 			this.btnConfirmar = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.txtNombre = new System.Windows.Forms.TextBox();
-			this.txtAncho = new System.Windows.Forms.TextBox();
-			this.txtTiempo = new System.Windows.Forms.TextBox();
-			this.txtAlto = new System.Windows.Forms.TextBox();
+			this.txtY = new System.Windows.Forms.TextBox();
+			this.txtDesign = new System.Windows.Forms.TextBox();
+			this.txtZ = new System.Windows.Forms.TextBox();
 			this.txtDescripcion = new System.Windows.Forms.TextBox();
 			this.cbMaterial = new System.Windows.Forms.ComboBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -49,8 +49,12 @@
 			this.txtArmarlo = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.txtFabricarlo = new System.Windows.Forms.TextBox();
-			this.txtAutor = new System.Windows.Forms.TextBox();
+			this.txtX = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
+			this.cbIdEstado = new System.Windows.Forms.ComboBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.cbMaquinaria = new System.Windows.Forms.ComboBox();
+			this.label11 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.imgPrototipo)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -63,10 +67,10 @@
 			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(-2, 7);
-			this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.button1.Location = new System.Drawing.Point(9, 9);
+			this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(64, 46);
+			this.button1.Size = new System.Drawing.Size(48, 37);
 			this.button1.TabIndex = 0;
 			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -77,9 +81,10 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(15, 63);
+			this.label1.Location = new System.Drawing.Point(32, 70);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(95, 25);
+			this.label1.Size = new System.Drawing.Size(75, 19);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Nombre:";
 			// 
@@ -89,9 +94,10 @@
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label2.Location = new System.Drawing.Point(15, 326);
+			this.label2.Location = new System.Drawing.Point(330, 67);
+			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(329, 25);
+			this.label2.Size = new System.Drawing.Size(260, 19);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Tiempo requerido para diseñarlo:";
 			// 
@@ -101,9 +107,10 @@
 			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label3.Location = new System.Drawing.Point(384, 61);
+			this.label3.Location = new System.Drawing.Point(32, 118);
+			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(236, 25);
+			this.label3.Size = new System.Drawing.Size(184, 19);
 			this.label3.TabIndex = 3;
 			this.label3.Text = "Tipo de material usado:";
 			// 
@@ -113,11 +120,12 @@
 			this.label4.BackColor = System.Drawing.Color.Transparent;
 			this.label4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label4.Location = new System.Drawing.Point(15, 258);
+			this.label4.Location = new System.Drawing.Point(32, 286);
+			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(324, 25);
+			this.label4.Size = new System.Drawing.Size(89, 19);
 			this.label4.TabIndex = 4;
-			this.label4.Text = "Altura de el prototipo finalizado: ";
+			this.label4.Text = "Tamaño Z: ";
 			// 
 			// label5
 			// 
@@ -125,20 +133,22 @@
 			this.label5.BackColor = System.Drawing.Color.Transparent;
 			this.label5.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label5.Location = new System.Drawing.Point(389, 250);
+			this.label5.Location = new System.Drawing.Point(330, 233);
+			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(130, 25);
+			this.label5.Size = new System.Drawing.Size(105, 19);
 			this.label5.TabIndex = 5;
-			this.label5.Text = "Descripcion:";
+			this.label5.Text = "Descripción:";
 			// 
 			// imgPrototipo
 			// 
 			this.imgPrototipo.BackColor = System.Drawing.Color.Transparent;
-			this.imgPrototipo.Image = global::FablabCatalagoVirtualCapasUI.Properties.Resources.imagepicturebox;
-			this.imgPrototipo.Location = new System.Drawing.Point(761, 42);
-			this.imgPrototipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.imgPrototipo.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.imgPrototipo.Image = ((System.Drawing.Image)(resources.GetObject("imgPrototipo.Image")));
+			this.imgPrototipo.Location = new System.Drawing.Point(646, 90);
+			this.imgPrototipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.imgPrototipo.Name = "imgPrototipo";
-			this.imgPrototipo.Size = new System.Drawing.Size(407, 395);
+			this.imgPrototipo.Size = new System.Drawing.Size(389, 383);
 			this.imgPrototipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.imgPrototipo.TabIndex = 8;
 			this.imgPrototipo.TabStop = false;
@@ -149,15 +159,16 @@
 			this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
 			this.btnConfirmar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.Botonsubmit;
 			this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnConfirmar.FlatAppearance.BorderSize = 0;
 			this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnConfirmar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConfirmar.Location = new System.Drawing.Point(995, 457);
-			this.btnConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.btnConfirmar.Location = new System.Drawing.Point(34, 486);
+			this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.btnConfirmar.Name = "btnConfirmar";
-			this.btnConfirmar.Size = new System.Drawing.Size(176, 59);
+			this.btnConfirmar.Size = new System.Drawing.Size(132, 48);
 			this.btnConfirmar.TabIndex = 9;
 			this.btnConfirmar.UseVisualStyleBackColor = false;
 			this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -168,66 +179,68 @@
 			this.label7.BackColor = System.Drawing.Color.Transparent;
 			this.label7.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label7.Location = new System.Drawing.Point(15, 191);
+			this.label7.Location = new System.Drawing.Point(32, 231);
+			this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(318, 25);
+			this.label7.Size = new System.Drawing.Size(83, 19);
 			this.label7.TabIndex = 10;
-			this.label7.Text = "Ancho de el prototipo finalizado:";
+			this.label7.Text = "Tamaño Y:";
 			// 
 			// txtNombre
 			// 
 			this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtNombre.Location = new System.Drawing.Point(20, 89);
-			this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtNombre.Location = new System.Drawing.Point(36, 90);
+			this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(328, 27);
+			this.txtNombre.Size = new System.Drawing.Size(247, 23);
 			this.txtNombre.TabIndex = 11;
 			// 
-			// txtAncho
+			// txtY
 			// 
-			this.txtAncho.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAncho.Location = new System.Drawing.Point(20, 221);
-			this.txtAncho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtAncho.Name = "txtAncho";
-			this.txtAncho.Size = new System.Drawing.Size(328, 27);
-			this.txtAncho.TabIndex = 12;
+			this.txtY.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtY.Location = new System.Drawing.Point(35, 256);
+			this.txtY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtY.Name = "txtY";
+			this.txtY.Size = new System.Drawing.Size(247, 23);
+			this.txtY.TabIndex = 12;
 			// 
-			// txtTiempo
+			// txtDesign
 			// 
-			this.txtTiempo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTiempo.Location = new System.Drawing.Point(20, 366);
-			this.txtTiempo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtTiempo.Name = "txtTiempo";
-			this.txtTiempo.Size = new System.Drawing.Size(328, 27);
-			this.txtTiempo.TabIndex = 13;
+			this.txtDesign.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDesign.Location = new System.Drawing.Point(334, 90);
+			this.txtDesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtDesign.Name = "txtDesign";
+			this.txtDesign.Size = new System.Drawing.Size(247, 23);
+			this.txtDesign.TabIndex = 13;
 			// 
-			// txtAlto
+			// txtZ
 			// 
-			this.txtAlto.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAlto.Location = new System.Drawing.Point(20, 290);
-			this.txtAlto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtAlto.Name = "txtAlto";
-			this.txtAlto.Size = new System.Drawing.Size(328, 27);
-			this.txtAlto.TabIndex = 14;
+			this.txtZ.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtZ.Location = new System.Drawing.Point(35, 312);
+			this.txtZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtZ.Name = "txtZ";
+			this.txtZ.Size = new System.Drawing.Size(247, 23);
+			this.txtZ.TabIndex = 14;
 			// 
 			// txtDescripcion
 			// 
 			this.txtDescripcion.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDescripcion.Location = new System.Drawing.Point(389, 290);
-			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtDescripcion.Location = new System.Drawing.Point(330, 255);
+			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.txtDescripcion.Multiline = true;
 			this.txtDescripcion.Name = "txtDescripcion";
-			this.txtDescripcion.Size = new System.Drawing.Size(333, 139);
+			this.txtDescripcion.Size = new System.Drawing.Size(251, 114);
 			this.txtDescripcion.TabIndex = 15;
 			// 
 			// cbMaterial
 			// 
+			this.cbMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbMaterial.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbMaterial.FormattingEnabled = true;
-			this.cbMaterial.Location = new System.Drawing.Point(389, 89);
-			this.cbMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cbMaterial.Location = new System.Drawing.Point(35, 142);
+			this.cbMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.cbMaterial.Name = "cbMaterial";
-			this.cbMaterial.Size = new System.Drawing.Size(333, 27);
+			this.cbMaterial.Size = new System.Drawing.Size(251, 24);
 			this.cbMaterial.TabIndex = 16;
 			// 
 			// openFileDialog1
@@ -238,21 +251,22 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.BackColor = System.Drawing.Color.Transparent;
-			this.label6.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label6.Location = new System.Drawing.Point(384, 121);
+			this.label6.Location = new System.Drawing.Point(326, 118);
+			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(324, 25);
+			this.label6.Size = new System.Drawing.Size(255, 19);
 			this.label6.TabIndex = 17;
 			this.label6.Text = "Tiempo requerido para armarlo: ";
 			// 
 			// txtArmarlo
 			// 
 			this.txtArmarlo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtArmarlo.Location = new System.Drawing.Point(395, 151);
-			this.txtArmarlo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtArmarlo.Location = new System.Drawing.Point(334, 142);
+			this.txtArmarlo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.txtArmarlo.Name = "txtArmarlo";
-			this.txtArmarlo.Size = new System.Drawing.Size(328, 27);
+			this.txtArmarlo.Size = new System.Drawing.Size(247, 23);
 			this.txtArmarlo.TabIndex = 18;
 			// 
 			// label8
@@ -261,29 +275,30 @@
 			this.label8.BackColor = System.Drawing.Color.Transparent;
 			this.label8.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label8.Location = new System.Drawing.Point(384, 191);
+			this.label8.Location = new System.Drawing.Point(326, 174);
+			this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(341, 25);
+			this.label8.Size = new System.Drawing.Size(269, 19);
 			this.label8.TabIndex = 19;
 			this.label8.Text = "Tiempo requerido para fabricarlo: ";
 			// 
 			// txtFabricarlo
 			// 
 			this.txtFabricarlo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtFabricarlo.Location = new System.Drawing.Point(395, 221);
-			this.txtFabricarlo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtFabricarlo.Location = new System.Drawing.Point(334, 199);
+			this.txtFabricarlo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.txtFabricarlo.Name = "txtFabricarlo";
-			this.txtFabricarlo.Size = new System.Drawing.Size(328, 27);
+			this.txtFabricarlo.Size = new System.Drawing.Size(247, 23);
 			this.txtFabricarlo.TabIndex = 20;
 			// 
-			// txtAutor
+			// txtX
 			// 
-			this.txtAutor.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAutor.Location = new System.Drawing.Point(21, 151);
-			this.txtAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtAutor.Name = "txtAutor";
-			this.txtAutor.Size = new System.Drawing.Size(328, 27);
-			this.txtAutor.TabIndex = 22;
+			this.txtX.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtX.Location = new System.Drawing.Point(36, 199);
+			this.txtX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtX.Name = "txtX";
+			this.txtX.Size = new System.Drawing.Size(247, 23);
+			this.txtX.TabIndex = 22;
 			// 
 			// label9
 			// 
@@ -291,21 +306,74 @@
 			this.label9.BackColor = System.Drawing.Color.Transparent;
 			this.label9.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label9.Location = new System.Drawing.Point(16, 122);
+			this.label9.Location = new System.Drawing.Point(32, 175);
+			this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(73, 25);
+			this.label9.Size = new System.Drawing.Size(87, 19);
 			this.label9.TabIndex = 21;
-			this.label9.Text = "Autor:";
+			this.label9.Text = "Tamaño X:";
+			// 
+			// cbIdEstado
+			// 
+			this.cbIdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbIdEstado.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbIdEstado.FormattingEnabled = true;
+			this.cbIdEstado.Location = new System.Drawing.Point(35, 365);
+			this.cbIdEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cbIdEstado.Name = "cbIdEstado";
+			this.cbIdEstado.Size = new System.Drawing.Size(251, 24);
+			this.cbIdEstado.TabIndex = 24;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.BackColor = System.Drawing.Color.Transparent;
+			this.label10.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.label10.Location = new System.Drawing.Point(32, 343);
+			this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(65, 19);
+			this.label10.TabIndex = 23;
+			this.label10.Text = "Estado:";
+			// 
+			// cbMaquinaria
+			// 
+			this.cbMaquinaria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbMaquinaria.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbMaquinaria.FormattingEnabled = true;
+			this.cbMaquinaria.Location = new System.Drawing.Point(35, 421);
+			this.cbMaquinaria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cbMaquinaria.Name = "cbMaquinaria";
+			this.cbMaquinaria.Size = new System.Drawing.Size(251, 24);
+			this.cbMaquinaria.TabIndex = 26;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.BackColor = System.Drawing.Color.Transparent;
+			this.label11.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.label11.Location = new System.Drawing.Point(32, 399);
+			this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(150, 19);
+			this.label11.TabIndex = 25;
+			this.label11.Text = "Maquinaria Usada:";
 			// 
 			// IngresarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundIngresar;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.agregarmateriales;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1183, 527);
-			this.Controls.Add(this.txtAutor);
+			this.ClientSize = new System.Drawing.Size(1063, 589);
+			this.Controls.Add(this.cbMaquinaria);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.cbIdEstado);
+			this.Controls.Add(this.label10);
+			this.Controls.Add(this.txtX);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.txtFabricarlo);
 			this.Controls.Add(this.label8);
@@ -313,9 +381,9 @@
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.cbMaterial);
 			this.Controls.Add(this.txtDescripcion);
-			this.Controls.Add(this.txtAlto);
-			this.Controls.Add(this.txtTiempo);
-			this.Controls.Add(this.txtAncho);
+			this.Controls.Add(this.txtZ);
+			this.Controls.Add(this.txtDesign);
+			this.Controls.Add(this.txtY);
 			this.Controls.Add(this.txtNombre);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnConfirmar);
@@ -328,7 +396,7 @@
 			this.Controls.Add(this.button1);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.MaximizeBox = false;
 			this.Name = "IngresarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -353,9 +421,9 @@
 		private System.Windows.Forms.Button btnConfirmar;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox txtNombre;
-		private System.Windows.Forms.TextBox txtAncho;
-		private System.Windows.Forms.TextBox txtTiempo;
-		private System.Windows.Forms.TextBox txtAlto;
+		private System.Windows.Forms.TextBox txtY;
+		private System.Windows.Forms.TextBox txtDesign;
+		private System.Windows.Forms.TextBox txtZ;
 		private System.Windows.Forms.TextBox txtDescripcion;
 		private System.Windows.Forms.ComboBox cbMaterial;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -363,7 +431,11 @@
 		private System.Windows.Forms.TextBox txtArmarlo;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox txtFabricarlo;
-		private System.Windows.Forms.TextBox txtAutor;
+		private System.Windows.Forms.TextBox txtX;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.ComboBox cbIdEstado;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.ComboBox cbMaquinaria;
+		private System.Windows.Forms.Label label11;
 	}
 }
