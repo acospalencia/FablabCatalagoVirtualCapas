@@ -26,8 +26,7 @@ namespace FablabCatalagoVirtualCapasDAL
 				maquinaria.Nombre = reader.GetString(1);
 				maquinaria.Marca = reader.GetString(2);
 				maquinaria.Detalle = reader.GetString(3);
-				maquinaria.IdMaterial = reader.GetInt32(4);
-				maquinaria.Idestado = reader.GetInt32(5);
+				maquinaria.Idestado = reader.GetInt32(4);
 				ListaMaquinaria.Add(maquinaria);
 			}
 			return ListaMaquinaria;
