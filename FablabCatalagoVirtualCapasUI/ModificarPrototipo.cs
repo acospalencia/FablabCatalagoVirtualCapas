@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,15 +23,15 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para validar que todos los textbox esten llenos
 		private bool validar()
 		{
-			return !string.IsNullOrEmpty(txtNombre.Text);
-				//!string.IsNullOrEmpty(cbMaterial.Text) &&
-				//!string.IsNullOrEmpty(txtAlto.Text) &&
-				//!string.IsNullOrEmpty(txtDesign.Text) &&
-				//!string.IsNullOrEmpty(txtAutor.Text) &&
-				//!string.IsNullOrEmpty(txtArmarlo.Text) &&
-				//!string.IsNullOrEmpty(txtFabricarlo.Text) &&
-				//!string.IsNullOrEmpty(txtDescripcion.Text) &&
-				//!string.IsNullOrEmpty(txtAncho.Text);
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+				!string.IsNullOrEmpty(cbMaterial.Text) &&
+				!string.IsNullOrEmpty(txtZ.Text) &&
+				!string.IsNullOrEmpty(txtDesign.Text) &&
+				!string.IsNullOrEmpty(txtX.Text) &&
+				!string.IsNullOrEmpty(txtArmarlo.Text) &&
+				!string.IsNullOrEmpty(txtFabricarlo.Text) &&
+				!string.IsNullOrEmpty(txtDescripcion.Text) &&
+				!string.IsNullOrEmpty(txtY.Text);
 		}
 		//metodo para que la aplicacion se cierre al darle a la x 
 		private void ModificarPrototipo_FormClosing(object sender, FormClosingEventArgs e)
@@ -54,26 +56,49 @@ namespace FablabCatalagoVirtualCapasUI
 		private void dgListado_SelectionChanged(object sender, EventArgs e)
 		{
 			var ingresar = new MaterialesBL();
+			var materialBL = new MaterialesBL();
+			var EstadosBL = new EstadosBL();
+			var maquinariaBL = new MaquinariaBL();
 			cbMaterial.DataSource = ingresar.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.DataSource = materialBL.regresarLista();
+			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.ValueMember = "Id";
+			cbIdEstado.DataSource = EstadosBL.RegresarEstadosPrototipos();
+			cbIdEstado.DisplayMember = "NombreEstado";
+			cbIdEstado.ValueMember = "Id";
+			cbMaquinaria.DataSource = maquinariaBL.MaquinariaList();
+			cbMaquinaria.DisplayMember = "Nombre";
+			cbMaquinaria.ValueMember = "Id";
+
+
 			if (dgListado != null && dgListado.SelectedRows.Count > 0)
 			{
 				DataGridViewRow row = dgListado.SelectedRows[0];
 				if (row != null)
 				{
-					//txtId.Text = row.Cells[0].Value.ToString();
-					//txtNombre.Text = row.Cells[1].Value.ToString();
-					//txtAlto.Text = row.Cells[3].Value.ToString();
-					//txtAncho.Text = row.Cells[4].Value.ToString();
-					//txtDescripcion.Text = row.Cells[5].Value.ToString();
-					//txtDesign.Text = row.Cells[7].Value.ToString();
-					//txtArmarlo.Text = row.Cells[8].Value.ToString();
-					//txtFabricarlo.Text = row.Cells[9].Value.ToString();
-					//txtAutor.Text = row.Cells[10].Value.ToString();
-					//cbMaterial.Text = row.Cells[2].Value.ToString();
-					//Image imagen  = (Image)row.Cells[6].Value;
-					//img.Image = imagen;
-					
+					txtId.Text = row.Cells[0].Value.ToString();
+					txtNombre.Text = row.Cells[1].Value.ToString();
+					txtIdMaterial.Text = row.Cells[2].Value.ToString();
+					txtX.Text = row.Cells[3].Value.ToString();
+					txtY.Text = row.Cells[4].Value.ToString();
+					txtZ.Text = row.Cells[5].Value.ToString();
+					txtDescripcion.Text = row.Cells[6].Value.ToString();
+					txtIdDuraciones.Text = row.Cells[8].Value.ToString();
+					txtIdEstado.Text = row.Cells[9].Value.ToString();
+					txtIdMaquinaria.Text = row.Cells[10].Value.ToString();
+					if (row.Cells[7].Value != DBNull.Value)
+					{
+						byte[] imagenBytes = (byte[])row.Cells[7].Value;
+						using (MemoryStream ms = new MemoryStream(imagenBytes))
+						{
+							img.Image = Image.FromStream(ms);
+						}
+					}
+					else
+					{
+						img.Image = null;
+					}
 				}
 			}
 		}
@@ -82,6 +107,9 @@ namespace FablabCatalagoVirtualCapasUI
 		{
             if ( validar())
             {
+				MemoryStream ms = new MemoryStream();
+				img.Image.Save(ms, ImageFormat.Jpeg);
+				byte[] abyte = ms.ToArray();
 				//var modificar = new Prototipo
 				//{
 				//	Id = int.Parse(txtId.Text),
@@ -114,7 +142,7 @@ namespace FablabCatalagoVirtualCapasUI
 				//	img.Image = null;
 				//	MessageBox.Show("Los datos se han Actualizado con exito");
 				//}
-            
+
 			}
 			else
 			{
@@ -137,6 +165,21 @@ namespace FablabCatalagoVirtualCapasUI
 				dgListado.DataSource = prototiposFiltrados;
 			}
 			
+		}
+
+		private void txtIdDuraciones_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdDuraciones.Text, out int idDuracion))
+			{
+				DuracionesBL duracionesBL = new DuracionesBL();
+				Duraciones duracion = duracionesBL.MostrarPorIdDuraciones(idDuracion);
+				if (duracion != null)
+				{
+					txtDesign.Text = duracion.TiempoDiseno;
+					txtArmarlo.Text = duracion.TiempoArmado;
+					txtFabricarlo.Text = duracion.TiempoFabricado;
+				}
+			}
 		}
 	}
 }

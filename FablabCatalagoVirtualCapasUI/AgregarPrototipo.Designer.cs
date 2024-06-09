@@ -33,8 +33,8 @@
 			this.btnModificar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.lblTitulo = new System.Windows.Forms.Label();
-			this.btnRegresar = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnRegresar = new System.Windows.Forms.Button();
 			btnIngresar = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -49,10 +49,10 @@
 			btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			btnIngresar.Location = new System.Drawing.Point(16, 233);
-			btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 2);
+			btnIngresar.Location = new System.Drawing.Point(12, 189);
+			btnIngresar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 2);
 			btnIngresar.Name = "btnIngresar";
-			btnIngresar.Size = new System.Drawing.Size(100, 97);
+			btnIngresar.Size = new System.Drawing.Size(75, 79);
 			btnIngresar.TabIndex = 0;
 			btnIngresar.UseVisualStyleBackColor = false;
 			btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
@@ -67,10 +67,9 @@
 			this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnModificar.Location = new System.Drawing.Point(172, 233);
-			this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnModificar.Location = new System.Drawing.Point(140, 189);
 			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(116, 98);
+			this.btnModificar.Size = new System.Drawing.Size(87, 80);
 			this.btnModificar.TabIndex = 1;
 			this.btnModificar.UseVisualStyleBackColor = false;
 			this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -85,10 +84,9 @@
 			this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEliminar.Location = new System.Drawing.Point(368, 233);
-			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnEliminar.Location = new System.Drawing.Point(276, 189);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(103, 87);
+			this.btnEliminar.Size = new System.Drawing.Size(77, 71);
 			this.btnEliminar.TabIndex = 2;
 			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -99,59 +97,57 @@
 			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
 			this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblTitulo.Location = new System.Drawing.Point(16, 52);
-			this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblTitulo.Location = new System.Drawing.Point(12, 108);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(446, 45);
+			this.lblTitulo.Size = new System.Drawing.Size(357, 36);
 			this.lblTitulo.TabIndex = 0;
 			this.lblTitulo.Text = "Elija la opción  a realizar";
+			// 
+			// panel1
+			// 
+			this.panel1.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.backgroundPanel;
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.btnRegresar);
+			this.panel1.Controls.Add(this.btnEliminar);
+			this.panel1.Controls.Add(this.btnModificar);
+			this.panel1.Controls.Add(this.lblTitulo);
+			this.panel1.Controls.Add(btnIngresar);
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(393, 447);
+			this.panel1.TabIndex = 9;
 			// 
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegresar.Location = new System.Drawing.Point(-27, 15);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnRegresar.Location = new System.Drawing.Point(-2, 6);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(107, 33);
-			this.btnRegresar.TabIndex = 7;
+			this.btnRegresar.Size = new System.Drawing.Size(48, 37);
+			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
-			// panel1
-			// 
-			this.panel1.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.backgroundPanel;
-			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.panel1.Controls.Add(this.btnEliminar);
-			this.panel1.Controls.Add(this.btnModificar);
-			this.panel1.Controls.Add(this.lblTitulo);
-			this.panel1.Controls.Add(btnIngresar);
-			this.panel1.Controls.Add(this.btnRegresar);
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Margin = new System.Windows.Forms.Padding(4);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(524, 550);
-			this.panel1.TabIndex = 9;
-			// 
 			// AgregarPrototipo
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundAgregar;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.ClientSize = new System.Drawing.Size(1044, 542);
+			this.ClientSize = new System.Drawing.Size(800, 440);
 			this.Controls.Add(this.panel1);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "AgregarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -167,7 +163,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblTitulo;
-		private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Panel panel1;
-    }
+		private System.Windows.Forms.Button btnRegresar;
+	}
 }

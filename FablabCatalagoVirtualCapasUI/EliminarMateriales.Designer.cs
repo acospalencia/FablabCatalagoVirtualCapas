@@ -39,11 +39,12 @@
 			// 
 			// dgVer
 			// 
+			this.dgVer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgVer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgVer.Location = new System.Drawing.Point(12, 64);
+			this.dgVer.Location = new System.Drawing.Point(31, 135);
 			this.dgVer.Name = "dgVer";
 			this.dgVer.RowHeadersWidth = 51;
-			this.dgVer.Size = new System.Drawing.Size(519, 249);
+			this.dgVer.Size = new System.Drawing.Size(892, 315);
 			this.dgVer.TabIndex = 10;
 			this.dgVer.SelectionChanged += new System.EventHandler(this.dgVer_SelectionChanged);
 			// 
@@ -56,9 +57,9 @@
 			this.btnLupa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnLupa.Location = new System.Drawing.Point(419, 29);
+			this.btnLupa.Location = new System.Drawing.Point(706, 64);
 			this.btnLupa.Name = "btnLupa";
-			this.btnLupa.Size = new System.Drawing.Size(42, 32);
+			this.btnLupa.Size = new System.Drawing.Size(56, 42);
 			this.btnLupa.TabIndex = 9;
 			this.btnLupa.UseVisualStyleBackColor = false;
 			// 
@@ -75,20 +76,22 @@
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.Transparent;
-			this.btnEliminar.Location = new System.Drawing.Point(537, 147);
+			this.btnEliminar.Location = new System.Drawing.Point(944, 257);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(58, 69);
+			this.btnEliminar.Size = new System.Drawing.Size(80, 82);
 			this.btnEliminar.TabIndex = 8;
 			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
 			// 
 			// txtbuscar
 			// 
-			this.txtbuscar.Location = new System.Drawing.Point(195, 33);
+			this.txtbuscar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtbuscar.Location = new System.Drawing.Point(273, 70);
 			this.txtbuscar.Multiline = true;
 			this.txtbuscar.Name = "txtbuscar";
-			this.txtbuscar.Size = new System.Drawing.Size(216, 25);
+			this.txtbuscar.Size = new System.Drawing.Size(418, 28);
 			this.txtbuscar.TabIndex = 7;
+			this.txtbuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
 			// 
 			// btnRegresar
@@ -109,7 +112,7 @@
 			// 
 			// txtId
 			// 
-			this.txtId.Location = new System.Drawing.Point(564, 15);
+			this.txtId.Location = new System.Drawing.Point(971, 10);
 			this.txtId.Margin = new System.Windows.Forms.Padding(2);
 			this.txtId.Name = "txtId";
 			this.txtId.Size = new System.Drawing.Size(76, 20);
@@ -120,9 +123,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.backgroundEliminar;
+			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.agregarmateriales;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(607, 342);
+			this.ClientSize = new System.Drawing.Size(1036, 541);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.dgVer);

@@ -37,5 +37,24 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return Id;
 		}
+		public Duraciones MostrarPorIdDuraciones(int Id)
+		{
+			var test = new Duraciones();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarPorIdDuraciones";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Duraciones duraciones = new Duraciones();
+				duraciones.Id = reader.GetInt32(0);
+				duraciones.TiempoDiseno = reader.GetString(1);
+				duraciones.TiempoFabricado = reader.GetString(2);
+				duraciones.TiempoArmado = reader.GetString(3);
+				test = duraciones;
+			}
+			return test;
+		}
 	}
 }
