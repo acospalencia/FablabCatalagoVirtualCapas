@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using FablabCatalagoVirtualCapasEN;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Drawing.Imaging;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
@@ -33,18 +35,41 @@ namespace FablabCatalagoVirtualCapasDAL
             }
             return lista;
         }
-        public void guardarMaterial (Materiales pMateriales)
+        public int guardarMaterial (Materiales pMateriales)
         {
-            
-        }
-        public void actualizarMaterial (Materiales pMateriales)
+            SqlCommand cmd = ComunBD.ObtenerComan();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spAgregarMaterial";
+            cmd.Parameters.AddWithValue("@NombreMaterial", pMateriales.NombreMaterial);
+			cmd.Parameters.AddWithValue("@X", pMateriales.X);
+			cmd.Parameters.AddWithValue("@Y", pMateriales.Y);
+			cmd.Parameters.AddWithValue("@Z", pMateriales.Z);
+			cmd.Parameters.AddWithValue("@IdTipoMaterial", pMateriales.IdTipoMaterial);
+			cmd.Parameters.AddWithValue("@Precio", pMateriales.Precio);
+            return ComunBD.EjecutarComand(cmd);
+		}
+        public int actualizarMaterial (Materiales pMateriales)
         {
-            
-        }
-        public void eliminarMateriales (Materiales pMateriales)
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spActualizarMaterial";
+			cmd.Parameters.AddWithValue("@Id", pMateriales.Id);
+			cmd.Parameters.AddWithValue("@NombreMaterial", pMateriales.NombreMaterial);
+			cmd.Parameters.AddWithValue("@X", pMateriales.X);
+			cmd.Parameters.AddWithValue("@Y", pMateriales.Y);
+			cmd.Parameters.AddWithValue("@Z", pMateriales.Z);
+			cmd.Parameters.AddWithValue("@IdTipoMaterial", pMateriales.IdTipoMaterial);
+			cmd.Parameters.AddWithValue("@Precio", pMateriales.Precio);
+			return ComunBD.EjecutarComand(cmd);
+		}
+        public int eliminarMateriales (Materiales pMateriales)
         {
-           
-        }
+            SqlCommand cmd = ComunBD.ObtenerComan();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPEliminarMaterial";
+            cmd.Parameters.AddWithValue("@Id", pMateriales.Id);
+            return ComunBD.EjecutarComand (cmd);
+		}
     }
 }
     
