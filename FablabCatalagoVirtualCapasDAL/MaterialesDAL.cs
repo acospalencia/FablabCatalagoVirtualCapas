@@ -70,6 +70,29 @@ namespace FablabCatalagoVirtualCapasDAL
             cmd.Parameters.AddWithValue("@Id", pMateriales.Id);
             return ComunBD.EjecutarComand (cmd);
 		}
-    }
+		public Materiales MostrarPorIdMateriales(int Id)
+		{
+			var regresar = new Materiales();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarPorIdMateriales";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Materiales materiales = new Materiales();
+                materiales.Id = reader.GetInt32(0);
+                materiales.NombreMaterial = reader.GetString(1);
+                materiales.X = reader.GetString(2);
+                materiales.Y = reader.GetString(3);
+                materiales.Z = reader.GetString(4);
+                materiales.IdTipoMaterial = reader.GetInt32(5);
+                materiales.Precio = reader.GetDecimal(6);
+
+				regresar = materiales;
+			}
+			return regresar;
+		}
+	}
 }
     

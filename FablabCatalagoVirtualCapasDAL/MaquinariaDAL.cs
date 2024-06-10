@@ -31,6 +31,26 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return ListaMaquinaria;
 		}
-			
+		public Maquinaria MostrarPorIdMaquinaria(int Id)
+		{
+			var Regresar = new Maquinaria();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarPorIdMaquinaria";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Maquinaria maquinaria = new Maquinaria();
+				maquinaria.Id = reader.GetInt32(0);
+				maquinaria.Nombre = reader.GetString(1);
+				maquinaria.Marca = reader.GetString(2);
+				maquinaria.Detalle = reader.GetString(3);
+				maquinaria.Idestado = reader.GetInt32(4);
+				Regresar = maquinaria;
+			}
+			return Regresar;
+		}
+
 	}
 }

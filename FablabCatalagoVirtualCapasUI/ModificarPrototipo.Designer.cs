@@ -146,6 +146,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtId.Name = "txtId";
 			this.txtId.Size = new System.Drawing.Size(100, 20);
 			this.txtId.TabIndex = 15;
+			this.txtId.Visible = false;
 			// 
 			// btnLupa
 			// 
@@ -170,6 +171,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.img.Size = new System.Drawing.Size(103, 104);
 			this.img.TabIndex = 32;
 			this.img.TabStop = false;
+			this.img.Visible = false;
 			// 
 			// cbMaquinaria
 			// 
@@ -426,6 +428,8 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtIdMaterial.Name = "txtIdMaterial";
 			this.txtIdMaterial.Size = new System.Drawing.Size(100, 20);
 			this.txtIdMaterial.TabIndex = 55;
+			this.txtIdMaterial.Visible = false;
+			this.txtIdMaterial.TextChanged += new System.EventHandler(this.txtIdMaterial_TextChanged);
 			// 
 			// txtIdDuraciones
 			// 
@@ -433,6 +437,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtIdDuraciones.Name = "txtIdDuraciones";
 			this.txtIdDuraciones.Size = new System.Drawing.Size(100, 20);
 			this.txtIdDuraciones.TabIndex = 56;
+			this.txtIdDuraciones.Visible = false;
 			this.txtIdDuraciones.TextChanged += new System.EventHandler(this.txtIdDuraciones_TextChanged);
 			// 
 			// txtIdEstado
@@ -441,6 +446,8 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtIdEstado.Name = "txtIdEstado";
 			this.txtIdEstado.Size = new System.Drawing.Size(100, 20);
 			this.txtIdEstado.TabIndex = 57;
+			this.txtIdEstado.Visible = false;
+			this.txtIdEstado.TextChanged += new System.EventHandler(this.txtIdEstado_TextChanged);
 			// 
 			// txtIdMaquinaria
 			// 
@@ -448,6 +455,8 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtIdMaquinaria.Name = "txtIdMaquinaria";
 			this.txtIdMaquinaria.Size = new System.Drawing.Size(100, 20);
 			this.txtIdMaquinaria.TabIndex = 58;
+			this.txtIdMaquinaria.Visible = false;
+			this.txtIdMaquinaria.TextChanged += new System.EventHandler(this.txtIdMaquinaria_TextChanged);
 			// 
 			// ModificarPrototipo
 			// 

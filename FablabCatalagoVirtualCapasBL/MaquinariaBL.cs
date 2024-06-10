@@ -15,5 +15,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return maquinariaDAL.RegresarMaquinaria();
 		}
+		public Maquinaria MostrarPorIdMaquinaria(int Id)
+		{
+			return maquinariaDAL.MostrarPorIdMaquinaria(Id);
+		}
 	}
 }

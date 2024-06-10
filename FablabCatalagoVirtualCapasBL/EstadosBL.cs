@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FablabCatalagoVirtualCapasEN;
 using FablabCatalagoVirtualCapasDAL;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace FablabCatalagoVirtualCapasBL
 {
@@ -14,6 +15,10 @@ namespace FablabCatalagoVirtualCapasBL
 		public List<Estados> RegresarEstadosPrototipos()
 		{
 			return EstadosDal.RegresarEstadosPrototipos();
+		}
+		public Estados MostrarPorIdEstados(int Id)
+		{
+			return EstadosDal.MostrarPorIdEstados(Id);
 		}
 	}
 }

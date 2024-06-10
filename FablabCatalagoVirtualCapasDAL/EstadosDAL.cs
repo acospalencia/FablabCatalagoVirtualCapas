@@ -28,5 +28,23 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return ListaEstados;
 		}
+		public Estados MostrarPorIdEstados(int Id)
+		{
+			var regresar = new Estados();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarPorIdEstados";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Estados Estados = new Estados();
+				Estados.Id = reader.GetInt32(0);
+				Estados.NombreEstado = reader.GetString(1);
+				Estados.Detalle = reader.GetString(2);
+				regresar = Estados;
+			}
+			return regresar;
+		}
 	}
 }

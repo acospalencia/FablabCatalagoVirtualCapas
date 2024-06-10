@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -105,43 +106,56 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
-            if ( validar())
-            {
-				MemoryStream ms = new MemoryStream();
-				img.Image.Save(ms, ImageFormat.Jpeg);
-				byte[] abyte = ms.ToArray();
-				//var modificar = new Prototipo
-				//{
-				//	Id = int.Parse(txtId.Text),
-				//	NombrePrototipo = txtNombre.Text,
-				//	TipoMaterial = cbMaterial.Text,
-				//	Ancho = double.Parse(txtAncho.Text),
-				//	Alto = double.Parse(txtAlto.Text),
-				//	TiempoArmado = txtArmarlo.Text,
-				//	TiempoDiseñado = txtDesign.Text,
-				//	TiempoFabricado = txtFabricarlo.Text,
-				//	Descripcion = txtDescripcion.Text,
-				//	Autor = txtAutor.Text,
-				//	ImagenPrototipo = img.Image
-				//};
-				//if (modificar != null)
-				//{
-				//	var modificarLista = new PrototipoBL();
-				//	modificarLista.Modificar(modificar);
-				//	var Actualiazar = new PrototipoBL();
-				//	dgListado.DataSource = null;
-				//	dgListado.DataSource = Actualiazar.regresarlista();
-				//	txtDescripcion.Text = null;
-				//	txtAncho.Text = null;
-				//	txtNombre.Text = null;
-				//	txtAlto.Text = null;
-				//	txtDesign.Text = null;
-				//	txtArmarlo.Text = null;
-				//	txtFabricarlo.Text = null;
-				//	txtAutor.Text = null;
-				//	img.Image = null;
-				//	MessageBox.Show("Los datos se han Actualizado con exito");
-				//}
+			if (validar())
+			{	
+				//MemoryStream ms = new MemoryStream();
+				//img.Image.Save(ms, ImageFormat.Jpeg);
+				//byte[] abyte = ms.ToArray();
+
+				var duracionesModify = new Duraciones
+				{
+					Id = int.Parse(txtIdDuraciones.Text),
+					TiempoDiseno = txtDesign.Text,
+					TiempoFabricado = txtFabricarlo.Text,
+					TiempoArmado = txtArmarlo.Text
+				};
+
+				var modificar = new Prototipo
+				{
+					Id = int.Parse(txtId.Text),
+					NombrePrototipo = txtNombre.Text,
+					IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
+					X = txtX.Text,
+					Y = txtX.Text,
+					Z = txtZ.Text,
+					Descripcion = txtDescripcion.Text,
+					IdDuracion = int.Parse(txtIdDuraciones.Text),
+					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
+					IdMaquinaria = Convert.ToInt32(cbMaquinaria.SelectedValue)
+
+				};
+				if (modificar != null)
+				{
+					var modifyDura = new DuracionesBL();
+					modifyDura.ActualizarDuraciones(duracionesModify);
+					var modificarLista = new PrototipoBL();
+					modificarLista.Modificar(modificar);
+					var Actualiazar = new PrototipoBL();
+					dgListado.DataSource = null;
+					dgListado.DataSource = Actualiazar.regresarlista();
+					txtId.Text = null;
+					txtNombre.Text = null;
+					cbMaterial.Text = null;
+					txtX.Text = null;
+					txtX.Text = null;
+					txtZ.Text = null;
+					txtDescripcion.Text = null;
+					txtIdDuraciones.Text = null;
+					cbIdEstado.Text = null;
+					cbMaquinaria.Text = null;
+
+					MessageBox.Show("Los datos se han Actualizado con exito");
+				}
 
 			}
 			else
@@ -164,7 +178,7 @@ namespace FablabCatalagoVirtualCapasUI
 				var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgListado.DataSource = prototiposFiltrados;
 			}
-			
+
 		}
 
 		private void txtIdDuraciones_TextChanged(object sender, EventArgs e)
@@ -178,6 +192,45 @@ namespace FablabCatalagoVirtualCapasUI
 					txtDesign.Text = duracion.TiempoDiseno;
 					txtArmarlo.Text = duracion.TiempoArmado;
 					txtFabricarlo.Text = duracion.TiempoFabricado;
+				}
+			}
+		}
+
+		private void txtIdMaterial_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdMaterial.Text, out int idMaterial))
+			{
+				MaterialesBL materialesBL = new MaterialesBL();
+				Materiales materiales = materialesBL.MostrarPorIdMateriales(idMaterial);
+				if (materiales != null)
+				{
+					cbMaterial.Text = materiales.NombreMaterial;
+				}
+			}
+		}
+
+		private void txtIdEstado_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdEstado.Text, out int idMaterial))
+			{
+				EstadosBL estadosBL = new EstadosBL();
+				Estados estados = estadosBL.MostrarPorIdEstados(idMaterial);
+				if (estados != null)
+				{
+					cbIdEstado.Text = estados.NombreEstado;
+				}
+			}
+		}
+
+		private void txtIdMaquinaria_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdMaquinaria.Text, out int idMaterial))
+			{
+				MaquinariaBL MaquinariaBL = new MaquinariaBL();
+				Maquinaria maquinaria = MaquinariaBL.MostrarPorIdMaquinaria(idMaterial);
+				if (maquinaria != null)
+				{
+					cbMaquinaria.Text = maquinaria.Nombre;
 				}
 			}
 		}
