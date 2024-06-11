@@ -138,7 +138,12 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 			
 		}
-	}
+
+        private void btnLupa_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 
 

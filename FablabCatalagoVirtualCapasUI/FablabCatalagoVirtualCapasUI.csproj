@@ -89,6 +89,12 @@
     <Compile Include="EliminarPrototipo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EliminarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRegistro.Designer.cs">
+      <DependentUpon>EliminarRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformacionPrototipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,24 @@
     <Compile Include="ModificarPrototipo.Designer.cs">
       <DependentUpon>ModificarPrototipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarR.Designer.cs">
+      <DependentUpon>ModificarR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarRegistro.Designer.cs">
+      <DependentUpon>ModificarRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +175,9 @@
     <EmbeddedResource Include="EliminarPrototipo.resx">
       <DependentUpon>EliminarPrototipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRegistro.resx">
+      <DependentUpon>EliminarRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InformacionPrototipos.resx">
       <DependentUpon>InformacionPrototipos.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +192,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarPrototipo.resx">
       <DependentUpon>ModificarPrototipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarR.resx">
+      <DependentUpon>ModificarR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarRegistro.resx">
+      <DependentUpon>ModificarRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
