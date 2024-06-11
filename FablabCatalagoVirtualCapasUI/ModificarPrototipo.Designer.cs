@@ -69,6 +69,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.txtIdMaterial = new System.Windows.Forms.TextBox();
+			this.txtIdDuraciones = new System.Windows.Forms.TextBox();
+			this.txtIdEstado = new System.Windows.Forms.TextBox();
+			this.txtIdMaquinaria = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgListado)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
 			this.SuspendLayout();
@@ -100,10 +104,10 @@ namespace FablabCatalagoVirtualCapasUI
 			// dgListado
 			// 
 			this.dgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgListado.Location = new System.Drawing.Point(615, 76);
+			this.dgListado.Location = new System.Drawing.Point(595, 76);
 			this.dgListado.Name = "dgListado";
 			this.dgListado.RowHeadersWidth = 51;
-			this.dgListado.Size = new System.Drawing.Size(427, 406);
+			this.dgListado.Size = new System.Drawing.Size(456, 419);
 			this.dgListado.TabIndex = 10;
 			this.dgListado.SelectionChanged += new System.EventHandler(this.dgListado_SelectionChanged);
 			// 
@@ -161,10 +165,10 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// img
 			// 
-			this.img.Location = new System.Drawing.Point(487, 422);
-			this.img.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.img.Location = new System.Drawing.Point(487, 378);
+			this.img.Margin = new System.Windows.Forms.Padding(2);
 			this.img.Name = "img";
-			this.img.Size = new System.Drawing.Size(32, 41);
+			this.img.Size = new System.Drawing.Size(103, 104);
 			this.img.TabIndex = 32;
 			this.img.TabStop = false;
 			this.img.Visible = false;
@@ -418,6 +422,42 @@ namespace FablabCatalagoVirtualCapasUI
 			this.label1.TabIndex = 33;
 			this.label1.Text = "Nombre:";
 			// 
+			// txtIdMaterial
+			// 
+			this.txtIdMaterial.Location = new System.Drawing.Point(373, 462);
+			this.txtIdMaterial.Name = "txtIdMaterial";
+			this.txtIdMaterial.Size = new System.Drawing.Size(100, 20);
+			this.txtIdMaterial.TabIndex = 55;
+			this.txtIdMaterial.Visible = false;
+			this.txtIdMaterial.TextChanged += new System.EventHandler(this.txtIdMaterial_TextChanged);
+			// 
+			// txtIdDuraciones
+			// 
+			this.txtIdDuraciones.Location = new System.Drawing.Point(373, 488);
+			this.txtIdDuraciones.Name = "txtIdDuraciones";
+			this.txtIdDuraciones.Size = new System.Drawing.Size(100, 20);
+			this.txtIdDuraciones.TabIndex = 56;
+			this.txtIdDuraciones.Visible = false;
+			this.txtIdDuraciones.TextChanged += new System.EventHandler(this.txtIdDuraciones_TextChanged);
+			// 
+			// txtIdEstado
+			// 
+			this.txtIdEstado.Location = new System.Drawing.Point(373, 514);
+			this.txtIdEstado.Name = "txtIdEstado";
+			this.txtIdEstado.Size = new System.Drawing.Size(100, 20);
+			this.txtIdEstado.TabIndex = 57;
+			this.txtIdEstado.Visible = false;
+			this.txtIdEstado.TextChanged += new System.EventHandler(this.txtIdEstado_TextChanged);
+			// 
+			// txtIdMaquinaria
+			// 
+			this.txtIdMaquinaria.Location = new System.Drawing.Point(373, 540);
+			this.txtIdMaquinaria.Name = "txtIdMaquinaria";
+			this.txtIdMaquinaria.Size = new System.Drawing.Size(100, 20);
+			this.txtIdMaquinaria.TabIndex = 58;
+			this.txtIdMaquinaria.Visible = false;
+			this.txtIdMaquinaria.TextChanged += new System.EventHandler(this.txtIdMaquinaria_TextChanged);
+			// 
 			// ModificarPrototipo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +467,10 @@ namespace FablabCatalagoVirtualCapasUI
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.agregarmateriales;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 589);
+			this.Controls.Add(this.txtIdMaquinaria);
+			this.Controls.Add(this.txtIdEstado);
+			this.Controls.Add(this.txtIdDuraciones);
+			this.Controls.Add(this.txtIdMaterial);
 			this.Controls.Add(this.cbMaquinaria);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.cbIdEstado);
@@ -502,6 +546,10 @@ namespace FablabCatalagoVirtualCapasUI
 		private Label label3;
 		private Label label2;
 		private Label label1;
+		private TextBox txtIdMaterial;
+		private TextBox txtIdDuraciones;
+		private TextBox txtIdEstado;
+		private TextBox txtIdMaquinaria;
 	}
 
         //private System.Windows.Forms.Panel panel1;

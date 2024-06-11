@@ -17,9 +17,17 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return duracionesDAL.GuardarDuraciones(pDuracion);
 		}
+		public int ActualizarDuraciones(Duraciones pDuracion)
+		{
+			return duracionesDAL.ActualizarDuraciones(pDuracion);
+		}
 		public int RegresarId()
 		{
 			return duracionesDAL.RegresarId();
+		}
+		public Duraciones MostrarPorIdDuraciones(int pDuracion)
+		{
+			return duracionesDAL.MostrarPorIdDuraciones(pDuracion);
 		}
 	}
 }

@@ -49,6 +49,7 @@
     <Compile Include="ModeloPrototipo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototipo.cs" />
+    <Compile Include="TipoMaterial.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,5 +28,10 @@ namespace FablabCatalagoVirtualCapasBL
         {
             materialesDAL.eliminarMateriales(pMateriales);
         }
-    }
+        public Materiales MostrarPorIdMateriales(int Id)
+        {
+            return materialesDAL.MostrarPorIdMateriales (Id);
+        }
+
+	}
 }
