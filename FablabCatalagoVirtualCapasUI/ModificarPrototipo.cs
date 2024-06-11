@@ -78,6 +78,18 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgListado.SelectedRows[0];
 				if (row != null)
 				{
+					txtId.Enabled = true;
+					txtNombre.Enabled = true;
+					cbMaterial.Enabled = true;
+					txtX.Enabled = true;
+					txtY.Enabled = true;
+					txtZ.Enabled = true;
+					txtDesign.Enabled = true;
+					txtArmarlo.Enabled = true;
+					txtFabricarlo.Enabled = true;
+					txtDescripcion.Enabled = true;
+					cbIdEstado.Enabled = true;
+					cbMaquinaria.Enabled = true;
 					txtId.Text = row.Cells[0].Value.ToString();
 					txtNombre.Text = row.Cells[1].Value.ToString();
 					txtIdMaterial.Text = row.Cells[2].Value.ToString();
@@ -147,12 +159,29 @@ namespace FablabCatalagoVirtualCapasUI
 					txtNombre.Text = null;
 					cbMaterial.Text = null;
 					txtX.Text = null;
-					txtX.Text = null;
+					txtY.Text = null;
 					txtZ.Text = null;
+					txtDesign.Text = null;
+					txtArmarlo.Text = null;
+					txtFabricarlo.Text = null;
 					txtDescripcion.Text = null;
 					txtIdDuraciones.Text = null;
 					cbIdEstado.Text = null;
 					cbMaquinaria.Text = null;
+					txtId.Enabled = false;
+					txtNombre.Enabled = false;
+					cbMaterial.Enabled = false;
+					txtX.Enabled = false;
+					txtY.Enabled = false;
+					txtZ.Enabled = false;
+					txtDesign.Enabled = false;
+					txtArmarlo.Enabled = false;
+					txtFabricarlo.Enabled = false;
+					txtDescripcion.Enabled = false;
+					cbIdEstado.Enabled = false;
+					cbMaquinaria.Enabled = false;
+
+
 
 					MessageBox.Show("Los datos se han Actualizado con exito");
 				}
