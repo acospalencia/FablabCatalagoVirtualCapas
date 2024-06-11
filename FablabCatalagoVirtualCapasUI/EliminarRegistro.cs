@@ -21,5 +21,12 @@ namespace FablabCatalagoVirtualCapasUI
         {
 
         }
-    }
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+			var anteriorForm = new ModificarRegistro();
+			anteriorForm.Show();
+			this.Hide();
+		}
+	}
 }

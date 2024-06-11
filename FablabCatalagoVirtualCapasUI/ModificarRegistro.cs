@@ -20,24 +20,36 @@ namespace FablabCatalagoVirtualCapasUI
         private void btnModificar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var formModified = new ModificarPrototipo();
+            var formModified = new ModificarR();
             formModified.Show();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var formIngresarPrototipo = new IngresarPrototipo();
+            var formIngresarPrototipo = new NuevoUsuario();
             formIngresarPrototipo.Show();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var formEliminar = new EliminarPrototipo();
+            var formEliminar = new EliminarRegistro();
             formEliminar.Show();
             this.Hide();
         }
-    }
+
+		private void ModificarRegistro_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void btnRegresar_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			var menuprincipal = new ElegirAccion();
+			menuprincipal.Show();
+		}
+	}
 
 }
 

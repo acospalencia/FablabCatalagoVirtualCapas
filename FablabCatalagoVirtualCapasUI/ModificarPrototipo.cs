@@ -116,13 +116,18 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 		}
 		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
+
+		public byte[] guardarimg(System.Drawing.Image img)
+		{
+			MemoryStream ms = new MemoryStream();
+			img.Save(ms, ImageFormat.Jpeg);
+			return ms.ToArray();
+		}
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
 			if (validar())
-			{	
-				//MemoryStream ms = new MemoryStream();
-				//img.Image.Save(ms, ImageFormat.Jpeg);
-				//byte[] abyte = ms.ToArray();
+			{
+				dgListado.DataSource = null;	
 
 				var duracionesModify = new Duraciones
 				{
@@ -140,6 +145,7 @@ namespace FablabCatalagoVirtualCapasUI
 					X = txtX.Text,
 					Y = txtX.Text,
 					Z = txtZ.Text,
+					Imagen = guardarimg(img.Image),
 					Descripcion = txtDescripcion.Text,
 					IdDuracion = int.Parse(txtIdDuraciones.Text),
 					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
@@ -185,6 +191,8 @@ namespace FablabCatalagoVirtualCapasUI
 
 					MessageBox.Show("Los datos se han Actualizado con exito");
 				}
+				var regresarlista = new PrototipoBL();
+				dgListado.DataSource = regresarlista.regresarlista();
 
 			}
 			else
