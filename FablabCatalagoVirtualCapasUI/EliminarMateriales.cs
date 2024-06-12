@@ -72,18 +72,24 @@ namespace FablabCatalagoVirtualCapasUI
         //metodo para buscar un material dentro de el datagrid por el ID
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            if (txtbuscar.Text == "" || txtbuscar.Text == null)
-            {
-                var regresarlista = new MaterialesBL();
-                dgVer.DataSource = regresarlista.regresarLista();
-            }
-
-            if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
-            {
-                var Lista = new MaterialesBL();
-                var MaterialesFiltrados = Lista.regresarLista().Where(i => i.Id == idBuscada).ToList();
-                dgVer.DataSource = MaterialesFiltrados;
-            }
-        }
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
+			{
+				var regresarlista = new MaterialesBL();
+				dgVer.DataSource = regresarlista.regresarLista();
+			}
+			else
+			{
+				var Lista = new MaterialesBL();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarLista().Where(p => p.NombreMaterial.ToLower().Contains(textoBusqueda)).ToList();
+				dgVer.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				dgVer.DataSource = prototiposFiltrados;
+			}
+		}
     }
 }

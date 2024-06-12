@@ -145,7 +145,8 @@ namespace FablabCatalagoVirtualCapasUI
 					X = txtX.Text,
 					Y = txtX.Text,
 					Z = txtZ.Text,
-					Imagen = guardarimg(img.Image),
+
+
 					Descripcion = txtDescripcion.Text,
 					IdDuracion = int.Parse(txtIdDuraciones.Text),
 					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
@@ -203,19 +204,24 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para buscar un objeto en la lista dependiendo en su Id
 		private void txtbuscar_TextChanged(object sender, EventArgs e)
 		{
-			if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
 			{
 				var regresarlista = new PrototipoBL();
 				dgListado.DataSource = regresarlista.regresarlista();
 			}
-
-			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			else
 			{
 				var Lista = new PrototipoBL();
-				var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarlista().Where(p => p.NombrePrototipo.ToLower().Contains(textoBusqueda)).ToList();
+				dgListado.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgListado.DataSource = prototiposFiltrados;
 			}
-
 		}
 
 		private void txtIdDuraciones_TextChanged(object sender, EventArgs e)

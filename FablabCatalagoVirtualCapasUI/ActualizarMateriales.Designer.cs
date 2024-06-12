@@ -31,28 +31,27 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarMateriales));
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.btnGuardar = new System.Windows.Forms.Button();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.btnModificar = new System.Windows.Forms.Button();
-			this.txtTipo = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.txtAlto = new System.Windows.Forms.TextBox();
-			this.txtNombre = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtPrecio = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.txtProveedor = new System.Windows.Forms.TextBox();
-			this.label10 = new System.Windows.Forms.Label();
-			this.txtAncho = new System.Windows.Forms.TextBox();
 			this.dgMaterial = new System.Windows.Forms.DataGridView();
 			this.btnLupa = new System.Windows.Forms.Button();
 			this.txtbuscar = new System.Windows.Forms.TextBox();
 			this.txtId = new System.Windows.Forms.TextBox();
+			this.cbTipoMaterial = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtY = new System.Windows.Forms.TextBox();
+			this.txtNombre = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.txtPrecio = new System.Windows.Forms.TextBox();
+			this.label9 = new System.Windows.Forms.Label();
+			this.txtZ = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.txtX = new System.Windows.Forms.TextBox();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgMaterial)).BeginInit();
 			this.SuspendLayout();
@@ -62,18 +61,6 @@
 			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-			// 
-			// btnGuardar
-			// 
-			this.btnGuardar.BackColor = System.Drawing.Color.PaleTurquoise;
-			this.btnGuardar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGuardar.Location = new System.Drawing.Point(639, 465);
-			this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Size = new System.Drawing.Size(204, 52);
-			this.btnGuardar.TabIndex = 18;
-			this.btnGuardar.Text = "Guardar";
-			this.btnGuardar.UseVisualStyleBackColor = false;
 			// 
 			// openFileDialog1
 			// 
@@ -91,7 +78,7 @@
 			this.btnRegresar.Location = new System.Drawing.Point(8, 10);
 			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
+			this.btnRegresar.Size = new System.Drawing.Size(50, 46);
 			this.btnRegresar.TabIndex = 29;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -99,21 +86,21 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.panel2.Controls.Add(this.btnModificar);
-			this.panel2.Controls.Add(this.txtTipo);
+			this.panel2.Controls.Add(this.cbTipoMaterial);
 			this.panel2.Controls.Add(this.label2);
-			this.panel2.Controls.Add(this.label1);
-			this.panel2.Controls.Add(this.txtAlto);
+			this.panel2.Controls.Add(this.label3);
+			this.panel2.Controls.Add(this.txtY);
 			this.panel2.Controls.Add(this.txtNombre);
 			this.panel2.Controls.Add(this.label6);
-			this.panel2.Controls.Add(this.label4);
+			this.panel2.Controls.Add(this.label7);
 			this.panel2.Controls.Add(this.txtPrecio);
-			this.panel2.Controls.Add(this.label8);
 			this.panel2.Controls.Add(this.label9);
-			this.panel2.Controls.Add(this.txtProveedor);
+			this.panel2.Controls.Add(this.txtZ);
 			this.panel2.Controls.Add(this.label10);
-			this.panel2.Controls.Add(this.txtAncho);
-			this.panel2.Location = new System.Drawing.Point(370, 0);
+			this.panel2.Controls.Add(this.txtX);
+			this.panel2.Controls.Add(this.btnModificar);
+			this.panel2.Controls.Add(this.label8);
+			this.panel2.Location = new System.Drawing.Point(174, -4);
 			this.panel2.Margin = new System.Windows.Forms.Padding(4);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(500, 743);
@@ -139,102 +126,6 @@
 			this.btnModificar.Visible = false;
 			this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
 			// 
-			// txtTipo
-			// 
-			this.txtTipo.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTipo.Location = new System.Drawing.Point(53, 198);
-			this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
-			this.txtTipo.Multiline = true;
-			this.txtTipo.Name = "txtTipo";
-			this.txtTipo.Size = new System.Drawing.Size(345, 35);
-			this.txtTipo.TabIndex = 46;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label2.Location = new System.Drawing.Point(39, 159);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(199, 36);
-			this.label2.TabIndex = 45;
-			this.label2.Text = "Tipo Material:";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label1.Location = new System.Drawing.Point(39, 421);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(238, 36);
-			this.label1.TabIndex = 43;
-			this.label1.Text = "Alto del material:";
-			// 
-			// txtAlto
-			// 
-			this.txtAlto.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAlto.Location = new System.Drawing.Point(53, 461);
-			this.txtAlto.Margin = new System.Windows.Forms.Padding(4);
-			this.txtAlto.Multiline = true;
-			this.txtAlto.Name = "txtAlto";
-			this.txtAlto.Size = new System.Drawing.Size(344, 35);
-			this.txtAlto.TabIndex = 44;
-			// 
-			// txtNombre
-			// 
-			this.txtNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtNombre.Location = new System.Drawing.Point(53, 120);
-			this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-			this.txtNombre.Multiline = true;
-			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(345, 35);
-			this.txtNombre.TabIndex = 42;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.BackColor = System.Drawing.Color.Transparent;
-			this.label6.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label6.Location = new System.Drawing.Point(39, 246);
-			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(106, 36);
-			this.label6.TabIndex = 41;
-			this.label6.Text = "Precio:";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.BackColor = System.Drawing.Color.Transparent;
-			this.label4.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label4.Location = new System.Drawing.Point(39, 81);
-			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(127, 36);
-			this.label4.TabIndex = 40;
-			this.label4.Text = "Nombre:";
-			// 
-			// txtPrecio
-			// 
-			this.txtPrecio.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPrecio.Location = new System.Drawing.Point(53, 290);
-			this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
-			this.txtPrecio.Multiline = true;
-			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(348, 35);
-			this.txtPrecio.TabIndex = 36;
-			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -247,62 +138,14 @@
 			this.label8.TabIndex = 1;
 			this.label8.Text = "Actualizar materiales";
 			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.BackColor = System.Drawing.Color.Transparent;
-			this.label9.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label9.Location = new System.Drawing.Point(39, 329);
-			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(264, 36);
-			this.label9.TabIndex = 37;
-			this.label9.Text = "Ancho del material:";
-			// 
-			// txtProveedor
-			// 
-			this.txtProveedor.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtProveedor.Location = new System.Drawing.Point(53, 560);
-			this.txtProveedor.Margin = new System.Windows.Forms.Padding(4);
-			this.txtProveedor.Multiline = true;
-			this.txtProveedor.Name = "txtProveedor";
-			this.txtProveedor.Size = new System.Drawing.Size(348, 35);
-			this.txtProveedor.TabIndex = 39;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.BackColor = System.Drawing.Color.Transparent;
-			this.label10.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label10.Location = new System.Drawing.Point(39, 520);
-			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(155, 36);
-			this.label10.TabIndex = 35;
-			this.label10.Text = "Proveedor:";
-			// 
-			// txtAncho
-			// 
-			this.txtAncho.BackColor = System.Drawing.SystemColors.ScrollBar;
-			this.txtAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAncho.Location = new System.Drawing.Point(53, 369);
-			this.txtAncho.Margin = new System.Windows.Forms.Padding(4);
-			this.txtAncho.Multiline = true;
-			this.txtAncho.Name = "txtAncho";
-			this.txtAncho.Size = new System.Drawing.Size(344, 35);
-			this.txtAncho.TabIndex = 38;
-			// 
 			// dgMaterial
 			// 
 			this.dgMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgMaterial.Location = new System.Drawing.Point(869, 120);
+			this.dgMaterial.Location = new System.Drawing.Point(676, 116);
 			this.dgMaterial.Name = "dgMaterial";
 			this.dgMaterial.RowHeadersWidth = 51;
 			this.dgMaterial.RowTemplate.Height = 24;
-			this.dgMaterial.Size = new System.Drawing.Size(487, 619);
+			this.dgMaterial.Size = new System.Drawing.Size(675, 619);
 			this.dgMaterial.TabIndex = 45;
 			this.dgMaterial.SelectionChanged += new System.EventHandler(this.dgMaterial_SelectionChanged);
 			// 
@@ -315,7 +158,7 @@
 			this.btnLupa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnLupa.Location = new System.Drawing.Point(1253, 41);
+			this.btnLupa.Location = new System.Drawing.Point(1163, 40);
 			this.btnLupa.Margin = new System.Windows.Forms.Padding(4);
 			this.btnLupa.Name = "btnLupa";
 			this.btnLupa.Size = new System.Drawing.Size(56, 39);
@@ -325,12 +168,15 @@
 			// 
 			// txtbuscar
 			// 
-			this.txtbuscar.Location = new System.Drawing.Point(954, 46);
+			this.txtbuscar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.txtbuscar.Location = new System.Drawing.Point(864, 45);
 			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.txtbuscar.Multiline = true;
 			this.txtbuscar.Name = "txtbuscar";
 			this.txtbuscar.Size = new System.Drawing.Size(287, 30);
 			this.txtbuscar.TabIndex = 46;
+			this.txtbuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
 			// 
 			// txtId
 			// 
@@ -339,6 +185,151 @@
 			this.txtId.Size = new System.Drawing.Size(100, 22);
 			this.txtId.TabIndex = 48;
 			this.txtId.Visible = false;
+			// 
+			// cbTipoMaterial
+			// 
+			this.cbTipoMaterial.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.cbTipoMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbTipoMaterial.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbTipoMaterial.FormattingEnabled = true;
+			this.cbTipoMaterial.Location = new System.Drawing.Point(68, 220);
+			this.cbTipoMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.cbTipoMaterial.Name = "cbTipoMaterial";
+			this.cbTipoMaterial.Size = new System.Drawing.Size(344, 31);
+			this.cbTipoMaterial.TabIndex = 72;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label2.Location = new System.Drawing.Point(54, 173);
+			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(199, 36);
+			this.label2.TabIndex = 71;
+			this.label2.Text = "Tipo Material:";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label3.Location = new System.Drawing.Point(54, 436);
+			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(189, 36);
+			this.label3.TabIndex = 69;
+			this.label3.Text = "Tamaño eje Y";
+			// 
+			// txtY
+			// 
+			this.txtY.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.txtY.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtY.Location = new System.Drawing.Point(68, 476);
+			this.txtY.Margin = new System.Windows.Forms.Padding(4);
+			this.txtY.Multiline = true;
+			this.txtY.Name = "txtY";
+			this.txtY.Size = new System.Drawing.Size(344, 35);
+			this.txtY.TabIndex = 70;
+			// 
+			// txtNombre
+			// 
+			this.txtNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNombre.Location = new System.Drawing.Point(68, 135);
+			this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+			this.txtNombre.Multiline = true;
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.Size = new System.Drawing.Size(345, 35);
+			this.txtNombre.TabIndex = 68;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.BackColor = System.Drawing.Color.Transparent;
+			this.label6.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label6.Location = new System.Drawing.Point(54, 261);
+			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(106, 36);
+			this.label6.TabIndex = 67;
+			this.label6.Text = "Precio:";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.BackColor = System.Drawing.Color.Transparent;
+			this.label7.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label7.Location = new System.Drawing.Point(54, 96);
+			this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(127, 36);
+			this.label7.TabIndex = 66;
+			this.label7.Text = "Nombre:";
+			// 
+			// txtPrecio
+			// 
+			this.txtPrecio.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.txtPrecio.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPrecio.Location = new System.Drawing.Point(68, 305);
+			this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+			this.txtPrecio.Multiline = true;
+			this.txtPrecio.Name = "txtPrecio";
+			this.txtPrecio.Size = new System.Drawing.Size(348, 35);
+			this.txtPrecio.TabIndex = 62;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.BackColor = System.Drawing.Color.Transparent;
+			this.label9.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label9.Location = new System.Drawing.Point(54, 344);
+			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(190, 36);
+			this.label9.TabIndex = 63;
+			this.label9.Text = "Tamaño eje X";
+			// 
+			// txtZ
+			// 
+			this.txtZ.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.txtZ.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtZ.Location = new System.Drawing.Point(68, 575);
+			this.txtZ.Margin = new System.Windows.Forms.Padding(4);
+			this.txtZ.Multiline = true;
+			this.txtZ.Name = "txtZ";
+			this.txtZ.Size = new System.Drawing.Size(348, 35);
+			this.txtZ.TabIndex = 65;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.BackColor = System.Drawing.Color.Transparent;
+			this.label10.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label10.Location = new System.Drawing.Point(54, 535);
+			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(192, 36);
+			this.label10.TabIndex = 61;
+			this.label10.Text = "Tamaño Eje Z";
+			// 
+			// txtX
+			// 
+			this.txtX.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.txtX.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtX.Location = new System.Drawing.Point(68, 384);
+			this.txtX.Margin = new System.Windows.Forms.Padding(4);
+			this.txtX.Multiline = true;
+			this.txtX.Name = "txtX";
+			this.txtX.Size = new System.Drawing.Size(344, 35);
+			this.txtX.TabIndex = 64;
 			// 
 			// ActualizarMateriales
 			// 
@@ -355,7 +346,6 @@
 			this.Controls.Add(this.dgMaterial);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.btnRegresar);
-			this.Controls.Add(this.btnGuardar);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
@@ -375,27 +365,26 @@
 
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button btnGuardar;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtProveedor;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAncho;
-		private System.Windows.Forms.TextBox txtNombre;
 		private System.Windows.Forms.DataGridView dgMaterial;
 		private System.Windows.Forms.Button btnLupa;
 		private System.Windows.Forms.TextBox txtbuscar;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox txtAlto;
-		private System.Windows.Forms.TextBox txtTipo;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtId;
 		private System.Windows.Forms.Button btnModificar;
+		private System.Windows.Forms.ComboBox cbTipoMaterial;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox txtY;
+		private System.Windows.Forms.TextBox txtNombre;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox txtPrecio;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.TextBox txtZ;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.TextBox txtX;
 	}
 }

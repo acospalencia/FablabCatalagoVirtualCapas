@@ -44,7 +44,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Y", pPrototipo.Y);
 			cmd.Parameters.AddWithValue("@Z", pPrototipo.Z);
 			cmd.Parameters.AddWithValue("@Descripcion", pPrototipo.Descripcion);
-			cmd.Parameters.AddWithValue("@Imagen", pPrototipo.Imagen);
+			//cmd.Parameters.AddWithValue("@Imagen", pPrototipo.Imagen);
 			cmd.Parameters.AddWithValue("@IdDuracion", pPrototipo.IdDuracion);
 			cmd.Parameters.AddWithValue("@IdEstado", pPrototipo.IdEstado);
 			cmd.Parameters.AddWithValue("@IdMaquinaria", pPrototipo.IdMaquinaria);

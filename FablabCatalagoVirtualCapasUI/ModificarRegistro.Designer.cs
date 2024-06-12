@@ -40,7 +40,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.label1.Location = new System.Drawing.Point(346, 53);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
@@ -54,14 +54,17 @@
 			this.btnModificar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.editar__1_;
 			this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnModificar.FlatAppearance.BorderSize = 0;
+			this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.ForeColor = System.Drawing.Color.Transparent;
-			this.btnModificar.Location = new System.Drawing.Point(460, 215);
+			this.btnModificar.Location = new System.Drawing.Point(945, 440);
 			this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(109, 89);
 			this.btnModificar.TabIndex = 1;
 			this.btnModificar.UseVisualStyleBackColor = false;
+			this.btnModificar.Visible = false;
 			this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
 			// 
 			// btnEliminar
@@ -70,11 +73,13 @@
 			this.btnEliminar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.btnElimnar2;
 			this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnEliminar.FlatAppearance.BorderSize = 0;
+			this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEliminar.Location = new System.Drawing.Point(718, 221);
+			this.btnEliminar.Location = new System.Drawing.Point(578, 211);
 			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(101, 85);
+			this.btnEliminar.Size = new System.Drawing.Size(136, 123);
 			this.btnEliminar.TabIndex = 2;
 			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -85,6 +90,8 @@
 			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.Location = new System.Drawing.Point(3, 5);
 			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
@@ -104,10 +111,10 @@
 			this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnIngresar.ForeColor = System.Drawing.Color.Transparent;
-			this.btnIngresar.Location = new System.Drawing.Point(246, 217);
+			this.btnIngresar.Location = new System.Drawing.Point(357, 211);
 			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnIngresar.Name = "btnIngresar";
-			this.btnIngresar.Size = new System.Drawing.Size(92, 85);
+			this.btnIngresar.Size = new System.Drawing.Size(155, 130);
 			this.btnIngresar.TabIndex = 4;
 			this.btnIngresar.UseVisualStyleBackColor = false;
 			this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);

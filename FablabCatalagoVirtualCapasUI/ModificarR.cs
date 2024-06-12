@@ -38,5 +38,10 @@ namespace FablabCatalagoVirtualCapasUI
 			anteriorForm.Show();
 			this.Hide();
 		}
+
+		private void ModificarR_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }

@@ -22,12 +22,12 @@ namespace FablabCatalagoVirtualCapasUI
 		}
 		private bool validacion()
 		{
-			return !string.IsNullOrEmpty(txtNombre.Text) &&
-					!string.IsNullOrEmpty(txtTipo.Text) &&
-					!string.IsNullOrEmpty(txtAncho.Text) &&
-					!string.IsNullOrEmpty(txtAlto.Text) &&
-					!string.IsNullOrEmpty(txtPrecio.Text) &&
-					!string.IsNullOrEmpty(txtProveedor.Text);
+			return !string.IsNullOrEmpty(txtNombre.Text);
+					//!string.IsNullOrEmpty(txtTipo.Text) &&
+					//!string.IsNullOrEmpty(txtAncho.Text) &&
+					//!string.IsNullOrEmpty(txtAlto.Text) &&
+					//!string.IsNullOrEmpty(txtPrecio.Text) &&
+					//!string.IsNullOrEmpty(txtProveedor.Text);
 		}
 
         private void ActualizarMateriales_Load(object sender, EventArgs e)
@@ -56,35 +56,37 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgMaterial.SelectedRows[0];
 				if (row != null)
 				{
-					btnModificar.Visible = true;
-					txtId.Text = row.Cells[0].Value.ToString();
-					txtNombre.Text = row.Cells[1].Value.ToString();
-					txtPrecio.Text = row.Cells[3].Value.ToString();
-					txtProveedor.Text = row.Cells[6].Value.ToString();
-					txtAlto.Text = row.Cells[5].Value.ToString();
-					txtAncho.Text = row.Cells[4].Value.ToString();
-					txtTipo.Text = row.Cells[2].Value.ToString();
+					//btnModificar.Visible = true;
+					//txtId.Text = row.Cells[0].Value.ToString();
+					//txtNombre.Text = row.Cells[1].Value.ToString();
+					//txtPrecio.Text = row.Cells[3].Value.ToString();
+					//txtProveedor.Text = row.Cells[6].Value.ToString();
+					//txtAlto.Text = row.Cells[5].Value.ToString();
+					//txtAncho.Text = row.Cells[4].Value.ToString();
+					//txtTipo.Text = row.Cells[2].Value.ToString();
 				}
 			}
 		}
 
 		private void btnLupa_Click(object sender, EventArgs e)
 		{
-			if (txtbuscar.Text == "" || txtbuscar.Text == null)
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
 			{
 				var regresarlista = new MaterialesBL();
 				dgMaterial.DataSource = regresarlista.regresarLista();
 			}
-
-			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
-			{
-				var Lista = new MaterialesBL ();
-				var prototiposFiltrados = Lista.regresarLista().Where(i => i.Id == idBuscada).ToList();
-				dgMaterial.DataSource = prototiposFiltrados;
-			}
 			else
 			{
-				MessageBox.Show("Ingrese un número válido en el campo para buscar.");
+				var Lista = new MaterialesBL();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarLista().Where(p => p.NombreMaterial.ToLower().Contains(textoBusqueda)).ToList();
+				dgMaterial.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				dgMaterial.DataSource = prototiposFiltrados;
 			}
 		}
 
@@ -112,11 +114,11 @@ namespace FablabCatalagoVirtualCapasUI
 					dgMaterial.DataSource = null;
 					dgMaterial.DataSource = regresar.regresarLista();
 				}
-				txtProveedor.Text = null;
-				txtPrecio.Text = null;
-				txtAlto.Text = null;
-				txtAncho.Text = null;
-				txtTipo.Text = null;
+				//txtProveedor.Text = null;
+				//txtPrecio.Text = null;
+				//txtAlto.Text = null;
+				//txtAncho.Text = null;
+				//txtTipo.Text = null;
 				txtNombre.Text = null;
 				btnModificar.Visible = false;
 				MessageBox.Show("Los datos se han Actualizado con exito");
@@ -126,6 +128,28 @@ namespace FablabCatalagoVirtualCapasUI
 				MessageBox.Show("porfavor rellene los correspondientees textboxx");
 			}
 
+		}
+
+		private void txtbuscar_TextChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
+			{
+				var regresarlista = new MaterialesBL();
+				dgMaterial.DataSource = regresarlista.regresarLista();
+			}
+			else
+			{
+				var Lista = new MaterialesBL();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarLista().Where(p => p.NombreMaterial.ToLower().Contains(textoBusqueda)).ToList();
+				dgMaterial.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				dgMaterial.DataSource = prototiposFiltrados;
+			}
 		}
 	}
 	

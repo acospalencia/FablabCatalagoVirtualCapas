@@ -88,7 +88,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
 			this.btnRegresar.Location = new System.Drawing.Point(-3, 7);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
 			this.btnRegresar.TabIndex = 9;
@@ -106,7 +106,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			this.dgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgListado.Location = new System.Drawing.Point(793, 94);
-			this.dgListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dgListado.Margin = new System.Windows.Forms.Padding(4);
 			this.dgListado.Name = "dgListado";
 			this.dgListado.RowHeadersWidth = 51;
 			this.dgListado.Size = new System.Drawing.Size(608, 516);
@@ -125,7 +125,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnModificar.Location = new System.Drawing.Point(40, 598);
-			this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(176, 59);
 			this.btnModificar.TabIndex = 11;
@@ -137,7 +137,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.txtbuscar.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.txtbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtbuscar.Location = new System.Drawing.Point(876, 41);
-			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtbuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.txtbuscar.Multiline = true;
 			this.txtbuscar.Name = "txtbuscar";
 			this.txtbuscar.Size = new System.Drawing.Size(400, 32);
@@ -147,7 +147,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtId
 			// 
 			this.txtId.Location = new System.Drawing.Point(497, 534);
-			this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtId.Margin = new System.Windows.Forms.Padding(4);
 			this.txtId.Name = "txtId";
 			this.txtId.Size = new System.Drawing.Size(132, 22);
 			this.txtId.TabIndex = 15;
@@ -163,7 +163,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.btnLupa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnLupa.Location = new System.Drawing.Point(1285, 37);
-			this.btnLupa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnLupa.Margin = new System.Windows.Forms.Padding(4);
 			this.btnLupa.Name = "btnLupa";
 			this.btnLupa.Size = new System.Drawing.Size(76, 39);
 			this.btnLupa.TabIndex = 29;
@@ -177,6 +177,7 @@ namespace FablabCatalagoVirtualCapasUI
 			this.img.Size = new System.Drawing.Size(373, 233);
 			this.img.TabIndex = 32;
 			this.img.TabStop = false;
+			this.img.Visible = false;
 			// 
 			// cbMaquinaria
 			// 
@@ -430,7 +431,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtIdMaterial
 			// 
 			this.txtIdMaterial.Location = new System.Drawing.Point(497, 569);
-			this.txtIdMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIdMaterial.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIdMaterial.Name = "txtIdMaterial";
 			this.txtIdMaterial.Size = new System.Drawing.Size(132, 22);
 			this.txtIdMaterial.TabIndex = 55;
@@ -440,7 +441,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtIdDuraciones
 			// 
 			this.txtIdDuraciones.Location = new System.Drawing.Point(497, 601);
-			this.txtIdDuraciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIdDuraciones.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIdDuraciones.Name = "txtIdDuraciones";
 			this.txtIdDuraciones.Size = new System.Drawing.Size(132, 22);
 			this.txtIdDuraciones.TabIndex = 56;
@@ -450,7 +451,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtIdEstado
 			// 
 			this.txtIdEstado.Location = new System.Drawing.Point(497, 633);
-			this.txtIdEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIdEstado.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIdEstado.Name = "txtIdEstado";
 			this.txtIdEstado.Size = new System.Drawing.Size(132, 22);
 			this.txtIdEstado.TabIndex = 57;
@@ -460,7 +461,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// txtIdMaquinaria
 			// 
 			this.txtIdMaquinaria.Location = new System.Drawing.Point(497, 665);
-			this.txtIdMaquinaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIdMaquinaria.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIdMaquinaria.Name = "txtIdMaquinaria";
 			this.txtIdMaquinaria.Size = new System.Drawing.Size(132, 22);
 			this.txtIdMaquinaria.TabIndex = 58;
@@ -502,16 +503,16 @@ namespace FablabCatalagoVirtualCapasUI
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.img);
 			this.Controls.Add(this.btnLupa);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.txtbuscar);
 			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.dgListado);
 			this.Controls.Add(this.btnRegresar);
+			this.Controls.Add(this.img);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "ModificarPrototipo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

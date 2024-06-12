@@ -43,7 +43,7 @@
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(27, 122);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(149, 22);
 			this.textBox1.TabIndex = 0;
@@ -74,7 +74,7 @@
 			// textBox2
 			// 
 			this.textBox2.Location = new System.Drawing.Point(27, 230);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(149, 22);
 			this.textBox2.TabIndex = 3;
@@ -90,7 +90,7 @@
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.ForeColor = System.Drawing.Color.DarkGray;
 			this.btnEliminar.Location = new System.Drawing.Point(652, 203);
-			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(116, 87);
 			this.btnEliminar.TabIndex = 4;
@@ -99,7 +99,7 @@
 			// textBox3
 			// 
 			this.textBox3.Location = new System.Drawing.Point(224, 81);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox3.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(369, 22);
 			this.textBox3.TabIndex = 5;
@@ -109,7 +109,7 @@
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(224, 126);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.Size = new System.Drawing.Size(420, 223);
@@ -123,7 +123,7 @@
 			this.btnBuscar.FlatAppearance.BorderSize = 0;
 			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnBuscar.Location = new System.Drawing.Point(603, 74);
-			this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnBuscar.Name = "btnBuscar";
 			this.btnBuscar.Size = new System.Drawing.Size(41, 37);
 			this.btnBuscar.TabIndex = 7;
@@ -136,10 +136,12 @@
 			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.Location = new System.Drawing.Point(1, 1);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(53, 42);
 			this.btnRegresar.TabIndex = 8;
@@ -163,10 +165,11 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox1);
 			this.DoubleBuffered = true;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "ModificarR";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ModificarRegistro";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModificarR_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
