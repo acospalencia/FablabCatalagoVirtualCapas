@@ -45,6 +45,7 @@
     <Compile Include="EstadosBL.cs" />
     <Compile Include="MaquinariaBL.cs" />
     <Compile Include="MaterialesBL.cs" />
+    <Compile Include="ModeloProto2BL.cs" />
     <Compile Include="ModeloPrototipoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototipoBL.cs" />

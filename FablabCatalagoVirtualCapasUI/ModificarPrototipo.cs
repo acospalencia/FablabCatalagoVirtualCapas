@@ -60,8 +60,10 @@ namespace FablabCatalagoVirtualCapasUI
 			var materialBL = new MaterialesBL();
 			var EstadosBL = new EstadosBL();
 			var maquinariaBL = new MaquinariaBL();
+
 			cbMaterial.DataSource = ingresar.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.ValueMember = "Id";
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
 			cbMaterial.ValueMember = "Id";
@@ -78,6 +80,18 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgListado.SelectedRows[0];
 				if (row != null)
 				{
+					txtId.Enabled = true;
+					txtNombre.Enabled = true;
+					cbMaterial.Enabled = true;
+					txtX.Enabled = true;
+					txtY.Enabled = true;
+					txtZ.Enabled = true;
+					txtDesign.Enabled = true;
+					txtArmarlo.Enabled = true;
+					txtFabricarlo.Enabled = true;
+					txtDescripcion.Enabled = true;
+					cbIdEstado.Enabled = true;
+					cbMaquinaria.Enabled = true;
 					txtId.Text = row.Cells[0].Value.ToString();
 					txtNombre.Text = row.Cells[1].Value.ToString();
 					txtIdMaterial.Text = row.Cells[2].Value.ToString();
@@ -100,17 +114,17 @@ namespace FablabCatalagoVirtualCapasUI
 					{
 						img.Image = null;
 					}
+
 				}
 			}
 		}
 		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
+
+		
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
 			if (validar())
-			{	
-				//MemoryStream ms = new MemoryStream();
-				//img.Image.Save(ms, ImageFormat.Jpeg);
-				//byte[] abyte = ms.ToArray();
+			{
 
 				var duracionesModify = new Duraciones
 				{
@@ -147,15 +161,32 @@ namespace FablabCatalagoVirtualCapasUI
 					txtNombre.Text = null;
 					cbMaterial.Text = null;
 					txtX.Text = null;
-					txtX.Text = null;
+					txtY.Text = null;
 					txtZ.Text = null;
+					txtDesign.Text = null;
+					txtArmarlo.Text = null;
+					txtFabricarlo.Text = null;
 					txtDescripcion.Text = null;
 					txtIdDuraciones.Text = null;
 					cbIdEstado.Text = null;
 					cbMaquinaria.Text = null;
+					txtId.Enabled = false;
+					txtNombre.Enabled = false;
+					cbMaterial.Enabled = false;
+					txtX.Enabled = false;
+					txtY.Enabled = false;
+					txtZ.Enabled = false;
+					txtDesign.Enabled = false;
+					txtArmarlo.Enabled = false;
+					txtFabricarlo.Enabled = false;
+					txtDescripcion.Enabled = false;
+					cbIdEstado.Enabled = false;
+					cbMaquinaria.Enabled = false;
 
 					MessageBox.Show("Los datos se han Actualizado con exito");
 				}
+				var regresarlista = new PrototipoBL();
+				dgListado.DataSource = regresarlista.regresarlista();
 
 			}
 			else
@@ -166,19 +197,24 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para buscar un objeto en la lista dependiendo en su Id
 		private void txtbuscar_TextChanged(object sender, EventArgs e)
 		{
-			if (txtbuscar.Text == "" || txtbuscar.Text == "0" || txtbuscar.Text == null)
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
 			{
 				var regresarlista = new PrototipoBL();
 				dgListado.DataSource = regresarlista.regresarlista();
 			}
-
-			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			else
 			{
 				var Lista = new PrototipoBL();
-				var prototiposFiltrados = Lista.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarlista().Where(p => p.NombrePrototipo.ToLower().Contains(textoBusqueda)).ToList();
+				dgListado.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgListado.DataSource = prototiposFiltrados;
 			}
-
 		}
 
 		private void txtIdDuraciones_TextChanged(object sender, EventArgs e)
@@ -234,6 +270,7 @@ namespace FablabCatalagoVirtualCapasUI
 				}
 			}
 		}
+
 	}
 }
 

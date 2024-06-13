@@ -28,5 +28,23 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return lista;
 		}
+		public TipoMaterial MostrarPorIdTipo(int Id)
+		{
+			var Regresar = new TipoMaterial();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarTipoId";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				TipoMaterial tipos = new TipoMaterial();
+				tipos.Id = reader.GetInt32(0);
+				tipos.NombreTipo = reader.GetString(1);
+				tipos.Descripcion = reader.GetString(2);
+				Regresar = tipos;
+			}
+			return Regresar;
+		}
 	}
 }

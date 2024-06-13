@@ -142,7 +142,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtId
 			// 
-			this.txtId.Location = new System.Drawing.Point(373, 434);
+			this.txtId.Location = new System.Drawing.Point(307, 434);
 			this.txtId.Name = "txtId";
 			this.txtId.Size = new System.Drawing.Size(100, 20);
 			this.txtId.TabIndex = 15;
@@ -165,10 +165,10 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// img
 			// 
-			this.img.Location = new System.Drawing.Point(487, 378);
+			this.img.Location = new System.Drawing.Point(421, 401);
 			this.img.Margin = new System.Windows.Forms.Padding(2);
 			this.img.Name = "img";
-			this.img.Size = new System.Drawing.Size(103, 104);
+			this.img.Size = new System.Drawing.Size(169, 159);
 			this.img.TabIndex = 32;
 			this.img.TabStop = false;
 			this.img.Visible = false;
@@ -176,6 +176,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// cbMaquinaria
 			// 
 			this.cbMaquinaria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbMaquinaria.Enabled = false;
 			this.cbMaquinaria.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbMaquinaria.FormattingEnabled = true;
 			this.cbMaquinaria.Location = new System.Drawing.Point(30, 411);
@@ -200,6 +201,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// cbIdEstado
 			// 
 			this.cbIdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbIdEstado.Enabled = false;
 			this.cbIdEstado.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbIdEstado.FormattingEnabled = true;
 			this.cbIdEstado.Location = new System.Drawing.Point(30, 355);
@@ -223,6 +225,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtX
 			// 
+			this.txtX.Enabled = false;
 			this.txtX.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtX.Location = new System.Drawing.Point(31, 189);
 			this.txtX.Margin = new System.Windows.Forms.Padding(2);
@@ -245,6 +248,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtFabricarlo
 			// 
+			this.txtFabricarlo.Enabled = false;
 			this.txtFabricarlo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtFabricarlo.Location = new System.Drawing.Point(329, 189);
 			this.txtFabricarlo.Margin = new System.Windows.Forms.Padding(2);
@@ -267,6 +271,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtArmarlo
 			// 
+			this.txtArmarlo.Enabled = false;
 			this.txtArmarlo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtArmarlo.Location = new System.Drawing.Point(329, 132);
 			this.txtArmarlo.Margin = new System.Windows.Forms.Padding(2);
@@ -290,6 +295,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// cbMaterial
 			// 
 			this.cbMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbMaterial.Enabled = false;
 			this.cbMaterial.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbMaterial.FormattingEnabled = true;
 			this.cbMaterial.Location = new System.Drawing.Point(30, 132);
@@ -300,6 +306,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtDescripcion
 			// 
+			this.txtDescripcion.Enabled = false;
 			this.txtDescripcion.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtDescripcion.Location = new System.Drawing.Point(325, 245);
 			this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
@@ -310,6 +317,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtZ
 			// 
+			this.txtZ.Enabled = false;
 			this.txtZ.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtZ.Location = new System.Drawing.Point(30, 302);
 			this.txtZ.Margin = new System.Windows.Forms.Padding(2);
@@ -319,6 +327,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtDesign
 			// 
+			this.txtDesign.Enabled = false;
 			this.txtDesign.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtDesign.Location = new System.Drawing.Point(329, 80);
 			this.txtDesign.Margin = new System.Windows.Forms.Padding(2);
@@ -328,6 +337,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtY
 			// 
+			this.txtY.Enabled = false;
 			this.txtY.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtY.Location = new System.Drawing.Point(30, 246);
 			this.txtY.Margin = new System.Windows.Forms.Padding(2);
@@ -337,6 +347,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtNombre
 			// 
+			this.txtNombre.Enabled = false;
 			this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNombre.Location = new System.Drawing.Point(31, 80);
 			this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
@@ -424,7 +435,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtIdMaterial
 			// 
-			this.txtIdMaterial.Location = new System.Drawing.Point(373, 462);
+			this.txtIdMaterial.Location = new System.Drawing.Point(307, 462);
 			this.txtIdMaterial.Name = "txtIdMaterial";
 			this.txtIdMaterial.Size = new System.Drawing.Size(100, 20);
 			this.txtIdMaterial.TabIndex = 55;
@@ -433,7 +444,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtIdDuraciones
 			// 
-			this.txtIdDuraciones.Location = new System.Drawing.Point(373, 488);
+			this.txtIdDuraciones.Location = new System.Drawing.Point(307, 488);
 			this.txtIdDuraciones.Name = "txtIdDuraciones";
 			this.txtIdDuraciones.Size = new System.Drawing.Size(100, 20);
 			this.txtIdDuraciones.TabIndex = 56;
@@ -442,7 +453,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtIdEstado
 			// 
-			this.txtIdEstado.Location = new System.Drawing.Point(373, 514);
+			this.txtIdEstado.Location = new System.Drawing.Point(307, 514);
 			this.txtIdEstado.Name = "txtIdEstado";
 			this.txtIdEstado.Size = new System.Drawing.Size(100, 20);
 			this.txtIdEstado.TabIndex = 57;
@@ -451,7 +462,7 @@ namespace FablabCatalagoVirtualCapasUI
 			// 
 			// txtIdMaquinaria
 			// 
-			this.txtIdMaquinaria.Location = new System.Drawing.Point(373, 540);
+			this.txtIdMaquinaria.Location = new System.Drawing.Point(307, 540);
 			this.txtIdMaquinaria.Name = "txtIdMaquinaria";
 			this.txtIdMaquinaria.Size = new System.Drawing.Size(100, 20);
 			this.txtIdMaquinaria.TabIndex = 58;
@@ -493,13 +504,13 @@ namespace FablabCatalagoVirtualCapasUI
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.img);
 			this.Controls.Add(this.btnLupa);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.txtbuscar);
 			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.dgListado);
 			this.Controls.Add(this.btnRegresar);
+			this.Controls.Add(this.img);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;

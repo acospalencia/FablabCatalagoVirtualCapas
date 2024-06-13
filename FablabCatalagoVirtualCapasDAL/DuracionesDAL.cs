@@ -29,7 +29,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "SPActualizarDuraciones";
 			cmd.Parameters.AddWithValue("@id", pDuraciones.Id);
-			cmd.Parameters.AddWithValue("@Diseñado", pDuraciones.TiempoDiseno);
+			cmd.Parameters.AddWithValue("@Disenado", pDuraciones.TiempoDiseno);
 			cmd.Parameters.AddWithValue("@Fabricado", pDuraciones.TiempoFabricado);
 			cmd.Parameters.AddWithValue("@Armado", pDuraciones.TiempoArmado);
 			return ComunBD.EjecutarComand(cmd);

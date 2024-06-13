@@ -56,6 +56,25 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return listUsers;
 		}
+		public User Logearse(User pUser)
+		{
+			var regresar = new User();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPLogin";
+			cmd.Parameters.AddWithValue("@Usuario", pUser.Usuario);
+			cmd.Parameters.AddWithValue("@Contra", pUser.Password);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				User usuarios = new User();
+				usuarios.Id = reader.GetInt32(0);
+				usuarios.Usuario = reader.GetString(1);
+				usuarios.Password = reader.GetString(2);
+				regresar = usuarios;
+			}
+			return regresar;
+		}
 			
 	}
 	

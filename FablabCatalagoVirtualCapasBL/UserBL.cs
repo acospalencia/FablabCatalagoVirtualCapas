@@ -28,5 +28,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return UserDAL.RegresarLista();
 		}
+		public User Login(User pUser)
+		{
+			return UserDAL.Logearse(pUser);
+		}
 	}
 }
