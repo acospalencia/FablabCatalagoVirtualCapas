@@ -33,6 +33,7 @@
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.dgvlistaprototipos = new System.Windows.Forms.DataGridView();
 			this.label2 = new System.Windows.Forms.Label();
+			this.txtId = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvlistaprototipos)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,10 +47,9 @@
 			this.btnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSiguiente.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSiguiente.Location = new System.Drawing.Point(466, 450);
-			this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSiguiente.Location = new System.Drawing.Point(350, 366);
 			this.btnSiguiente.Name = "btnSiguiente";
-			this.btnSiguiente.Size = new System.Drawing.Size(176, 59);
+			this.btnSiguiente.Size = new System.Drawing.Size(132, 48);
 			this.btnSiguiente.TabIndex = 30;
 			this.btnSiguiente.UseVisualStyleBackColor = false;
 			this.btnSiguiente.Visible = false;
@@ -68,10 +68,9 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(-2, 7);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.Location = new System.Drawing.Point(-2, 6);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
+			this.btnRegresar.Size = new System.Drawing.Size(48, 37);
 			this.btnRegresar.TabIndex = 32;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btncancelar_Click_1);
@@ -80,12 +79,11 @@
 			// 
 			this.dgvlistaprototipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvlistaprototipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvlistaprototipos.Location = new System.Drawing.Point(-1, 127);
-			this.dgvlistaprototipos.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvlistaprototipos.Location = new System.Drawing.Point(-1, 103);
 			this.dgvlistaprototipos.Name = "dgvlistaprototipos";
 			this.dgvlistaprototipos.ReadOnly = true;
 			this.dgvlistaprototipos.RowHeadersWidth = 51;
-			this.dgvlistaprototipos.Size = new System.Drawing.Size(1068, 315);
+			this.dgvlistaprototipos.Size = new System.Drawing.Size(801, 256);
 			this.dgvlistaprototipos.TabIndex = 2;
 			this.dgvlistaprototipos.SelectionChanged += new System.EventHandler(this.dgvlistaprototipos_SelectionChanged);
 			// 
@@ -95,28 +93,34 @@
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-			this.label2.Location = new System.Drawing.Point(372, 27);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Location = new System.Drawing.Point(279, 22);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(322, 42);
+			this.label2.Size = new System.Drawing.Size(254, 33);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Listado de prototipos";
 			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(688, 23);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(100, 20);
+			this.txtId.TabIndex = 33;
+			// 
 			// ListaPrototipos
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundMain;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1067, 542);
+			this.ClientSize = new System.Drawing.Size(800, 440);
+			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnSiguiente);
 			this.Controls.Add(this.dgvlistaprototipos);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "ListaPrototipos";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -136,5 +140,6 @@
 		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.DataGridView dgvlistaprototipos;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox txtId;
 	}
 }

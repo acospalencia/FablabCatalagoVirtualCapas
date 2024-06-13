@@ -60,8 +60,10 @@ namespace FablabCatalagoVirtualCapasUI
 			var materialBL = new MaterialesBL();
 			var EstadosBL = new EstadosBL();
 			var maquinariaBL = new MaquinariaBL();
+
 			cbMaterial.DataSource = ingresar.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
+			cbMaterial.ValueMember = "Id";
 			cbMaterial.DataSource = materialBL.regresarLista();
 			cbMaterial.DisplayMember = "nombreMaterial";
 			cbMaterial.ValueMember = "Id";
@@ -112,22 +114,17 @@ namespace FablabCatalagoVirtualCapasUI
 					{
 						img.Image = null;
 					}
+
 				}
 			}
 		}
 		//metodo para asignar los valores a los atributos y que se actualice el prototipo seleccionado
 
-		public byte[] guardarimg(System.Drawing.Image img)
-		{
-			MemoryStream ms = new MemoryStream();
-			img.Save(ms, ImageFormat.Jpeg);
-			return ms.ToArray();
-		}
+		
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
 			if (validar())
 			{
-				dgListado.DataSource = null;	
 
 				var duracionesModify = new Duraciones
 				{
@@ -145,8 +142,6 @@ namespace FablabCatalagoVirtualCapasUI
 					X = txtX.Text,
 					Y = txtX.Text,
 					Z = txtZ.Text,
-
-
 					Descripcion = txtDescripcion.Text,
 					IdDuracion = int.Parse(txtIdDuraciones.Text),
 					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
@@ -187,8 +182,6 @@ namespace FablabCatalagoVirtualCapasUI
 					txtDescripcion.Enabled = false;
 					cbIdEstado.Enabled = false;
 					cbMaquinaria.Enabled = false;
-
-
 
 					MessageBox.Show("Los datos se han Actualizado con exito");
 				}

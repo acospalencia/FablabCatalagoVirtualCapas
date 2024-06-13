@@ -50,6 +50,7 @@ namespace FablabCatalagoVirtualCapasUI
                 if (row != null)
                 {
 					test = row;
+					
 					btnSiguiente.Visible = true;
 				}
             }
