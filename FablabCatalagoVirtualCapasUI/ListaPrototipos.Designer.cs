@@ -33,7 +33,7 @@
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.dgvlistaprototipos = new System.Windows.Forms.DataGridView();
 			this.label2 = new System.Windows.Forms.Label();
-			this.txtId = new System.Windows.Forms.TextBox();
+			this.txtNombre = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvlistaprototipos)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -99,12 +99,14 @@
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Listado de prototipos";
 			// 
-			// txtId
+			// txtNombre
 			// 
-			this.txtId.Location = new System.Drawing.Point(688, 23);
-			this.txtId.Name = "txtId";
-			this.txtId.Size = new System.Drawing.Size(100, 20);
-			this.txtId.TabIndex = 33;
+			this.txtNombre.Location = new System.Drawing.Point(688, 23);
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.Size = new System.Drawing.Size(100, 20);
+			this.txtNombre.TabIndex = 33;
+			this.txtNombre.Visible = false;
+			this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
 			// 
 			// ListaPrototipos
 			// 
@@ -114,7 +116,7 @@
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundMain;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 440);
-			this.Controls.Add(this.txtId);
+			this.Controls.Add(this.txtNombre);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnSiguiente);
@@ -140,6 +142,6 @@
 		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.DataGridView dgvlistaprototipos;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox txtId;
+		private System.Windows.Forms.TextBox txtNombre;
 	}
 }

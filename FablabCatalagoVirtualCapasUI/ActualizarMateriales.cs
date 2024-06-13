@@ -13,28 +13,31 @@ using System.Windows.Forms;
 
 namespace FablabCatalagoVirtualCapasUI
 {
-    public partial class ActualizarMateriales : Form
-    {
-        public ActualizarMateriales()
-        {
-            InitializeComponent();
+	public partial class ActualizarMateriales : Form
+	{
+		public ActualizarMateriales()
+		{
+			InitializeComponent();
 
 		}
 		private bool validacion()
 		{
-			return !string.IsNullOrEmpty(txtNombre.Text);
-					//!string.IsNullOrEmpty(txtTipo.Text) &&
-					//!string.IsNullOrEmpty(txtAncho.Text) &&
-					//!string.IsNullOrEmpty(txtAlto.Text) &&
-					//!string.IsNullOrEmpty(txtPrecio.Text) &&
-					//!string.IsNullOrEmpty(txtProveedor.Text);
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+					!string.IsNullOrEmpty(txtX.Text) &&
+					!string.IsNullOrEmpty(txtY.Text) &&
+					!string.IsNullOrEmpty(txtPrecio.Text) &&
+					!string.IsNullOrEmpty(txtZ.Text);
 		}
 
-        private void ActualizarMateriales_Load(object sender, EventArgs e)
-        {
+		private void ActualizarMateriales_Load(object sender, EventArgs e)
+		{
 			var Actualizardg = new MaterialesBL();
 			dgMaterial.DataSource = null;
 			dgMaterial.DataSource = Actualizardg.regresarLista();
+			var tipo = new TipoMaterialBL();
+			cbTipoMaterial.DataSource = tipo.regresarTipoMaterial();
+			cbTipoMaterial.DisplayMember = "NombreTipo";
+			cbTipoMaterial.ValueMember = "Id";
 		}
 
 		private void btnRegresar_Click(object sender, EventArgs e)
@@ -56,14 +59,20 @@ namespace FablabCatalagoVirtualCapasUI
 				DataGridViewRow row = dgMaterial.SelectedRows[0];
 				if (row != null)
 				{
-					//btnModificar.Visible = true;
-					//txtId.Text = row.Cells[0].Value.ToString();
-					//txtNombre.Text = row.Cells[1].Value.ToString();
-					//txtPrecio.Text = row.Cells[3].Value.ToString();
-					//txtProveedor.Text = row.Cells[6].Value.ToString();
-					//txtAlto.Text = row.Cells[5].Value.ToString();
-					//txtAncho.Text = row.Cells[4].Value.ToString();
-					//txtTipo.Text = row.Cells[2].Value.ToString();
+					txtNombre.Enabled = true;
+					txtX.Enabled = true;
+					txtY.Enabled = true;
+					txtZ.Enabled = true;
+					txtPrecio.Enabled = true;
+					cbTipoMaterial.Enabled = true;
+					btnModificar.Visible = true;
+					txtId.Text = row.Cells[0].Value.ToString();
+					txtNombre.Text = row.Cells[1].Value.ToString();
+					txtIdTipo.Text = row.Cells[2].Value.ToString();
+					txtPrecio.Text = row.Cells[3].Value.ToString();
+					txtX.Text = row.Cells[4].Value.ToString();
+					txtY.Text = row.Cells[5].Value.ToString();
+					txtZ.Text = row.Cells[6].Value.ToString();
 				}
 			}
 		}
@@ -92,36 +101,36 @@ namespace FablabCatalagoVirtualCapasUI
 
 		private void btnModificar_Click_1(object sender, EventArgs e)
 		{
-			if(validacion())
-
+			if (validacion())
 			{
-				var actualizar = new Materiales
+				var nuevomateria = new Materiales
 				{
-					//Id = int.Parse(txtId.Text),
-					//NombreMaterial = txtNombre.Text,
-					//Precio = double.Parse(txtPrecio.Text),
-					//Z = txtProveedor.Text,
-					//IdTipoMaterial = txtTipo.Text,
-					//X = double.Parse(txtAncho.Text),
-					//Y = double.Parse(txtAlto.Text),
-
+					Id = int.Parse(txtId.Text),
+					NombreMaterial = txtNombre.Text,
+					X = txtX.Text,
+					Y = txtY.Text,
+					Z = txtZ.Text,
+					Precio = decimal.Parse(txtPrecio.Text),
+					IdTipoMaterial = Convert.ToInt32(cbTipoMaterial.SelectedValue)
 				};
-				if (actualizar != null)
-				{
-					var ActuDatos = new MaterialesBL();
-					ActuDatos.actualizarMateriales(actualizar);
-					var regresar = new MaterialesBL();
-					dgMaterial.DataSource = null;
-					dgMaterial.DataSource = regresar.regresarLista();
-				}
-				//txtProveedor.Text = null;
-				//txtPrecio.Text = null;
-				//txtAlto.Text = null;
-				//txtAncho.Text = null;
-				//txtTipo.Text = null;
+
+				var guardar = new MaterialesBL();
+				guardar.actualizarMateriales(nuevomateria);
+				txtZ.Text = null;
+				txtPrecio.Text = null;
+				txtY.Text = null;
+				txtX.Text = null;
 				txtNombre.Text = null;
-				btnModificar.Visible = false;
-				MessageBox.Show("Los datos se han Actualizado con exito");
+				MessageBox.Show("Los datos se han ingresado con exito");
+				txtNombre.Enabled = false;
+				txtX.Enabled = false;
+				txtY.Enabled = false;
+				txtZ.Enabled = false;
+				txtPrecio.Enabled = false;
+				cbTipoMaterial.Enabled = false;
+				var Actualizardg = new MaterialesBL();
+				dgMaterial.DataSource = null;
+				dgMaterial.DataSource = Actualizardg.regresarLista();
 			}
 			else
 			{
@@ -151,6 +160,19 @@ namespace FablabCatalagoVirtualCapasUI
 				dgMaterial.DataSource = prototiposFiltrados;
 			}
 		}
+
+		private void txtIdTipo_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtIdTipo.Text, out int idMaterial))
+			{
+				TipoMaterialBL MaquinariaBL = new TipoMaterialBL();
+				TipoMaterial maquinaria = MaquinariaBL.MostrarPorIdTipo(idMaterial);
+				if (maquinaria != null)
+				{
+					cbTipoMaterial.Text = maquinaria.NombreTipo;
+				}
+			}
+		}
 	}
-	
+
 }
