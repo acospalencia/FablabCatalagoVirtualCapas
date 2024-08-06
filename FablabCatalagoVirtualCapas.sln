@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FablabCatalagoVirtualCapasD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FablabCatalagoVirtualCapasUI", "FablabCatalagoVirtualCapasUI\FablabCatalagoVirtualCapasUI.csproj", "{A73F42E3-9498-4474-BE91-D7787D6DAA0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FablabCatalagoVirtualCapasWPF", "FablabCatalagoVirtualCapasWPF\FablabCatalagoVirtualCapasWPF.csproj", "{0F100C2C-5D8B-4A04-A2E9-42C2CD6AF5C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A73F42E3-9498-4474-BE91-D7787D6DAA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A73F42E3-9498-4474-BE91-D7787D6DAA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A73F42E3-9498-4474-BE91-D7787D6DAA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F100C2C-5D8B-4A04-A2E9-42C2CD6AF5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F100C2C-5D8B-4A04-A2E9-42C2CD6AF5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F100C2C-5D8B-4A04-A2E9-42C2CD6AF5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F100C2C-5D8B-4A04-A2E9-42C2CD6AF5C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
