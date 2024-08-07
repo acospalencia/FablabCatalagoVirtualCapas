@@ -55,11 +55,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Agregar Material.xaml.cs">
+      <DependentUpon>Agregar Material.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RegistrarMaterial.xaml.cs">
+      <DependentUpon>RegistrarMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelecAdministrar.xaml.cs">
+      <DependentUpon>SelecAdministrar.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Agregar Material.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InformacionPrototipo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="InicioSesion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Listaprototipo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MantenimientoMaterial.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,10 +92,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="RegistrarMaterial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelecAdministrar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InformacionPrototipo.xaml.cs">
+      <DependentUpon>InformacionPrototipo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Listaprototipo.xaml.cs">
+      <DependentUpon>Listaprototipo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMaterial.xaml.cs">
+      <DependentUpon>MantenimientoMaterial.xaml</DependentUpon>
     </Compile>
     <Compile Include="PantallaPrincipal.xaml.cs">
       <DependentUpon>PantallaPrincipal.xaml</DependentUpon>
@@ -108,6 +150,34 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="BgLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FablabCatalagoVirtualCapasBL\FablabCatalagoVirtualCapasBL.csproj">
+      <Project>{d1d4b22e-1591-4053-b377-a55c2af08d09}</Project>
+      <Name>FablabCatalagoVirtualCapasBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FablabCatalagoVirtualCapasEN\FablabCatalagoVirtualCapasEN.csproj">
+      <Project>{b5444a84-2094-4c02-9132-cd9c5b5006bd}</Project>
+      <Name>FablabCatalagoVirtualCapasEN</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgLista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgInforProto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgSelecMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgAgregarMate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgPapelera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgRegistrarMate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

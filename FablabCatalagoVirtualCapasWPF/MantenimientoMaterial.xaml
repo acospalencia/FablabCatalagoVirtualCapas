@@ -1,0 +1,34 @@
+﻿<Window x:Class="Fablab.esfe.MantenimientoMaterial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fablab.esfe"
+        mc:Ignorable="d"
+        Title="MantenimientoMaterial" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgAgregarMate.png"/>
+        </Grid.Background>
+        <Label Content="Mantenimiento de Material" HorizontalAlignment="Left" Margin="222,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="20" Background="{x:Null}" Foreground="#FFF7F0F0"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="616,338,0,0" VerticalAlignment="Top" Height="42" Width="78" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgPapelera.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="116,344,0,0" VerticalAlignment="Top" Height="30" Width="147" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF7D4AA2"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="462,91,29,185"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
+        <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="28,96,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
+        <Label Content="Precio:" HorizontalAlignment="Left" Margin="28,135,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
+        <Label Content="Ancho Material:" HorizontalAlignment="Left" Margin="28,166,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
+        <Label Content="Alto Material" HorizontalAlignment="Left" Margin="28,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
+        <Label Content="Proveedor" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="#FFF1E7E7"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="222,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>

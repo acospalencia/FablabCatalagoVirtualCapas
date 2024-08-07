@@ -1,0 +1,22 @@
+﻿<Window x:Class="Fablab.esfe.SelecAdministrar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fablab.esfe"
+        mc:Ignorable="d"
+        Title="SelecAdministrar" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgRegistrarMate.png"/>
+        </Grid.Background>
+        <Label Content="Que sección desea administrar" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="31" Width="304" FontWeight="Bold" FontSize="20" FontFamily="Arial" Foreground="#FFEDE3E3"/>
+        <Button Content="Materiales" HorizontalAlignment="Left" Margin="67,138,0,0" VerticalAlignment="Top" Height="41" Width="208" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF95569C"/>
+        <Button Content="Prototipos" HorizontalAlignment="Left" Margin="445,138,0,0" VerticalAlignment="Top" Height="41" Width="215" FontSize="16" FontWeight="Bold" FontFamily="Arial" Background="#FF95569C"/>
+        <Button Content="Autores" HorizontalAlignment="Left" Margin="67,202,0,0" VerticalAlignment="Top" Width="208" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="16" Background="#FF713A92"/>
+        <Button Content="Clubs" HorizontalAlignment="Left" Margin="445,202,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88"/>
+        <Button Content="Proveedores" HorizontalAlignment="Left" Margin="67,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.653" Width="208" Height="38" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF7459A5"/>
+        <Button Content="Maquinaria" HorizontalAlignment="Left" Margin="445,275,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86"/>
+
+    </Grid>
+</Window>
