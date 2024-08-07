@@ -1,0 +1,50 @@
+﻿<Window x:Class="interfaces.ModificarPrototipo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interfaces"
+        mc:Ignorable="d"
+        Title="ModificarPrototipo" Height="514" Width="1208">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgAggProto.jpg"/>
+        </Grid.Background>
+        <Label Content= "Nombre:" HorizontalAlignment="Left" Margin="72,36,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Ancho del prototipo finalizado:" HorizontalAlignment="Left" Margin="72,185,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Altura del prtotipo finalizado" HorizontalAlignment="Left" Margin="72,255,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tipo de material usado:" HorizontalAlignment="Left" Margin="413,112,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tiempo requerido para armarlo:" HorizontalAlignment="Left" Margin="72,330,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16" Width="269"/>
+        <Label Content="Tiempo requerido para diseñarlo:" HorizontalAlignment="Left" Margin="413,36,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tiempo requerido para para fabricarlo:" HorizontalAlignment="Left" Margin="402,179,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="413,255,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="72,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+        <TextBox x:Name="txtAncho" HorizontalAlignment="Left" Margin="72,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+        <TextBox x:Name="txtAltura" HorizontalAlignment="Left" Margin="72,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+        <TextBox x:Name="txtArmarlo" HorizontalAlignment="Left" Margin="72,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+        <TextBox x:Name="txtDesign" HorizontalAlignment="Left" Margin="413,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264"/>
+        <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Margin="413,143,0,0" VerticalAlignment="Top" Width="264"/>
+        <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="413,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264"/>
+        <TextBox x:Name="txtAltura1" HorizontalAlignment="Left" Margin="413,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="84"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="733,154,31,121"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="1080,90,0,0" VerticalAlignment="Top" Width="45" Height="35">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgLupa.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="851,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="24"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="875,406,0,0" VerticalAlignment="Top" Width="80" Height="61">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="1038,406,0,0" VerticalAlignment="Top" Width="64" Height="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgPapelera.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Autor" HorizontalAlignment="Left" Margin="72,108,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtAutores" HorizontalAlignment="Left" Margin="72,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+
+    </Grid>
+</Window>

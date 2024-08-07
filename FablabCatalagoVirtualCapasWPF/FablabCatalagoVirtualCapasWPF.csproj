@@ -86,17 +86,53 @@
     <Compile Include="Eliminar Proveedor.xaml.cs">
       <DependentUpon>Eliminar Proveedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EliminarMaquinaria.xaml.cs">
+      <DependentUpon>EliminarMaquinaria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresaeClub.xaml.cs">
+      <DependentUpon>IngresaeClub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarAutores.xaml.cs">
+      <DependentUpon>IngresarAutores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarMaquinaria.xaml.cs">
+      <DependentUpon>IngresarMaquinaria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoAutores.xaml.cs">
+      <DependentUpon>MantenimientoAutores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClubs.xaml.cs">
+      <DependentUpon>MantenimientoClubs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMaquinaria.xaml.cs">
+      <DependentUpon>MantenimientoMaquinaria.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modificar Material.xaml.cs">
       <DependentUpon>Modificar Material.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modificar Proveedor.xaml.cs">
       <DependentUpon>Modificar Proveedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModificarAutores.xaml.cs">
+      <DependentUpon>ModificarAutores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarClubs.xaml.cs">
+      <DependentUpon>ModificarClubs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPrototipo.xaml.cs">
+      <DependentUpon>ModificarPrototipo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registrar Proveedor.xaml.cs">
       <DependentUpon>Registrar Proveedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistrarMaterial.xaml.cs">
       <DependentUpon>RegistrarMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPrototipos.xaml.cs">
+      <DependentUpon>RegistrarPrototipos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPrototipo.xaml.cs">
+      <DependentUpon>RegistroPrototipo.xaml</DependentUpon>
     </Compile>
     <Compile Include="SelecAdministrar.xaml.cs">
       <DependentUpon>SelecAdministrar.xaml</DependentUpon>
@@ -137,7 +173,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="EliminarMaquinaria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="InformacionPrototipo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IngresaeClub.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IngresarAutores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IngresarMaquinaria.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -146,6 +198,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Listaprototipo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MantenimientoAutores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MantenimientoClubs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MantenimientoMaquinaria.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -161,6 +225,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ModificarAutores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModificarClubs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModificarPrototipo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PantallaPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -170,6 +246,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RegistrarMaterial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegistrarPrototipos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegistroPrototipo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -282,6 +366,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="BgBtnCompra.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgAggProto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgModiClub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgModiAUtor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgMaquinaria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BgClubs.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

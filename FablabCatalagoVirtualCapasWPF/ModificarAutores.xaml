@@ -1,0 +1,49 @@
+﻿<Window x:Class="interfaces.ModificarAutores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interfaces"
+        mc:Ignorable="d"
+        Title="ModificarAutores" Height="434" Width="857">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgModiAUtor.jpg"/>
+        </Grid.Background>
+        <Label Content="Nombres: " HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFBF7F7"/>
+        <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="116,134,0,0" VerticalAlignment="Top" Foreground="#FFF7F1F1" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Correo elecronico: " HorizontalAlignment="Left" Margin="116,199,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Fecha de registro: " HorizontalAlignment="Left" Margin="119,254,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="280,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCorreoElectronico" HorizontalAlignment="Left" Margin="280,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="txtFechaRegistro" HorizontalAlignment="Left" Margin="280,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="510,352,0,0" VerticalAlignment="Top" Height="56" Width="78">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="697,356,0,0" VerticalAlignment="Top" Height="48" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgPapelera.png"/>
+            </Button.Background>
+        </Button>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="428,133,19,82"/>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="523,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" Height="28"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="709,77,0,0" VerticalAlignment="Top" Height="32" Width="36">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgLupa.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
