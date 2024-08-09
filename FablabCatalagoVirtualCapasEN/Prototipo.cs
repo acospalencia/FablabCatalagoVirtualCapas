@@ -12,14 +12,14 @@ namespace FablabCatalagoVirtualCapasEN
 		//Crear atributos
 		public int Id { get; set; }
 		public string NombrePrototipo { get; set; }
-		public string TipoMaterial { get; set; }
-		public double Alto { get; set; } 
-		public double Ancho { get; set;}
+		public int IdMaterial { get; set; }
+		public string X { get; set; } 
+		public string Y { get; set;}
+		public string Z { get; set; }
 		public string Descripcion { get; set;}
-		public Image ImagenPrototipo { get; set;}
-		public string TiempoDiseñado { get; set;}
-		public string TiempoArmado { get; set; }
-		public string TiempoFabricado { get; set; }
-		public string Autor {  get; set; }
+		public byte[] Imagen { get; set;}
+		public int IdDuracion { get; set;}
+		public int IdEstado {  get; set; }
+		public int IdMaquinaria { get; set; }
 	}
 }

@@ -30,17 +30,19 @@
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionPrototipos));
 			this.lblNombre = new System.Windows.Forms.Label();
-			this.lblMaterial = new System.Windows.Forms.Label();
+			this.lblX = new System.Windows.Forms.Label();
 			this.lblDescripcion = new System.Windows.Forms.Label();
-			this.lblAncho = new System.Windows.Forms.Label();
-			this.lblAlto = new System.Windows.Forms.Label();
+			this.lblMaquina = new System.Windows.Forms.Label();
+			this.lbldiseno = new System.Windows.Forms.Label();
 			this.imgProtoripo = new System.Windows.Forms.PictureBox();
-			this.lblFab = new System.Windows.Forms.Label();
-			this.lblDesign = new System.Windows.Forms.Label();
-			this.lblArmar = new System.Windows.Forms.Label();
+			this.lblY = new System.Windows.Forms.Label();
+			this.lblZ = new System.Windows.Forms.Label();
+			this.lblEstado = new System.Windows.Forms.Label();
 			this.btnRegresar = new System.Windows.Forms.Button();
-			this.lblAutor = new System.Windows.Forms.Label();
+			this.lblNombreMat = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.lblFabricado = new System.Windows.Forms.Label();
+			this.lblArmado = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.imgProtoripo)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -50,23 +52,25 @@
 			this.lblNombre.BackColor = System.Drawing.Color.Transparent;
 			this.lblNombre.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblNombre.Location = new System.Drawing.Point(30, 139);
+			this.lblNombre.Location = new System.Drawing.Point(22, 113);
+			this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lblNombre.Name = "lblNombre";
-			this.lblNombre.Size = new System.Drawing.Size(129, 34);
+			this.lblNombre.Size = new System.Drawing.Size(102, 27);
 			this.lblNombre.TabIndex = 31;
 			this.lblNombre.Text = "Nombre: ";
 			// 
-			// lblMaterial
+			// lblX
 			// 
-			this.lblMaterial.AutoSize = true;
-			this.lblMaterial.BackColor = System.Drawing.Color.Transparent;
-			this.lblMaterial.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMaterial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblMaterial.Location = new System.Drawing.Point(30, 258);
-			this.lblMaterial.Name = "lblMaterial";
-			this.lblMaterial.Size = new System.Drawing.Size(224, 34);
-			this.lblMaterial.TabIndex = 32;
-			this.lblMaterial.Text = "Tipo de material: ";
+			this.lblX.AutoSize = true;
+			this.lblX.BackColor = System.Drawing.Color.Transparent;
+			this.lblX.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblX.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblX.Location = new System.Drawing.Point(22, 210);
+			this.lblX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblX.Name = "lblX";
+			this.lblX.Size = new System.Drawing.Size(170, 27);
+			this.lblX.TabIndex = 32;
+			this.lblX.Text = "Dimensiones X: ";
 			// 
 			// lblDescripcion
 			// 
@@ -74,83 +78,89 @@
 			this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
 			this.lblDescripcion.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblDescripcion.Location = new System.Drawing.Point(30, 559);
+			this.lblDescripcion.Location = new System.Drawing.Point(22, 417);
+			this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lblDescripcion.Name = "lblDescripcion";
-			this.lblDescripcion.Size = new System.Drawing.Size(172, 34);
+			this.lblDescripcion.Size = new System.Drawing.Size(139, 27);
 			this.lblDescripcion.TabIndex = 33;
 			this.lblDescripcion.Text = "Descripcion: ";
 			this.lblDescripcion.Click += new System.EventHandler(this.lblDescripcion_Click);
 			// 
-			// lblAncho
+			// lblMaquina
 			// 
-			this.lblAncho.AutoSize = true;
-			this.lblAncho.BackColor = System.Drawing.Color.Transparent;
-			this.lblAncho.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAncho.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblAncho.Location = new System.Drawing.Point(592, 139);
-			this.lblAncho.Name = "lblAncho";
-			this.lblAncho.Size = new System.Drawing.Size(110, 34);
-			this.lblAncho.TabIndex = 34;
-			this.lblAncho.Text = "Ancho: ";
+			this.lblMaquina.AutoSize = true;
+			this.lblMaquina.BackColor = System.Drawing.Color.Transparent;
+			this.lblMaquina.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMaquina.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblMaquina.Location = new System.Drawing.Point(444, 113);
+			this.lblMaquina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblMaquina.Name = "lblMaquina";
+			this.lblMaquina.Size = new System.Drawing.Size(199, 27);
+			this.lblMaquina.TabIndex = 34;
+			this.lblMaquina.Text = "Maquinaria Usada: ";
 			// 
-			// lblAlto
+			// lbldiseno
 			// 
-			this.lblAlto.AutoSize = true;
-			this.lblAlto.BackColor = System.Drawing.Color.Transparent;
-			this.lblAlto.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAlto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblAlto.Location = new System.Drawing.Point(592, 209);
-			this.lblAlto.Name = "lblAlto";
-			this.lblAlto.Size = new System.Drawing.Size(82, 34);
-			this.lblAlto.TabIndex = 35;
-			this.lblAlto.Text = "Alto: ";
+			this.lbldiseno.AutoSize = true;
+			this.lbldiseno.BackColor = System.Drawing.Color.Transparent;
+			this.lbldiseno.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbldiseno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lbldiseno.Location = new System.Drawing.Point(444, 161);
+			this.lbldiseno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lbldiseno.Name = "lbldiseno";
+			this.lbldiseno.Size = new System.Drawing.Size(198, 27);
+			this.lbldiseno.TabIndex = 35;
+			this.lbldiseno.Text = "Tiempo de Diseño: ";
 			// 
 			// imgProtoripo
 			// 
 			this.imgProtoripo.BackColor = System.Drawing.Color.Transparent;
-			this.imgProtoripo.Location = new System.Drawing.Point(994, 117);
-			this.imgProtoripo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.imgProtoripo.Location = new System.Drawing.Point(902, 93);
+			this.imgProtoripo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.imgProtoripo.Name = "imgProtoripo";
-			this.imgProtoripo.Size = new System.Drawing.Size(524, 550);
+			this.imgProtoripo.Size = new System.Drawing.Size(393, 447);
 			this.imgProtoripo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.imgProtoripo.TabIndex = 36;
 			this.imgProtoripo.TabStop = false;
 			// 
-			// lblFab
+			// lblY
 			// 
-			this.lblFab.AutoSize = true;
-			this.lblFab.BackColor = System.Drawing.Color.Transparent;
-			this.lblFab.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblFab.Location = new System.Drawing.Point(30, 337);
-			this.lblFab.Name = "lblFab";
-			this.lblFab.Size = new System.Drawing.Size(441, 34);
-			this.lblFab.TabIndex = 37;
-			this.lblFab.Text = "Tiempo necesitado para fabricarlo:  ";
+			this.lblY.AutoSize = true;
+			this.lblY.BackColor = System.Drawing.Color.Transparent;
+			this.lblY.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblY.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblY.Location = new System.Drawing.Point(22, 261);
+			this.lblY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblY.Name = "lblY";
+			this.lblY.Size = new System.Drawing.Size(167, 27);
+			this.lblY.TabIndex = 37;
+			this.lblY.Text = "Dimensiones Y: ";
 			// 
-			// lblDesign
+			// lblZ
 			// 
-			this.lblDesign.AutoSize = true;
-			this.lblDesign.BackColor = System.Drawing.Color.Transparent;
-			this.lblDesign.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDesign.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblDesign.Location = new System.Drawing.Point(30, 413);
-			this.lblDesign.Name = "lblDesign";
-			this.lblDesign.Size = new System.Drawing.Size(426, 34);
-			this.lblDesign.TabIndex = 38;
-			this.lblDesign.Text = "Tiempo necesitado para diseñarlo: ";
+			this.lblZ.AutoSize = true;
+			this.lblZ.BackColor = System.Drawing.Color.Transparent;
+			this.lblZ.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblZ.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblZ.Location = new System.Drawing.Point(22, 310);
+			this.lblZ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblZ.Name = "lblZ";
+			this.lblZ.Size = new System.Drawing.Size(167, 27);
+			this.lblZ.TabIndex = 38;
+			this.lblZ.Text = "Dimensiones Z: ";
 			// 
-			// lblArmar
+			// lblEstado
 			// 
-			this.lblArmar.AutoSize = true;
-			this.lblArmar.BackColor = System.Drawing.Color.Transparent;
-			this.lblArmar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblArmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblArmar.Location = new System.Drawing.Point(30, 479);
-			this.lblArmar.Name = "lblArmar";
-			this.lblArmar.Size = new System.Drawing.Size(427, 34);
-			this.lblArmar.TabIndex = 39;
-			this.lblArmar.Text = "Tiempo necesitado para armarlo:   ";
+			this.lblEstado.AutoSize = true;
+			this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+			this.lblEstado.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblEstado.Location = new System.Drawing.Point(22, 361);
+			this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblEstado.Name = "lblEstado";
+			this.lblEstado.Size = new System.Drawing.Size(90, 27);
+			this.lblEstado.TabIndex = 39;
+			this.lblEstado.Text = "Estado: ";
 			// 
 			// btnRegresar
 			// 
@@ -164,25 +174,25 @@
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(-2, 7);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.Location = new System.Drawing.Point(-2, 6);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
+			this.btnRegresar.Size = new System.Drawing.Size(48, 37);
 			this.btnRegresar.TabIndex = 40;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
 			// 
-			// lblAutor
+			// lblNombreMat
 			// 
-			this.lblAutor.AutoSize = true;
-			this.lblAutor.BackColor = System.Drawing.Color.Transparent;
-			this.lblAutor.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAutor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblAutor.Location = new System.Drawing.Point(30, 196);
-			this.lblAutor.Name = "lblAutor";
-			this.lblAutor.Size = new System.Drawing.Size(100, 34);
-			this.lblAutor.TabIndex = 41;
-			this.lblAutor.Text = "Autor: ";
+			this.lblNombreMat.AutoSize = true;
+			this.lblNombreMat.BackColor = System.Drawing.Color.Transparent;
+			this.lblNombreMat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblNombreMat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblNombreMat.Location = new System.Drawing.Point(22, 161);
+			this.lblNombreMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblNombreMat.Name = "lblNombreMat";
+			this.lblNombreMat.Size = new System.Drawing.Size(171, 27);
+			this.lblNombreMat.TabIndex = 41;
+			this.lblNombreMat.Text = "Material Usado: ";
 			// 
 			// label1
 			// 
@@ -190,38 +200,64 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(577, 36);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Location = new System.Drawing.Point(433, 29);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(394, 42);
+			this.label1.Size = new System.Drawing.Size(308, 33);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Información de prototipos";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
+			// lblFabricado
+			// 
+			this.lblFabricado.AutoSize = true;
+			this.lblFabricado.BackColor = System.Drawing.Color.Transparent;
+			this.lblFabricado.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFabricado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblFabricado.Location = new System.Drawing.Point(444, 210);
+			this.lblFabricado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblFabricado.Name = "lblFabricado";
+			this.lblFabricado.Size = new System.Drawing.Size(227, 27);
+			this.lblFabricado.TabIndex = 42;
+			this.lblFabricado.Text = "Tiempo de Fabricado: ";
+			// 
+			// lblArmado
+			// 
+			this.lblArmado.AutoSize = true;
+			this.lblArmado.BackColor = System.Drawing.Color.Transparent;
+			this.lblArmado.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblArmado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblArmado.Location = new System.Drawing.Point(444, 261);
+			this.lblArmado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblArmado.Name = "lblArmado";
+			this.lblArmado.Size = new System.Drawing.Size(208, 27);
+			this.lblArmado.TabIndex = 43;
+			this.lblArmado.Text = "Tiempo de Armado: ";
+			// 
 			// InformacionPrototipos
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.BackgroundMain;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1530, 778);
+			this.ClientSize = new System.Drawing.Size(1321, 632);
+			this.Controls.Add(this.lblArmado);
+			this.Controls.Add(this.lblFabricado);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.lblAutor);
+			this.Controls.Add(this.lblNombreMat);
 			this.Controls.Add(this.btnRegresar);
-			this.Controls.Add(this.lblArmar);
-			this.Controls.Add(this.lblDesign);
-			this.Controls.Add(this.lblFab);
+			this.Controls.Add(this.lblEstado);
+			this.Controls.Add(this.lblZ);
+			this.Controls.Add(this.lblY);
 			this.Controls.Add(this.imgProtoripo);
-			this.Controls.Add(this.lblAlto);
-			this.Controls.Add(this.lblAncho);
+			this.Controls.Add(this.lbldiseno);
+			this.Controls.Add(this.lblMaquina);
 			this.Controls.Add(this.lblDescripcion);
-			this.Controls.Add(this.lblMaterial);
+			this.Controls.Add(this.lblX);
 			this.Controls.Add(this.lblNombre);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "InformacionPrototipos";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -235,16 +271,18 @@
 
         #endregion
 		public System.Windows.Forms.Label lblNombre;
-		public System.Windows.Forms.Label lblMaterial;
+		public System.Windows.Forms.Label lblX;
 		public System.Windows.Forms.Label lblDescripcion;
-		public System.Windows.Forms.Label lblAncho;
-		public System.Windows.Forms.Label lblAlto;
+		public System.Windows.Forms.Label lblMaquina;
+		public System.Windows.Forms.Label lbldiseno;
 		public System.Windows.Forms.PictureBox imgProtoripo;
-		public System.Windows.Forms.Label lblFab;
-		public System.Windows.Forms.Label lblDesign;
-		public System.Windows.Forms.Label lblArmar;
+		public System.Windows.Forms.Label lblY;
+		public System.Windows.Forms.Label lblZ;
+		public System.Windows.Forms.Label lblEstado;
 		private System.Windows.Forms.Button btnRegresar;
-		public System.Windows.Forms.Label lblAutor;
+		public System.Windows.Forms.Label lblNombreMat;
 		private System.Windows.Forms.Label label1;
+		public System.Windows.Forms.Label lblFabricado;
+		public System.Windows.Forms.Label lblArmado;
 	}
 }

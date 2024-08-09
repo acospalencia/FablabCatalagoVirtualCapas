@@ -33,6 +33,7 @@
 			this.btnMaterial = new System.Windows.Forms.Button();
 			this.btnPrototipo = new System.Windows.Forms.Button();
 			this.btnRegresar = new System.Windows.Forms.Button();
+			this.btnUsuario = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -41,7 +42,7 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(268, 52);
+			this.label1.Location = new System.Drawing.Point(356, 122);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(343, 31);
@@ -52,7 +53,7 @@
 			// 
 			this.btnMaterial.BackColor = System.Drawing.Color.Transparent;
 			this.btnMaterial.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnMaterial.Location = new System.Drawing.Point(121, 210);
+			this.btnMaterial.Location = new System.Drawing.Point(405, 286);
 			this.btnMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnMaterial.Name = "btnMaterial";
 			this.btnMaterial.Size = new System.Drawing.Size(260, 69);
@@ -65,7 +66,7 @@
 			// 
 			this.btnPrototipo.BackColor = System.Drawing.Color.Transparent;
 			this.btnPrototipo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPrototipo.Location = new System.Drawing.Point(503, 210);
+			this.btnPrototipo.Location = new System.Drawing.Point(81, 286);
 			this.btnPrototipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnPrototipo.Name = "btnPrototipo";
 			this.btnPrototipo.Size = new System.Drawing.Size(260, 69);
@@ -77,21 +78,35 @@
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
-			this.btnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegresar.BackgroundImage")));
+			this.btnRegresar.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.FlechaAtras;
 			this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
 			this.btnRegresar.FlatAppearance.BorderSize = 0;
+			this.btnRegresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegresar.Location = new System.Drawing.Point(7, 9);
+			this.btnRegresar.Location = new System.Drawing.Point(7, 11);
 			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(49, 32);
+			this.btnRegresar.Size = new System.Drawing.Size(64, 46);
 			this.btnRegresar.TabIndex = 5;
 			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+			// 
+			// btnUsuario
+			// 
+			this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
+			this.btnUsuario.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUsuario.Location = new System.Drawing.Point(731, 286);
+			this.btnUsuario.Margin = new System.Windows.Forms.Padding(4);
+			this.btnUsuario.Name = "btnUsuario";
+			this.btnUsuario.Size = new System.Drawing.Size(260, 69);
+			this.btnUsuario.TabIndex = 6;
+			this.btnUsuario.Text = "Usuarios";
+			this.btnUsuario.UseVisualStyleBackColor = false;
+			this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
 			// 
 			// ElegirAccion
 			// 
@@ -101,13 +116,15 @@
 			this.BackColor = System.Drawing.Color.Cornsilk;
 			this.BackgroundImage = global::FablabCatalagoVirtualCapasUI.Properties.Resources.elejiraccion;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(923, 454);
+			this.ClientSize = new System.Drawing.Size(1067, 542);
+			this.Controls.Add(this.btnUsuario);
 			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnPrototipo);
 			this.Controls.Add(this.btnMaterial);
 			this.Controls.Add(this.label1);
 			this.DoubleBuffered = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Location = new System.Drawing.Point(-2, 6);
 			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.MaximizeBox = false;
 			this.Name = "ElegirAccion";
@@ -125,5 +142,6 @@
 		private System.Windows.Forms.Button btnMaterial;
 		private System.Windows.Forms.Button btnPrototipo;
 		private System.Windows.Forms.Button btnRegresar;
+		private System.Windows.Forms.Button btnUsuario;
 	}
 }

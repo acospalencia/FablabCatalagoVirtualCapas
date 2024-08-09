@@ -42,5 +42,12 @@ namespace FablabCatalagoVirtualCapasUI
 			var menuprincipal = new PantallaPrincipal();
 			menuprincipal.Show();
 		}
+
+		private void btnUsuario_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			var menuUsuarios = new ModificarRegistro();
+			menuUsuarios.Show();
+		}
 	}
 }

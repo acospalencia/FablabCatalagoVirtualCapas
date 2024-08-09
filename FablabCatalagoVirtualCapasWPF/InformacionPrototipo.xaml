@@ -1,0 +1,26 @@
+﻿<Window x:Class="Fablab.esfe.InformacionPrototipo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fablab.esfe"
+        mc:Ignorable="d"
+        Title="InformacionPrototipo" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgInforProto.png"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="39" Margin="191,10,0,0" VerticalAlignment="Top" Width="354"/>
+        <Label Content="Información de prototipos" HorizontalAlignment="Left" Margin="190,13,0,0" VerticalAlignment="Top" Foreground="#FFF7EBEB" FontWeight="Bold" FontFamily="Arial" FontSize="20"/>
+        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="34,99,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tipo de material: " HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Alto: " HorizontalAlignment="Left" Margin="368,99,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Tiempo necesitado para fabricarlo:  " HorizontalAlignment="Left" Margin="368,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="34,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Tiempo necesitado para diseñarlo: " HorizontalAlignment="Left" Margin="371,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Tiempo necesitado para armarlo:   " HorizontalAlignment="Left" Margin="368,296,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Ancho: " HorizontalAlignment="Left" Margin="34,296,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="661,67,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>

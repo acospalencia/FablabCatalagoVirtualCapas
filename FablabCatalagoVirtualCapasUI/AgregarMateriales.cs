@@ -21,11 +21,10 @@ namespace FablabCatalagoVirtualCapasUI
 		private bool validacion()
 		{
 			return !string.IsNullOrEmpty(txtNombre.Text) &&
-					!string.IsNullOrEmpty(txtTipo.Text) &&
-					!string.IsNullOrEmpty(txtAncho.Text) &&
-					!string.IsNullOrEmpty(txtAlto.Text) &&
+					!string.IsNullOrEmpty(txtX.Text) &&
+					!string.IsNullOrEmpty(txtY.Text) &&
 					!string.IsNullOrEmpty(txtPrecio.Text) &&
-					!string.IsNullOrEmpty(txtProveedor.Text);
+					!string.IsNullOrEmpty(txtZ.Text);
 		}
 
 		private void btnRegresar_Click(object sender, EventArgs e)
@@ -42,12 +41,10 @@ namespace FablabCatalagoVirtualCapasUI
 
 		private void AgregarMateriales_Load(object sender, EventArgs e)
 		{
-			
-		}
-
-		private void dgMaterial_SelectionChanged(object sender, EventArgs e)
-		{
-			
+			var tipo = new TipoMaterialBL();
+			cbTipoMaterial.DataSource = tipo.regresarTipoMaterial();
+			cbTipoMaterial.DisplayMember = "NombreTipo";
+			cbTipoMaterial.ValueMember = "Id";
 		}
 
 		private void btnModificar_Click(object sender, EventArgs e)
@@ -56,21 +53,20 @@ namespace FablabCatalagoVirtualCapasUI
             {
 				var nuevomateria = new Materiales
 				{
-					nombreMaterial = txtNombre.Text,
-					precio = double.Parse(txtPrecio.Text),
-					proveedor = txtProveedor.Text,
-					tipoMaterial = txtTipo.Text,
-					Ancho = double.Parse(txtAncho.Text),
-					Altura = double.Parse(txtAlto.Text),
+					NombreMaterial = txtNombre.Text,
+					X = txtX.Text,
+					Y = txtY.Text,
+					Z = txtZ.Text,
+					Precio = decimal.Parse(txtPrecio.Text),
+					IdTipoMaterial = Convert.ToInt32(cbTipoMaterial.SelectedValue)
 				};
 
 				var guardar = new MaterialesBL();
 				guardar.guardarMaterial(nuevomateria);
-				txtProveedor.Text = null;
+				txtZ.Text = null;
 				txtPrecio.Text = null;
-				txtAlto.Text = null;
-				txtAncho.Text = null;
-				txtTipo.Text = null;
+				txtY.Text = null;
+				txtX.Text = null;
 				txtNombre.Text = null;
 				MessageBox.Show("Los datos se han ingresado con exito");
 			}
@@ -80,5 +76,6 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 			
 		}
+
 	}
 }

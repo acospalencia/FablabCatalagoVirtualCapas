@@ -1,0 +1,43 @@
+﻿<Window x:Class="interfaces.RegistroPrototipo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interfaces"
+        mc:Ignorable="d"
+        Title="RegistroPrototipo" Height="532" Width="827">
+    <Grid x:Name="btnRegresar1">
+        <Grid.Background>
+            <ImageBrush ImageSource="/BgAggProto.jpg"/>
+        </Grid.Background>
+        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="50,28,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Ancho del prototipo finalizado: " HorizontalAlignment="Left" Margin="50,183,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Tiempo requerido para realizarlo:" HorizontalAlignment="Left" Margin="50,348,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Tipo de material usado: " HorizontalAlignment="Left" Margin="418,109,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Tiempo requerido para armarlo: " HorizontalAlignment="Left" Margin="40,265,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Tiempo requerido para diseñarlo: " HorizontalAlignment="Left" Margin="414,28,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Tiempo requerido para para fabricarlo: " HorizontalAlignment="Left" Margin="418,189,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="437,265,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="50,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,309,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237"/>
+        <TextBox x:Name="txtDesign" HorizontalAlignment="Left" Margin="418,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="425,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="243"/>
+        <TextBox HorizontalAlignment="Left" Margin="425,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="100"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="656,451,0,0" VerticalAlignment="Top" Width="70" Height="55">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+            </Button.Background>
+        </Button>
+        <ComboBox HorizontalAlignment="Left" Margin="418,144,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="36" Width="40">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgRegresar.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Autor: " HorizontalAlignment="Left" Margin="50,109,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtAutor" HorizontalAlignment="Left" Margin="48,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+
+    </Grid>
+</Window>

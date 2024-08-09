@@ -11,12 +11,12 @@ namespace FablabCatalagoVirtualCapasEN
     public class Materiales
     {
         public int Id {  get; set; }
-        public string nombreMaterial {  get; set; }
-        public string tipoMaterial { get; set; }
-        public double precio { get; set; }
-        public double Ancho { get; set; }
-        public double Altura { get; set; }
-        public string proveedor { get; set; }
+        public string NombreMaterial {  get; set; }
+        public int IdTipoMaterial { get; set; }
+        public decimal Precio { get; set; }
+        public string X { get; set; }
+        public string Y { get; set; }
+        public string Z { get; set; }
 
     }
 }

@@ -71,16 +71,22 @@ namespace FablabCatalagoVirtualCapasUI
 		//metodo para buscar un prototipo dentro de el datagrid por el ID
 		private void txtbuscar_TextChanged(object sender, EventArgs e)
 		{
-			if (txtbuscar.Text == "" || txtbuscar.Text == null)
+			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
 			{
 				var regresarlista = new PrototipoBL();
 				dgVer.DataSource = regresarlista.regresarlista();
 			}
-
-			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			else
 			{
 				var Lista = new PrototipoBL();
-				var prototiposFiltrados = Lista.regresarlista().Where(i => i.Id == idBuscada).ToList();
+				var textoBusqueda = txtbuscar.Text.ToLower();
+				var usuariosFiltrados = Lista.regresarlista().Where(p => p.NombrePrototipo.ToLower().Contains(textoBusqueda)).ToList();
+				dgVer.DataSource = usuariosFiltrados;
+			}
+			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
+			{
+				var Lista2 = new PrototipoBL();
+				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgVer.DataSource = prototiposFiltrados;
 			}
 		}

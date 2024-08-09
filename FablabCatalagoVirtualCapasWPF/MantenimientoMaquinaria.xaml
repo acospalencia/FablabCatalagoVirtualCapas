@@ -1,0 +1,31 @@
+﻿<Window x:Class="interfaces.MantenimientoMaquinaria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:interfaces"
+        mc:Ignorable="d"
+        Title="MantenimientoMaquinaria" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
+        </Grid.Background>
+        <Label Content="MANTENIMIENTO PARA MAQUINARIAS" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontFamily="Arial" FontSize="22" Foreground="White"/>
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="464,176,0,0" VerticalAlignment="Top" Width="86" Height="72">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgEditar.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="217,176,0,0" VerticalAlignment="Top" Width="95" Height="72">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgBtnIngresar.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42">
+            <Button.Background>
+                <ImageBrush ImageSource="/BgRegresar.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

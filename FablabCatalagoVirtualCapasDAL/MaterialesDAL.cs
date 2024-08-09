@@ -4,37 +4,95 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FablabCatalagoVirtualCapasEN;
+using System.Data;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Drawing.Imaging;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
     public class MaterialesDAL
     {
-        private static List<Materiales> listaMateriales = new List<Materiales>()
-        {
-            new Materiales{ Id = 1, nombreMaterial = "Plastico pvc", tipoMaterial = "plastico", Ancho = 12, Altura = 20, precio = 10, proveedor = "compañia de juanito", },
-			new Materiales{ Id = 2, nombreMaterial = "Playwood", tipoMaterial = "plastico", Ancho = 12, Altura = 20, precio = 10, proveedor = "compañia de juanito", }
-		};
 
         public List<Materiales> regresarLista()
         {
-            return listaMateriales;
+            List<Materiales> lista = new List<Materiales>();//-- definicion de lista 
+            SqlCommand cmd = ComunBD.ObtenerComan();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPObtenerTodoMateriales";
+            SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+            while (reader.Read())
+            {
+                Materiales Materiales = new Materiales();
+                Materiales.Id = reader.GetInt32(0);
+                Materiales.NombreMaterial = reader.GetString(1);
+                Materiales.X = reader.GetString(2);
+                Materiales.Y = reader.GetString(3);
+                Materiales.Z = reader.GetString(4);
+                Materiales.IdTipoMaterial = reader.GetInt32(5);
+                Materiales.Precio = reader.GetDecimal(6);
+                lista.Add(Materiales);
+            }
+            return lista;
         }
-        public void guardarMaterial (Materiales pMateriales)
+        public int guardarMaterial (Materiales pMateriales)
         {
-            pMateriales.Id = listaMateriales.Select(listaMateriales => listaMateriales.Id).DefaultIfEmpty(1).Max() + 1;
-            listaMateriales.Add(pMateriales);
-        }
-        public void actualizarMaterial (Materiales pMateriales)
+            SqlCommand cmd = ComunBD.ObtenerComan();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spAgregarMaterial";
+            cmd.Parameters.AddWithValue("@NombreMaterial", pMateriales.NombreMaterial);
+			cmd.Parameters.AddWithValue("@X", pMateriales.X);
+			cmd.Parameters.AddWithValue("@Y", pMateriales.Y);
+			cmd.Parameters.AddWithValue("@Z", pMateriales.Z);
+			cmd.Parameters.AddWithValue("@IdTipoMaterial", pMateriales.IdTipoMaterial);
+			cmd.Parameters.AddWithValue("@Precio", pMateriales.Precio);
+            return ComunBD.EjecutarComand(cmd);
+		}
+        public int actualizarMaterial (Materiales pMateriales)
         {
-            var remover = listaMateriales.FirstOrDefault(i => i.Id == pMateriales.Id);
-            listaMateriales.Add(pMateriales);
-            listaMateriales.Remove(remover);
-        }
-        public void eliminarMateriales (Materiales pMateriales)
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spActualizarMaterial";
+			cmd.Parameters.AddWithValue("@Id", pMateriales.Id);
+			cmd.Parameters.AddWithValue("@NombreMaterial", pMateriales.NombreMaterial);
+			cmd.Parameters.AddWithValue("@X", pMateriales.X);
+			cmd.Parameters.AddWithValue("@Y", pMateriales.Y);
+			cmd.Parameters.AddWithValue("@Z", pMateriales.Z);
+			cmd.Parameters.AddWithValue("@IdTipoMaterial", pMateriales.IdTipoMaterial);
+			cmd.Parameters.AddWithValue("@Precio", pMateriales.Precio);
+			return ComunBD.EjecutarComand(cmd);
+		}
+        public int eliminarMateriales (Materiales pMateriales)
         {
-            var eliminar = listaMateriales.FirstOrDefault(i => i.Id == pMateriales.Id);
-            listaMateriales.Remove(eliminar);
-        }
-    }
+            SqlCommand cmd = ComunBD.ObtenerComan();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPEliminarMaterial";
+            cmd.Parameters.AddWithValue("@Id", pMateriales.Id);
+            return ComunBD.EjecutarComand (cmd);
+		}
+		public Materiales MostrarPorIdMateriales(int Id)
+		{
+			var regresar = new Materiales();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarPorIdMateriales";
+			cmd.Parameters.AddWithValue("@Id", Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Materiales materiales = new Materiales();
+                materiales.Id = reader.GetInt32(0);
+                materiales.NombreMaterial = reader.GetString(1);
+                materiales.X = reader.GetString(2);
+                materiales.Y = reader.GetString(3);
+                materiales.Z = reader.GetString(4);
+                materiales.IdTipoMaterial = reader.GetInt32(5);
+                materiales.Precio = reader.GetDecimal(6);
+
+				regresar = materiales;
+			}
+			return regresar;
+		}
+	}
 }
     
