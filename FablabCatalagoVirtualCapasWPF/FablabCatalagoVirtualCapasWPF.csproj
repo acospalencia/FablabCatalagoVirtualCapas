@@ -382,5 +382,11 @@
   <ItemGroup>
     <Resource Include="BgClubs.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\Botones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

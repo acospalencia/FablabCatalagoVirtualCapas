@@ -13,7 +13,31 @@
         <Rectangle HorizontalAlignment="Left" Height="434" Margin="369,0,0,0" VerticalAlignment="Center" Width="426" Fill="White"/>
         <Label Content="Bienvenido al catalogo  digital de &#xD;&#xA; prototipos de FabLab ESFE." HorizontalAlignment="Center" Margin="391,10,0,0" VerticalAlignment="Top" FontSize="24" Background="{x:Null}" Foreground="#FF1A3E86" BorderBrush="#FFE4D4D4" Height="69" FontFamily="Arial" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button x:Name="btnListado" Content="Ver listado de prototipos" HorizontalAlignment="Left" Margin="462,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"  Height="39" Width="240" Background="#FFBE43BF" FontFamily="Arial"/>
-        <Button x:Name="BtnAdministrar" Content="Administrar Catalogo" HorizontalAlignment="Left" Margin="462,274,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Height="38" Width="240" Background="#FFBE43BF" FontFamily="Arial" Click="BtnAdministrar_Click"/>
+        <Button x:Name="BtnAdministrar" Content="Administrar Catalogo" 
+        HorizontalAlignment="Left" Margin="462,274,0,0" 
+        VerticalAlignment="Top" FontWeight="Bold" FontSize="16" 
+        Height="38" Width="240" FontFamily="Arial" 
+        Click="BtnAdministrar_Click" Cursor="Hand" 
+        BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <!-- Color de fondo por defecto -->
+                    <Setter Property="Background" Value="#FFBE43BF"/>
+
+                    <Style.Triggers>
+                        <!-- Trigger para cuando el ratón está sobre el botón -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+
+                        <!-- Trigger para cuando el botón está presionado -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="Blue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <Image HorizontalAlignment="Left" Height="140" Margin="116,204,0,0" VerticalAlignment="Top" Width="155" Source="/LogoFablab.png"/>
 
     </Grid>

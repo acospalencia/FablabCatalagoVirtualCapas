@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="InicioSesion" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+        Title="InicioSesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" WindowStyle="ThreeDBorderWindow" Height="442" Width="803">
     <Grid>
+
         <Grid.Background>
-            <ImageBrush ImageSource="/BgLogin.png"/>
+            <ImageBrush ImageSource="/BgLogin.png" TileMode="None" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Margin="260,186,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,237,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31"/>
-        <Button x:Name="btn_regresar" Content="Button" HorizontalAlignment="Left" Margin="588,26,0,0" VerticalAlignment="Top" Click="btn_regresar_Click"/>
-        <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content=""
-                Width="260" Height="30"
-                Canvas.Left="150" Canvas.Top="150" Click="BtnIngresar_Click" Margin="260,250,283,83"/>
+        <TextBox x:Name="txtUsuario" Margin="260,182,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="32"/>
+        <Button x:Name="btn_regresar" Content="Button" HorizontalAlignment="Left" Margin="510,83,0,0" VerticalAlignment="Top" Click="btn_regresar_Click"/>
+        <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="262,284,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
 
     </Grid>
 </Window>

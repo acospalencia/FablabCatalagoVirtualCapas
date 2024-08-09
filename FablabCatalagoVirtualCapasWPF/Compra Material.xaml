@@ -42,12 +42,12 @@
                 </Button.Background>
             </Button>
             <Button
-                Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="">
+                Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand">
                 <Button.Background>
                     <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="666,355,0,0" VerticalAlignment="Top" Height="52" Width="39">
+            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="637,355,0,0" VerticalAlignment="Top" Height="52" Width="68">
                 <Button.Background>
                     <ImageBrush ImageSource="/BgPapelera.png"/>
                 </Button.Background>
