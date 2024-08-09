@@ -383,10 +383,46 @@
     <Resource Include="BgClubs.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Recursos\Botones\" />
+    <Resource Include="Recursos\Botones\BtnFlechaAtras.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Fondos\Fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnIngresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnLupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnCompra.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Botones\BtnGuardar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\Fondo6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Fondos\LogoFablab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
