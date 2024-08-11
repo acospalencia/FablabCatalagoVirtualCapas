@@ -8,7 +8,7 @@
         Title="MantenimientoMaterial" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgAgregarMate.png"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo4.png"/>
         </Grid.Background>
         <Label Content="Mantenimiento de Material" HorizontalAlignment="Left" Margin="222,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="20" Background="{x:Null}" Foreground="#FFF7F0F0"/>
         <Button Content="" HorizontalAlignment="Left" Margin="616,338,0,0" VerticalAlignment="Top" Height="42" Width="78" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="{x:Null}">

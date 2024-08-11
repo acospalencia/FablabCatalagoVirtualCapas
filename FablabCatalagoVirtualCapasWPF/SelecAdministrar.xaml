@@ -8,7 +8,7 @@
         Title="SelecAdministrar" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgRegistrarMate.png"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Que sección desea administrar" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="31" Width="304" FontWeight="Bold" FontSize="20" FontFamily="Arial" Foreground="#FFEDE3E3"/>
         <Button Content="Materiales" HorizontalAlignment="Left" Margin="67,138,0,0" VerticalAlignment="Top" Height="41" Width="208" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF95569C"/>

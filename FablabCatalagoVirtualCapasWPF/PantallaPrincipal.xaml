@@ -8,7 +8,7 @@
         Title="PantallaPrincipal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="434">
         <Grid.Background>
-            <ImageBrush ImageSource="/BgPanel.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="434" Margin="369,0,0,0" VerticalAlignment="Center" Width="426" Fill="White"/>
         <Label Content="Bienvenido al catalogo  digital de &#xD;&#xA; prototipos de FabLab ESFE." HorizontalAlignment="Center" Margin="391,10,0,0" VerticalAlignment="Top" FontSize="24" Background="{x:Null}" Foreground="#FF1A3E86" BorderBrush="#FFE4D4D4" Height="69" FontFamily="Arial" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>

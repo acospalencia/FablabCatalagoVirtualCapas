@@ -8,7 +8,7 @@
         Title="Listaprototipo" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgLista.png"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,82,10,136"/>
         <Rectangle HorizontalAlignment="Left" Height="36" Margin="168,23,0,0" VerticalAlignment="Top" Width="489"/>
