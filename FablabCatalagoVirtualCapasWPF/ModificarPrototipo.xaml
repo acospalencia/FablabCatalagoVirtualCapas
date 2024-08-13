@@ -8,7 +8,7 @@
         Title="ModificarPrototipo" Height="514" Width="1208">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgAggProto.jpg"/>
+            <ImageBrush ImageSource="Recursos/Fondos/Fondo2.jpg"/>
         </Grid.Background>
         <Label Content= "Nombre:" HorizontalAlignment="Left" Margin="72,36,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label Content="Ancho del prototipo finalizado:" HorizontalAlignment="Left" Margin="72,185,0,0" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
@@ -29,18 +29,18 @@
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="733,154,31,121"/>
         <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="1080,90,0,0" VerticalAlignment="Top" Width="45" Height="35">
             <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="851,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="24"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="875,406,0,0" VerticalAlignment="Top" Width="80" Height="61">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="1038,406,0,0" VerticalAlignment="Top" Width="64" Height="60">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
         <Label Content="Autor" HorizontalAlignment="Left" Margin="72,108,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>

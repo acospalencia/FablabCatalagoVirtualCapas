@@ -8,7 +8,7 @@
         Title="IngresarMaquinaria" Height="476" Width="562">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgMaquinaria.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre: " HorizontalAlignment="Left" Margin="80,34,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label Content="Marca: " HorizontalAlignment="Left" Margin="80,97,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
@@ -22,7 +22,7 @@
         <ComboBox HorizontalAlignment="Left" Margin="80,355,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="296,385,0,0" VerticalAlignment="Top" Width="67" Height="49">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>

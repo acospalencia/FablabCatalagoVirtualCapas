@@ -8,16 +8,16 @@
         Title="MantenimientoAutores" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgModiAUtor.jpg"/>
+            <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
         <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="255,168,0,0" VerticalAlignment="Top" Width="76" Height="69">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnIngresar.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="445,168,0,0" VerticalAlignment="Top" Width="84" Height="69">
             <Button.Background>
-                <ImageBrush ImageSource="/BgEditar.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
         <Label Content="MANTENIMIENTO DE AUTORES" HorizontalAlignment="Left" Margin="255,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="White"/>

@@ -8,7 +8,7 @@
         Title="IngresarAutores" Height="444" Width="620">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgModiAUtor.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
         <Label Content="Nombres: " HorizontalAlignment="Left" Margin="126,78,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="126,130,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
@@ -20,12 +20,12 @@
         <TextBox x:Name="txtFechaRegistro" HorizontalAlignment="Left" Margin="306,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="207,321,0,0" VerticalAlignment="Top" Width="46" Height="40">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="377,321,0,0" VerticalAlignment="Top" Width="49" Height="40">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="24">

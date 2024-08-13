@@ -8,7 +8,7 @@
         Title="ModificarAutores" Height="434" Width="857">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgModiAUtor.jpg"/>
+            <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
         <Label Content="Nombres: " HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFBF7F7"/>
         <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="116,134,0,0" VerticalAlignment="Top" Foreground="#FFF7F1F1" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
@@ -29,19 +29,19 @@
         <TextBox x:Name="txtFechaRegistro" HorizontalAlignment="Left" Margin="280,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="510,352,0,0" VerticalAlignment="Top" Height="56" Width="78">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="697,356,0,0" VerticalAlignment="Top" Height="48" Width="60">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="428,133,19,82"/>
         <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="523,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" Height="28"/>
         <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="709,77,0,0" VerticalAlignment="Top" Height="32" Width="36">
             <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
         </Button>
 
