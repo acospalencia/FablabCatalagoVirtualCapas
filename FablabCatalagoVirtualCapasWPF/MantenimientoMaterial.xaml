@@ -8,16 +8,20 @@
         Title="MantenimientoMaterial" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgAgregarMate.png"/>
+            <ImageBrush ImageSource="/Fondo4.png"/>
         </Grid.Background>
         <Label Content="Mantenimiento de Material" HorizontalAlignment="Left" Margin="222,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="20" Background="{x:Null}" Foreground="#FFF7F0F0"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="616,338,0,0" VerticalAlignment="Top" Height="42" Width="78" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="{x:Null}">
+        <Button Content="" HorizontalAlignment="Left" Margin="616,328,0,0" VerticalAlignment="Top" Height="52" Width="83" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="/BtnEliminar.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
         <Button Content="Agregar" HorizontalAlignment="Left" Margin="116,344,0,0" VerticalAlignment="Top" Height="30" Width="147" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF7D4AA2"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="462,91,29,185"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="462,91,29,185">
+            <DataGrid.Background>
+                <ImageBrush/>
+            </DataGrid.Background>
+        </DataGrid>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
         <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="28,96,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>
         <Label Content="Precio:" HorizontalAlignment="Left" Margin="28,135,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7"/>

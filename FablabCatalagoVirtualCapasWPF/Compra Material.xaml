@@ -9,7 +9,7 @@
     <Grid>
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/BgModiMateri.jpeg"/>
+                <ImageBrush ImageSource="/Fondo1.jpg"/>
             </Grid.Background>
             <Label Content="Compra Materiales" HorizontalAlignment="Left" Margin="286,34,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
             <Label Content="Proveedor" HorizontalAlignment="Left" Margin="51,94,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="94" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
@@ -38,18 +38,18 @@
             <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="434,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="TextBox_TextChanged"/>
             <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Center" Height="34" Margin="0,84,0,0" VerticalAlignment="Top" Width="36">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BgLupa.png"/>
+                    <ImageBrush ImageSource="/BtnLupa.png"/>
                 </Button.Background>
             </Button>
             <Button
                 Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                    <ImageBrush ImageSource="/BtnGuardar.jpeg"/>
                 </Button.Background>
             </Button>
             <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="637,355,0,0" VerticalAlignment="Top" Height="52" Width="68">
                 <Button.Background>
-                    <ImageBrush ImageSource="/BgPapelera.png"/>
+                    <ImageBrush ImageSource="/BtnEliminar.png"/>
                 </Button.Background>
             </Button>
 

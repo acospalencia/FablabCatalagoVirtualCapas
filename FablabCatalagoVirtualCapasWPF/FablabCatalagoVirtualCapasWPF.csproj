@@ -427,5 +427,35 @@
   <ItemGroup>
     <Resource Include="Recursos\Fondos\Fondo7.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fondo3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fondo6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnGuardar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnIngresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnCompra.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BtnLupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fondo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fondo1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
