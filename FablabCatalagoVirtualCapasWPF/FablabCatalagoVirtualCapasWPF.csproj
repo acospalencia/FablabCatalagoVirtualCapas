@@ -304,15 +304,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="LogoFablab.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgPanel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgLogin.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FablabCatalagoVirtualCapasBL\FablabCatalagoVirtualCapasBL.csproj">
       <Project>{d1d4b22e-1591-4053-b377-a55c2af08d09}</Project>
       <Name>FablabCatalagoVirtualCapasBL</Name>
@@ -321,66 +312,6 @@
       <Project>{b5444a84-2094-4c02-9132-cd9c5b5006bd}</Project>
       <Name>FablabCatalagoVirtualCapasEN</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgLista.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgInforProto.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgSelecMaterial.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgAgregarMate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgPapelera.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgRegistrarMate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgAggProveedor.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgBtnIngresar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgEditar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgRegresar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgModiProveedor.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgLupa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgBtnGuardar.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgModiMateri.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgBtnCompra.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgAggProto.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgModiClub.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgModiAUtor.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgMaquinaria.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BgClubs.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Botones\BtnFlechaAtras.png" />
@@ -426,36 +357,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Fondos\Fondo7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Fondo3.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Fondo6.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnGuardar.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnIngresar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnEditar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnCompra.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnEliminar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BtnLupa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Fondo4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Fondo1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
