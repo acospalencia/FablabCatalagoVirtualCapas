@@ -13,7 +13,8 @@
             <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="/Fondo3.jpeg"/>
+
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
             <Label.Background>

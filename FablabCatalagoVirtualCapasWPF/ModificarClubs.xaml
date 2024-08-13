@@ -8,7 +8,7 @@
         Title="ModificarClubs" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgModiClub.jpg"/>
+            <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Autores: " HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label Content="Nombre del club: " HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
@@ -21,18 +21,18 @@
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="298,142,28,106"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="400,364,0,0" VerticalAlignment="Top" Height="60" Width="69">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="566,364,0,0" VerticalAlignment="Top" Height="55" Width="65">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="427,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Height="25"/>
         <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="652,80,0,0" VerticalAlignment="Top" Width="46" Height="39">
             <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
         </Button>
 

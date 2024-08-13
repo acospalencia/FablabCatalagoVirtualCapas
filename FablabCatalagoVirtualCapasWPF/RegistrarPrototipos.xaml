@@ -8,17 +8,17 @@
         Title="RegistrarPrototipos" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgAggProto.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo2.jpg"/>
         </Grid.Background>
         <Label Content="ELIJA LA OPCION A REALIZAR" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="22"/>
         <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="232,193,0,0" VerticalAlignment="Top" Width="107" Height="102">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnIngresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="508,192,0,0" VerticalAlignment="Top" Width="116" Height="103">
             <Button.Background>
-                <ImageBrush ImageSource="/BgEditar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="39" Width="46">
