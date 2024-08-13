@@ -13,6 +13,7 @@
             <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
+
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
@@ -76,7 +77,11 @@
             </TextBox.Background>
         </TextBox>
         <Label Grid.Column="1" Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="20" FontFamily="Arial"/>
-        <Button Grid.Column="1" Content="Guardar" HorizontalAlignment="Left" Margin="401,316,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="31" Width="161" Background="#FF8F3AA9"/>
+        <Button Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="401,316,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="62" Width="95">
+            <Button.Background>
+                <ImageBrush ImageSource="/BtnGuardar.jpeg"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

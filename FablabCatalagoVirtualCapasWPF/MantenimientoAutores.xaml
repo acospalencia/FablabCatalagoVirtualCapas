@@ -8,11 +8,13 @@
         Title="MantenimientoAutores" Height="450" Width="800">
     <Grid>
         <Grid.Background>
+
             <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
         <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="255,168,0,0" VerticalAlignment="Top" Width="76" Height="69">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
+
             </Button.Background>
         </Button>
         <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="445,168,0,0" VerticalAlignment="Top" Width="84" Height="69">
