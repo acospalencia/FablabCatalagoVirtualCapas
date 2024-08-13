@@ -8,7 +8,7 @@
         Title="EliminarMaquinaria" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgMaquinaria.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre: " HorizontalAlignment="Left" Margin="69,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label x:Name="txtMarca" Content="Marca: " HorizontalAlignment="Left" Margin="69,127,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
@@ -23,12 +23,12 @@
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="316,143,65,125"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="460,359,0,0" VerticalAlignment="Top" Width="66" Height="55">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="608,360,0,0" VerticalAlignment="Top" Width="55" Height="53">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="400,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Height="24"/>

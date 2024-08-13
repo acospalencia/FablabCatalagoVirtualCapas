@@ -8,7 +8,7 @@
         Title="RegistroPrototipo" Height="532" Width="827">
     <Grid x:Name="btnRegresar1">
         <Grid.Background>
-            <ImageBrush ImageSource="/BgAggProto.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo2.jpg"/>
         </Grid.Background>
         <Label Content="Nombre: " HorizontalAlignment="Left" Margin="50,28,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Ancho del prototipo finalizado: " HorizontalAlignment="Left" Margin="50,183,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
@@ -27,7 +27,7 @@
         <TextBox HorizontalAlignment="Left" Margin="425,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="100"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="656,451,0,0" VerticalAlignment="Top" Width="70" Height="55">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
         <ComboBox HorizontalAlignment="Left" Margin="418,144,0,0" VerticalAlignment="Top" Width="250"/>
