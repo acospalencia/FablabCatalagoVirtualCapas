@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="Listaprototipo" Height="450" Width="800">
+        Title="Listaprototipo" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
@@ -14,10 +14,17 @@
         <Rectangle HorizontalAlignment="Left" Height="36" Margin="168,23,0,0" VerticalAlignment="Top" Width="489"/>
         <Label Content="Listado de prototipos" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Foreground="#FFF5F0F0" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Button Content="Siguiente" HorizontalAlignment="Left" Margin="324,337,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="30" Width="130" Foreground="#FF0C0B0B" BorderBrush="{x:Null}" Background="#FF9E2CC1"/>
-        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
-            </Button.Background>
+        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Foreground="{x:Null}" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Definir la imagen de fondo -->
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>
