@@ -23,7 +23,7 @@
         </Button>
         <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="45">
             <Button.Background>
-                <ImageBrush ImageSource="/BgRegresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
         </Button>
 

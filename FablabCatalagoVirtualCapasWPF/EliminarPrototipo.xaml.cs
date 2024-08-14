@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace prototipos
 {
 	/// <summary>
-	/// Lógica de interacción para Window1.xaml
+	/// Lógica de interacción para Window2.xaml
 	/// </summary>
-	public partial class Window1 : Window
+	public partial class Window2 : Window
 	{
-		public Window1()
+		public Window2()
 		{
 			InitializeComponent();
 		}
