@@ -12,9 +12,13 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo7.png" TileMode="None" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <TextBox x:Name="txtUsuario" Margin="260,182,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="32"/>
-        <Button x:Name="btn_regresar" Content="Button" HorizontalAlignment="Left" Margin="510,83,0,0" VerticalAlignment="Top" Click="btn_regresar_Click"/>
+        <TextBox x:Name="txtUsuario" Margin="260,182,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="32" Foreground="#FF878787" GotFocus="txtPassword_GotFocus"/>
+        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39">
+            <Button.Background>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="262,284,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
 
     </Grid>

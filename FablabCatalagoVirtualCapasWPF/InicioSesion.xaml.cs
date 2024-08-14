@@ -39,7 +39,7 @@ namespace Fablab.esfe
             back.Show();
             this.Close();
 		}
-		public static string GetSHA256(string str)
+		public static string Encrypt(string str)
 		{
 			SHA256 sha256 = SHA256Managed.Create();
 			ASCIIEncoding encoding = new ASCIIEncoding();
@@ -55,21 +55,33 @@ namespace Fablab.esfe
 			var inicioSesion = new User
 			{
 				Usuario = txtUsuario.Text,
-				Password = GetSHA256(txtPassword.Text)
+				Password = Encrypt(txtPassword.Text)
 			};
 			var verificar = new UserBL();
 			User Logearse = verificar.Login(inicioSesion);
 
 			if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
 			{
-				//var formAgregar = new ElegirAccion();
-				//formAgregar.Show();
-				//this.Hide();
+				var formAgregar = new SelecAdministrar();
+				formAgregar.Show();
+				this.Hide();
 			}
 			else
 			{
 				MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
 			}
+		}
+
+		private void txtUsuario_GotFocus(object sender, RoutedEventArgs e)
+		{
+			txtUsuario.Text = "";
+			txtUsuario.Foreground = new SolidColorBrush(Colors.Black);
+		}
+
+		private void txtPassword_GotFocus(object sender, RoutedEventArgs e)
+		{
+			txtPassword.Text = "";
+			txtPassword.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}
 }

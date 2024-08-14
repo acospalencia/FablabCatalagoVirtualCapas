@@ -23,5 +23,12 @@ namespace Fablab.esfe
         {
             InitializeComponent();
         }
+
+		private void btn_regresar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScMain = new PantallaPrincipal();
+			ScMain.Show();
+			this.Close();
+		}
     }
 }

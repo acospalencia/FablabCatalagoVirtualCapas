@@ -18,5 +18,12 @@ namespace Fablab.esfe
 			ScInicio.Show();
 			this.Close();
 		}
+
+		private void btnListado_Click(object sender, RoutedEventArgs e)
+		{
+			var ScListado = new Listaprototipo();
+			ScListado.Show();
+			this.Close();
+		}
 	}
 }
