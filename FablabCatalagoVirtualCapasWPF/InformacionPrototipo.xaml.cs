@@ -24,17 +24,12 @@ namespace Fablab.esfe
 			InitializeComponent();
 		}
 
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-		}
-
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
 		{
 
 			var ScLista = new Listaprototipo();
 			ScLista.Show();
-			this.Hide();
+			this.Close();
 
 		}
 	}

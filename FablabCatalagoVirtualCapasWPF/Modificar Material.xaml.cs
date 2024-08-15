@@ -26,12 +26,20 @@ namespace UI
         {
             InitializeComponent();
         }
+		private bool validacion()
+		{
+			return !string.IsNullOrEmpty(txtNombre.Text) &&
+					!string.IsNullOrEmpty(txtX.Text) &&
+					!string.IsNullOrEmpty(txtY.Text) &&
+					!string.IsNullOrEmpty(txtPrecio.Text) &&
+					!string.IsNullOrEmpty(txtZ.Text);
+		}
 
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
 		{
 			var ScBack = new Accion_Material();
 			ScBack.Show();
-			this.Hide();
+			this.Close();
 		}
 
 		private void btnBuscar_Click(object sender, RoutedEventArgs e)
@@ -78,11 +86,6 @@ namespace UI
 			}
 		}
 
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-		}
-
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			var Actualizardg = new MaterialesBL();
@@ -92,6 +95,83 @@ namespace UI
 			cbTipoMaterial.ItemsSource = tipo.regresarTipoMaterial();
 			cbTipoMaterial.DisplayMemberPath = "NombreTipo";
 			cbTipoMaterial.SelectedValuePath = "Id";
+		}
+
+		private void btnGuardar_Click(object sender, RoutedEventArgs e)
+		{
+			if (validacion())
+			{
+				var nuevomateria = new Materiales
+				{
+					Id = int.Parse(txtId.Text),
+					NombreMaterial = txtNombre.Text,
+					X = txtX.Text,
+					Y = txtY.Text,
+					Z = txtZ.Text,
+					Precio = decimal.Parse(txtPrecio.Text),
+					IdTipoMaterial = Convert.ToInt32(cbTipoMaterial.SelectedValue)
+				};
+
+				var guardar = new MaterialesBL();
+				guardar.actualizarMateriales(nuevomateria);
+				txtZ.Text = null;
+				txtPrecio.Text = null;
+				txtY.Text = null;
+				txtX.Text = null;
+				txtNombre.Text = null;
+				MessageBox.Show("Los datos se han ingresado con exito");
+				txtNombre.IsEnabled = false;
+				txtX.IsEnabled = false;
+				txtY.IsEnabled = false;
+				txtZ.IsEnabled = false;
+				txtPrecio.IsEnabled = false;
+				cbTipoMaterial.IsEnabled = false;
+				var Actualizardg = new MaterialesBL();
+				dgMaterial.ItemsSource = null;
+				dgMaterial.ItemsSource = Actualizardg.regresarLista();
+			}
+			else
+			{
+				MessageBox.Show("porfavor rellene los correspondientees textboxx");
+			}
+		}
+
+		private void dgMaterial_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (dgMaterial.SelectedItem != null)
+			{
+				var row = (Materiales)dgMaterial.SelectedItem;
+				if (row != null)
+				{
+					txtNombre.IsEnabled = true;
+					txtX.IsEnabled = true;
+					txtY.IsEnabled = true;
+					txtZ.IsEnabled = true;
+					txtPrecio.IsEnabled = true;
+					cbTipoMaterial.IsEnabled = true;
+					btnModificar.Visibility = Visibility.Visible;
+					txtId.Text = row.Id.ToString();
+					txtNombre.Text = row.NombreMaterial;
+					txtIdTipo.Text = row.IdTipoMaterial.ToString();
+					txtPrecio.Text = row.Precio.ToString();
+					txtX.Text = row.X.ToString();
+					txtY.Text = row.Y.ToString();
+					txtZ.Text = row.Z.ToString();
+				}
+			}
+		}
+
+		private void txtIdTipo_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			if (int.TryParse(txtIdTipo.Text, out int idMaterial))
+			{
+				TipoMaterialBL MaquinariaBL = new TipoMaterialBL();
+				TipoMaterial maquinaria = MaquinariaBL.MostrarPorIdTipo(idMaterial);
+				if (maquinaria != null)
+				{
+					cbTipoMaterial.Text = maquinaria.NombreTipo;
+				}
+			}
 		}
 	}
 }

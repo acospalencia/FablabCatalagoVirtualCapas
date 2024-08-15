@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="InicioSesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" WindowStyle="ThreeDBorderWindow" Height="442" Width="803">
+        Title="InicioSesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Height="442" Width="803">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

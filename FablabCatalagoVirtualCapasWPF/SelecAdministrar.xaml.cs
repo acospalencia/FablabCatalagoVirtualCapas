@@ -29,20 +29,14 @@ namespace Fablab.esfe
 		{
             var ScMat = new Accion_Material();
             ScMat.Show();
-            this.Hide();
+            this.Close();
         }
 
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
 		{
             var ScMain = new PantallaPrincipal();
             ScMain.Show();
-            this.Hide();
-		}
-
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-
+            this.Close();
 		}
 	}
 }

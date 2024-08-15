@@ -39,7 +39,7 @@ namespace Fablab.esfe
 		{
 			var ScBack = new Accion_Material();
 			ScBack.Show();
-			this.Hide();
+			this.Close();
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -78,12 +78,6 @@ namespace Fablab.esfe
 			{
 				MessageBox.Show("porfavor rellene los correspondientees textbox");
 			}
-		}
-
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-
 		}
 	}
 }

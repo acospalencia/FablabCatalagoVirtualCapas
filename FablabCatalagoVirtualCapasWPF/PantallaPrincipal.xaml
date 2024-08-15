@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+        Title="PantallaPrincipal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="434">
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png" Stretch="UniformToFill"/>

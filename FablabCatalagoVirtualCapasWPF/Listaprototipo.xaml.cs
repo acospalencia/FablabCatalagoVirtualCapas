@@ -33,7 +33,7 @@ namespace Fablab.esfe
 		{
 			var ScMain = new PantallaPrincipal();
 			ScMain.Show();
-			this.Hide();
+			this.Close();
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -60,7 +60,7 @@ namespace Fablab.esfe
 		private void btnSiguiente_Click(object sender, RoutedEventArgs e)
 		{
 			formInfo.Show();
-			this.Hide();
+			this.Close();
 			var protoinfo = new Prototipo
 			{
 				NombrePrototipo = txtNombre.Text
@@ -94,12 +94,6 @@ namespace Fablab.esfe
 				}
 			}
 			
-		}
-
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-
 		}
 	}
 }

@@ -33,17 +33,11 @@ namespace Fablab.esfe
 				!string.IsNullOrEmpty(txtPassword.Password);
 		}
 
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-
-		}
-
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
 		{
             var back = new PantallaPrincipal();
             back.Show();
-            this.Hide();
+            this.Close();
 		}
 		public static string Encrypt(string str)
 		{
@@ -60,7 +54,7 @@ namespace Fablab.esfe
 		{
 			var formAgregar = new SelecAdministrar();
 			formAgregar.Show();
-			this.Hide();
+			this.Close();
 			//if (Validar())
    //         {
 			//	var inicioSesion = new User

@@ -29,27 +29,21 @@ namespace UI
 		{
 			var ScBack = new SelecAdministrar();
 			ScBack.Show();
-			this.Hide();
+			this.Close();
 		}
 
 		private void btnAgregar_Click(object sender, RoutedEventArgs e)
 		{
 			var ScAgg = new RegistrarMaterial();
 			ScAgg.Show();
-			this.Hide();
-		}
-
-		private void Window_Closed(object sender, EventArgs e)
-		{
-			Application.Current.Shutdown();
-
+			this.Close();
 		}
 
 		private void btnModificar_Click(object sender, RoutedEventArgs e)
 		{
 			var ScAgg = new Modificar_Material();
 			ScAgg.Show();
-			this.Hide();
+			this.Close();
 		}
 	}
 }

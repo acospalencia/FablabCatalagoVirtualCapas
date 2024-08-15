@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="InformacionPrototipo" Height="550" Width="1150" Closed="Window_Closed" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="InformacionPrototipo" Height="550" Width="1150" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png"/>
