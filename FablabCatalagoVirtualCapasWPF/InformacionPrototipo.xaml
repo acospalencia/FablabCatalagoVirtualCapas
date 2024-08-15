@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="InformacionPrototipo" Height="550" Width="900">
+        Title="InformacionPrototipo" Height="550" Width="1150" Closed="Window_Closed" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png"/>
@@ -16,14 +16,26 @@
         <Label x:Name="lblNombreMat" Content="Tipo de material: " HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblY" Content="DImension Y: " HorizontalAlignment="Left" Margin="39,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblFabricado" Content="Tiempo necesitado para fabricarlo:  " HorizontalAlignment="Left" Margin="338,99,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Label x:Name="lblMaquina" Content="Maquinaria: " HorizontalAlignment="Left" Margin="340,296,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label x:Name="lblMaquina" Content="Maquinaria: " HorizontalAlignment="Left" Margin="340,287,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lbldiseno" Content="Tiempo necesitado para diseñarlo: " HorizontalAlignment="Left" Margin="338,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblArmado" Content="Tiempo necesitado para armarlo:   " HorizontalAlignment="Left" Margin="335,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblX" Content="Dimension X: " HorizontalAlignment="Left" Margin="39,287,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="100" Margin="665,70,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="lblZ" Content="DImension Z: " HorizontalAlignment="Left" Margin="39,411,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="372" Margin="724,99,0,0" VerticalAlignment="Top" Width="427"/>
+        <Label x:Name="lblZ" Content="DImension Z: " HorizontalAlignment="Left" Margin="335,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblEstado" Content="Estado: " HorizontalAlignment="Left" Margin="39,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Label x:Name="lblDescripcion" Content="Descripcion: " HorizontalAlignment="Left" Margin="340,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label x:Name="lblDescripcion" Content="Descripcion: " HorizontalAlignment="Left" Margin="39,422,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Button x:Name="btn_regresar" Visibility="Visible" Content="" HorizontalAlignment="Left" Margin="21,21,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="55" Height="51" Foreground="{x:Null}" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <!-- Definir la imagen de fondo -->
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="Listaprototipo" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="Listaprototipo" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
@@ -13,8 +13,8 @@
         <DataGrid Name="dgvlistaprototipos" ColumnWidth="*" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,82,10,136" IsReadOnly="True" SelectionChanged="dgvlistaprototipos_SelectionChanged"/>
         <Rectangle HorizontalAlignment="Left" Height="36" Margin="168,23,0,0" VerticalAlignment="Top" Width="489"/>
         <Label Content="Listado de prototipos" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Foreground="#FFF5F0F0" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Button x:Name="btnSiguiente" Content="Siguiente" HorizontalAlignment="Left" Margin="324,337,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="30" Width="130" Foreground="#FF0C0B0B" BorderBrush="{x:Null}" Background="#FF9E2CC1" Visibility="Visible" Click="btnSiguiente_Click"/>
-        <Button x:Name="btn_regresar" Visibility="Visible" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Foreground="{x:Null}" Cursor="Hand">
+        <Button x:Name="btnSiguiente" Content="Siguiente" HorizontalAlignment="Left" Margin="324,337,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="30" Width="130" Foreground="#FF0C0B0B" BorderBrush="{x:Null}" Background="#FF9E2CC1" Visibility="Hidden" Click="btnSiguiente_Click"/>
+        <Button x:Name="btn_regresar" Visibility="Visible" Content="" HorizontalAlignment="Left" Margin="21,21,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="58" Height="48" Foreground="{x:Null}" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>

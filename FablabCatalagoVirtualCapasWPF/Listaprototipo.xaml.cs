@@ -33,7 +33,7 @@ namespace Fablab.esfe
 		{
 			var ScMain = new PantallaPrincipal();
 			ScMain.Show();
-			this.Close();
+			this.Hide();
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -45,19 +45,13 @@ namespace Fablab.esfe
 
 		private void dgvlistaprototipos_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-            // Verificar si hay una fila seleccionada
             if (dgvlistaprototipos.SelectedItem != null)
             {
-                // Obtener la fila seleccionada como objeto del tipo de tus datos (por ejemplo, "Prototipo")
                 var row = (ModeloPrototipo)dgvlistaprototipos.SelectedItem;
 
-                // Verificar si la fila no es nula
                 if (row != null)
                 {
-                    // Asignar el valor de la celda al TextBox
                     txtNombre.Text = row.Nombre;
-
-                    // Mostrar el botón
                     btnSiguiente.Visibility = Visibility.Visible;
                 }
             }
@@ -87,13 +81,25 @@ namespace Fablab.esfe
 				formInfo.lblEstado.Content += prototipos.NombreEstado;
 				formInfo.lblMaquina.Content += prototipos.Nombre;
 
-				//byte[] imagenBytes = (byte[])prototipos.Imagen;
-				//using (MemoryStream ms = new MemoryStream(imagenBytes))
-				//{
-				//	formInfo.imgPrototipo.Image = Image.FromStream(ms);
-				//}
+				byte[] imagenBytes = (byte[])prototipos.Imagen;
+				using (MemoryStream ms = new MemoryStream(imagenBytes))
+				{
+					BitmapImage bitmap = new BitmapImage();
+					bitmap.BeginInit();
+					bitmap.StreamSource = ms;
+					bitmap.CacheOption = BitmapCacheOption.OnLoad;
+					bitmap.EndInit();
 
+					formInfo.imgPrototipo.Source = bitmap;
+				}
 			}
+			
+		}
+
+		private void Window_Closed(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
+
 		}
 	}
 }

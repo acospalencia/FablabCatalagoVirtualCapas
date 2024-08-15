@@ -5,83 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="RegistrarMaterial" Height="450" Width="800">
+        Title="RegistrarMaterial" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="19*"/>
-        </Grid.ColumnDefinitions>
+        
         <Grid.Background>
 
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="70,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="94">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="28,96,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
+        <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="70,113,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="141">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Precio:" HorizontalAlignment="Left" Margin="28,135,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
+        <Label Content="Precio:" HorizontalAlignment="Left" Margin="70,176,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="80">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Ancho Material:" HorizontalAlignment="Left" Margin="28,166,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
+        <Label Content="Ancho Material:" HorizontalAlignment="Left" Margin="70,228,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="161">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Alto Material" HorizontalAlignment="Left" Margin="28,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7">
-            <Label.Background>
-                <ImageBrush/>
-            </Label.Background>
+        <Label Content="Alto Material:" HorizontalAlignment="Left" Margin="70,284,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="132">
+
         </Label>
-        <Label Content="Proveedor" HorizontalAlignment="Left" Margin="28,236,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="#FFF1E7E7">
-            <Label.Background>
-                <ImageBrush/>
-            </Label.Background>
-        </Label>
-        <TextBox HorizontalAlignment="Left" Margin="30,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="244,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="30">
+
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="30,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="244,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="30">
+
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="30,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
+        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="244,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28">
+
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="30,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
+        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="244,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28">
+
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="30,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <TextBox.Background>
-                <ImageBrush/>
-            </TextBox.Background>
-        </TextBox>
-        <Label Grid.Column="1" Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="20" FontFamily="Arial"/>
-        <Button Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="401,316,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="62" Width="95">
+        <Label Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="20" FontFamily="Arial"/>
+        <Button x:Name="btnRegistrar" Content="" HorizontalAlignment="Left" Margin="593,307,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="71" Width="95" Click="btnRegistrar_Click" >
             <Button.Background>
-                <ImageBrush ImageSource="/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
+        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ComboBox x:Name="cbTipoMaterial" HorizontalAlignment="Left" Margin="244,117,0,0" VerticalAlignment="Top" Width="149" Height="30" />
+        <Label Content="Profundidad Material:" HorizontalAlignment="Left" Margin="70,338,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="174"/>
+        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="244,339,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28"/>
 
     </Grid>
 </Window>

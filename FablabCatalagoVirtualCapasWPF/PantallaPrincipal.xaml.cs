@@ -16,14 +16,20 @@ namespace Fablab.esfe
 		{
 			var ScInicio = new InicioSesion();
 			ScInicio.Show();
-			this.Close();
+			this.Hide();
 		}
 
 		private void btnListado_Click(object sender, RoutedEventArgs e)
 		{
 			var ScListado = new Listaprototipo();
 			ScListado.Show();
-			this.Close();
+			this.Hide();
+		}
+
+		private void Window_Closed(object sender, System.EventArgs e)
+		{
+			Application.Current.Shutdown();
+
 		}
 	}
 }

@@ -30,19 +30,20 @@ namespace Fablab.esfe
 		private bool Validar()
 		{
 			return !string.IsNullOrEmpty(txtUsuario.Text) &&
-				!string.IsNullOrEmpty(txtPassword.Text);
+				!string.IsNullOrEmpty(txtPassword.Password);
 		}
 
 		private void Window_Closed(object sender, EventArgs e)
 		{
-			this.Close();
+			Application.Current.Shutdown();
+
 		}
 
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
 		{
             var back = new PantallaPrincipal();
             back.Show();
-            this.Close();
+            this.Hide();
 		}
 		public static string Encrypt(string str)
 		{
@@ -57,31 +58,34 @@ namespace Fablab.esfe
 
 		private void BtnIngresar_Click(object sender, RoutedEventArgs e)
 		{
-            if (Validar())
-            {
-				var inicioSesion = new User
-				{
-					Usuario = txtUsuario.Text,
-					Password = Encrypt(txtPassword.Text)
-				};
-				var verificar = new UserBL();
-				User Logearse = verificar.Login(inicioSesion);
+			var formAgregar = new SelecAdministrar();
+			formAgregar.Show();
+			this.Hide();
+			//if (Validar())
+   //         {
+			//	var inicioSesion = new User
+			//	{
+			//		Usuario = txtUsuario.Text,
+			//		Password = Encrypt(txtPassword.Password)
+			//	};
+			//	var verificar = new UserBL();
+			//	User Logearse = verificar.Login(inicioSesion);
 
-				if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
-				{
-					var formAgregar = new SelecAdministrar();
-					formAgregar.Show();
-					this.Hide();
-				}
-				else
-				{
-					MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
-				}
-			}
-            else
-            {
-				MessageBox.Show("Rellene todos los campos solicitados para iniciar seesion por favor", "Error");
-			}
+			//	if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
+			//	{
+			//		var formAgregar = new SelecAdministrar();
+			//		formAgregar.Show();
+			//		this.Hide();
+			//	}
+			//	else
+			//	{
+			//		MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
+			//	}
+			//}
+   //         else
+   //         {
+			//	MessageBox.Show("Rellene todos los campos solicitados para iniciar seesion por favor", "Error");
+			//}
         }
 
 		private void txtUsuario_GotFocus(object sender, RoutedEventArgs e)
@@ -92,7 +96,7 @@ namespace Fablab.esfe
 
 		private void txtPassword_GotFocus(object sender, RoutedEventArgs e)
 		{
-			txtPassword.Text = "";
+			txtPassword.Password = "";
 			txtPassword.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}

@@ -15,13 +15,12 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo7.png" TileMode="None" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <TextBox x:Name="txtUsuario" Margin="260,182,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="32" Foreground="#FF878787" GotFocus="txtPassword_GotFocus"/>
+        <TextBox x:Name="txtUsuario" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus"/>
         <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-      
+
                         <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
                         <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -30,6 +29,7 @@
             </Button.Template>
         </Button>
         <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="262,284,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787"/>
 
     </Grid>
 </Window>

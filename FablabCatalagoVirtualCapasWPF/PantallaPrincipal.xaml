@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="PantallaPrincipal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
     <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="434">
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="434" Margin="369,0,0,0" VerticalAlignment="Center" Width="426" Fill="White"/>
         <Label Content="Bienvenido al catalogo  digital de &#xD;&#xA; prototipos de FabLab ESFE." HorizontalAlignment="Center" Margin="391,10,0,0" VerticalAlignment="Top" FontSize="24" Background="{x:Null}" Foreground="#FF1A3E86" BorderBrush="#FFE4D4D4" Height="69" FontFamily="Arial" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button x:Name="btnListado" Content="Ver listado de prototipos" HorizontalAlignment="Left" Margin="462,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"  Height="39" Width="240" Background="#FFBE43BF" FontFamily="Arial" Click="btnListado_Click"/>
+        <Button x:Name="btnListado" Cursor="Hand" Content="Ver listado de prototipos" HorizontalAlignment="Left" Margin="462,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"  Height="39" Width="240" Background="#FFBE43BF" FontFamily="Arial" Click="btnListado_Click"/>
         <Button x:Name="BtnAdministrar" Content="Administrar Catalogo" 
         HorizontalAlignment="Left" Margin="462,274,0,0" 
         VerticalAlignment="Top" FontWeight="Bold" FontSize="16" 
