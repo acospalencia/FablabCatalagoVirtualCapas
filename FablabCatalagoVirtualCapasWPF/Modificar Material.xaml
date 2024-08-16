@@ -40,11 +40,6 @@
                 </Label.RenderTransform>
             </Label>
             <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="146,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="24" IsEnabled="False" />
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="685,356,0,0" VerticalAlignment="Top" Height="52" Width="39">
-                <Button.Background>
-                    <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
-                </Button.Background>
-            </Button>
             <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -66,7 +61,7 @@
         <Button Visibility="Hidden" Width="79" VerticalAlignment="Top" x:Name="btnModificar" Margin="446,356,0,0" Height="68" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Click="btnGuardar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
-            </Button.Background>           
+            </Button.Background>
         </Button>
         <DataGrid x:Name="dgMaterial" HorizontalAlignment="Left" Height="215" Margin="382,123,0,0" VerticalAlignment="Top" Width="392" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgMaterial_SelectionChanged"/>
         <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="434,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="txtbuscar_TextChanged" />

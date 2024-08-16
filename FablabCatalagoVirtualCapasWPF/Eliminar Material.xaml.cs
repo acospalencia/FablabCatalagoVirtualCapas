@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FablabCatalagoVirtualCapasBL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,10 @@ namespace UI
             InitializeComponent();
         }
 
-		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+		private void Window_Loaded(object sender, EventArgs e)
 		{
-
-        }
+			var regresarLista = new MaterialesBL();
+			dgVer.ItemsSource = regresarLista.regresarLista();
+		}
     }
 }

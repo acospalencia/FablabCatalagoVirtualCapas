@@ -12,20 +12,32 @@
                 <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
             </Grid.Background>
             <Label Content="Elija la opcion a realizar" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="581,190,0,0" VerticalAlignment="Top" Height="66" Width="50">
+            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="581,190,0,0" VerticalAlignment="Top" Height="66" Width="78" Click="btnEliminar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnEliminar.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="291,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnModificar_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Recursos/Botones/BtnEditar.png"/>
-                </Button.Background>
+            <Button x:Name="btnModificar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="291,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnModificar_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image Source="/Recursos/Botones/btnEditar.png" Stretch="Fill"/>
+                            <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
             <Button x:Name="btnAgregar" Content="" HorizontalAlignment="Left" Margin="138,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnAgregar_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Recursos/Botones/BtnIngresar.png"/>
-                </Button.Background>
+                <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/BtnIngresar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+                </Button.Template>
             </Button>
             <Button x:Name="btnCompra" Content="" HorizontalAlignment="Left" Margin="424,190,0,0" VerticalAlignment="Top" Height="66" Width="56">
                 <Button.Background>
@@ -38,7 +50,6 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
-
                         <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
                         <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>

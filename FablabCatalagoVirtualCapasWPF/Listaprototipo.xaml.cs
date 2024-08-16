@@ -95,5 +95,10 @@ namespace Fablab.esfe
 			}
 			
 		}
-	}
+
+		private void Window_Closed(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+    }
 }

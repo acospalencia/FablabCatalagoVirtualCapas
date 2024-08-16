@@ -45,5 +45,12 @@ namespace UI
 			ScAgg.Show();
 			this.Close();
 		}
-	}
+
+		private void btnEliminar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScDel = new Eliminar_Material();
+			ScDel.Show();
+			this.Close();
+        }
+    }
 }
