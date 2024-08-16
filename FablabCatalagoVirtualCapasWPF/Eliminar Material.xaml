@@ -5,30 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Eliminar_Material" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Eliminar_Material" Height="450" Width="810" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
             </Grid.Background>
-            <Label Content="Eliminar Materiales" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-            <DataGrid HorizontalAlignment="Left" Name="dgVer" Height="245" Margin="35,121,0,0" VerticalAlignment="Top" Width="673" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-            <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="219,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="26" />
-            <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="34" Margin="159,84,0,0" VerticalAlignment="Top" Width="36">
+            <Label Content="Eliminar Materiales" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="172" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
+            <DataGrid HorizontalAlignment="Left" Name="dgVer" Height="245" Margin="22,121,0,0" VerticalAlignment="Top" Width="673" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgVer_SelectionChanged"/>
+            <TextBox x:Name="txtbuscar" HorizontalAlignment="Center" Margin="0,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="26" TextChanged="txtBuscar_TextChanged" />
+            <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="34" Margin="199,84,0,0" VerticalAlignment="Top" Width="36" Click="btnBuscar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Recursos/Botones/BtnLupa.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50">
+            <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50" Click="btnRegresar1_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Recursos/Botones/btnFlechaAtras.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="713,148,0,0" VerticalAlignment="Top" Height="82" Width="65">
+            <Button x:Name="btnEliminar" Visibility="Hidden"  Content="" HorizontalAlignment="Left" Margin="703,147,0,0" VerticalAlignment="Top" Height="82" Width="90" Click="btnEliminar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
                 </Button.Background>
             </Button>
+            <TextBox HorizontalAlignment="Left" Visibility="Hidden" Name="txtId" Margin="703,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
         </Grid>
 

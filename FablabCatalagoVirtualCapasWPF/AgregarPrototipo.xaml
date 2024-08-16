@@ -5,52 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipos"
         mc:Ignorable="d"
-        Title="AgregarPrototipo" Height="450" Width="800">
+        Title="AgregarPrototipo" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="35,64,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <Button Content="
-" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="45">
+" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="45" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
         </Button>
-        <TextBox HorizontalAlignment="Left" Margin="35,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"  />
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="35,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"  />
         <Label Content="Tipo de material
 " HorizontalAlignment="Left" Margin="35,108,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
+        <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Margin="35,131,0,0" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Tamaño X" HorizontalAlignment="Left" Margin="35,154,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <TextBox HorizontalAlignment="Left" Margin="35,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <Label Content="Tamaño Y" HorizontalAlignment="Left" Margin="35,198,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
+        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="35,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="35,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="35,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Estado" HorizontalAlignment="Left" Margin="35,292,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="35,315,0,0" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Tamaño Z" HorizontalAlignment="Left" Margin="35,248,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <Label Content="Maquinaria Usada" HorizontalAlignment="Left" Margin="35,337,0,0" VerticalAlignment="Top" Width="130" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="35,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbMaquinaria" HorizontalAlignment="Left" Margin="35,360,0,0" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Tiempo de diseño" HorizontalAlignment="Left" Margin="243,73,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <TextBox HorizontalAlignment="Left" Margin="243,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <Label Content="Tiempo de Armado" HorizontalAlignment="Left" Margin="243,117,0,0" VerticalAlignment="Top" Width="157" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="243,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="243,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
+        <TextBox x:Name="txtArmarlo" HorizontalAlignment="Left" Margin="243,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <TextBox x:Name="txtDesign" HorizontalAlignment="Left" Margin="243,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Tiempo de Fabricacion
 " HorizontalAlignment="Left" Margin="238,162,0,0" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <TextBox HorizontalAlignment="Left" Margin="243,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="243,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
+        <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="243,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="243,207,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <TextBox HorizontalAlignment="Left" Margin="243,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <Button Content="
-" HorizontalAlignment="Left" Margin="282,360,0,0" VerticalAlignment="Top" Height="51" Width="67">
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="243,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <Button x:Name="btnAgg" Content="" HorizontalAlignment="Left" Margin="282,360,0,0" VerticalAlignment="Top" Height="51" Width="67" Click="btnAgg_Click"  >
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
-        <Image x:Name="pbImagen" HorizontalAlignment="Left" Height="343" Margin="460,78,0,0" VerticalAlignment="Top" Width="318"/>
+        <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="343" Margin="460,78,0,0" VerticalAlignment="Top" Width="318"/>
         <Label Content="ingresar un nuevo Prototipo" HorizontalAlignment="Left" Margin="334,28,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="14"/>
+        <Button x:Name="btnAddFoto" Content="Agregar Foto" HorizontalAlignment="Left" Margin="378,410,0,0" VerticalAlignment="Top" Height="25" Width="82" Click="btnAddFoto_Click"  >
+
+        </Button>
 
     </Grid>
 </Window>

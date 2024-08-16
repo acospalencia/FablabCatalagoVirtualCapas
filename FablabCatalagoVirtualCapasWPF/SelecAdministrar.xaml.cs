@@ -1,4 +1,5 @@
-﻿using System;
+﻿using interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Fablab.esfe
             InitializeComponent();
         }
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void btnMaterial_Click(object sender, RoutedEventArgs e)
 		{
             var ScMat = new Accion_Material();
             ScMat.Show();
@@ -38,5 +39,12 @@ namespace Fablab.esfe
             ScMain.Show();
             this.Close();
 		}
-	}
+
+		private void btnProto_CLick(object sender, RoutedEventArgs e)
+		{
+            var ScProto = new RegistrarPrototipos();
+            ScProto.Show();
+            this.Close();
+        }
+    }
 }
