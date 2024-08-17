@@ -43,7 +43,7 @@ namespace prototipos
 				!string.IsNullOrEmpty(txtY.Text);
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
 		{
 			var ScBack = new RegistrarPrototipos();
 			ScBack.Show();
@@ -52,7 +52,7 @@ namespace prototipos
 
 		private void btnAgg_Click(object sender, RoutedEventArgs e)
 		{
-			if (validar())
+			if(validar())
 			{
 				var duracion = new Duraciones
 				{
@@ -66,6 +66,7 @@ namespace prototipos
 
 				BitmapSource bitmapSource = (BitmapSource)imgPrototipo.Source;
 				byte[] abyte = null;
+				
 
 				if (bitmapSource != null)
 				{
@@ -113,7 +114,7 @@ namespace prototipos
 			}
 			else
 			{
-				MessageBox.Show("porfavor rellene los correspondientees textboxx");
+				MessageBox.Show("porfavor rellene los correspondientees textbox");
 			}
 		}
 
@@ -135,13 +136,13 @@ namespace prototipos
 
 		private void btnAddFoto_Click(object sender, RoutedEventArgs e)
 		{
-			var openFileDialog = new Microsoft.Win32.OpenFileDialog();
-			openFileDialog.Title = "Seleccionar imagen";
-			openFileDialog.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.gif;*.bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+			var SubirImagen = new Microsoft.Win32.OpenFileDialog();
+			SubirImagen.Title = "Seleccionar imagen";
+			SubirImagen.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.gif;*.bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
 
-			if (openFileDialog.ShowDialog() == true)
+			if (SubirImagen.ShowDialog() == true)
 			{
-				string rutaImagen = openFileDialog.FileName;
+				string rutaImagen = SubirImagen.FileName;
 
 				try
 				{

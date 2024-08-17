@@ -11,8 +11,7 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="35,64,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <Button Content="
-" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="45" Click="Button_Click">
+        <Button Content="" Name="btnRegresar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="45" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
