@@ -63,7 +63,7 @@
                 <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="dgMaterial" HorizontalAlignment="Left" Height="215" Margin="382,123,0,0" VerticalAlignment="Top" Width="392" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgMaterial_SelectionChanged"/>
+        <DataGrid x:Name="dgMaterial" HorizontalAlignment="Left" Height="215" Margin="382,123,0,0" VerticalAlignment="Top" Width="392" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgMaterial_SelectionChanged" IsReadOnly="True"/>
         <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="434,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="txtbuscar_TextChanged" />
         <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Center" Height="34" Margin="0,84,0,0" VerticalAlignment="Top" Width="36" Click="btnBuscar_Click">
             <Button.Background>

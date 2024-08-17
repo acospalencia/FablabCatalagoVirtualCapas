@@ -36,7 +36,9 @@ namespace interfaces
 
 		private void btnEliminar_Click(object sender, RoutedEventArgs e)
 		{
-
+			var ScDel = new Window2();
+			ScDel.Show();
+			this.Close();
 		}
 
 		private void btnRegresar_Click(object sender, RoutedEventArgs e)
@@ -44,6 +46,13 @@ namespace interfaces
             var ScBack = new SelecAdministrar();
             ScBack.Show();
             this.Close();
+		}
+
+		private void btnModificar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScModi = new Window1();
+			ScModi.Show();
+			this.Close();
 		}
 	}
 }

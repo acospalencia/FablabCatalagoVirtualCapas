@@ -16,7 +16,7 @@
                 <ImageBrush ImageSource="/Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="116" Height="103">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="116" Height="103" Click="btnModificar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
