@@ -31,11 +31,23 @@
                 <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="400,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Height="24"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="608,100,0,0" VerticalAlignment="Top" Width="37" Height="24">
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="378,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Height="19"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="608,90,0,0" VerticalAlignment="Top" Width="39" Height="38">
             <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
+        </Button>
+        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>

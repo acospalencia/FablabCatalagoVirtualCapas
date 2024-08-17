@@ -23,5 +23,10 @@ namespace prototipos
 		{
 			InitializeComponent();
 		}
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

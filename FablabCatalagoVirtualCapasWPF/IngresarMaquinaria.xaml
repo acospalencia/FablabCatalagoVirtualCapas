@@ -28,11 +28,6 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="32" Height="25">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgRegresar.png"/>
-            </Button.Background>
-        </Button>
 
     </Grid>
 </Window>

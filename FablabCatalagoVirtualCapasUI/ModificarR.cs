@@ -43,5 +43,10 @@ namespace FablabCatalagoVirtualCapasUI
 		{
 			Application.Exit();
 		}
+
+		private void btnEliminar_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

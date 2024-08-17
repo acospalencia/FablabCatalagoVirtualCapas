@@ -1,4 +1,5 @@
-﻿using interfaces;
+﻿using FablabCatalagoVirtualCapasWPF;
+using interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,5 +47,19 @@ namespace Fablab.esfe
             ScProto.Show();
             this.Close();
         }
-    }
+
+		private void btnUsuarios_Click(object sender, RoutedEventArgs e)
+		{
+            var ScUsu = new AccionUsuarios();
+			ScUsu.Show();
+            this.Close();
+        }
+
+		private void btnMaquinaria_Click(object sender, RoutedEventArgs e)
+		{
+            var ScMaq = new MantenimientoMaquinaria();
+            ScMaq.Show();
+            this.Close();
+		}
+	}
 }
