@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fablab.esfe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +24,26 @@ namespace interfaces
         {
             InitializeComponent();
         }
-    }
+
+		private void btnIngresar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScAdd = new IngresarAutores();
+			ScAdd.Show();
+			this.Close();
+		}
+
+		private void btnModificar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScModifi = new ModificarAutores();
+			ScModifi.Show();
+			this.Close();
+		}
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScBack = new SelecAdministrar();
+			ScBack.Show();
+			this.Close();
+		}
+	}
 }

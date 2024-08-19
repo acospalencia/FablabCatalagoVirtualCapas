@@ -55,9 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Accion Autores.xaml.cs">
-      <DependentUpon>Accion Autores.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Accion Material.xaml.cs">
       <DependentUpon>Accion Material.xaml</DependentUpon>
     </Compile>
@@ -149,10 +146,6 @@
     <Compile Include="SelecAdministrar.xaml.cs">
       <DependentUpon>SelecAdministrar.xaml</DependentUpon>
     </Compile>
-    <Page Include="Accion Autores.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Accion Material.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

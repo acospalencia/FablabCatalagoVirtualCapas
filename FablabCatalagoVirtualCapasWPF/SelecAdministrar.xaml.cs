@@ -68,5 +68,12 @@ namespace Fablab.esfe
             ScProve.Show();
             this.Close();
 		}
+
+		private void btnAutores_Click(object sender, RoutedEventArgs e)
+		{
+            var ScAutor = new MantenimientoAutores();
+            ScAutor.Show();
+            this.Close();
+		}
 	}
 }

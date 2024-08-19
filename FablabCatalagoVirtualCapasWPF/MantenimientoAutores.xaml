@@ -5,27 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="MantenimientoAutores" Height="450" Width="800">
+        Title="MantenimientoAutores" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
 
             <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
-        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="255,168,0,0" VerticalAlignment="Top" Width="76" Height="69">
+        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="255,168,0,0" VerticalAlignment="Top" Width="76" Height="69" Click="btnIngresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
 
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="445,168,0,0" VerticalAlignment="Top" Width="84" Height="69">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="445,168,0,0" VerticalAlignment="Top" Width="84" Height="69" Click="btnModificar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
         <Label Content="MANTENIMIENTO DE AUTORES" HorizontalAlignment="Left" Margin="255,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="44" Height="32">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="44" Height="32" Click="btnRegresar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgRegresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
         </Button>
 

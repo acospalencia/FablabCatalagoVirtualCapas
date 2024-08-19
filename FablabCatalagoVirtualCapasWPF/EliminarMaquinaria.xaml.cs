@@ -121,13 +121,13 @@ namespace interfaces
 
             if (result == MessageBoxResult.OK)
             {
-				var ActuMaqui = new Maquinaria
+				var DeleteMaqui = new Maquinaria
 				{
 					Id = Convert.ToInt32(txtId.Text),
 				};
 
 				var modiMaqui = new MaquinariaBL();
-				modiMaqui.EliminarMaquinaria(ActuMaqui);
+				modiMaqui.EliminarMaquinaria(DeleteMaqui);
 				dgVer.ItemsSource = null;
 				dgVer.ItemsSource = modiMaqui.MaquinariaList();
 

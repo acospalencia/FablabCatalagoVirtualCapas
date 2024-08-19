@@ -5,50 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="ModificarAutores" Height="434" Width="857">
+        Title="ModificarAutores" Height="500" Width="857" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
 
             <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
 
         </Grid.Background>
-        <Label Content="Nombres: " HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFBF7F7"/>
-        <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="116,134,0,0" VerticalAlignment="Top" Foreground="#FFF7F1F1" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Label Content="Correo elecronico: " HorizontalAlignment="Left" Margin="116,199,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label Content="Fecha de registro: " HorizontalAlignment="Left" Margin="119,254,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="280,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="280,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCorreoElectronico" HorizontalAlignment="Left" Margin="280,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-        <TextBox x:Name="txtFechaRegistro" HorizontalAlignment="Left" Margin="280,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="510,352,0,0" VerticalAlignment="Top" Height="56" Width="78">
+        <Label Content="Nombres: " HorizontalAlignment="Left" Margin="39,104,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFBF7F7"/>
+        <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="39,162,0,0" VerticalAlignment="Top" Foreground="#FFF7F1F1" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Correo elecronico: " HorizontalAlignment="Left" Margin="39,226,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Fecha de registro: " HorizontalAlignment="Left" Margin="42,282,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="203,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="203,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txtCorreoElectronico" HorizontalAlignment="Left" Margin="203,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="510,352,0,0" VerticalAlignment="Top" Height="56" Width="78" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Background>
 
                 <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="697,356,0,0" VerticalAlignment="Top" Height="48" Width="60">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="697,356,0,0" VerticalAlignment="Top" Height="48" Width="60" Click="btnEliminar_Click" Visibility="Hidden">
             <Button.Background>
 
                 <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="428,133,19,82"/>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="523,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" Height="28"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="709,77,0,0" VerticalAlignment="Top" Height="32" Width="36">
+        <DataGrid x:Name="dgVer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="370,64,19,0" SelectionChanged="dgVer_SelectionChanged" Height="232" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="535,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" Height="28" TextChanged="txtBuscar_TextChanged"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="721,27,0,0" VerticalAlignment="Top" Height="32" Width="36">
             <Button.Background>
 
                 <ImageBrush ImageSource="Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <DatePicker x:Name="dtFecha" HorizontalAlignment="Left" Margin="203,296,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="228,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
 
     </Grid>
 </Window>
