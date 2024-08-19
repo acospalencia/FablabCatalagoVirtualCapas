@@ -46,5 +46,22 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return regresar;
 		}
+		public List<Estados> RegresarEstadosMaquinarias()
+		{
+			List<Estados> ListaEstados = new List<Estados>();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPListaEstados";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Estados estados = new Estados();
+				estados.Id = reader.GetInt32(0);
+				estados.NombreEstado = reader.GetString(1);
+				estados.Detalle = reader.GetString(2);
+				ListaEstados.Add(estados);
+			}
+			return ListaEstados;
+		}
 	}
 }

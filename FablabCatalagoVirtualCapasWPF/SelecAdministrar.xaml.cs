@@ -61,5 +61,12 @@ namespace Fablab.esfe
             ScMaq.Show();
             this.Close();
 		}
+
+		private void btnProveedor_Click(object sender, RoutedEventArgs e)
+		{
+            var ScProve = new Registrar_Proveedor();
+            ScProve.Show();
+            this.Close();
+		}
 	}
 }

@@ -52,5 +52,37 @@ namespace FablabCatalagoVirtualCapasDAL
 			return Regresar;
 		}
 
-	}
+		public int GuardarMaquinaria(Maquinaria pMaquinaria)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPAggMaquinaria";
+			cmd.Parameters.AddWithValue("@Nombre", pMaquinaria.Nombre);
+			cmd.Parameters.AddWithValue("@Marca", pMaquinaria.Marca);
+			cmd.Parameters.AddWithValue("@Detalle", pMaquinaria.Detalle);
+			cmd.Parameters.AddWithValue("@IdEstado", pMaquinaria.Idestado);
+			
+			return ComunBD.EjecutarComand(cmd);
+		}
+		public int ActualizarMaquinaria(Maquinaria pMaquinaria)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPActuMaquinaria";
+			cmd.Parameters.AddWithValue("@Id", pMaquinaria.Id);
+			cmd.Parameters.AddWithValue("@Nombre", pMaquinaria.Nombre);
+			cmd.Parameters.AddWithValue("@Marca", pMaquinaria.Marca);
+			cmd.Parameters.AddWithValue("@Detalle", pMaquinaria.Detalle);
+			cmd.Parameters.AddWithValue("@IdEstado", pMaquinaria.Idestado);
+			return ComunBD.EjecutarComand(cmd);
+		}
+		public int EliminarMaquinaria(Maquinaria pMaquinaria)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPEliminarMaquinaria";
+			cmd.Parameters.AddWithValue("@Id", pMaquinaria.Id);
+			return ComunBD.EjecutarComand(cmd);
+		}
+	} 
 }

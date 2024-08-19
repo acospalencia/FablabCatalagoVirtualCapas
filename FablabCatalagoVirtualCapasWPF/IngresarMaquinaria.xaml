@@ -5,28 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="IngresarMaquinaria" Height="476" Width="562">
+        Title="IngresarMaquinaria" Height="476" Width="562" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
-        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="80,34,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Label Content="Marca: " HorizontalAlignment="Left" Margin="80,97,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtMarca1" Content="Detalle: " HorizontalAlignment="Left" Margin="80,159,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Label x:Name="txtIdMaterial" Content="Id Material: " HorizontalAlignment="Left" Margin="80,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtIdEstado" Content="Id Estado: " HorizontalAlignment="Left" Margin="80,324,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="80,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="80,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="80,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="80,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="80,355,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="296,385,0,0" VerticalAlignment="Top" Width="67" Height="49">
+        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="89,83,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Marca: " HorizontalAlignment="Left" Margin="89,147,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label x:Name="txtMarca1" Content="Detalle: " HorizontalAlignment="Left" Margin="341,85,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="txtIdEstado" Content="Estado: " HorizontalAlignment="Left" Margin="341,145,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="89,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="89,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="341,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="341,175,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Width="94" Height="73" Click="btnGuardar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush/>
             </Button.Foreground>
+        </Button>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42" Click="btnRegresar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
+            </Button.Background>
         </Button>
 
     </Grid>

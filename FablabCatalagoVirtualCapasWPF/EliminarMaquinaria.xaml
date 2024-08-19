@@ -5,34 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="EliminarMaquinaria" Height="450" Width="800">
+        Title="EliminarMaquinaria" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre: " HorizontalAlignment="Left" Margin="69,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtMarca" Content="Marca: " HorizontalAlignment="Left" Margin="69,127,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtDetalle" Content="Detalle: " HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtIdMaterial" Content="Id Material: " HorizontalAlignment="Left" Margin="69,281,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtIdEstado" Content="Id Estado: " HorizontalAlignment="Left" Margin="73,358,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="69,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="69,391,0,0" VerticalAlignment="Top" Width="120"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="316,143,65,125"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="460,359,0,0" VerticalAlignment="Top" Width="66" Height="55">
+        <Label Content="Marca: " HorizontalAlignment="Left" Margin="69,127,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Detalle: " HorizontalAlignment="Left" Margin="69,208,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label Content="Id Estado: " HorizontalAlignment="Left" Margin="73,285,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="69,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="69,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="69,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="69,318,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <DataGrid x:Name="dgVer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="264,105,10,0" ColumnWidth="*" Height="235" VerticalAlignment="Top" SelectionChanged="dgVer_SelectionChanged"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="378,360,0,0" VerticalAlignment="Top" Width="66" Height="55" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="608,360,0,0" VerticalAlignment="Top" Width="55" Height="53">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="592,362,0,0" VerticalAlignment="Top" Width="55" Height="53" Click="btnEliminar_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="378,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Height="19"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="608,90,0,0" VerticalAlignment="Top" Width="39" Height="38">
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="378,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Height="19" TextChanged="txtBuscar_TextChanged"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="608,67,0,0" VerticalAlignment="Top" Width="39" Height="38">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
             </Button.Background>
@@ -49,6 +47,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Label Content="Modifica o Elimina un registro" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="189,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
 
     </Grid>
 </Window>

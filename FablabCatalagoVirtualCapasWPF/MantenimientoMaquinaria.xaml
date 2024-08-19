@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="MantenimientoMaquinaria" Height="450" Width="800">
+        Title="MantenimientoMaquinaria" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="MANTENIMIENTO PARA MAQUINARIAS" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontFamily="Arial" FontSize="22" Foreground="White"/>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="464,176,0,0" VerticalAlignment="Top" Width="86" Height="72">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="464,176,0,0" VerticalAlignment="Top" Width="86" Height="72" Click="btnModificar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="217,176,0,0" VerticalAlignment="Top" Width="95" Height="72">
+        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="217,176,0,0" VerticalAlignment="Top" Width="95" Height="72" Click="btnIngresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>

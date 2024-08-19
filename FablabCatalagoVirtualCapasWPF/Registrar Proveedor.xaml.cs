@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fablab.esfe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +24,33 @@ namespace UI
         {
             InitializeComponent();
         }
-    }
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScBack = new SelecAdministrar();
+            ScBack.Show();
+            this.Close();    
+        }
+
+		private void btnAgregar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScAgg = new Agregar_Proveedor();
+			ScAgg.Show();
+			this.Close();
+		}
+
+		private void btnModificar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScModi = new Modificar_Proveedor();
+			ScModi.Show();
+			this.Close();
+		}
+
+		private void btnEliminar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScDel = new Eliminar_Proveedor();
+			ScDel.Show();
+			this.Close();
+		}
+	}
 }

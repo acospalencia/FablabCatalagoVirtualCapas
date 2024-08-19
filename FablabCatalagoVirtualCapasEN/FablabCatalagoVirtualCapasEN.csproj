@@ -50,6 +50,7 @@
     <Compile Include="ModeloPrototipo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototipo.cs" />
+    <Compile Include="Proveedor.cs" />
     <Compile Include="TipoMaterial.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

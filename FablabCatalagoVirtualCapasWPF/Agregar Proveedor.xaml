@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Agregar_Proveedor" Height="450" Width="800">
+        Title="Agregar_Proveedor" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Fondo6.jpeg"/>
+            <ImageBrush ImageSource="recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
         <Label Content="Nombres" HorizontalAlignment="Left" Margin="50,94,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
             <Label.RenderTransform>
@@ -20,12 +20,12 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="50,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="50,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" />
         <Label Content="Apellidos" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
         <Label Content="Agregar proveedor" HorizontalAlignment="Left" Margin="286,34,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
         <Label Content="Dirección" HorizontalAlignment="Left" Margin="50,235,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
-        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="209" Height="25" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="txtDirección" HorizontalAlignment="Left" Margin="50,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Height="25" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="209" Height="25" />
+        <TextBox x:Name="txtDirección" HorizontalAlignment="Left" Margin="50,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Height="25" />
         <Label Content="Correo Electrónico" HorizontalAlignment="Left" Margin="449,167,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="195" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -36,17 +36,17 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="451,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="290" Height="25" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="451,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="290" Height="25" />
         <Label Content="Teléfono" HorizontalAlignment="Left" Margin="451,102,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
-        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="451,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50">
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="451,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" />
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50" Click="btnRegresar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgRegresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnGuardar_Copiar" Content="" HorizontalAlignment="Left" Height="77" Margin="545,263,0,0" VerticalAlignment="Top" Width="102" FontSize="16" FontWeight="Bold" FontFamily="Arial">
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Height="77" Margin="545,263,0,0" VerticalAlignment="Top" Width="102" FontSize="16" FontWeight="Bold" FontFamily="Arial" Click="btnGuardar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="recursos/Botones/BtnGuardar.jpeg"/>
             </Button.Background>
         </Button>
 

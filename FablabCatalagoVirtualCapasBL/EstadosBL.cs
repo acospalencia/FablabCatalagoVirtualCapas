@@ -20,5 +20,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return EstadosDal.MostrarPorIdEstados(Id);
 		}
+		public List<Estados> RegresarEstadosMaquinarias()
+		{
+			return EstadosDal.RegresarEstadosMaquinarias();
+		}
 	}
 }

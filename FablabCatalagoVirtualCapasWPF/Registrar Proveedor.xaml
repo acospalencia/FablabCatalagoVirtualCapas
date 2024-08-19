@@ -5,30 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Accion Proveedor" Height="450" Width="800">
-    <Grid x:Name="btnRegresar">
+        Title="Accion Proveedor" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Fondo3.jpeg"/>
+            <ImageBrush ImageSource="recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Elija la opcion a realizar" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="557,190,0,0" VerticalAlignment="Top" Height="66" Width="50">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="557,190,0,0" VerticalAlignment="Top" Height="66" Width="50" Click="btnEliminar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnEliminar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top" Height="66" Width="56">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnModificar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgEditar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnAgregar" Content="" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" Height="66" Width="56">
+        <Button x:Name="btnAgregar" Content="" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnAgregar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgBtnIngresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50" Click="btnRegresar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/BgRegresar.png"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
         </Button>
 

@@ -15,7 +15,7 @@
         <Button Content="Prototipos" Name="btnProtos" HorizontalAlignment="Left" Margin="445,138,0,0" VerticalAlignment="Top" Height="41" Width="215" FontSize="16" FontWeight="Bold" FontFamily="Arial" Background="#FF95569C" Click="btnProto_CLick"/>
         <Button Content="Autores" HorizontalAlignment="Left" Margin="67,202,0,0" VerticalAlignment="Top" Width="208" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="16" Background="#FF713A92"/>
         <Button Content="Clubs" HorizontalAlignment="Left" Margin="445,202,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88"/>
-        <Button Content="Proveedores" HorizontalAlignment="Left" Margin="67,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.653" Width="208" Height="38" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF7459A5"/>
+        <Button x:Name="btnProveedor" Content="Proveedores" HorizontalAlignment="Left" Margin="67,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.653" Width="208" Height="38" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF7459A5" Click="btnProveedor_Click"/>
         <Button x:Name="btnMaquinaria" Content="Maquinaria" HorizontalAlignment="Left" Margin="445,275,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnMaquinaria_Click"/>
         <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
             <Button.Template>

@@ -51,6 +51,7 @@
     <Compile Include="ModeloPrototipoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototipoDAL.cs" />
+    <Compile Include="ProveedorDAL.cs" />
     <Compile Include="TipoMaterialDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>

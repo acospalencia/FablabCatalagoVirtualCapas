@@ -12,7 +12,6 @@ namespace FablabCatalagoVirtualCapasEN
 		public string Nombre { get; set; }
 		public string Marca { get; set; }
 		public string Detalle { get; set; }
-		public int IdMaterial {  get; set; }
 		public int Idestado { get; set; }
 	}
 }
