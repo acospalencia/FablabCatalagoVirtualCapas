@@ -19,7 +19,7 @@
         <Label Content="Fecha de registro: " HorizontalAlignment="Left" Margin="129,233,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Center" Margin="0,299,0,0" VerticalAlignment="Top" Width="80" Height="65" Click="btnGuardar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">

@@ -50,7 +50,7 @@
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="243,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Button x:Name="btnModificar" Content=" " HorizontalAlignment="Left" Margin="282,360,0,0" VerticalAlignment="Top" Height="51" Width="66" Click="btnModificar_Click" >
             <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
             <Button.Foreground>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>

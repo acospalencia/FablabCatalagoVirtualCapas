@@ -75,5 +75,12 @@ namespace Fablab.esfe
             ScAutor.Show();
             this.Close();
 		}
+
+		private void btnClubs_Click(object sender, RoutedEventArgs e)
+		{
+            var ScClubs = new MantenimientoClubs();
+            ScClubs.Show();
+            this.Close();
+		}
 	}
 }

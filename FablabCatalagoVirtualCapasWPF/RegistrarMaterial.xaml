@@ -51,7 +51,7 @@
         <Label Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="20" FontFamily="Arial"/>
         <Button x:Name="btnRegistrar" Content="" HorizontalAlignment="Left" Margin="593,307,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="71" Width="95" Click="btnRegistrar_Click" >
             <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">

@@ -21,7 +21,7 @@
         </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="454,340,0,0" VerticalAlignment="Top" Height="62" Width="74">
             <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
         </Button>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="310,69,21,122"/>

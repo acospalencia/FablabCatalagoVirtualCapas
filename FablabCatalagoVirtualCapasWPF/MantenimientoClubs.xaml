@@ -11,17 +11,17 @@
             <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="MANTENIMIENTO DE CLUBS" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Foreground="#FFFFF6F6" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Button x:Name="btnIngresar" Content="" Margin="394,157,140,0" VerticalAlignment="Top" Height="68">
+        <Button x:Name="btnIngresar" Content="" Margin="394,157,140,0" VerticalAlignment="Top" Height="68" Click="btnIngresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnEditar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="tbnRegresar" Content="" HorizontalAlignment="Left" Margin="188,163,0,0" VerticalAlignment="Top" Height="56" Width="82">
+        <Button x:Name="tbnRegresar" Content="" HorizontalAlignment="Left" Margin="188,163,0,0" VerticalAlignment="Top" Height="56" Width="82" Click="tbnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="45">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="45" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>

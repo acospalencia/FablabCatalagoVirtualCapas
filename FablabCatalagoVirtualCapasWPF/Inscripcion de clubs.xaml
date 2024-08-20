@@ -1,0 +1,42 @@
+﻿<Window x:Class="FablabCatalagoVirtualCapasWPF.Inscripcion_de_clubs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FablabCatalagoVirtualCapasWPF"
+        mc:Ignorable="d"
+        Title="Inscripcion_de_clubs" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
+            </Grid.Background>
+            <Label Content="Fecha de inscripcion: " HorizontalAlignment="Left" Margin="85,99,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+            <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="85,184,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+            <TextBox x:Name="txtFechaInscripcion" HorizontalAlignment="Left" Margin="85,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="85,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="417,324,0,0" VerticalAlignment="Top" Height="60" Width="69" Click="btnGuardar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Autores: " HorizontalAlignment="Left" Margin="85,275,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+            <TextBox x:Name="txtAutores" HorizontalAlignment="Left" Margin="85,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+
+                            <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                            <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <ComboBox HorizontalAlignment="Left" Margin="366,119,0,0" VerticalAlignment="Top" Width="120"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

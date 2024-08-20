@@ -31,7 +31,7 @@
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="510,352,0,0" VerticalAlignment="Top" Height="56" Width="78" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Background>
 
-                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="697,356,0,0" VerticalAlignment="Top" Height="48" Width="60" Click="btnEliminar_Click" Visibility="Hidden">

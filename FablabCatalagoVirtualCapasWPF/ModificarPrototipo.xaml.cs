@@ -29,7 +29,7 @@ namespace prototipos
 		{
 			InitializeComponent();
 		}
-		private bool validar()
+		private bool Validar()
 		{
 			return !string.IsNullOrEmpty(txtNombre.Text) &&
 				!string.IsNullOrEmpty(cbMaterial.Text) &&
@@ -176,7 +176,7 @@ namespace prototipos
 
 		private void btnModificar_Click(object sender, RoutedEventArgs e)
 		{
-			if (validar())
+			if (Validar())
 			{
 
 				var duracionesModify = new Duraciones
@@ -207,9 +207,8 @@ namespace prototipos
 					modifyDura.ActualizarDuraciones(duracionesModify);
 					var modificarLista = new PrototipoBL();
 					modificarLista.Modificar(modificar);
-					var Actualiazar = new PrototipoBL();
-					dgListado.ItemsSource = null;
-					cbMaterial.SelectedValue = Actualiazar;
+					
+					cbMaterial.Text = null;
 					txtId.Text = null;
 					txtNombre.Text = null;
 					cbMaterial.Text = null;
@@ -236,15 +235,16 @@ namespace prototipos
 					cbIdEstado.IsEnabled = false;
 					cbMaquinaria.IsEnabled = false;
 
-					MessageBox.Show("Los datos se han Actualizado con exito");
+					MessageBox.Show("Los datos se han Actualizado con exito","Correcto");
 				}
 				var regresarlista = new PrototipoBL();
+				dgListado.ItemsSource = null;
 				dgListado.ItemsSource = regresarlista.regresarlista();
 
 			}
 			else
 			{
-				MessageBox.Show("porfavor rellene los correspondientees textbox");
+				MessageBox.Show("Por favor rellene los correspondientees textbox", "Error");
 			}
 		}
 

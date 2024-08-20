@@ -20,7 +20,7 @@
         <TextBox Margin="340,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="68" HorizontalAlignment="Left" Width="120"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="481,349,0,0" VerticalAlignment="Top" Width="58" Height="50">
             <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.jpeg"/>
+                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
             </Button.Background>
         </Button>
 

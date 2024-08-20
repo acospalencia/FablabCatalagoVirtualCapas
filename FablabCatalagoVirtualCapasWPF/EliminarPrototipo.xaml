@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipos"
         mc:Ignorable="d"
-        Title="EliminarPrototipo" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="EliminarPrototipo" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo2.jpg"/>

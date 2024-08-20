@@ -82,7 +82,6 @@ namespace FablabCatalagoVirtualCapasDAL
 					IdEstado = reader.GetInt32(9),
 					IdMaquinaria = reader.GetInt32(10)
 				};
-
 				if (!reader.IsDBNull(7))
 				{
 					long length = reader.GetBytes(7, 0, null, 0, 0); 
