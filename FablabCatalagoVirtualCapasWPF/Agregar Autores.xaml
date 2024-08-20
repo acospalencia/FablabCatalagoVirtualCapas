@@ -49,7 +49,7 @@
                 </Button.Background>
             </Button>
             <Button
-                Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="">
+                Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Click="btnGuardar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.png"/>
                 </Button.Background>

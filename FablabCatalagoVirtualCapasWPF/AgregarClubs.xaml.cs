@@ -63,7 +63,9 @@ namespace FablabCatalagoVirtualCapasWPF
 
 		private void btnIncripcion_Click(object sender, RoutedEventArgs e)
 		{
-
+			var ScIns = new Inscripcion_de_clubs();
+			ScIns.Show();
+			this.Close();
 		}
 	}
 }

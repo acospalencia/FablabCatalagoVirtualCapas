@@ -20,14 +20,14 @@ namespace FablabCatalagoVirtualCapasDAL
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
-				Autores maquinaria = new Autores();
-				maquinaria.Id = reader.GetInt32(0);
-				maquinaria.Nombres = reader.GetString(1);
-				maquinaria.Apellidos = reader.GetString(2);
-				maquinaria.CorreElectronico = reader.GetString(3);
-				maquinaria.FechaRegistro = reader.GetDateTime(4);
+				Autores Autores = new Autores();
+				Autores.Id = reader.GetInt32(0);
+				Autores.Nombres = reader.GetString(1);
+				Autores.Apellidos = reader.GetString(2);
+				Autores.CorreElectronico = reader.GetString(3);
+				Autores.FechaRegistro = reader.GetDateTime(4);
 
-				ListaAutores.Add(maquinaria);
+				ListaAutores.Add(Autores);
 			}
 			return ListaAutores;
 		}

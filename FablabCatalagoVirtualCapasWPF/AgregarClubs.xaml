@@ -11,20 +11,14 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
             </Grid.Background>
-            <Label Content="Nombre del club: " HorizontalAlignment="Left" Margin="67,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-            <Label Content="Fecha de inscripcion: " HorizontalAlignment="Left" Margin="67,248,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-            <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="67,333,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-            <TextBox x:Name="txtNombreClub" HorizontalAlignment="Left" Margin="67,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtFechaInscripcion" HorizontalAlignment="Left" Margin="67,281,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="295,230,0,0" VerticalAlignment="Top" Height="60" Width="69" Click="btnGuardar_Click">
+            <Label Content="Nombre del club: " HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="19" Foreground="White" Height="32" Width="172"/>
+            <TextBox x:Name="txtNombreClub" HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="35"/>
+            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="280,332,0,0" VerticalAlignment="Top" Height="60" Width="69" Click="btnGuardar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnIncripcion" Content="Inscripcion de clubs" HorizontalAlignment="Left" Margin="443,241,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88" Click="btnIncripcion_Click"/>
-            <Label Content="Autores: " HorizontalAlignment="Left" Margin="229,333,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-            <TextBox x:Name="txtAutores" HorizontalAlignment="Left" Margin="229,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btnIncripcion" Content="Inscripcion de clubs" HorizontalAlignment="Left" Margin="457,341,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88" Click="btnIncripcion_Click"/>
             <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -37,6 +31,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+            <Label Content="Ingrese un nuevo Club" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="240"/>
 
         </Grid>
 

@@ -15,5 +15,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return clubBl.GuardarClub(pClub);
 		}
+		public List<Club> ListaCLub()
+		{
+			return clubBl.RegresarLista();
+		}
 	}
 }

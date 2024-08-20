@@ -63,6 +63,7 @@
     <Compile Include="Club.cs" />
     <Compile Include="Duraciones.cs" />
     <Compile Include="Estados.cs" />
+    <Compile Include="InscripcionClub.cs" />
     <Compile Include="Maquinaria.cs" />
     <Compile Include="Materiales.cs" />
     <Compile Include="ModeloProto2.cs" />

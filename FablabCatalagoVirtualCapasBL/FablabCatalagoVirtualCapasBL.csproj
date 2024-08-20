@@ -62,6 +62,7 @@
     <Compile Include="ClubBL.cs" />
     <Compile Include="DuracionesBL.cs" />
     <Compile Include="EstadosBL.cs" />
+    <Compile Include="InscripcionClubBL.cs" />
     <Compile Include="MaquinariaBL.cs" />
     <Compile Include="MaterialesBL.cs" />
     <Compile Include="ModeloProto2BL.cs" />

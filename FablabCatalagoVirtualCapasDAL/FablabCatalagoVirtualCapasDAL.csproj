@@ -64,6 +64,7 @@
     <Compile Include="ComunBD.cs" />
     <Compile Include="DuracionesDAL.cs" />
     <Compile Include="EstadosDAL.cs" />
+    <Compile Include="InscripcionClubDAL.cs" />
     <Compile Include="MaquinariaDAL.cs" />
     <Compile Include="MaterialesDAL.cs" />
     <Compile Include="ModeloProto2DAL.cs" />
