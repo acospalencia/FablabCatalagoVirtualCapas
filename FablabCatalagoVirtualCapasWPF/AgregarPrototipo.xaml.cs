@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using FablabCatalagoVirtualCapasWPF;
 using interfaces;
 using Microsoft.Win32;
 using System;
@@ -109,6 +110,10 @@ namespace prototipos
 					txtFabricarlo.Text = null;
 					imgPrototipo.Source = null;
 					txtX.Text = null;
+
+					var ScCrea = new CreacionPrototipo();
+					ScCrea.ShowDialog();
+
 					MessageBox.Show("Los datos se han ingresado con exito");
 				}
 			}
