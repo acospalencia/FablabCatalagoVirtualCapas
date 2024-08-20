@@ -52,5 +52,12 @@ namespace UI
 			ScDel.Show();
 			this.Close();
         }
+
+		private void btnCompra_Click(object sender, RoutedEventArgs e)
+		{
+			var Scbuy = new Compra_Material();
+			Scbuy.Show();
+			this.Close();
+        }
     }
 }

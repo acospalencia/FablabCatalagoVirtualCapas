@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Autores.cs" />
     <Compile Include="Club.cs" />
+    <Compile Include="CompraMate.cs" />
     <Compile Include="CreacionProto.cs" />
     <Compile Include="Duraciones.cs" />
     <Compile Include="Estados.cs" />

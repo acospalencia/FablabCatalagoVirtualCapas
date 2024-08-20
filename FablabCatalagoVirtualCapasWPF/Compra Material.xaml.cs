@@ -28,5 +28,10 @@ namespace UI
 		{
 
         }
+
+		private void dgVer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
+        }
     }
 }

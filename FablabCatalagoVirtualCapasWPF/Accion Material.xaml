@@ -39,7 +39,7 @@
                 </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnCompra" Content="" HorizontalAlignment="Left" Margin="424,190,0,0" VerticalAlignment="Top" Height="66" Width="56">
+            <Button x:Name="btnCompra" Content="" HorizontalAlignment="Left" Margin="424,190,0,0" VerticalAlignment="Top" Height="66" Width="56" Click="btnCompra_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnCompra.png"/>
                 </Button.Background>
