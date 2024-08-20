@@ -46,7 +46,7 @@ namespace interfaces
 			cbIdAutor.ItemsSource = AutorBL.RegresarLista();
 			cbIdAutor.DisplayMemberPath = "Nombres";
 			cbIdAutor.SelectedValuePath = "Id";
-			cbIdClub.ItemsSource = ClubeBl.ListaCLub();
+			cbIdClub.ItemsSource = ClubeBl.RegresarLista();
 			cbIdClub.DisplayMemberPath = "NombreClub";
 			cbIdClub.SelectedValuePath = "Id";
 

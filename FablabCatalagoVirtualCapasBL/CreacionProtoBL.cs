@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasBL
 {
-	public class ClubBL
+	public class CreacionProtoBL
 	{
-		ClubDAL clubBl = new ClubDAL();
-		public int GuardarClub(Club pClub)
+		CreacionProtoDAL creDAl = new CreacionProtoDAL();
+		public int GuardarCrea(CreacionProto pCreac)
 		{
-			return clubBl.GuardarClub(pClub);
-		}
-		public List<Club> RegresarLista()
-		{
-			return clubBl.RegresarLista();
+			return creDAl.GuardarCreacion(pCreac);
 		}
 	}
 }

@@ -62,6 +62,7 @@
     <Compile Include="AutoresDAL.cs" />
     <Compile Include="ClubDAL.cs" />
     <Compile Include="ComunBD.cs" />
+    <Compile Include="CreacionProtoDAL.cs" />
     <Compile Include="DuracionesDAL.cs" />
     <Compile Include="EstadosDAL.cs" />
     <Compile Include="InscripcionClubDAL.cs" />

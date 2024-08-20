@@ -112,46 +112,6 @@ namespace prototipos
 			dgListado.ItemsSource = regresarlista.regresarlista();
 		}
 
-		private void txtIdMaterial_TextChanged(object sender, TextChangedEventArgs e)
-		{
-			if (int.TryParse(txtIdMaterial.Text, out int idMaterial))
-			{
-				MaterialesBL materialesBL = new MaterialesBL();
-				Materiales materiales = materialesBL.MostrarPorIdMateriales(idMaterial);
-				if (materiales != null)
-				{
-					cbMaterial.Text = materiales.NombreMaterial;
-				}
-
-			}
-		}
-
-		private void txtIdEstado_TextChanged(object sender, TextChangedEventArgs e)
-		{
-			if (int.TryParse(txtIdEstado.Text, out int idMaterial))
-			{
-				EstadosBL estadosBL = new EstadosBL();
-				Estados estados = estadosBL.MostrarPorIdEstados(idMaterial);
-				if (estados != null)
-				{
-					cbIdEstado.Text = estados.NombreEstado;
-				}
-			}
-		}
-
-		private void txtIdMaquinaria_TextChanged(object sender, TextChangedEventArgs e)
-		{
-			if (int.TryParse(txtIdMaquinaria.Text, out int idMaterial))
-			{
-				MaquinariaBL MaquinariaBL = new MaquinariaBL();
-				Maquinaria maquinaria = MaquinariaBL.MostrarPorIdMaquinaria(idMaterial);
-				if (maquinaria != null)
-				{
-					cbMaquinaria.Text = maquinaria.Nombre;
-				}
-			}
-		}
-
 		private void txtIdDuraciones_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			if (int.TryParse(txtIdDuraciones.Text, out int idDuracion))
@@ -165,13 +125,6 @@ namespace prototipos
 					txtFabricarlo.Text = duracion.TiempoFabricado;
 				}
 			}
-		}
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			var ScBack = new RegistrarPrototipos();
-			ScBack.Show();
-			this.Close();
 		}
 
 		private void btnModificar_Click(object sender, RoutedEventArgs e)
@@ -268,6 +221,13 @@ namespace prototipos
 				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
 				dgListado.ItemsSource = prototiposFiltrados;
 			}
+		}
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScBack = new RegistrarPrototipos();
+			ScBack.Show();
+			this.Close();
 		}
 	}
 }

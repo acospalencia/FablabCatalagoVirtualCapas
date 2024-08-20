@@ -12,7 +12,7 @@
         </Grid.Background>
         <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,117,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="513" Height="340" VerticalAlignment="Top"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="51,109,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="43" Click="Button_Click">
+        <Button x:Name="btnRegresar" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="43" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
             </Button.Background>
@@ -62,10 +62,10 @@
         </Button>
         <Label Content="Modificar registros de Prototipos" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="74,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden"/>
-        <TextBox x:Name="txtIdMaterial" HorizontalAlignment="Left" Margin="74,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" TextChanged="txtIdMaterial_TextChanged"/>
-        <TextBox x:Name="txtIdEstado" HorizontalAlignment="Left" Margin="119,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" TextChanged="txtIdEstado_TextChanged"/>
+        <TextBox x:Name="txtIdMaterial" HorizontalAlignment="Left" Margin="74,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
+        <TextBox x:Name="txtIdEstado" HorizontalAlignment="Left" Margin="119,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
         <TextBox x:Name="txtIdDuraciones" HorizontalAlignment="Left" Margin="119,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" TextChanged="txtIdDuraciones_TextChanged"/>
-        <TextBox x:Name="txtIdMaquinaria" HorizontalAlignment="Left" Margin="164,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" TextChanged="txtIdMaquinaria_TextChanged"/>
+        <TextBox x:Name="txtIdMaquinaria" HorizontalAlignment="Left" Margin="164,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
         <Image  HorizontalAlignment="Left" Name="img" Height="100" Margin="348,338,0,0" VerticalAlignment="Top" Width="100" Visibility="Hidden"/>
         <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Margin="50,179,0,0" Text="" VerticalAlignment="Top" Width="178" Foreground="Black" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
 

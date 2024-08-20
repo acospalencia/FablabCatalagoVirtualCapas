@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="AutoresBL.cs" />
     <Compile Include="ClubBL.cs" />
+    <Compile Include="CreacionProtoBL.cs" />
     <Compile Include="DuracionesBL.cs" />
     <Compile Include="EstadosBL.cs" />
     <Compile Include="InscripcionClubBL.cs" />

@@ -94,5 +94,19 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return lista;
 		}
+		public int RegresarIdProto()
+		{
+			int Id = 0;
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPUltimoProto";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Id = reader.GetInt32(0);
+
+			}
+			return Id;
+		}
 	}
 }

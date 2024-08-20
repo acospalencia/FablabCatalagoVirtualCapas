@@ -30,5 +30,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return PrototiposDAL.RegresarLista();
 		}
+		public int RegresarIdProto()
+		{
+			return PrototiposDAL.RegresarIdProto();
+		}
 	}
 }

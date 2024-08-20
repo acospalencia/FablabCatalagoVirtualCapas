@@ -93,8 +93,8 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
 			{
-				var Lista2 = new PrototipoBL();
-				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				var Lista2 = new MaterialesBL();
+				var prototiposFiltrados = Lista2.regresarLista().Where(p => p.Id == idBuscada).ToList();
 				dgMaterial.DataSource = prototiposFiltrados;
 			}
 		}
@@ -155,8 +155,8 @@ namespace FablabCatalagoVirtualCapasUI
 			}
 			if (!string.IsNullOrEmpty(txtbuscar.Text) && int.TryParse(txtbuscar.Text, out int idBuscada))
 			{
-				var Lista2 = new PrototipoBL();
-				var prototiposFiltrados = Lista2.regresarlista().Where(p => p.Id == idBuscada).ToList();
+				var Lista2 = new MaterialesBL();
+				var prototiposFiltrados = Lista2.regresarLista().Where(p => p.Id == idBuscada).ToList();
 				dgMaterial.DataSource = prototiposFiltrados;
 			}
 		}

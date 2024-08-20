@@ -53,7 +53,9 @@ namespace prototipos
 
 		private void btnAgg_Click(object sender, RoutedEventArgs e)
 		{
-			if(validar())
+
+			
+			if (validar())
 			{
 				var duracion = new Duraciones
 				{
@@ -67,7 +69,7 @@ namespace prototipos
 
 				BitmapSource bitmapSource = (BitmapSource)imgPrototipo.Source;
 				byte[] abyte = null;
-				
+
 
 				if (bitmapSource != null)
 				{
@@ -113,13 +115,11 @@ namespace prototipos
 
 					var ScCrea = new CreacionPrototipo();
 					ScCrea.ShowDialog();
-
-					MessageBox.Show("Los datos se han ingresado con exito");
 				}
 			}
 			else
 			{
-				MessageBox.Show("porfavor rellene los correspondientees textbox");
+				MessageBox.Show("porfavor rellene los correspondientes textbox");
 			}
 		}
 
