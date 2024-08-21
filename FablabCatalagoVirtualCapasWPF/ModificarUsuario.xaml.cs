@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace prototipos
 	/// <summary>
 	/// Lógica de interacción para Window4.xaml
 	/// </summary>
-	public partial class Window4 : Window
+	public partial class Window4 : MetroWindow
 	{
 		public Window4()
 		{

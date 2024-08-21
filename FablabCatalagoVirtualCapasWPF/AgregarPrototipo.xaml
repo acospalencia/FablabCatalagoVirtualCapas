@@ -1,4 +1,5 @@
-﻿<Window x:Class="prototipos.MainWindow"
+﻿<Controls:MetroWindow x:Class="prototipos.MainWindow"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -52,4 +53,4 @@
         <Button x:Name="btnAddFoto" Content="Agregar Foto" HorizontalAlignment="Left" Margin="512,458,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnAddFoto_Click"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

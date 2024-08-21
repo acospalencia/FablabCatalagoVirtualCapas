@@ -14,13 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 
 namespace Fablab.esfe
 {
     /// <summary>
     /// Lógica de interacción para Listaprototipo.xaml
     /// </summary>
-    public partial class Listaprototipo : Window
+    public partial class Listaprototipo : MetroWindow
     {
         public Listaprototipo()
         {

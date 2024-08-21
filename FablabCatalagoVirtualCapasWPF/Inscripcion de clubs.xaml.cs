@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace FablabCatalagoVirtualCapasWPF
 	/// <summary>
 	/// Lógica de interacción para Inscripcion_de_clubs.xaml
 	/// </summary>
-	public partial class Inscripcion_de_clubs : Window
+	public partial class Inscripcion_de_clubs : MetroWindow
 	{
 		public Inscripcion_de_clubs()
 		{

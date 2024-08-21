@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para ModificarClubs.xaml
     /// </summary>
-    public partial class ModificarClubs : Window
+    public partial class ModificarClubs : MetroWindow
     {
         public ModificarClubs()
         {

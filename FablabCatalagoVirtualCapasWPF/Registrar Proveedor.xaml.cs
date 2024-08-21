@@ -1,4 +1,5 @@
 ﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace UI
     /// <summary>
     /// Lógica de interacción para Registrar_Proveedor.xaml
     /// </summary>
-    public partial class Registrar_Proveedor : Window
+    public partial class Registrar_Proveedor : MetroWindow
     {
         public Registrar_Proveedor()
         {

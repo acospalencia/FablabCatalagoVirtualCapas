@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Fablab.esfe
     /// <summary>
     /// Lógica de interacción para RegistrarMaterial.xaml
     /// </summary>
-    public partial class RegistrarMaterial : Window
+    public partial class RegistrarMaterial : MetroWindow
     {
         public RegistrarMaterial()
         {

@@ -1,6 +1,7 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
 using interfaces;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace FablabCatalagoVirtualCapasWPF
 	/// <summary>
 	/// Lógica de interacción para AgregarClubs.xaml
 	/// </summary>
-	public partial class AgregarClubs : Window
+	public partial class AgregarClubs : MetroWindow
 	{
 		public AgregarClubs()
 		{

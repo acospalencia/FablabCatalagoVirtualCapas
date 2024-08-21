@@ -1,4 +1,5 @@
-﻿<Window x:Class="Fablab.esfe.RegistrarMaterial"
+﻿<Controls:MetroWindow x:Class="Fablab.esfe.RegistrarMaterial"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -71,4 +72,4 @@
         <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="244,339,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

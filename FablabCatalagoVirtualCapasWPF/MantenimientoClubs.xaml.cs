@@ -1,5 +1,6 @@
 ﻿using Fablab.esfe;
 using FablabCatalagoVirtualCapasWPF;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para MantenimientoClubs.xaml
     /// </summary>
-    public partial class MantenimientoClubs : Window
+    public partial class MantenimientoClubs : MetroWindow
     {
         public MantenimientoClubs()
         {

@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace UI
     /// <summary>
     /// Lógica de interacción para Eliminar_Proveedor.xaml
     /// </summary>
-    public partial class Eliminar_Proveedor : Window
+    public partial class Eliminar_Proveedor : MetroWindow
     {
         public Eliminar_Proveedor()
         {

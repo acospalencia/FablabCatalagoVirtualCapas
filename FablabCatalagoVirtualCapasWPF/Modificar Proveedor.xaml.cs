@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace UI
 	/// <summary>
 	/// Lógica de interacción para Modificar_Proveedor.xaml
 	/// </summary>
-	public partial class Modificar_Proveedor : Window
+	public partial class Modificar_Proveedor : MetroWindow
 	{
 		public Modificar_Proveedor()
 		{

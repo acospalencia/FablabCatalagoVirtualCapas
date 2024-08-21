@@ -1,4 +1,5 @@
 ﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
 using prototipos;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para RegistrarPrototipos.xaml
     /// </summary>
-    public partial class RegistrarPrototipos : Window
+    public partial class RegistrarPrototipos : MetroWindow
     {
         public RegistrarPrototipos()
         {

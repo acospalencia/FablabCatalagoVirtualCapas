@@ -1,4 +1,5 @@
 ﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace UI
     /// <summary>
     /// Lógica de interacción para Accion_Material.xaml
     /// </summary>
-    public partial class Accion_Material : Window
+    public partial class Accion_Material : MetroWindow
     {
         public Accion_Material()
         {

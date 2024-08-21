@@ -1,4 +1,5 @@
 ﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para MantenimientoAutores.xaml
     /// </summary>
-    public partial class MantenimientoAutores : Window
+    public partial class MantenimientoAutores : MetroWindow
     {
         public MantenimientoAutores()
         {

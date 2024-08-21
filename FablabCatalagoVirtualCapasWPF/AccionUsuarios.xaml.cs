@@ -1,4 +1,5 @@
 ﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
 using prototipos;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace FablabCatalagoVirtualCapasWPF
 	/// <summary>
 	/// Lógica de interacción para AccionUsuarios.xaml
 	/// </summary>
-	public partial class AccionUsuarios : Window
+	public partial class AccionUsuarios : MetroWindow
 	{
 		public AccionUsuarios()
 		{

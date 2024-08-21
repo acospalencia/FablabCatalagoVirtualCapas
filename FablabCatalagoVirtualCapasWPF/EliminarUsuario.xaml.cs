@@ -1,6 +1,7 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
 using FablabCatalagoVirtualCapasWPF;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace prototipos
 	/// <summary>
 	/// Lógica de interacción para Window5.xaml
 	/// </summary>
-	public partial class Window5 : Window
+	public partial class Window5 : MetroWindow 
 	{
 		public Window5()
 		{

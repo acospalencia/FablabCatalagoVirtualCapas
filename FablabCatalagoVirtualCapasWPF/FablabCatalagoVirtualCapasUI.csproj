@@ -183,9 +183,6 @@
     <Compile Include="EliminarUsuario.xaml.cs">
       <DependentUpon>EliminarUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IngresaeClub.xaml.cs">
-      <DependentUpon>IngresaeClub.xaml</DependentUpon>
-    </Compile>
     <Compile Include="IngresarAutores.xaml.cs">
       <DependentUpon>IngresarAutores.xaml</DependentUpon>
     </Compile>
@@ -230,9 +227,6 @@
     </Compile>
     <Compile Include="RegistrarPrototipos.xaml.cs">
       <DependentUpon>RegistrarPrototipos.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroPrototipo.xaml.cs">
-      <DependentUpon>RegistroPrototipo.xaml</DependentUpon>
     </Compile>
     <Compile Include="SelecAdministrar.xaml.cs">
       <DependentUpon>SelecAdministrar.xaml</DependentUpon>
@@ -290,10 +284,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="InformacionPrototipo.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="IngresaeClub.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -366,10 +356,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RegistrarPrototipos.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="RegistroPrototipo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace UI
 	/// <summary>
 	/// Lógica de interacción para Compra_Material.xaml
 	/// </summary>
-	public partial class Compra_Material : Window
+	public partial class Compra_Material :	MetroWindow
 	{
 		public Compra_Material()
 		{

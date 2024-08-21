@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para EliminarMaquinaria.xaml
     /// </summary>
-    public partial class EliminarMaquinaria : Window
+    public partial class EliminarMaquinaria : MetroWindow
     {
         public EliminarMaquinaria()
         {

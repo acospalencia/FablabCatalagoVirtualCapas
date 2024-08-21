@@ -1,6 +1,7 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
 using FablabCatalagoVirtualCapasWPF;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace prototipos
 	/// <summary>
 	/// Lógica de interacción para Window3.xaml
 	/// </summary>
-	public partial class Window3 : Window
+	public partial class Window3 : MetroWindow
 	{
 		public Window3()
 		{
