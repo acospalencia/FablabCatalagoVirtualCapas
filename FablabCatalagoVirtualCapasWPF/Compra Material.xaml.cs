@@ -172,5 +172,12 @@ namespace UI
 				MessageBox.Show("Por favor rellene los correspondientes textbox", "Error");
 			}
 		}
-	}
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScBack = new Accion_Material();
+			ScBack.Show();
+			this.Close();
+        }
+    }
 }

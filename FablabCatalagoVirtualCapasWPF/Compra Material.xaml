@@ -24,7 +24,7 @@
                 </Label.RenderTransform>
             </Label>
             <Label Content="Material" HorizontalAlignment="Left" Margin="56,161,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
-            <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50">
+            <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="50" Click="btnRegresar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
                 </Button.Background>
