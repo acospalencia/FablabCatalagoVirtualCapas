@@ -22,6 +22,27 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@TotalPagar", pCompra.TotalPagar);
 			return ComunBD.EjecutarComand(cmd);
 		}
+		public int ModificarCompra(CompraMate pCompra)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPModiCompra";
+			cmd.Parameters.AddWithValue("@Id", pCompra.Id);
+			cmd.Parameters.AddWithValue("@IdMaterial", pCompra.IdMaterial);
+			cmd.Parameters.AddWithValue("@IdProveedor", pCompra.IdProveedor);
+			cmd.Parameters.AddWithValue("@CantidadCompra", pCompra.CantidadCompra);
+			cmd.Parameters.AddWithValue("@TotalPagar", pCompra.TotalPagar);
+			return ComunBD.EjecutarComand(cmd);
+		}
+		public int DeleteCompra(CompraMate pCompra)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPDeleteCompra";
+			cmd.Parameters.AddWithValue("@Id", pCompra.Id);
+			return ComunBD.EjecutarComand(cmd);
+		}
+
 		public List<CompraMate> RegresarLista()
 		{
 			List<CompraMate> ListaClubs = new List<CompraMate>();

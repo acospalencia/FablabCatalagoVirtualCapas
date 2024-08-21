@@ -15,5 +15,17 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return CompraDAl.GuardarCompra(pComra);
 		}
+		public List<CompraMate> RegresarLista()
+		{
+			return CompraDAl.RegresarLista();
+		}
+		public int ModificarCompra(CompraMate pComra)
+		{
+			return CompraDAl.ModificarCompra(pComra);
+		}
+		public int EliminarCompra(CompraMate pComra)
+		{
+			return CompraDAl.DeleteCompra(pComra);
+		}
 	}
 }

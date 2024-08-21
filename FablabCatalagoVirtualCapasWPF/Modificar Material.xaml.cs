@@ -149,7 +149,9 @@ namespace UI
 					txtZ.IsEnabled = true;
 					txtPrecio.IsEnabled = true;
 					cbTipoMaterial.IsEnabled = true;
+
 					btnModificar.Visibility = Visibility.Visible;
+					
 					txtId.Text = row.Id.ToString();
 					txtNombre.Text = row.NombreMaterial;
 					txtIdTipo.Text = row.IdTipoMaterial.ToString();

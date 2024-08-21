@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Compra_Material" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Compra_Material" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Grid>
             <Grid.Background>
@@ -29,29 +29,41 @@
                 </Button.Background>
             </Button>
             <ComboBox x:Name="cbProveedor" HorizontalAlignment="Left" Height="28" Margin="56,128,0,0" VerticalAlignment="Top" Width="176"/>
-            <Label Content="Fecha Compra" HorizontalAlignment="Left" Margin="56,224,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
             <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Height="28" Margin="56,191,0,0" VerticalAlignment="Top" Width="176"/>
-            <DatePicker x:Name="dpFechaCompra" HorizontalAlignment="Left" Height="46" Margin="56,259,0,0" VerticalAlignment="Top" Width="209" FontFamily="Arial" FontSize="16"/>
             <Label Content="Total a pagar" HorizontalAlignment="Left" Margin="56,311,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
-            <TextBox x:Name="txtPagar" HorizontalAlignment="Left" Margin="56,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="24" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="txtPagar" HorizontalAlignment="Left" Margin="56,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="24" />
             <DataGrid x:Name="dgVer" HorizontalAlignment="Left" Height="215" Margin="339,123,0,0" VerticalAlignment="Top" Width="435" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="dgVer_SelectionChanged"/>
-            <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="434,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="434,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" />
             <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Center" Height="34" Margin="0,84,0,0" VerticalAlignment="Top" Width="36">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
                 </Button.Background>
             </Button>
             <Button
-                Width="77" VerticalAlignment="Top" x:Name="btnGuardar" Margin="446,356,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand">
+                Width="76" VerticalAlignment="Top" x:Name="btnGuardar" Margin="380,367,0,0" Height="51" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand" Click="btnGuardar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="637,355,0,0" VerticalAlignment="Top" Height="52" Width="68">
+            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="637,368,0,0" VerticalAlignment="Top" Height="52" Width="68" Click="btnEliminar_Click" Visibility="Hidden">
                 <Button.Background>
                     <ImageBrush ImageSource="/Recursos/Botones/BtnEliminar.png"/>
                 </Button.Background>
             </Button>
+            <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="56,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="24" />
+            <Label Content="Cantidad Compra" HorizontalAlignment="Left" Margin="56,236,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
+            <Button x:Name="btnModificar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="516,361,0,0" VerticalAlignment="Top" Height="66" Width="76" Click="btnModificar_Click" Visibility="Hidden">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image Source="/Recursos/Botones/BtnEditar.png" Stretch="Fill"/>
+                            <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TextBox HorizontalAlignment="Left" Name="txtId" Margin="687,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="51" Visibility="Hidden"/>
 
         </Grid>
 
