@@ -1,11 +1,12 @@
-﻿<Window x:Class="Fablab.esfe.InicioSesion"
+﻿<Controls:MetroWindow x:Class="Fablab.esfe.InicioSesion"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="InicioSesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Height="450" Width="803">
+        Title="Iniciar Sesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Height="450" Width="803">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -15,8 +16,8 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo7.png" TileMode="None" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <TextBox x:Name="txtUsuario" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus"/>
-        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+        <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.ClearTextButton="True" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus" Background="#FFFDFDFD" Controls:ControlsHelper.FocusBorderBrush="Black"/>
+        <Button  x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="45" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -28,8 +29,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="262,284,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787"/>
+        <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="261,282,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
+        <PasswordBox x:Name="txtPassword" Controls:ControlsHelper.FocusBorderBrush="Black" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787" Background="#FFFDFDFD" BorderBrush="#FFCCCCCC"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

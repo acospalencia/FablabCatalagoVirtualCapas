@@ -1,22 +1,23 @@
-﻿<Window x:Class="Fablab.esfe.SelecAdministrar"
+﻿<mah:MetroWindow x:Class="Fablab.esfe.SelecAdministrar"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="SelecAdministrar" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Administración" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Que sección desea administrar" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="31" Width="304" FontWeight="Bold" FontSize="20" FontFamily="Arial" Foreground="#FFEDE3E3"/>
-        <Button Content="Materiales" Name="btnMaterial" HorizontalAlignment="Left" Margin="67,138,0,0" VerticalAlignment="Top" Height="41" Width="208" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF95569C" Click="btnMaterial_Click"/>
-        <Button Content="Prototipos" Name="btnProtos" HorizontalAlignment="Left" Margin="445,138,0,0" VerticalAlignment="Top" Height="41" Width="215" FontSize="16" FontWeight="Bold" FontFamily="Arial" Background="#FF95569C" Click="btnProto_CLick"/>
-        <Button x:Name="btnAutores" Content="Autores" HorizontalAlignment="Left" Margin="67,202,0,0" VerticalAlignment="Top" Width="208" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="16" Background="#FF713A92" Click="btnAutores_Click"/>
-        <Button x:Name="btnClubs" Content="Clubs" HorizontalAlignment="Left" Margin="445,202,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88" Click="btnClubs_Click"/>
-        <Button x:Name="btnProveedor" Content="Proveedores" HorizontalAlignment="Left" Margin="67,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.653" Width="208" Height="38" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF7459A5" Click="btnProveedor_Click"/>
-        <Button x:Name="btnMaquinaria" Content="Maquinaria" HorizontalAlignment="Left" Margin="445,275,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnMaquinaria_Click"/>
+        <Button Content="Materiales" Name="btnMaterial" HorizontalAlignment="Left" Margin="93,108,0,0" VerticalAlignment="Top" Height="41" Width="208" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF95569C" Click="btnMaterial_Click"/>
+        <Button Content="Prototipos" Name="btnProtos" Margin="471,108,0,0" VerticalAlignment="Top" Height="41" Width="215" FontSize="16" FontWeight="Bold" FontFamily="Arial" Background="#FF95569C" Click="btnProto_CLick" HorizontalAlignment="Left"/>
+        <Button x:Name="btnAutores" Content="Autores" HorizontalAlignment="Left" Margin="93,172,0,0" VerticalAlignment="Top" Width="208" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="16" Background="#FF713A92" Click="btnAutores_Click"/>
+        <Button x:Name="btnClubs" Content="Clubs" HorizontalAlignment="Left" Margin="471,172,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88" Click="btnClubs_Click"/>
+        <Button x:Name="btnProveedor" Content="Proveedores" HorizontalAlignment="Left" Margin="93,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.653" Width="208" Height="38" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF7459A5" Click="btnProveedor_Click"/>
+        <Button x:Name="btnMaquinaria" Content="Maquinaria" HorizontalAlignment="Left" Margin="471,245,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnMaquinaria_Click"/>
         <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -29,8 +30,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Content="Usuarios" Name="btnUsuarios" HorizontalAlignment="Left" Margin="67,346,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnUsuarios_Click"/>
-        <Button Content="Reporte" x:Name="btnReportes" HorizontalAlignment="Left" Margin="445,346,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" />
+        <Button Content="Usuarios" Name="btnUsuarios" HorizontalAlignment="Left" Margin="93,316,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnUsuarios_Click"/>
+        <Button Content="Reporte" x:Name="btnReportes" HorizontalAlignment="Left" Margin="471,316,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnReportes_Click" />
 
     </Grid>
-</Window>
+</mah:MetroWindow>

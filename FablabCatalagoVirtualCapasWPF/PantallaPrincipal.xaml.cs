@@ -1,11 +1,12 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
+using System.Windows;
 
 namespace Fablab.esfe
 {
 	/// <summary>
 	/// Lógica de interacción para PantallaPrincipal.xaml
 	/// </summary>
-	public partial class PantallaPrincipal : Window
+	public partial class PantallaPrincipal : MetroWindow
 	{
 		public PantallaPrincipal()
 		{

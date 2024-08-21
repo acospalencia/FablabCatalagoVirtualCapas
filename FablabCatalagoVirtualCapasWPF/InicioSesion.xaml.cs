@@ -14,13 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FablabCatalagoVirtualCapasEN;
 using FablabCatalagoVirtualCapasBL;
+using MahApps.Metro.Controls;
 
 namespace Fablab.esfe
 {
     /// <summary>
     /// Lógica de interacción para InicioSesion.xaml
     /// </summary>
-    public partial class InicioSesion : Window
+    public partial class InicioSesion : MetroWindow
     {
         public InicioSesion()
         {
