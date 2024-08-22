@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
-        <Label Content="Elija la opcion a realizar" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
+        <Label Content="Elija la opcion a realizar" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="278" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="36"/>
         <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Center" Height="75" Width="80" Click="btnEliminar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">

@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
-        <Label Content="Que sección desea administrar" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="31" Width="304" FontWeight="Bold" FontSize="20" FontFamily="Arial" Foreground="#FFEDE3E3"/>
+        <Label Content="Que sección desea administrar" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Height="40" Width="357" FontWeight="Bold" FontSize="25" FontFamily="Times New Roman" Foreground="#FFEDE3E3"/>
         <Button Content="Materiales" Name="btnMaterial" HorizontalAlignment="Left" Margin="93,108,0,0" VerticalAlignment="Top" Height="41" Width="208" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF95569C" Click="btnMaterial_Click" Cursor="Hand"/>
         <Button Content="Prototipos" Name="btnProtos" Margin="471,108,0,0" VerticalAlignment="Top" Height="41" Width="215" FontSize="16" FontWeight="Bold" FontFamily="Arial" Background="#FF95569C" Click="btnProto_CLick" HorizontalAlignment="Left" Cursor="Hand"/>
         <Button x:Name="btnAutores" Content="Autores" HorizontalAlignment="Left" Margin="93,172,0,0" VerticalAlignment="Top" Width="208" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="16" Background="#FF713A92" Click="btnAutores_Click" Cursor="Hand"/>

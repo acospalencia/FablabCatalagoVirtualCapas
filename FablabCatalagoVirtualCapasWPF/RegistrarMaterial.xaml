@@ -14,42 +14,42 @@
 
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="70,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="94">
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="70,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.843,-0.538" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="94">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="70,113,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="141">
+        <Label Content="Tipo Material:" HorizontalAlignment="Left" Margin="70,135,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="141">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Precio:" HorizontalAlignment="Left" Margin="70,176,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="80">
+        <Label Content="Precio:" HorizontalAlignment="Left" Margin="70,198,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="80">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Ancho Material:" HorizontalAlignment="Left" Margin="70,228,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="161">
+        <Label Content="Ancho Material:" HorizontalAlignment="Left" Margin="70,250,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="161">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label Content="Alto Material:" HorizontalAlignment="Left" Margin="70,284,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="132">
+        <Label Content="Alto Material:" HorizontalAlignment="Left" Margin="70,306,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="132">
 
         </Label>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="244,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="30">
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="244,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" FontFamily="Arial" FontSize="18" FontWeight="Bold">
 
         </TextBox>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="244,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="30">
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="244,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="30" FontFamily="Arial" FontSize="18" FontWeight="Bold">
 
         </TextBox>
-        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="244,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28">
+        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="244,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="28" FontFamily="Arial" FontSize="18" FontWeight="Bold">
 
         </TextBox>
-        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="244,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28">
+        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="244,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="28" FontFamily="Arial" FontSize="18" FontWeight="Bold">
 
         </TextBox>
-        <Label Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="20" FontFamily="Arial"/>
+        <Label Content="Registrar Nuevo Material" HorizontalAlignment="Left" Margin="305,40,0,0" VerticalAlignment="Top" Foreground="#FFF7F4F4" FontWeight="Bold" FontSize="25" FontFamily="Times New Roman"/>
         <Button x:Name="btnRegistrar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="615,315,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Height="75" Width="80" Click="btnRegistrar_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -73,9 +73,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <ComboBox x:Name="cbTipoMaterial" HorizontalAlignment="Left" Margin="244,117,0,0" VerticalAlignment="Top" Width="149" Height="30" />
-        <Label Content="Profundidad Material:" HorizontalAlignment="Left" Margin="70,338,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="174"/>
-        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="244,339,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" Height="28"/>
+        <ComboBox x:Name="cbTipoMaterial" HorizontalAlignment="Left" Margin="244,139,0,0" VerticalAlignment="Top" Width="200" Height="30" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
+        <Label Content="Profundidad Material:" HorizontalAlignment="Left" Margin="70,360,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Arial" Foreground="#FFF1E7E7" Height="46" Width="174"/>
+        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="244,361,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="28" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
 
     </Grid>
 </Controls:MetroWindow>
