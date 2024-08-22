@@ -12,11 +12,11 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Añadir un nuevo usuario
-" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Height="53" Width="345" FontFamily="Arial" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF5E8E8" FontWeight="Bold"/>
-        <Label Content="nombre" HorizontalAlignment="Left" Margin="245,137,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold" Foreground="#FFFDF6F6"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="349,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="26"/>
-        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="224,204,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="20" FontWeight="Bold" Foreground="#FFFDF6F6"/>
-        <TextBox x:Name="txtContraseña" HorizontalAlignment="Left" Margin="349,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="248" Height="26"/>
+" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Height="53" Width="345" FontFamily="Times New Roman" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF5E8E8" FontWeight="Bold"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="245,137,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFDF6F6"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="349,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="26" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="224,204,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFDF6F6"/>
+        <TextBox x:Name="txtContraseña" HorizontalAlignment="Left" Margin="349,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="248" Height="26" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">

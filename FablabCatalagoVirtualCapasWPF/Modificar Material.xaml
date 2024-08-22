@@ -6,14 +6,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Modificar_Material" Height="500" Width="900" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Modificar_Material" Height="530" Width="900" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="Recursos/Fondos/Fondo1.jpg"/>
             </Grid.Background>
-            <Label Content="Moficar Materiales" HorizontalAlignment="Left" Margin="286,34,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="35,106,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+            <Label Content="Moficar Materiales" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="264" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="36"/>
+            <Label Content="Nombre" HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -23,14 +23,14 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="146,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="183" Height="24" IsEnabled="False" />
-            <Label Content="Tipo Material" HorizontalAlignment="Left" Margin="30,144,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
-            <ComboBox x:Name="cbTipoMaterial" HorizontalAlignment="Left" Margin="146,149,0,0"  Text="" VerticalAlignment="Top" Width="183" Height="25" IsEnabled="False" />
-            <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="146,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" />
-            <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="146,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" />
-            <Label Content="X" HorizontalAlignment="Left" Margin="36,188,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
-            <Label Content="Y" HorizontalAlignment="Left" Margin="36,230,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
-            <Label Content="Precio" HorizontalAlignment="Left" Margin="33,319,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="146,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="183" Height="24" IsEnabled="False" FontFamily="Arial" FontSize="18" />
+            <Label Content="Tipo Material" HorizontalAlignment="Left" Margin="30,176,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
+            <ComboBox x:Name="cbTipoMaterial" HorizontalAlignment="Left" Margin="146,181,0,0"  Text="" VerticalAlignment="Top" Width="183" Height="25" IsEnabled="False" FontFamily="Arial" FontSize="18" />
+            <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="146,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" FontFamily="Arial" FontSize="18" />
+            <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="146,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" FontFamily="Arial" FontSize="18" />
+            <Label Content="X" HorizontalAlignment="Left" Margin="36,220,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
+            <Label Content="Y" HorizontalAlignment="Left" Margin="36,262,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
+            <Label Content="Precio" HorizontalAlignment="Left" Margin="33,351,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -40,7 +40,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="146,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="24" IsEnabled="False" />
+            <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="146,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="24" IsEnabled="False" FontFamily="Arial" FontSize="18" />
             <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -53,13 +53,13 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="146,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" />
-            <Label Content="Z" HorizontalAlignment="Left" Margin="36,272,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
+            <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="146,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="25" IsEnabled="False" FontFamily="Arial" FontSize="18" />
+            <Label Content="Z" HorizontalAlignment="Left" Margin="36,304,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="41" FontWeight="Bold"/>
             <TextBox HorizontalAlignment="Left" Visibility="Hidden" Name="txtId" Margin="639,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <TextBox HorizontalAlignment="Left" Visibility="Hidden" Name="txtIdTipo" Margin="639,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txtIdTipo_TextChanged"/>
 
         </Grid>
-        <Button Visibility="Hidden" Cursor="Hand" Width="80" VerticalAlignment="Top" x:Name="btnModificar" Margin="596,387,0,0" Height="75" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Click="btnGuardar_Click">
+        <Button Visibility="Hidden" Cursor="Hand" Width="80" VerticalAlignment="Top" x:Name="btnModificar" Margin="596,408,0,0" Height="75" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="" Click="btnGuardar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -70,9 +70,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <DataGrid x:Name="dgMaterial" HorizontalAlignment="Left" Height="250" Margin="382,123,0,0" VerticalAlignment="Top" Width="508" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgMaterial_SelectionChanged" IsReadOnly="True"/>
-        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="506,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="txtbuscar_TextChanged" />
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="40" Margin="450,71,0,0" VerticalAlignment="Top" Width="40" Click="btnBuscar_Click">
+        <DataGrid x:Name="dgMaterial" HorizontalAlignment="Left" Height="250" Margin="382,0,0,0" VerticalAlignment="Center" Width="508" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgMaterial_SelectionChanged" IsReadOnly="True"/>
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="508,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="25" TextChanged="txtbuscar_TextChanged" />
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="40" Margin="452,89,0,0" VerticalAlignment="Top" Width="40" Click="btnBuscar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

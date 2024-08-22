@@ -15,9 +15,9 @@
         <Label Content="Nombre del club: " HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Fecha de inscripcion: " HorizontalAlignment="Left" Margin="67,248,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="67,333,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <ComboBox x:Name="cbIdAutor" HorizontalAlignment="Left" Margin="67,111,0,0" Text="" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
-        <ComboBox x:Name="cbIdClub" HorizontalAlignment="Left" Margin="67,199,0,0"  Text="" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
-        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
+        <ComboBox x:Name="cbIdAutor" HorizontalAlignment="Left" Margin="67,111,0,0" Text="" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="cbIdClub" HorizontalAlignment="Left" Margin="67,199,0,0"  Text="" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="77"/>
         <DataGrid x:Name="dgLista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="298,142,10,0" Height="205" VerticalAlignment="Top" SelectionChanged="dgLista_SelectionChanged" ColumnWidth="*"/>
         <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="450,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Template>
@@ -53,8 +53,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Label Content="Modificar una inscripcion de Club" HorizontalAlignment="Left" Margin="298,21,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="356"/>
-        <DatePicker x:Name="dpFecha" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="216" IsEnabled="False"/>
+        <Label Content="Modificar una inscripcion de Club" HorizontalAlignment="Left" Margin="298,40,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="356"/>
+        <DatePicker x:Name="dpFecha" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="759,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
             <Button.Template>

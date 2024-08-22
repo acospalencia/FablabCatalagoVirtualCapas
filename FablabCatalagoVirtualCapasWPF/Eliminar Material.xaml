@@ -12,10 +12,10 @@
             <Grid.Background>
                 <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
             </Grid.Background>
-            <Label Content="Eliminar Materiales" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="172" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-            <DataGrid HorizontalAlignment="Left" Name="dgVer" Height="245" Margin="22,121,0,0" VerticalAlignment="Top" Width="673" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgVer_SelectionChanged"/>
-            <TextBox x:Name="txtbuscar" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="26" TextChanged="txtBuscar_TextChanged" />
-            <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="40" Margin="201,73,0,0" VerticalAlignment="Top" Width="40" Click="btnBuscar_Click">
+            <Label Content="Eliminar Materiales" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="226" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="36"/>
+            <DataGrid HorizontalAlignment="Left" Name="dgVer" Height="245" Margin="22,137,0,0" VerticalAlignment="Top" Width="673" d:ItemsSource="{d:SampleData ItemCount=5}" ColumnWidth="*" SelectionChanged="dgVer_SelectionChanged"/>
+            <TextBox x:Name="txtbuscar" HorizontalAlignment="Center" Margin="0,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="26" TextChanged="txtBuscar_TextChanged" />
+            <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="40" Margin="201,89,0,0" VerticalAlignment="Top" Width="40" Click="btnBuscar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

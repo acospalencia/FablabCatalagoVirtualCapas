@@ -6,20 +6,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="IngresarMaquinaria" Height="476" Width="562" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="IngresarMaquinaria" Height="476" Width="700       " Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
-        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="89,83,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Label Content="Marca: " HorizontalAlignment="Left" Margin="89,147,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtMarca1" Content="Detalle: " HorizontalAlignment="Left" Margin="341,85,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Label x:Name="txtIdEstado" Content="Estado: " HorizontalAlignment="Left" Margin="341,145,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="89,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="89,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="341,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="341,175,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Center" Margin="0,306,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnGuardar_Click">
+        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="80,136,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Marca: " HorizontalAlignment="Left" Margin="80,200,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <Label x:Name="txtMarca1" Content="Detalle: " HorizontalAlignment="Left" Margin="373,140,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="txtIdEstado" Content="Estado: " HorizontalAlignment="Left" Margin="373,200,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="80,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="80,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="373,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="373,230,0,0" VerticalAlignment="Top" Width="233" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Width="80" Height="74" Click="btnGuardar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -44,6 +44,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Label Content="Ingresar una nueva maquinaria" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
 
     </Grid>
 </Controls:MetroWindow>

@@ -17,7 +17,7 @@
         <Label Content="Apellidos: " HorizontalAlignment="Left" Margin="39,179,0,0" VerticalAlignment="Top" Foreground="#FFF7F1F1" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label Content="Correo elecronico: " HorizontalAlignment="Left" Margin="39,243,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Fecha de registro: " HorizontalAlignment="Left" Margin="42,299,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="203,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="203,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
@@ -27,8 +27,8 @@
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <TextBox x:Name="txtCorreoElectronico" HorizontalAlignment="Left" Margin="203,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="203,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCorreoElectronico" HorizontalAlignment="Left" Margin="203,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="450,376,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -52,8 +52,8 @@
             </Button.Template>
         </Button>
         <DataGrid x:Name="dgVer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="370,122,19,0" SelectionChanged="dgVer_SelectionChanged" Height="232" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="450,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="277" Height="28" TextChanged="txtBuscar_TextChanged"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="745,72,0,0" VerticalAlignment="Top" Height="40" Width="40 ">
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="450,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="277" Height="28" TextChanged="txtBuscar_TextChanged"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="745,75,0,0" VerticalAlignment="Top" Height="40" Width="40 ">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -76,9 +76,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <DatePicker x:Name="dtFecha" HorizontalAlignment="Left" Margin="203,301,0,0" VerticalAlignment="Top" IsEnabled="False" Width="120"/>
+        <DatePicker x:Name="dtFecha" HorizontalAlignment="Left" Margin="203,301,0,0" VerticalAlignment="Top" IsEnabled="False" Width="145" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="228,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
-        <Label Content="Modificar Autores" HorizontalAlignment="Center" Margin="0,7,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="#FFFBF7F7"/>
+        <Label Content="Modificar Autores" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="#FFFBF7F7"/>
 
     </Grid>
 </Controls:MetroWindow>

@@ -16,7 +16,7 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo7.png" TileMode="None" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.ClearTextButton="True" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus" Background="#FFFDFDFD" Controls:ControlsHelper.FocusBorderBrush="Black"/>
+        <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.ClearTextButton="True" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="18" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus" Background="#FFFDFDFD" Controls:ControlsHelper.FocusBorderBrush="Black"/>
         <Button  x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -30,7 +30,7 @@
             </Button.Template>
         </Button>
         <Button x:Name="btnIngresar" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="261,282,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
-        <PasswordBox x:Name="txtPassword" Controls:ControlsHelper.FocusBorderBrush="Black" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787" Background="#FFFDFDFD" BorderBrush="#FFCCCCCC"/>
+        <PasswordBox x:Name="txtPassword" Controls:ControlsHelper.FocusBorderBrush="Black" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787" Background="#FFFDFDFD" BorderBrush="#FFCCCCCC" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
 
     </Grid>
 </Controls:MetroWindow>

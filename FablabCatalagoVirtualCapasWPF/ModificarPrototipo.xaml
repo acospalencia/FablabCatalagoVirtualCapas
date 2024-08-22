@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
-        <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,117,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="539" Height="340" VerticalAlignment="Top"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="51,109,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,137,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="539" Height="340" VerticalAlignment="Top"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="51,105,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Button x:Name="btnRegresar" Cursor="Hand" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -24,18 +24,17 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="51,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="14"  />
-        <Label Content="Tipo de material " HorizontalAlignment="Left" Margin="51,153,0,0" VerticalAlignment="Top" Width="120" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Tamaño X" HorizontalAlignment="Left" Margin="51,199,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="51,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Tamaño Y" HorizontalAlignment="Left" Margin="51,242,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="51,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="51,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="51,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Estado" HorizontalAlignment="Left" Margin="51,337,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="51,362,0,0" Text="" VerticalAlignment="Top" Width="178" Foreground="Black" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Tamaño Z" HorizontalAlignment="Left" Margin="51,293,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Maquinaria Usada" HorizontalAlignment="Left" Margin="51,382,0,0" VerticalAlignment="Top" Width="134" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="51,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="18"  />
+        <Label Content="Tipo de material " HorizontalAlignment="Left" Margin="51,160,0,0" VerticalAlignment="Top" Width="133" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tamaño X" HorizontalAlignment="Left" Margin="51,214,0,0" VerticalAlignment="Top" Width="88" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tamaño Y" HorizontalAlignment="Left" Margin="51,276,0,0" VerticalAlignment="Top" Width="88" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="51,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <TextBox x:Name="txtX" HorizontalAlignment="Left" Margin="51,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <TextBox x:Name="txtZ" HorizontalAlignment="Left" Margin="51,368,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="51,397,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="51,422,0,0" Text="" VerticalAlignment="Top" Width="178" Foreground="Black" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Tamaño Z" HorizontalAlignment="Left" Margin="51,338,0,0" VerticalAlignment="Top" Width="88" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Maquinaria Usada" HorizontalAlignment="Left" Margin="51,450,0,0" VerticalAlignment="Top" Width="154" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -45,16 +44,15 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <ComboBox x:Name="cbMaquinaria" HorizontalAlignment="Left" Margin="51,407,0,0" Text="" VerticalAlignment="Top" Width="178"/>
-        <Label Content="Tiempo de diseño" HorizontalAlignment="Left" Margin="278,114,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Tiempo de Armado" HorizontalAlignment="Left" Margin="278,158,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtArmarlo" HorizontalAlignment="Left" Margin="278,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtDesign" HorizontalAlignment="Left" Margin="278,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Tiempo de Fabricacion " HorizontalAlignment="Left" Margin="278,204,0,0" VerticalAlignment="Top" Width="166" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="278,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="278,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="278,248,0,0" VerticalAlignment="Top" Width="90" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="278,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <ComboBox x:Name="cbMaquinaria" HorizontalAlignment="Left" Margin="51,476,0,0" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Tiempo de diseño" HorizontalAlignment="Left" Margin="278,105,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Tiempo de Armado" HorizontalAlignment="Left" Margin="278,160,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtArmarlo" HorizontalAlignment="Left" Margin="278,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <TextBox x:Name="txtDesign" HorizontalAlignment="Left" Margin="278,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Tiempo de Fabricacion " HorizontalAlignment="Left" Margin="278,214,0,0" VerticalAlignment="Top" Width="191" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="278,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="278,276,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="278,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
         <Button x:Name="btnModificar" Cursor="Hand" Content=" " HorizontalAlignment="Left" Margin="348,448,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnModificar_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -66,9 +64,9 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="648,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" TextChanged="txtBuscar_TextChanged" FontFamily="Arial" FontSize="25" />
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="624,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="261" TextChanged="txtBuscar_TextChanged" FontFamily="Arial" FontSize="25" Height="29" />
         <Button Content="
-                " HorizontalAlignment="Left" Margin="915,68,0,0" VerticalAlignment="Top" Width="40" Height="40">
+                " HorizontalAlignment="Left" Margin="901,90,0,0" VerticalAlignment="Top" Width="40" Height="40">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -79,14 +77,14 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Label Content="Modificar registros de Prototipos" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
+        <Label Content="Modificar registros de Prototipos" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="74,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden"/>
         <TextBox x:Name="txtIdMaterial" HorizontalAlignment="Left" Margin="74,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
         <TextBox x:Name="txtIdEstado" HorizontalAlignment="Left" Margin="119,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
         <TextBox x:Name="txtIdDuraciones" HorizontalAlignment="Left" Margin="119,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" TextChanged="txtIdDuraciones_TextChanged"/>
         <TextBox x:Name="txtIdMaquinaria" HorizontalAlignment="Left" Margin="164,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden" />
         <Image  HorizontalAlignment="Left" Name="img" Height="100" Margin="348,338,0,0" VerticalAlignment="Top" Width="100" Visibility="Hidden"/>
-        <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Margin="50,179,0,0" Text="" VerticalAlignment="Top" Width="178" Foreground="Black" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
+        <ComboBox x:Name="cbMaterial" HorizontalAlignment="Left" Margin="50,185,0,0" Text="" VerticalAlignment="Top" Width="178" Foreground="Black" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
 
     </Grid>
 </Controls:MetroWindow>

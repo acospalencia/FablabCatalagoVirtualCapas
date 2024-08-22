@@ -12,7 +12,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Recursos/Fondos/Fondo2.jpg"/>
             </Grid.Background>
-            <Label Content="ELIJA LA OPCION A REALIZAR" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="22"/>
+            <Label Content="Elija la opción a realizar" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
             <Button x:Name="btnIngresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="288,193,0,0" VerticalAlignment="Top" Width="66" Height="66" Click="btnIngresar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">

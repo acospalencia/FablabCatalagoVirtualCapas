@@ -21,12 +21,12 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="50,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" />
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="50,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
         <Label Content="Apellidos" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
-        <Label Content="Agregar proveedor" HorizontalAlignment="Left" Margin="286,34,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
+        <Label Content="Agregar proveedor" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="220" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="42"/>
         <Label Content="Dirección" HorizontalAlignment="Left" Margin="50,235,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
-        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="209" Height="25" />
-        <TextBox x:Name="txtDirección" HorizontalAlignment="Left" Margin="50,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Height="25" />
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="209" Height="25" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
+        <TextBox x:Name="txtDirección" HorizontalAlignment="Left" Margin="50,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Height="25" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
         <Label Content="Correo Electrónico" HorizontalAlignment="Left" Margin="449,167,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="195" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -37,9 +37,9 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="451,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="290" Height="25" />
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="451,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="290" Height="25" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
         <Label Content="Teléfono" HorizontalAlignment="Left" Margin="451,102,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
-        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="451,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" />
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="451,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" FontFamily="Arial" FontSize="18" FontWeight="Bold" />
         <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">

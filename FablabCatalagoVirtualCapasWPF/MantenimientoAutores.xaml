@@ -34,7 +34,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Label Content="MANTENIMIENTO DE AUTORES" HorizontalAlignment="Left" Margin="255,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label Content="Elija la opción a realizar" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontWeight="Bold" FontSize="25" Foreground="White"/>
         <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">

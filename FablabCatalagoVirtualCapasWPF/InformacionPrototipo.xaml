@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="39" Margin="191,10,0,0" VerticalAlignment="Top" Width="354"/>
-        <Label Content="Información de prototipos" HorizontalAlignment="Left" Margin="190,13,0,0" VerticalAlignment="Top" Foreground="#FFF7EBEB" FontWeight="Bold" FontFamily="Arial" FontSize="20"/>
+        <Label Content="Información de prototipos" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Foreground="#FFF7EBEB" FontWeight="Bold" FontFamily="Times New Roman" FontSize="25"/>
         <Label x:Name="lblNombre" Content="Nombre: " HorizontalAlignment="Left" Margin="34,99,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label x:Name="lblNombreMat" Content="Tipo de material: " HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblY" Content="DImension Y: " HorizontalAlignment="Left" Margin="39,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
@@ -21,7 +21,7 @@
         <Label x:Name="lbldiseno" Content="Tiempo necesitado para diseñarlo: " HorizontalAlignment="Left" Margin="338,160,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblArmado" Content="Tiempo necesitado para armarlo:   " HorizontalAlignment="Left" Margin="335,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblX" Content="Dimension X: " HorizontalAlignment="Left" Margin="39,287,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="372" Margin="724,99,0,0" VerticalAlignment="Top" Width="427"/>
+        <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="372" Margin="694,99,0,0" VerticalAlignment="Top" Width="427"/>
         <Label x:Name="lblZ" Content="DImension Z: " HorizontalAlignment="Left" Margin="335,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblEstado" Content="Estado: " HorizontalAlignment="Left" Margin="39,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblDescripcion" Content="Descripcion: " HorizontalAlignment="Left" Margin="39,422,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
