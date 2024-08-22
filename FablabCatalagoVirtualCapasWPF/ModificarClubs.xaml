@@ -19,7 +19,7 @@
         <ComboBox x:Name="cbIdClub" HorizontalAlignment="Left" Margin="67,199,0,0"  Text="" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
         <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
         <DataGrid x:Name="dgLista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="298,142,10,0" Height="205" VerticalAlignment="Top" SelectionChanged="dgLista_SelectionChanged" ColumnWidth="*"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="450,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click" Visibility="Hidden">
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="450,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click" Visibility="Hidden">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -30,7 +30,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="706,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnEliminar_Click" Visibility="Hidden">
+        <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="706,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnEliminar_Click" Visibility="Hidden">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -56,7 +56,7 @@
         <Label Content="Modificar una inscripcion de Club" HorizontalAlignment="Left" Margin="298,21,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="356"/>
         <DatePicker x:Name="dpFecha" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="216" IsEnabled="False"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="759,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
-        <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
+        <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

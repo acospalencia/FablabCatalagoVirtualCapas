@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="MANTENIMIENTO DE CLUBS" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Foreground="#FFFFF6F6" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
-        <Button x:Name="btnIngresar" Content="" Margin="344,163,192,0" VerticalAlignment="Top" Height="75" Click="btnIngresar_Click" Width="80">
+        <Button x:Name="btnIngresar" Cursor="Hand" Content="" Margin="344,163,192,0" VerticalAlignment="Top" Height="75" Click="btnIngresar_Click" Width="80">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -23,7 +23,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="tbnRegresar" Content="" HorizontalAlignment="Left" Margin="192,163,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="tbnRegresar_Click">
+        <Button x:Name="tbnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="192,163,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="tbnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -34,7 +34,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+        <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

@@ -13,7 +13,7 @@
         </Grid.Background>
         <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,117,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="539" Height="340" VerticalAlignment="Top"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="51,109,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="btnRegresar" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+        <Button x:Name="btnRegresar" Cursor="Hand" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -55,7 +55,7 @@
         <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="278,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="278,248,0,0" VerticalAlignment="Top" Width="90" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="278,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="btnModificar" Content=" " HorizontalAlignment="Left" Margin="348,448,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnModificar_Click" >
+        <Button x:Name="btnModificar" Cursor="Hand" Content=" " HorizontalAlignment="Left" Margin="348,448,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnModificar_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

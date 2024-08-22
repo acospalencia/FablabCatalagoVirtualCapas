@@ -13,7 +13,7 @@
                 <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
             </Grid.Background>
             <Label Content="Elija la opcion a realizar" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Foreground="#FFF9F9F9" FontFamily="Arial" FontWeight="Bold" Height="36"/>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="595,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnEliminar_Click">
+            <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="595,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnEliminar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -24,7 +24,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnModificar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="286,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnModificar_Click">
+            <Button x:Name="btnModificar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="296,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnModificar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -35,7 +35,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnAgregar" Content="" HorizontalAlignment="Left" Margin="128,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnAgregar_Click">
+            <Button x:Name="btnAgregar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="128,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnAgregar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -46,7 +46,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnCompra" Content="" HorizontalAlignment="Left" Margin="449,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnCompra_Click">
+            <Button x:Name="btnCompra" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="449,190,0,0" VerticalAlignment="Top" Height="66" Width="66" Click="btnCompra_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

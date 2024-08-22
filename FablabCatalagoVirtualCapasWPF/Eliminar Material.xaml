@@ -26,7 +26,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar1_Click">
+            <Button Cursor="Hand" x:Name="btnRegresar1" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar1_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -37,7 +37,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnEliminar" Visibility="Hidden"   Content="" HorizontalAlignment="Left" Margin="710,198,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnEliminar_Click">
+            <Button x:Name="btnEliminar" Cursor="Hand" Visibility="Hidden"   Content="" HorizontalAlignment="Left" Margin="710,198,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnEliminar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

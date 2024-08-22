@@ -24,7 +24,7 @@
                 </Label.RenderTransform>
             </Label>
             <Label Content="Material" HorizontalAlignment="Left" Margin="56,161,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="30" Width="164" FontWeight="Bold"/>
-            <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+            <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -52,8 +52,8 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button
-                Width="80" VerticalAlignment="Top" x:Name="btnGuardar" Margin="0,383,0,0" Height="75" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand" Click="btnGuardar_Click">
+            <Button 
+                 Width="80" VerticalAlignment="Top" x:Name="btnGuardar" Margin="0,383,0,0" Height="75" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Content="" Cursor="Hand" Click="btnGuardar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

@@ -12,7 +12,7 @@
 
             <ImageBrush ImageSource="Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
-        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="255,204,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnIngresar_Click">
+        <Button x:Name="btnIngresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="255,200,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnIngresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -23,7 +23,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="489,200,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnModificar_Click">
+        <Button x:Name="btnModificar" Cursor="Hand"   Content="" HorizontalAlignment="Left" Margin="489,200,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnModificar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -35,10 +35,16 @@
             </Button.Template>
         </Button>
         <Label Content="MANTENIMIENTO DE AUTORES" HorizontalAlignment="Left" Margin="255,81,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRegresar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
-            </Button.Background>
+        <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRegresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>

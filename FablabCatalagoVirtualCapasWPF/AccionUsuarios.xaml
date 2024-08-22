@@ -13,7 +13,7 @@
                 <ImageBrush ImageSource="/Recursos/Fondos/Fondo2.jpg"/>
             </Grid.Background>
             <Label Content="ELIJA LA OPCION A REALIZAR" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="22"/>
-            <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="288,193,0,0" VerticalAlignment="Top" Width="66" Height="66" Click="btnIngresar_Click">
+            <Button x:Name="btnIngresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="288,193,0,0" VerticalAlignment="Top" Width="66" Height="66" Click="btnIngresar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -29,7 +29,7 @@
                     <ImageBrush ImageSource="/Recursos/Botones/BtnEditar.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+            <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -40,7 +40,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="447,193,0,0" VerticalAlignment="Top" Width="66" Height="66" Click="btnEliminar_Click">
+            <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="447,193,0,0" VerticalAlignment="Top" Width="66" Height="66" Click="btnEliminar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

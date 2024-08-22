@@ -13,7 +13,7 @@
                 <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
             </Grid.Background>
             <Label Content="Fecha de inscripcion: " HorizontalAlignment="Left" Margin="159,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White" Width="211"/>
-            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="631,308,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click">
+            <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="631,308,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -26,7 +26,7 @@
             </Button>
             <Label Content="Autor:" HorizontalAlignment="Left" Margin="494,83,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16" Width="68"/>
             <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="168,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" Height="76"/>
-            <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
+            <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

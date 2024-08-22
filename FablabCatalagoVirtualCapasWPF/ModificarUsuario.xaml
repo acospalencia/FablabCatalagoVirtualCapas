@@ -15,7 +15,7 @@
         <TextBox HorizontalAlignment="Left" Margin="151,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" Height="26"/>
         <Label Content="Contraseña" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial Black" FontSize="20" Foreground="#FFF7E8E8" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Margin="151,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="141" Height="26"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50">
+        <Button Content="" Cursor="Hand" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -26,7 +26,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Content="" HorizontalAlignment="Center" Margin="0,333,0,0" VerticalAlignment="Top" Height="75" Width="80">
+        <Button Content="" Cursor="Hand" HorizontalAlignment="Center" Margin="0,333,0,0" VerticalAlignment="Top" Height="75" Width="80">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

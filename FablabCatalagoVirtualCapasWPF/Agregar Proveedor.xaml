@@ -40,7 +40,7 @@
         <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="451,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="290" Height="25" />
         <Label Content="Teléfono" HorizontalAlignment="Left" Margin="451,102,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Foreground="#FFF7F1F1" Height="31" Width="80" FontWeight="Bold"/>
         <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="451,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Height="25" />
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+        <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -51,7 +51,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Height="75" Margin="596,308,0,0" VerticalAlignment="Top" Width="80" FontSize="16" FontWeight="Bold" FontFamily="Arial" Click="btnGuardar_Click">
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Height="75" Margin="596,308,0,0" VerticalAlignment="Top" Width="80" FontSize="16" FontWeight="Bold" FontFamily="Arial" Click="btnGuardar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

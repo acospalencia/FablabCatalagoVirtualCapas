@@ -29,7 +29,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnIngresar" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="261,282,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
+        <Button x:Name="btnIngresar" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Content="" Click="BtnIngresar_Click" Margin="261,282,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
         <PasswordBox x:Name="txtPassword" Controls:ControlsHelper.FocusBorderBrush="Black" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="262" Height="36" Password="Contraseña" GotFocus="txtPassword_GotFocus" Foreground="#FF878787" Background="#FFFDFDFD" BorderBrush="#FFCCCCCC"/>
 
     </Grid>

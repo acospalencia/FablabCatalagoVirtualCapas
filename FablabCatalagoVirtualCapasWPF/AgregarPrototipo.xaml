@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="120,68,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
-        <Button Content="" Name="btnRegresar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+        <Button Content="" Cursor="Hand" Name="btnRegresar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -49,7 +49,7 @@
         <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="401,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="401,203,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold" FontFamily="Arial" FontSize="14" Foreground="#FFF7EFEF"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="401,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="btnAgg" Content="" HorizontalAlignment="Left" Margin="414,429,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnAgg_Click"  >
+        <Button x:Name="btnAgg" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="414,429,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnAgg_Click"  >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -62,7 +62,7 @@
         </Button>
         <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="343" Margin="727,72,0,0" VerticalAlignment="Top" Width="318"/>
         <Label Content="ingresar un nuevo Prototipo" HorizontalAlignment="Center" Margin="0,17,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
-        <Button x:Name="btnAddFoto" Content="Agregar Foto" HorizontalAlignment="Left" Margin="777,452,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnAddFoto_Click"/>
+        <Button x:Name="btnAddFoto" Cursor="Hand" Content="Agregar Foto" HorizontalAlignment="Left" Margin="777,452,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnAddFoto_Click"/>
 
     </Grid>
 </Controls:MetroWindow>
