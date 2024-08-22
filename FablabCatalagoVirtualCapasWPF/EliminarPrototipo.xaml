@@ -23,7 +23,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="255,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272" Height="32" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="255,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272" Height="32" TextChanged="txtbuscar_TextChanged"/>
         <Button Content=""  HorizontalAlignment="Left" Margin="533,88,0,287" Width="43">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">

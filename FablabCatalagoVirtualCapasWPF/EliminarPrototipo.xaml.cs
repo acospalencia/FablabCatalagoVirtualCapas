@@ -73,7 +73,7 @@ namespace prototipos
 			}
 		}
 
-		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+		private void txtbuscar_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			if (string.IsNullOrEmpty(txtbuscar.Text) || txtbuscar.Text == "0")
 			{
