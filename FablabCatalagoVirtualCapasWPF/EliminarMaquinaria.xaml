@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="EliminarMaquinaria" Height="500" Width="900   " ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="Modificar o Eliminar registros" Height="500" Width="900   " ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>

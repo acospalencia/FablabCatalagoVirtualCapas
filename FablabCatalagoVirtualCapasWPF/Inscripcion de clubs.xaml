@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FablabCatalagoVirtualCapasWPF"
         mc:Ignorable="d"
-        Title="Inscripcion_de_clubs" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Ingresar nuevo registro" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid>
             <Grid.Background>

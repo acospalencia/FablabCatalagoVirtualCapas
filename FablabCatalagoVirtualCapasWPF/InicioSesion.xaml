@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="Iniciar Sesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Height="450" Width="803">
+        Title="Iniciar Sesion" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Height="450" Width="803" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

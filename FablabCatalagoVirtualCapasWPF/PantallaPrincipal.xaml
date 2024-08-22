@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fablab.esfe"
         mc:Ignorable="d"
-        Title="Pantalla Principal" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Bienvenido" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="434">
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo5.png" Stretch="UniformToFill"/>

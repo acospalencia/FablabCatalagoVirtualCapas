@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="Accion_Material" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Seleccionar proceso" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid x:Name="btnRegresar">
             <Grid.Background>

@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="IngresarAutores" Height="444" Width="620" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Ingresar nuevo registro" Height="444" Width="620" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo6.jpeg"/>

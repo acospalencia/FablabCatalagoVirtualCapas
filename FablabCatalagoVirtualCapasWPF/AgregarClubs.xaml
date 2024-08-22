@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FablabCatalagoVirtualCapasWPF"
         mc:Ignorable="d"
-        Title="AgregarClubs" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Ingresar nuevo registro" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid>
             <Grid.Background>
@@ -38,7 +38,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Label Content="Ingrese un nuevo club" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="240" FontWeight="Bold"/>
+            <Label Content="Ingrese un nuevo club" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="250" FontWeight="Bold"/>
 
         </Grid>
 

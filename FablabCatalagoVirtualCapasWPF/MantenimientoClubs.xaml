@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="MantenimientoClubs" Height="386" Width="616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Seleccionar proceso" Height="386" Width="616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
