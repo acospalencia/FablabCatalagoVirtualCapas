@@ -53,35 +53,32 @@ namespace Fablab.esfe
 
 		private void BtnIngresar_Click(object sender, RoutedEventArgs e)
 		{
-			var formAgregar = new SelecAdministrar();
-			formAgregar.Show();
-			this.Close();
-			//if (Validar())
-   //         {
-			//	var inicioSesion = new User
-			//	{
-			//		Usuario = txtUsuario.Text,
-			//		Password = Encrypt(txtPassword.Password)
-			//	};
-			//	var verificar = new UserBL();
-			//	User Logearse = verificar.Login(inicioSesion);
+			if (Validar())
+			{
+				var inicioSesion = new User
+				{
+					Usuario = txtUsuario.Text,
+					Password = Encrypt(txtPassword.Password)
+				};
+				var verificar = new UserBL();
+				User Logearse = verificar.Login(inicioSesion);
 
-			//	if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
-			//	{
-			//		var formAgregar = new SelecAdministrar();
-			//		formAgregar.Show();
-			//		this.Hide();
-			//	}
-			//	else
-			//	{
-			//		MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
-			//	}
-			//}
-   //         else
-   //         {
-			//	MessageBox.Show("Rellene todos los campos solicitados para iniciar seesion por favor", "Error");
-			//}
-        }
+				if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
+				{
+					var formAgregar = new SelecAdministrar();
+					formAgregar.Show();
+					this.Hide();
+				}
+				else
+				{
+					MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
+				}
+			}
+			else
+			{
+				MessageBox.Show("Rellene todos los campos solicitados para iniciar seesion por favor", "Error");
+			}
+		}
 
 		private void txtUsuario_GotFocus(object sender, RoutedEventArgs e)
 		{
