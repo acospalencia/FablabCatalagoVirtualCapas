@@ -54,75 +54,81 @@ namespace prototipos
 
 		private void btnAgg_Click(object sender, RoutedEventArgs e)
 		{
-
-			
-			if (validar())
-			{
-				var duracion = new Duraciones
+            if (imgPrototipo.Source != null)
+            {
+				if (validar())
 				{
-					TiempoDiseno = txtDesign.Text,
-					TiempoArmado = txtArmarlo.Text,
-					TiempoFabricado = txtFabricarlo.Text
-				};
-
-				var gurdarduraciones = new DuracionesBL();
-				gurdarduraciones.GuardarDuracion(duracion);
-
-				BitmapSource bitmapSource = (BitmapSource)imgPrototipo.Source;
-				byte[] abyte = null;
-
-
-				if (bitmapSource != null)
-				{
-					using (MemoryStream ms = new MemoryStream())
+					var duracion = new Duraciones
 					{
-						JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-						encoder.Frames.Add(BitmapFrame.Create(bitmapSource));
-						encoder.Save(ms);
+						TiempoDiseno = txtDesign.Text,
+						TiempoArmado = txtArmarlo.Text,
+						TiempoFabricado = txtFabricarlo.Text
+					};
 
-						abyte = ms.ToArray();
+					var gurdarduraciones = new DuracionesBL();
+					gurdarduraciones.GuardarDuracion(duracion);
+
+					BitmapSource bitmapSource = (BitmapSource)imgPrototipo.Source;
+					byte[] abyte = null;
+
+
+					if (bitmapSource != null)
+					{
+						using (MemoryStream ms = new MemoryStream())
+						{
+							JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+							encoder.Frames.Add(BitmapFrame.Create(bitmapSource));
+							encoder.Save(ms);
+
+							abyte = ms.ToArray();
+						}
+					}
+
+					var durabl = new DuracionesBL();
+
+					var Guardardatos = new Prototipo
+					{
+						NombrePrototipo = txtNombre.Text,
+						IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
+						X = txtX.Text,
+						Y = txtY.Text,
+						Z = txtZ.Text,
+						Descripcion = txtDescripcion.Text,
+						Imagen = abyte,
+						IdDuracion = durabl.RegresarId(),
+						IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
+						IdMaquinaria = Convert.ToInt32(cbMaquinaria.SelectedValue)
+
+					};
+					if (Guardardatos != null)
+					{
+						var guardarInfo = new PrototipoBL();
+						guardarInfo.Guardar(Guardardatos);
+						txtDescripcion.Text = null;
+						txtY.Text = null;
+						txtNombre.Text = null;
+						txtZ.Text = null;
+						txtDesign.Text = null;
+						txtArmarlo.Text = null;
+						txtFabricarlo.Text = null;
+						imgPrototipo.Source = null;
+						txtX.Text = null;
+
+						var ScCrea = new CreacionPrototipo();
+						ScCrea.ShowDialog();
 					}
 				}
-
-				var durabl = new DuracionesBL();
-
-				var Guardardatos = new Prototipo
+				else
 				{
-					NombrePrototipo = txtNombre.Text,
-					IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
-					X = txtX.Text,
-					Y = txtY.Text,
-					Z = txtZ.Text,
-					Descripcion = txtDescripcion.Text,
-					Imagen = abyte,
-					IdDuracion = durabl.RegresarId(),
-					IdEstado = Convert.ToInt32(cbIdEstado.SelectedValue),
-					IdMaquinaria = Convert.ToInt32(cbMaquinaria.SelectedValue)
-
-				};
-				if (Guardardatos != null)
-				{
-					var guardarInfo = new PrototipoBL();
-					guardarInfo.Guardar(Guardardatos);
-					txtDescripcion.Text = null;
-					txtY.Text = null;
-					txtNombre.Text = null;
-					txtZ.Text = null;
-					txtDesign.Text = null;
-					txtArmarlo.Text = null;
-					txtFabricarlo.Text = null;
-					imgPrototipo.Source = null;
-					txtX.Text = null;
-
-					var ScCrea = new CreacionPrototipo();
-					ScCrea.ShowDialog();
+					MessageBox.Show("porfavor rellene los correspondientes textbox");
 				}
 			}
-			else
-			{
-				MessageBox.Show("porfavor rellene los correspondientes textbox");
+            else
+            {
+				MessageBox.Show("porfavor selecciona una imagen para el registro");
+
 			}
-		}
+        }
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
