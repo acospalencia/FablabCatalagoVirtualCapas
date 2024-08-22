@@ -6,17 +6,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipos"
         mc:Ignorable="d"
-        Title="ModificarPrototipo" Height="579" Width="1076" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="ModificarPrototipo" Height="579" Width="1080" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo6.jpeg"/>
         </Grid.Background>
-        <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,117,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="513" Height="340" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dgListado" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="531,117,0,0" SelectionChanged="dgListado_SelectionChanged" IsReadOnly="True" HorizontalAlignment="Left" Width="539" Height="340" VerticalAlignment="Top"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="51,109,0,0" VerticalAlignment="Top" Width="79" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="btnRegresar" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="43" Click="btnRegresar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
-            </Button.Background>
+        <Button x:Name="btnRegresar" Content=" " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="51,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" FontWeight="Bold" FontFamily="Arial" FontSize="14"  />
         <Label Content="Tipo de material " HorizontalAlignment="Left" Margin="51,153,0,0" VerticalAlignment="Top" Width="120" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
@@ -49,17 +55,29 @@
         <TextBox x:Name="txtFabricarlo" HorizontalAlignment="Left" Margin="278,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="278,248,0,0" VerticalAlignment="Top" Width="90" Foreground="#FFF7EAEA" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="278,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="103" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="btnModificar" Content=" " HorizontalAlignment="Left" Margin="405,466,0,0" VerticalAlignment="Top" Height="52" Width="66" Click="btnModificar_Click" >
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
-            </Button.Background>
+        <Button x:Name="btnModificar" Content=" " HorizontalAlignment="Left" Margin="348,448,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnModificar_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="648,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" TextChanged="txtBuscar_TextChanged" FontFamily="Arial" FontSize="25" />
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="648,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" TextChanged="txtBuscar_TextChanged" FontFamily="Arial" FontSize="25" />
         <Button Content="
-                " HorizontalAlignment="Left" Margin="903,80,0,0" VerticalAlignment="Top" Width="46" Height="32">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnLupa.png"/>
-            </Button.Background>
+                " HorizontalAlignment="Left" Margin="915,68,0,0" VerticalAlignment="Top" Width="40" Height="40">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnLupa.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Label Content="Modificar registros de Prototipos" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="74,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Visibility="Hidden"/>

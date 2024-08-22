@@ -17,7 +17,7 @@
         </Grid.Background>
 
         <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.ClearTextButton="True" Margin="260,178,0,0" TextWrapping="Wrap" Text="Usuario" FontWeight="Bold" FontFamily="Arial" FontSize="16" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262" Foreground="#FF878787" GotFocus="txtUsuario_GotFocus" Background="#FFFDFDFD" Controls:ControlsHelper.FocusBorderBrush="Black"/>
-        <Button  x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="45" Cursor="Hand">
+        <Button  x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>

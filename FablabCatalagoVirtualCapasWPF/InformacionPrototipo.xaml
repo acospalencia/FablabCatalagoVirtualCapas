@@ -25,7 +25,7 @@
         <Label x:Name="lblZ" Content="DImension Z: " HorizontalAlignment="Left" Margin="335,348,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblEstado" Content="Estado: " HorizontalAlignment="Left" Margin="39,226,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <Label x:Name="lblDescripcion" Content="Descripcion: " HorizontalAlignment="Left" Margin="39,422,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
-        <Button x:Name="btn_regresar" Visibility="Visible" Content="" HorizontalAlignment="Left" Margin="21,21,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="55" Height="51" Foreground="{x:Null}" Cursor="Hand">
+        <Button x:Name="btn_regresar" Visibility="Visible" Content="" HorizontalAlignment="Left" Margin="21,21,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Foreground="{x:Null}" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>

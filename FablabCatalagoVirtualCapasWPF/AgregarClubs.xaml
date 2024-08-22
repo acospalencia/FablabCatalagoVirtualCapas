@@ -14,13 +14,19 @@
             </Grid.Background>
             <Label Content="Nombre del club: " HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="19" Foreground="White" Height="32" Width="172"/>
             <TextBox x:Name="txtNombreClub" HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" Height="35"/>
-            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="280,332,0,0" VerticalAlignment="Top" Height="60" Width="69" Click="btnGuardar_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
-                </Button.Background>
+            <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="280,319,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                            <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
             <Button x:Name="btnIncripcion" Content="Inscripcion de clubs" HorizontalAlignment="Left" Margin="457,341,0,0" VerticalAlignment="Top" Width="215" Height="40" FontWeight="Bold" FontFamily="Arial" FontSize="16" Background="#FF714A88" Click="btnIncripcion_Click"/>
-            <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="39" Cursor="Hand">
+            <Button x:Name="btn_regresar" Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

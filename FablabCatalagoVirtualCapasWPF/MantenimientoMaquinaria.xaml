@@ -12,20 +12,38 @@
             <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
         <Label Content="MANTENIMIENTO PARA MAQUINARIAS" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Background="Black" FontWeight="Bold" FontFamily="Arial" FontSize="22" Foreground="White"/>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="464,176,0,0" VerticalAlignment="Top" Width="86" Height="72" Click="btnModificar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Recursos/Botones/BtnEditar.png"/>
-            </Button.Background>
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="533,209,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnModificar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnEditar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="217,176,0,0" VerticalAlignment="Top" Width="95" Height="72" Click="btnIngresar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Recursos/Botones/BtnIngresar.png"/>
-            </Button.Background>
+        <Button x:Name="btnIngresar" Content="" HorizontalAlignment="Left" Margin="187,209,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnIngresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnIngresar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42" Click="btnRegresar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
-            </Button.Background>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRegresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>

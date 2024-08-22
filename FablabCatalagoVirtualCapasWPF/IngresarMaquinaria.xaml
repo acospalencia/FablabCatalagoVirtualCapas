@@ -19,18 +19,30 @@
         <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="89,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="341,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="341,175,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Width="94" Height="73" Click="btnGuardar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Recursos/Botones/BtnGuardar.png"/>
-            </Button.Background>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Center" Margin="0,306,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnGuardar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
             <Button.Foreground>
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="42" Click="btnRegresar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/Recursos/Botones/BtnFlechaAtras.png"/>
-            </Button.Background>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnRegresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>

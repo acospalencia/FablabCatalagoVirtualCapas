@@ -23,10 +23,16 @@
             <Label Content="Usuario que esta registrando:" HorizontalAlignment="Left" Margin="450,83,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="16" FontWeight="Bold"/>
             <Label Content="Fecha de creación:" HorizontalAlignment="Left" Margin="457,163,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="16" FontWeight="Bold"/>
             <Label Content="Agregar registro de creacion del prototipo" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
-            <Button x:Name="btnAgg" Content="" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Height="51" Width="68" Click="btnAgg_Click"  >
-                <Button.Background>
-                    <ImageBrush ImageSource="/Recursos/Botones/BtnGuardar.png"/>
-                </Button.Background>
+            <Button x:Name="btnAgg" Content="" HorizontalAlignment="Center" Margin="0,337,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnAgg_Click"  >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                            <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
 
         </Grid>
