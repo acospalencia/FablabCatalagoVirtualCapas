@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja la capa de acceso a datos para la creación de prototipos.
+	/// </summary>
 	public class CreacionProtoDAL
 	{
+		/// <summary>
+		/// Guarda una nueva creación de prototipo en la base de datos.
+		/// </summary>
+		/// <param name="pCreac">Instancia del objeto CreacionProto a guardar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int GuardarCreacion(CreacionProto pCreac)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -25,4 +33,5 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 	}
+
 }

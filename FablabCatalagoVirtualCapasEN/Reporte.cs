@@ -6,9 +6,20 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasEN
 {
+	/// <summary>
+	/// Representa un reporte que incluye el autor y la cantidad de prototipos.
+	/// </summary>
 	public class Reporte
 	{
-		public string Autor {  get; set; }
+		/// <summary>
+		/// Nombre del autor del reporte.
+		/// </summary>
+		public string Autor { get; set; }
+
+		/// <summary>
+		/// Cantidad de prototipos asociados al reporte.
+		/// </summary>
 		public int CantidadPrototipos { get; set; }
 	}
+
 }

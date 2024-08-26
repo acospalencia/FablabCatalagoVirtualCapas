@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja la capa de acceso a datos para los autores.
+	/// </summary>
 	public class AutoresDAL
 	{
+		/// <summary>
+		/// Obtiene la lista completa de autores desde la base de datos.
+		/// </summary>
+		/// <returns>Lista de objetos Autores.</returns>
 		public List<Autores> RegresarLista()
 		{
 			List<Autores> ListaAutores = new List<Autores>();
@@ -20,17 +27,25 @@ namespace FablabCatalagoVirtualCapasDAL
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
-				Autores Autores = new Autores();
-				Autores.Id = reader.GetInt32(0);
-				Autores.Nombres = reader.GetString(1);
-				Autores.Apellidos = reader.GetString(2);
-				Autores.CorreElectronico = reader.GetString(3);
-				Autores.FechaRegistro = reader.GetDateTime(4);
+				Autores autor = new Autores
+				{
+					Id = reader.GetInt32(0),
+					Nombres = reader.GetString(1),
+					Apellidos = reader.GetString(2),
+					CorreElectronico = reader.GetString(3),
+					FechaRegistro = reader.GetDateTime(4)
+				};
 
-				ListaAutores.Add(Autores);
+				ListaAutores.Add(autor);
 			}
 			return ListaAutores;
 		}
+
+		/// <summary>
+		/// Guarda un nuevo autor en la base de datos.
+		/// </summary>
+		/// <param name="pAutor">Instancia del objeto Autores a guardar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int GuardarAutor(Autores pAutor)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -42,6 +57,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Modifica un autor existente en la base de datos.
+		/// </summary>
+		/// <param name="pAutor">Instancia del objeto Autores con los datos actualizados.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int ModificarAutor(Autores pAutor)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -54,6 +75,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Elimina un autor de la base de datos.
+		/// </summary>
+		/// <param name="pAutor">Instancia del objeto Autores a eliminar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int EliminarAutor(Autores pAutor)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -63,4 +90,5 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 	}
+
 }

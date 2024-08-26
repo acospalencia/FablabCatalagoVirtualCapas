@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja el acceso a datos para la información del prototipo en la base de datos.
+	/// </summary>
 	public class ModeloProto2DAL
 	{
+		/// <summary>
+		/// Recupera la información de un prototipo desde la base de datos basado en el nombre del prototipo.
+		/// </summary>
+		/// <param name="pPrototipo">Objeto de tipo <see cref="Prototipo"/> que contiene el nombre del prototipo.</param>
+		/// <returns>Un objeto de tipo <see cref="ModeloProto2"/> que representa la información del prototipo.</returns>
 		public ModeloProto2 MostrarInfo(Prototipo pPrototipo)
 		{
 			var test = new ModeloProto2();
@@ -49,4 +57,5 @@ namespace FablabCatalagoVirtualCapasDAL
 			return test;
 		}
 	}
+
 }

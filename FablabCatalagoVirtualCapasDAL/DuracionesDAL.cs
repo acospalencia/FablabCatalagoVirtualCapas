@@ -11,8 +11,16 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja el acceso a datos para las duraciones de los procesos en la base de datos.
+	/// </summary>
 	public class DuracionesDAL
 	{
+		/// <summary>
+		/// Guarda una nueva duración en la base de datos.
+		/// </summary>
+		/// <param name="pDuraciones">Instancia del objeto Duraciones que contiene la información de la duración a guardar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int GuardarDuraciones(Duraciones pDuraciones)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -23,6 +31,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@TiempoArmado", pDuraciones.TiempoArmado);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Actualiza las duraciones existentes en la base de datos.
+		/// </summary>
+		/// <param name="pDuraciones">Instancia del objeto Duraciones que contiene la información actualizada de la duración.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int ActualizarDuraciones(Duraciones pDuraciones)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -35,6 +49,10 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
+		/// <summary>
+		/// Obtiene el último identificador registrado en la base de datos.
+		/// </summary>
+		/// <returns>El último identificador registrado.</returns>
 		public int RegresarId()
 		{
 			int Id = 0;
@@ -45,10 +63,15 @@ namespace FablabCatalagoVirtualCapasDAL
 			while (reader.Read())
 			{
 				Id = reader.GetInt32(0);
-
 			}
 			return Id;
 		}
+
+		/// <summary>
+		/// Muestra la información de duraciones basándose en el identificador proporcionado.
+		/// </summary>
+		/// <param name="Id">Identificador de la duración a recuperar.</param>
+		/// <returns>Una instancia del objeto Duraciones con la información recuperada.</returns>
 		public Duraciones MostrarPorIdDuraciones(int Id)
 		{
 			var test = new Duraciones();
@@ -69,4 +92,5 @@ namespace FablabCatalagoVirtualCapasDAL
 			return test;
 		}
 	}
+
 }

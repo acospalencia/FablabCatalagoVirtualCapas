@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja el acceso a datos para las inscripciones en clubes en la base de datos.
+	/// </summary>
 	public class InscripcionClubDAL
 	{
+		/// <summary>
+		/// Guarda una nueva inscripción en el club en la base de datos.
+		/// </summary>
+		/// <param name="pInscr">Objeto de tipo <see cref="InscripcionClub"/> que contiene los datos de la inscripción.</param>
+		/// <returns>El número de filas afectadas por la operación.</returns>
 		public int GuardarInscripcion(InscripcionClub pInscr)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -22,6 +30,11 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Detalle", pInscr.Detalle);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Recupera una lista de todas las inscripciones en clubes desde la base de datos.
+		/// </summary>
+		/// <returns>Una lista de objetos de tipo <see cref="InscripcionClub"/> que representan las inscripciones en clubes.</returns>
 		public List<InscripcionClub> RegresarLista()
 		{
 			List<InscripcionClub> ListaInscripcion = new List<InscripcionClub>();
@@ -42,6 +55,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return ListaInscripcion;
 		}
+
+		/// <summary>
+		/// Modifica una inscripción existente en el club en la base de datos.
+		/// </summary>
+		/// <param name="pInscr">Objeto de tipo <see cref="InscripcionClub"/> con los datos actualizados de la inscripción.</param>
+		/// <returns>El número de filas afectadas por la operación.</returns>
 		public int ModificarInscripcion(InscripcionClub pInscr)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -54,6 +73,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Detalle", pInscr.Detalle);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Elimina una inscripción del club en la base de datos.
+		/// </summary>
+		/// <param name="pInscr">Objeto de tipo <see cref="InscripcionClub"/> que representa la inscripción a eliminar.</param>
+		/// <returns>El número de filas afectadas por la operación.</returns>
 		public int EliminarInscripcion(InscripcionClub pInscr)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -63,4 +88,5 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 	}
+
 }

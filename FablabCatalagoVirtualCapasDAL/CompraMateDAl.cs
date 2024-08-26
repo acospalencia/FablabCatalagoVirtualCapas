@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
-	public class CompraMateDAl
+	/// <summary>
+	/// Clase que maneja la capa de acceso a datos para las compras de materiales.
+	/// </summary>
+	public class CompraMateDAL
 	{
+		/// <summary>
+		/// Guarda una nueva compra de material en la base de datos.
+		/// </summary>
+		/// <param name="pCompra">Instancia del objeto CompraMate a guardar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int GuardarCompra(CompraMate pCompra)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -22,6 +30,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@TotalPagar", pCompra.TotalPagar);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Modifica una compra de material existente en la base de datos.
+		/// </summary>
+		/// <param name="pCompra">Instancia del objeto CompraMate con los datos actualizados.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int ModificarCompra(CompraMate pCompra)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -34,6 +48,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@TotalPagar", pCompra.TotalPagar);
 			return ComunBD.EjecutarComand(cmd);
 		}
+
+		/// <summary>
+		/// Elimina una compra de material de la base de datos.
+		/// </summary>
+		/// <param name="pCompra">Instancia del objeto CompraMate a eliminar.</param>
+		/// <returns>El número de filas afectadas en la base de datos.</returns>
 		public int DeleteCompra(CompraMate pCompra)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -43,25 +63,32 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
+		/// <summary>
+		/// Obtiene la lista completa de compras de materiales desde la base de datos.
+		/// </summary>
+		/// <returns>Lista de objetos CompraMate.</returns>
 		public List<CompraMate> RegresarLista()
 		{
-			List<CompraMate> ListaClubs = new List<CompraMate>();
+			List<CompraMate> ListaCompras = new List<CompraMate>();
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "SPListaCompra";
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
-				CompraMate Club = new CompraMate();
-				Club.Id = reader.GetInt32(0);
-				Club.IdMaterial = reader.GetInt32(1);
-				Club.IdProveedor = reader.GetInt32(2);
-				Club.CantidadCompra = reader.GetString(3);
-				Club.TotalPagar = reader.GetDecimal(4);
+				CompraMate compra = new CompraMate
+				{
+					Id = reader.GetInt32(0),
+					IdMaterial = reader.GetInt32(1),
+					IdProveedor = reader.GetInt32(2),
+					CantidadCompra = reader.GetString(3),
+					TotalPagar = reader.GetDecimal(4)
+				};
 
-				ListaClubs.Add(Club);
+				ListaCompras.Add(compra);
 			}
-			return ListaClubs;
+			return ListaCompras;
 		}
 	}
+
 }
