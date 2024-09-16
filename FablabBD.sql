@@ -87,6 +87,7 @@ CREATE TABLE Autores
 	Nombres NVARCHAR(20) NOT NULL,
 	Apellidos NVARCHAR(20) NOT NULL,
 	CorreElectronico NVARCHAR(100) NOT NULL,
+	[Password] NVARCHAR(MAX) NOT NULL,
 	FechaRegistro DATE NOT NULL
 );
 CREATE TABLE CreacionPrototipos
@@ -102,7 +103,8 @@ CREATE TABLE CreacionPrototipos
 CREATE TABLE Clubs
 (
 	Id INT PRIMARY KEY NOT NULL IDENTITY (1,1),
-	NombreClub  NVARCHAR (50) NOT NULL
+	NombreClub  NVARCHAR (50) NOT NULL,
+	Detalle NVARCHAR (250) NOT NULL 
 );
 CREATE TABLE InscripcionClubs
 (
@@ -112,6 +114,15 @@ CREATE TABLE InscripcionClubs
 	FechaInscripcion DATE NOT NULL,
 	Detalle NVARCHAR (250) NOT NULL
 
+);
+CREATE TABLE SolicitudProyectos
+(
+	Id INT PRIMARY KEY NOT NULL IDENTITY (1,1),
+	TipoProyecto NVARCHAR(50) NOT NULL,
+	Descripcion NVARCHAR(MAX) NOT NULL,
+	Integrantes INT NOT NULL,
+	Fecha DATE NOT NULL,
+	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 GO
 
@@ -130,14 +141,6 @@ AS
 BEGIN
 SELECT *
 FROM Materiales 
-END
-GO
-
-CREATE PROCEDURE SPObtenerTodoAutores
-AS
-BEGIN
-SELECT *
-FROM Autores 
 END
 GO
 
@@ -181,15 +184,6 @@ CREATE PROCEDURE SPEliminarProveedores
 AS
 BEGIN
 DELETE FROM Proveedores
-WHERE Id = @Id
-END
-GO
-
-CREATE PROCEDURE SPEliminarAutores
-@Id INT
-AS
-BEGIN
-DELETE FROM Autores
 WHERE Id = @Id
 END
 GO
@@ -259,18 +253,6 @@ VALUES (@Usuario, @Pasword)
 END
 GO
 
-CREATE PROCEDURE SPAgregarAutor
-@Nombre NVARCHAR(20),
-@Apellidos NVARCHAR(20),
-@CorreElectronico NVARCHAR(100),
-@FechaRegistro DATE
-AS
-BEGIN
-INSERT INTO Autores
-VALUES (@Nombre, @Apellidos, @CorreElectronico, @FechaRegistro)
-END
-GO
-
 --Metodos para Actualizar un registro de las tablas basado en su Id
 CREATE PROCEDURE spActualizarPrototipo
 @NombrePrototipo NVARCHAR(30),
@@ -327,27 +309,12 @@ GO
 
 CREATE PROCEDURE SPActualizarUsuarios
 @Usuario NVARCHAR(10),
-@Pasword NVARCHAR(30),
+@Pasword NVARCHAR(MAX),
 @Id INT
 AS
 BEGIN
 UPDATE Usuarios
 SET Usuario = @Usuario, [Password] = @Pasword
-WHERE Id = @Id
-END
-GO
-
-CREATE PROCEDURE SPActualizarAutor
-@Nombre NVARCHAR(20),
-@Apellidos NVARCHAR(20),
-@CorreElectronico NVARCHAR(100),
-@FechaRegistro DATE,
-@Id INT
-AS
-BEGIN
-UPDATE Autores
-SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, 
-FechaRegistro = @FechaRegistro 
 WHERE Id = @Id
 END
 GO
@@ -594,24 +561,27 @@ CREATE PROCEDURE SPAggAutor
 @Nombres NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
+@Contraseña NVARCHAR(MAX),
 @FechaRegistro DATE
 AS
 BEGIN
 INSERT INTO Autores
-VALUES (@Nombres, @Apellidos, @CorreElectronico, @FechaRegistro)
+VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contraseña, @FechaRegistro)
 END
 GO
 
 CREATE PROCEDURE SPModiAutor
-@Id INT,
-@Nombres NVARCHAR(20),
+@Nombre NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
-@FechaRegistro DATE
+@Contraseña NVARCHAR(MAX),
+@FechaRegistro DATE,
+@Id INT
 AS
 BEGIN
 UPDATE Autores
-SET Nombres = @Nombres, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, FechaRegistro = @FechaRegistro
+SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, [Password] = @Contraseña,
+FechaRegistro = @FechaRegistro 
 WHERE Id = @Id
 END
 GO
@@ -626,11 +596,12 @@ END
 GO
 
 CREATE PROCEDURE SPAddClubs
-@NombreClub  NVARCHAR (50)
+@NombreClub  NVARCHAR (50),
+@Detalle NVARCHAR (250)
 AS 
 BEGIN
 INSERT INTO Clubs
-VALUES (@NombreClub)
+VALUES (@NombreClub, @Detalle)
 END 
 GO
 
