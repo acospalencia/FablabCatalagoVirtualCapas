@@ -219,6 +219,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FablabCatalagoVirtualCapasBL\FablabCatalagoVirtualCapasBL.csproj">
+      <Project>{d1d4b22e-1591-4053-b377-a55c2af08d09}</Project>
+      <Name>FablabCatalagoVirtualCapasBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FablabCatalagoVirtualCapasEN\FablabCatalagoVirtualCapasEN.csproj">
+      <Project>{b5444a84-2094-4c02-9132-cd9c5b5006bd}</Project>
+      <Name>FablabCatalagoVirtualCapasEN</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
