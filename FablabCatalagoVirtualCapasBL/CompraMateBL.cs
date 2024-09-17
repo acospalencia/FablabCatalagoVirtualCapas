@@ -14,7 +14,7 @@ namespace FablabCatalagoVirtualCapasBL
 	public class CompraMateBL
 	{
 		// Instancia de la capa de acceso a datos para compras de materiales.
-		CompraMateDAl CompraDAl = new CompraMateDAl();
+		CompraMateDAL CompraDAl = new CompraMateDAL();
 
 		/// <summary>
 		/// Guarda una nueva compra de material en la base de datos.
