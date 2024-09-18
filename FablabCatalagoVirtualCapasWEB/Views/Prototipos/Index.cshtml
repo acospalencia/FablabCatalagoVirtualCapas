@@ -1,0 +1,37 @@
+﻿@model IEnumerable<FablabCatalagoVirtualCapasEN.Prototipo>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Prototipos</h2>
+
+<div class="row">
+	@foreach (var item in Model)
+	{
+		var imageBase64 = "";
+		if (item.Imagen != null && item.Imagen.Length > 0)
+		{
+			// Convertimos el array de bytes a una cadena Base64
+			var base64String = Convert.ToBase64String(item.Imagen);
+			// Creamos el formato para mostrar la imagen correctamente
+			imageBase64 = String.Format("data:image/jpeg;base64,{0}", base64String);
+		}
+
+		<div class="col-md-4">
+			<div class="card h-100" >
+				<img src="@imageBase64" class="card-img-top " alt="@item.NombrePrototipo" />
+
+				<div class="card-body">
+					<h5 class="card-title">@item.NombrePrototipo</h5>
+					<p class="card-text">
+						Dimensiones: @item.X x @item.Y x @item.Z<br />
+					</p>
+					<a href="@Url.Action("Details", "Prototipos", new { id = item.Id })" class="btn btn-primary">Ver detalles</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>

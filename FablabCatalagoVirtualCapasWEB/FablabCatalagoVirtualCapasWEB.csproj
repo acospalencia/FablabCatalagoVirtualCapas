@@ -148,6 +148,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\MainStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -206,6 +207,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Prototipos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -213,7 +215,6 @@
     <Folder Include="Views\Autores\" />
     <Folder Include="Views\Clubs\" />
     <Folder Include="Views\InscripClubs\" />
-    <Folder Include="Views\Prototipos\" />
     <Folder Include="Views\SoliProyectos\" />
   </ItemGroup>
   <ItemGroup>
