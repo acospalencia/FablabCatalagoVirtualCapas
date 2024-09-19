@@ -212,6 +212,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Stylo\" />
     <Folder Include="Views\Autores\" />
     <Folder Include="Views\Clubs\" />
     <Folder Include="Views\InscripClubs\" />

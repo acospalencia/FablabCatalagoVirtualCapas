@@ -5,7 +5,6 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <h2>Prototipos</h2>
 
 <div class="row">
@@ -14,22 +13,44 @@
 		var imageBase64 = "";
 		if (item.Imagen != null && item.Imagen.Length > 0)
 		{
-			// Convertimos el array de bytes a una cadena Base64
 			var base64String = Convert.ToBase64String(item.Imagen);
-			// Creamos el formato para mostrar la imagen correctamente
 			imageBase64 = String.Format("data:image/jpeg;base64,{0}", base64String);
 		}
 
-		<div class="col-md-4">
-			<div class="card h-100" >
-				<img src="@imageBase64" class="card-img-top " alt="@item.NombrePrototipo" />
+		var modalId = "modal-" + item.Id;
+
+		<div class="col-md-3">
+			<div class="card fixed-size-card">
+				<img src="@imageBase64" class="" alt="@item.NombrePrototipo" />
 
 				<div class="card-body">
 					<h5 class="card-title">@item.NombrePrototipo</h5>
 					<p class="card-text">
 						Dimensiones: @item.X x @item.Y x @item.Z<br />
 					</p>
-					<a href="@Url.Action("Details", "Prototipos", new { id = item.Id })" class="btn btn-primary">Ver detalles</a>
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@modalId">
+						Ver detalles
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="@modalId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel-@item.Id" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalLabel-@item.Id">@item.NombrePrototipo</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p><strong>Dimensiones:</strong> @item.X x @item.Y x @item.Z</p>
+						<p><strong>Material:</strong> @item.IdMaterial</p>
+						<p><strong>Estado:</strong> @item.IdEstado</p>
+						<p><strong>Descripción:</strong> @item.Descripcion</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
 				</div>
 			</div>
 		</div>

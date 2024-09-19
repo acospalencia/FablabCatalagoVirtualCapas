@@ -4,7 +4,8 @@
 	height: 400px;
 }
 
-.fixed-size-card img {
+img {
 	height: 200px;
-	object-fit: cover;
+	width: 200px;
+	margin: auto;
 }
