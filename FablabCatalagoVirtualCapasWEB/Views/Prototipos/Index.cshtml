@@ -5,6 +5,7 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>Prototipos</h2>
 
 <div class="row">
@@ -19,16 +20,16 @@
 
 		var modalId = "modal-" + item.Id;
 
-		<div class="col-md-3">
+		<div class="col-md-4">
 			<div class="card fixed-size-card">
-				<img src="@imageBase64" class="" alt="@item.NombrePrototipo" />
+				<img src="@imageBase64" class="imgcard" alt="@item.NombrePrototipo" />
 
 				<div class="card-body">
 					<h5 class="card-title">@item.NombrePrototipo</h5>
-					<p class="card-text">
+					<p class="card-text size">
 						Descripcion: @item.Descripcion<br />
 					</p>
-					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@modalId">
+					<button type="button" class="btn btn-primary btnalign" data-bs-toggle="modal" data-bs-target="#@modalId">
 						Ver detalles
 					</button>
 				</div>
@@ -36,15 +37,20 @@
 		</div>
 
 		<div class="modal fade" id="@modalId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel-@item.Id" aria-hidden="true">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="modalLabel-@item.Id">@item.NombrePrototipo</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<p><strong>Dimensiones:</strong> @item.X x @item.Y x @item.Z</p>
+						<img src="@imageBase64" class="imgmodal" alt="@item.NombrePrototipo" />
+						<p><strong>Dimensiones:</strong> @item.X cm x @item.Y cm x @item.Z cm</p>
 						<p><strong>Material:</strong> @item.NombreMaterial</p>
+						<p><strong>Maquinaria:</strong> @item.Nombre</p>
+						<p><strong>Tiempo de armado:</strong> @item.TiempoArmado</p>
+						<p><strong>Tiempo de diseño:</strong> @item.TiempoDiseno</p>
+						<p><strong>tiempo de fabricación:</strong> @item.TiempoFabricado</p>
 						<p><strong>Estado:</strong> @item.NombreEstado</p>
 						<p><strong>Descripción:</strong> @item.Descripcion</p>
 					</div>
