@@ -14,23 +14,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FablabCatalagoVirtualCapasEN;
 using FablabCatalagoVirtualCapasBL;
+using MahApps.Metro.Controls;
 
 namespace Fablab.esfe
 {
     /// <summary>
     /// Lógica de interacción para InicioSesion.xaml
     /// </summary>
-    public partial class InicioSesion : Window
+    public partial class InicioSesion : MetroWindow
     {
         public InicioSesion()
         {
             InitializeComponent();
         }
 
-		private void Window_Closed(object sender, EventArgs e)
+		private bool Validar()
 		{
-			this.Close();
-           
+			return !string.IsNullOrEmpty(txtUsuario.Text) &&
+				!string.IsNullOrEmpty(txtPassword.Password);
 		}
 
 		private void btn_regresar_Click(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace Fablab.esfe
             back.Show();
             this.Close();
 		}
-		public static string GetSHA256(string str)
+		public static string Encrypt(string str)
 		{
 			SHA256 sha256 = SHA256Managed.Create();
 			ASCIIEncoding encoding = new ASCIIEncoding();
@@ -52,24 +53,43 @@ namespace Fablab.esfe
 
 		private void BtnIngresar_Click(object sender, RoutedEventArgs e)
 		{
-			var inicioSesion = new User
+			if (Validar())
 			{
-				Usuario = txtUsuario.Text,
-				Password = GetSHA256(txtPassword.Text)
-			};
-			var verificar = new UserBL();
-			User Logearse = verificar.Login(inicioSesion);
+				var inicioSesion = new User
+				{
+					Usuario = txtUsuario.Text,
+					Password = Encrypt(txtPassword.Password)
+				};
+				var verificar = new UserBL();
+				User Logearse = verificar.Login(inicioSesion);
 
-			if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
-			{
-				//var formAgregar = new ElegirAccion();
-				//formAgregar.Show();
-				//this.Hide();
+				if (Logearse.Usuario == inicioSesion.Usuario && Logearse.Password == inicioSesion.Password)
+				{
+					var formAgregar = new SelecAdministrar();
+					formAgregar.Show();
+					this.Hide();
+				}
+				else
+				{
+					MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
+				}
 			}
 			else
 			{
-				MessageBox.Show("Revise las credenciales ingresadas por favor", "Error");
+				MessageBox.Show("Rellene todos los campos solicitados para iniciar seesion por favor", "Error");
 			}
+		}
+
+		private void txtUsuario_GotFocus(object sender, RoutedEventArgs e)
+		{
+			txtUsuario.Text = "";
+			txtUsuario.Foreground = new SolidColorBrush(Colors.Black);
+		}
+
+		private void txtPassword_GotFocus(object sender, RoutedEventArgs e)
+		{
+			txtPassword.Password = "";
+			txtPassword.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Fablab.esfe;
+using MahApps.Metro.Controls;
+using prototipos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +20,40 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para RegistrarPrototipos.xaml
     /// </summary>
-    public partial class RegistrarPrototipos : Window
+    public partial class RegistrarPrototipos : MetroWindow
     {
         public RegistrarPrototipos()
         {
             InitializeComponent();
         }
-    }
+
+		private void btnIngresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScAgg = new MainWindow();
+            ScAgg.Show();
+            this.Close();   
+
+		}
+
+		private void btnEliminar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScDel = new Window2();
+			ScDel.Show();
+			this.Close();
+		}
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScBack = new SelecAdministrar();
+            ScBack.Show();
+            this.Close();
+		}
+
+		private void btnModificar_Click(object sender, RoutedEventArgs e)
+		{
+			var ScModi = new Window1();
+			ScModi.Show();
+			this.Close();
+		}
+	}
 }

@@ -1,40 +1,73 @@
-﻿<Window x:Class="interfaces.ModificarClubs"
+﻿<Controls:MetroWindow x:Class="interfaces.ModificarClubs"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="ModificarClubs" Height="450" Width="800">
+        Title="Modificar registros" Height="500" Width="900" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgModiClub.jpg"/>
+            <ImageBrush ImageSource="Recursos/Fondos/Fondo3.jpeg"/>
         </Grid.Background>
         <Label Content="Autores: " HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
         <Label Content="Nombre del club: " HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Fecha de inscripcion: " HorizontalAlignment="Left" Margin="67,248,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
         <Label Content="Descripcion: " HorizontalAlignment="Left" Margin="67,333,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtAutores" HorizontalAlignment="Left" Margin="67,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtNombreClub" HorizontalAlignment="Left" Margin="67,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtFechaInscripcion" HorizontalAlignment="Left" Margin="67,281,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="298,142,28,106"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="400,364,0,0" VerticalAlignment="Top" Height="60" Width="69">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
-            </Button.Background>
+        <ComboBox x:Name="cbIdAutor" HorizontalAlignment="Left" Margin="67,111,0,0" Text="" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="cbIdClub" HorizontalAlignment="Left" Margin="67,199,0,0"  Text="" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="67,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="77"/>
+        <DataGrid x:Name="dgLista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="298,142,10,0" Height="205" VerticalAlignment="Top" SelectionChanged="dgLista_SelectionChanged" ColumnWidth="*"/>
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="450,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click" Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="566,364,0,0" VerticalAlignment="Top" Height="55" Width="65">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
-            </Button.Background>
+        <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="706,368,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnEliminar_Click" Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnEliminar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="427,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Height="25"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="652,80,0,0" VerticalAlignment="Top" Width="46" Height="39">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
-            </Button.Background>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="450,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Height="25" TextChanged="txtBuscar_TextChanged"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="746,92,0,0" VerticalAlignment="Top" Width="40" Height="40 ">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnLupa.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Modificar una inscripcion de Club" HorizontalAlignment="Left" Margin="298,40,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Foreground="White" Height="41" Width="356"/>
+        <DatePicker x:Name="dpFecha" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top" Width="216" IsEnabled="False" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="759,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

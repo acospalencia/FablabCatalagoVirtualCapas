@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
+	/// <summary>
+	/// Clase que maneja el acceso a datos para los modelos de prototipo en la base de datos.
+	/// </summary>
 	public class ModeloPrototipoDAL
 	{
+		/// <summary>
+		/// Recupera una lista de modelos de prototipo desde la base de datos.
+		/// </summary>
+		/// <returns>Una lista de objetos de tipo <see cref="ModeloPrototipo"/> que representan los modelos de prototipo.</returns>
 		public List<ModeloPrototipo> RegresarListaModelo()
 		{
 			List<ModeloPrototipo> lista = new List<ModeloPrototipo>();
@@ -20,15 +27,17 @@ namespace FablabCatalagoVirtualCapasDAL
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
-				ModeloPrototipo ModeloProto = new ModeloPrototipo();
-				ModeloProto.Nombre = reader.GetString(0);
-				ModeloProto.MaterialUsado = reader.GetString(1);
-				ModeloProto.MaquinariaUsada = reader.GetString(2);
-				ModeloProto.Estado = reader.GetString(3);
+				ModeloPrototipo ModeloProto = new ModeloPrototipo
+				{
+					Nombre = reader.GetString(0),
+					MaterialUsado = reader.GetString(1),
+					MaquinariaUsada = reader.GetString(2),
+					Estado = reader.GetString(3)
+				};
 				lista.Add(ModeloProto);
 			}
 			return lista;
-
 		}
 	}
+
 }

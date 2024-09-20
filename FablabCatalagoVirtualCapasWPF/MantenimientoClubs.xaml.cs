@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Fablab.esfe;
+using FablabCatalagoVirtualCapasWPF;
+using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +20,32 @@ namespace interfaces
     /// <summary>
     /// Lógica de interacción para MantenimientoClubs.xaml
     /// </summary>
-    public partial class MantenimientoClubs : Window
+    public partial class MantenimientoClubs : MetroWindow
     {
         public MantenimientoClubs()
         {
             InitializeComponent();
         }
-    }
+
+		private void btnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScBack = new SelecAdministrar();
+            ScBack.Show();
+            this.Close();
+        }
+
+		private void tbnRegresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScAdd = new AgregarClubs();
+            ScAdd.Show();
+            this.Close();
+		}
+
+		private void btnIngresar_Click(object sender, RoutedEventArgs e)
+		{
+            var ScModi = new ModificarClubs();
+            ScModi.Show();
+            this.Close();
+		}
+	}
 }

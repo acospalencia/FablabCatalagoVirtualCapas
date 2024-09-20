@@ -1,0 +1,44 @@
+﻿<Controls:MetroWindow x:Class="prototipos.Window3"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prototipos"
+        mc:Ignorable="d"
+        Title="Ingresar nuevo registro" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Recursos/Fondos/LogoEsfe.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo3.jpeg"/>
+        </Grid.Background>
+        <Label Content="Añadir un nuevo usuario
+" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Height="53" Width="345" FontFamily="Times New Roman" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFF5E8E8" FontWeight="Bold"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="245,137,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFDF6F6"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="349,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="248" Height="26" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="224,204,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="16" FontWeight="Bold" Foreground="#FFFDF6F6"/>
+        <TextBox x:Name="txtContraseña" HorizontalAlignment="Left" Margin="349,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="248" Height="26" FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnRegresar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Center" Margin="0,327,0,0" VerticalAlignment="Top" Height="75" Width="80" Click="btnGuardar_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Controls:MetroWindow>

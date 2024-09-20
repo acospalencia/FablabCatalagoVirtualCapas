@@ -1,42 +1,73 @@
-﻿<Window x:Class="interfaces.EliminarMaquinaria"
+﻿<Controls:MetroWindow x:Class="interfaces.EliminarMaquinaria"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:interfaces"
         mc:Ignorable="d"
-        Title="EliminarMaquinaria" Height="450" Width="800">
+        Title="Modificar o Eliminar registros" Height="500" Width="900   " ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/Recursos/Fondos/LogoEsfe.png">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/BgMaquinaria.jpg"/>
+            <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
         </Grid.Background>
-        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="69,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtMarca" Content="Marca: " HorizontalAlignment="Left" Margin="69,127,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtDetalle" Content="Detalle: " HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtIdMaterial" Content="Id Material: " HorizontalAlignment="Left" Margin="69,281,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <Label x:Name="txtIdEstado" Content="Id Estado: " HorizontalAlignment="Left" Margin="73,358,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="69,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="69,391,0,0" VerticalAlignment="Top" Width="120"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="316,143,65,125"/>
-        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="460,359,0,0" VerticalAlignment="Top" Width="66" Height="55">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgBtnGuardar.jpeg"/>
-            </Button.Background>
+        <Label Content="Nombre: " HorizontalAlignment="Left" Margin="47,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White" Width="119"/>
+        <Label Content="Marca: " HorizontalAlignment="Left" Margin="47,183,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White" Width="98"/>
+        <Label Content="Detalle: " HorizontalAlignment="Left" Margin="47,264,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White" Width="107"/>
+        <Label Content="Id Estado: " HorizontalAlignment="Left" Margin="53,341,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="16" Foreground="White" Width="136"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="47,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" IsEnabled="False" FontFamily="Arial" FontSize="18"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Margin="47,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" IsEnabled="False" FontFamily="Arial" FontSize="18"/>
+        <TextBox x:Name="txtDetalle" HorizontalAlignment="Left" Margin="47,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" IsEnabled="False" FontFamily="Arial" FontSize="18"/>
+        <ComboBox x:Name="cbIdEstado" HorizontalAlignment="Left" Margin="47,374,0,0" VerticalAlignment="Top" Width="229" IsEnabled="False" FontFamily="Arial" FontSize="18"/>
+        <DataGrid x:Name="dgVer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="300,127,10,0" ColumnWidth="*" Height="235" VerticalAlignment="Top" SelectionChanged="dgVer_SelectionChanged"/>
+        <Button x:Name="btnGuardar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="378,383,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnGuardar_Click" Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnGuardar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="608,360,0,0" VerticalAlignment="Top" Width="55" Height="53">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgPapelera.png"/>
-            </Button.Background>
+        <Button x:Name="btnEliminar" Cursor="Hand" Content="" HorizontalAlignment="Left" Margin="592,383,0,0" VerticalAlignment="Top" Width="80" Height="75" Click="btnEliminar_Click" Visibility="Hidden">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnEliminar.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="400,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Height="24"/>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="608,100,0,0" VerticalAlignment="Top" Width="37" Height="24">
-            <Button.Background>
-                <ImageBrush ImageSource="/BgLupa.png"/>
-            </Button.Background>
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Margin="400,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" Height="19" TextChanged="txtBuscar_TextChanged"/>
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="676,81,0,0" VerticalAlignment="Top" Width="40" Height="40">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Image Source="/Recursos/Botones/btnLupa.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
+        <Button x:Name="btn_regresar"  Content="" HorizontalAlignment="Left" Margin="6,7,0,0" VerticalAlignment="Top" Click="btn_regresar_Click" BorderBrush="{x:Null}" Width="50" Height="50       " Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+
+                        <Image Source="/Recursos/Botones/BtnFlechaAtras.png" Stretch="Fill"/>
+                        <!-- Contenido del botón (puede ser texto o cualquier otro elemento visual) -->
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Modifica o Elimina un registro" HorizontalAlignment="Left" Margin="282,40,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="189,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

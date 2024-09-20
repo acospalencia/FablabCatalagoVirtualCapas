@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FablabCatalagoVirtualCapasEN.ModeloProto2>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Prototipos</h2>
+
+<div class="row">
+	@foreach (var item in Model)
+	{
+		var imageBase64 = "";
+		if (item.Imagen != null && item.Imagen.Length > 0)
+		{
+			var base64String = Convert.ToBase64String(item.Imagen);
+			imageBase64 = String.Format("data:image/jpeg;base64,{0}", base64String);
+		}
+
+		var modalId = "modal-" + item.Id;
+
+		<div class="col-md-3">
+			<div class="card fixed-size-card">
+				<img src="@imageBase64" class="" alt="@item.NombrePrototipo" />
+
+				<div class="card-body">
+					<h5 class="card-title">@item.NombrePrototipo</h5>
+					<p class="card-text">
+						Descripcion: @item.Descripcion<br />
+					</p>
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@modalId">
+						Ver detalles
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="@modalId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel-@item.Id" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalLabel-@item.Id">@item.NombrePrototipo</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p><strong>Dimensiones:</strong> @item.X x @item.Y x @item.Z</p>
+						<p><strong>Material:</strong> @item.NombreMaterial</p>
+						<p><strong>Estado:</strong> @item.NombreEstado</p>
+						<p><strong>Descripción:</strong> @item.Descripcion</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>
