@@ -22,6 +22,8 @@ namespace FablabCatalagoVirtualCapasEN
 		/// </summary>
 		public string NombrePrototipo { get; set; }
 
+		public int IdCategoria { get; set; }
+
 		/// <summary>
 		/// Identificador del material utilizado en el prototipo.
 		/// </summary>

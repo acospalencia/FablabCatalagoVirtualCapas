@@ -66,10 +66,18 @@ CREATE TABLE Maquinarias
 	Detalle NVARCHAR (250) NOT NULL,
 	IdEstado INT NOT NULL FOREIGN KEY REFERENCES Estados(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE Categorias
+(
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre VARCHAR (50) NOT NULL
+);
+
 CREATE TABLE Prototipos
 (
     Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
     NombrePrototipo NVARCHAR(50) NOT NULL,
+	IdCategoria INT NOT NULL FOREIGN KEY REFERENCES Categorias(Id) ON DELETE CASCADE ON UPDATE CASCADE,
     IdMaterial INT NOT NULL FOREIGN KEY REFERENCES Materiales(Id) ON DELETE CASCADE ON UPDATE CASCADE,
     X NVARCHAR(10) NOT NULL,
 	Y NVARCHAR(10) NOT NULL,
@@ -200,6 +208,7 @@ GO
 --Procesos para agregar nuevos registros a cada tabla
 CREATE PROCEDURE spAgregarPrototipo
 @NombrePrototipo NVARCHAR(30),
+@IdCategoria INT,
 @IdMaterial INT,
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
@@ -212,7 +221,7 @@ CREATE PROCEDURE spAgregarPrototipo
 AS
 BEGIN
 INSERT INTO Prototipos
-VALUES(@NombrePrototipo, @IdMaterial, @X, @Y, @Z, @Descripcion, @Imagen, @IdDuracion, @IdEstado, @IdMaquinaria )
+VALUES(@NombrePrototipo, @IdCategoria, @IdMaterial, @X, @Y, @Z, @Descripcion, @Imagen, @IdDuracion, @IdEstado, @IdMaquinaria )
 END
 GO
 
@@ -256,12 +265,12 @@ GO
 --Metodos para Actualizar un registro de las tablas basado en su Id
 CREATE PROCEDURE spActualizarPrototipo
 @NombrePrototipo NVARCHAR(30),
+@IdCategoria INT, 
 @IdMaterial INT,
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
 @Z NVARCHAR(10),
 @Descripcion VARCHAR(MAX),
-
 @IdDuracion INT,
 @IdEstado INT,
 @IdMaquinaria INT,
@@ -269,7 +278,7 @@ CREATE PROCEDURE spActualizarPrototipo
 AS
 BEGIN
 UPDATE Prototipos
-SET NombrePrototipo = @NombrePrototipo, IdMaterial = @IdMaterial, X = @X, Y = @Y, Z = @Z,
+SET NombrePrototipo = @NombrePrototipo, IdCategoria = @IdCategoria, IdMaterial = @IdMaterial, X = @X, Y = @Y, Z = @Z,
 Descripcion = @Descripcion, IdDuracion = @IdDuracion, IdEstado = @IdEstado, IdMaquinaria = @IdMaquinaria
 WHERE Id = @Id
 END
@@ -561,12 +570,12 @@ CREATE PROCEDURE SPAggAutor
 @Nombres NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
-@Contraseña NVARCHAR(MAX),
+@Contrasena NVARCHAR(MAX),
 @FechaRegistro DATE
 AS
 BEGIN
 INSERT INTO Autores
-VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contraseña, @FechaRegistro)
+VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contrasena, @FechaRegistro)
 END
 GO
 
@@ -574,13 +583,13 @@ CREATE PROCEDURE SPModiAutor
 @Nombre NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
-@Contraseña NVARCHAR(MAX),
+@Contrasena NVARCHAR(MAX),
 @FechaRegistro DATE,
 @Id INT
 AS
 BEGIN
 UPDATE Autores
-SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, [Password] = @Contraseña,
+SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, [Password] = @Contrasena,
 FechaRegistro = @FechaRegistro 
 WHERE Id = @Id
 END
