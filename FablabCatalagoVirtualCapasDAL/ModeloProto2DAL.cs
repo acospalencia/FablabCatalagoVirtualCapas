@@ -56,6 +56,43 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return test;
 		}
+		public List<ModeloProto2> MostrarInfoWEB()
+		{
+			List<ModeloProto2> test = new List<ModeloProto2> ();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarInfoWEB";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				ModeloProto2 prototipo = new ModeloProto2
+				{
+					Id = reader.GetInt32(0),
+					NombrePrototipo = reader.GetString(1),
+					NombreMaterial = reader.GetString(2),
+					X = reader.GetString(3),
+					Y = reader.GetString(4),
+					Z = reader.GetString(5),
+					Descripcion = reader.GetString(6),
+					TiempoArmado = reader.GetString(7),
+					TiempoDiseno = reader.GetString(8),
+					TiempoFabricado = reader.GetString(9),
+					NombreEstado = reader.GetString(10),
+					Nombre = reader.GetString(11),
+				};
+
+				if (!reader.IsDBNull(11))
+				{
+					long length = reader.GetBytes(12, 0, null, 0, 0);
+					byte[] buffer = new byte[length];
+					reader.GetBytes(12, 0, buffer, 0, (int)length);
+					prototipo.Imagen = buffer;
+				}
+
+				test.Add(prototipo);
+			}
+			return test;
+		}
 	}
 
 }

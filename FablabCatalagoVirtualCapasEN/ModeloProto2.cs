@@ -11,6 +11,7 @@ namespace FablabCatalagoVirtualCapasEN
 	/// </summary>
 	public class ModeloProto2
 	{
+		public int Id { get; set; }
 		/// <summary>
 		/// Nombre del prototipo.
 		/// </summary>

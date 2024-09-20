@@ -11,14 +11,12 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
     public class PrototiposController : Controller
     {
 
-        private PrototipoBL protosBL = new PrototipoBL();
 		private ModeloProto2BL modelo2BL = new ModeloProto2BL();
 		// GET: Prototipos
 		public ActionResult Index()
         {
-            //var modelos = modelo2BL.MostrarPrototi();
-            var protos = protosBL.regresarlista();
-            return View(protos);
+            var modelos = modelo2BL.MostrarInfoWEB();
+            return View(modelos);
         }
     }
 }

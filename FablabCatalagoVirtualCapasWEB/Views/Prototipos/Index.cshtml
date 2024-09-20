@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FablabCatalagoVirtualCapasEN.Prototipo>
+﻿@model IEnumerable<FablabCatalagoVirtualCapasEN.ModeloProto2>
 
 @{
 	ViewBag.Title = "Index";
@@ -26,7 +26,7 @@
 				<div class="card-body">
 					<h5 class="card-title">@item.NombrePrototipo</h5>
 					<p class="card-text">
-						Dimensiones: @item.X x @item.Y x @item.Z<br />
+						Descripcion: @item.Descripcion<br />
 					</p>
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@modalId">
 						Ver detalles
@@ -44,8 +44,8 @@
 					</div>
 					<div class="modal-body">
 						<p><strong>Dimensiones:</strong> @item.X x @item.Y x @item.Z</p>
-						<p><strong>Material:</strong> @item.IdMaterial</p>
-						<p><strong>Estado:</strong> @item.IdEstado</p>
+						<p><strong>Material:</strong> @item.NombreMaterial</p>
+						<p><strong>Estado:</strong> @item.NombreEstado</p>
 						<p><strong>Descripción:</strong> @item.Descripcion</p>
 					</div>
 					<div class="modal-footer">

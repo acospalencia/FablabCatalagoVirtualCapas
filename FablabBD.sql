@@ -74,7 +74,7 @@ CREATE TABLE Prototipos
     X NVARCHAR(10) NOT NULL,
 	Y NVARCHAR(10) NOT NULL,
 	Z NVARCHAR(10) NOT NULL,
-    Descripcion NVARCHAR(250) NOT NULL,
+    Descripcion VARCHAR(MAX) NOT NULL,
     Imagen IMAGE NOT NULL,
 	IdDuracion INT NOT NULL FOREIGN KEY REFERENCES Duraciones(Id) ON DELETE CASCADE ON UPDATE CASCADE,
 	IdEstado INT NOT NULL FOREIGN KEY REFERENCES Estados(Id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -204,7 +204,7 @@ CREATE PROCEDURE spAgregarPrototipo
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
 @Z NVARCHAR(10),
-@Descripcion NVARCHAR(100),
+@Descripcion VARCHAR(MAX),
 @Imagen Image,
 @IdDuracion INT,
 @IdEstado INT,
@@ -260,7 +260,7 @@ CREATE PROCEDURE spActualizarPrototipo
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
 @Z NVARCHAR(10),
-@Descripcion NVARCHAR(100),
+@Descripcion VARCHAR(MAX),
 
 @IdDuracion INT,
 @IdEstado INT,
@@ -728,5 +728,19 @@ FROM  Autores A
 INNER JOIN CreacionPrototipos CP ON A.Id = CP.IdAutorLider
 GROUP BY A.Nombres, A.Apellidos
 ORDER BY CantidadPrototipos DESC;
+END
+GO
+
+CREATE PROCEDURE SPMostrarInfoWEB
+AS
+BEGIN
+Select Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen
+from Prototipos
+Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
+Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
+Inner Join Estados on Prototipos.IdEstado = Estados.Id
+Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
 END
 GO
