@@ -27,6 +27,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spAgregarPrototipo";
 			cmd.Parameters.AddWithValue("@NombrePrototipo", pPrototipo.NombrePrototipo);
+			cmd.Parameters.AddWithValue("@IdCategoria", pPrototipo.IdCategoria);
 			cmd.Parameters.AddWithValue("@IdMaterial", pPrototipo.IdMaterial);
 			cmd.Parameters.AddWithValue("@X", pPrototipo.X);
 			cmd.Parameters.AddWithValue("@Y", pPrototipo.Y);
@@ -51,6 +52,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.CommandText = "spActualizarPrototipo";
 			cmd.Parameters.AddWithValue("@Id", pPrototipo.Id);
 			cmd.Parameters.AddWithValue("@NombrePrototipo", pPrototipo.NombrePrototipo);
+			cmd.Parameters.AddWithValue("@IdCategoria", pPrototipo.IdCategoria);
 			cmd.Parameters.AddWithValue("@IdMaterial", pPrototipo.IdMaterial);
 			cmd.Parameters.AddWithValue("@X", pPrototipo.X);
 			cmd.Parameters.AddWithValue("@Y", pPrototipo.Y);

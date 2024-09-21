@@ -17,6 +17,9 @@ namespace FablabCatalagoVirtualCapasEN
 		/// </summary>
 		public string NombrePrototipo { get; set; }
 
+		public string CatNombre { get; set; }
+
+
 		/// <summary>
 		/// Nombre del material asociado con el prototipo.
 		/// </summary>

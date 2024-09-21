@@ -15,7 +15,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		// GET: Prototipos
 		public ActionResult Index()
         {
-            var modelos = modelo2BL.MostrarInfoWEB();
+            var modelos = modelo2BL.MostrarInfoCat1();
             return View(modelos);
         }
     }

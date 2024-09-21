@@ -28,9 +28,17 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return modeloProto2DAL.MostrarInfo(pPrototipo);
 		}
-		public List<ModeloProto2> MostrarInfoWEB()
+		public List<ModeloProto2> MostrarInfoCat1()
 		{
-			return modeloProto2DAL.MostrarInfoWEB();
+			return modeloProto2DAL.MostrarInfoCat1();
+		}
+		public List<ModeloProto2> MostrarInfoCat2()
+		{
+			return modeloProto2DAL.MostrarInfoCat2();
+		}
+		public List<ModeloProto2> MostrarInfoCat3()
+		{
+			return modeloProto2DAL.MostrarInfoCat3();
 		}
 	}
 
