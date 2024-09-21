@@ -18,7 +18,9 @@
 }
 
 .spacingtext {
-	padding-left: 600px;
+	margin-left: auto;
+	float: right;
+
 }
 .size {
 	display: -webkit-box;
