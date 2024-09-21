@@ -143,6 +143,7 @@
     <Compile Include="PrototipoBL.cs" />
     <Compile Include="ProveedorBL.cs" />
     <Compile Include="ReporteBL.cs" />
+    <Compile Include="SolicitudProyectosBL.cs" />
     <Compile Include="TipoMaterialBL.cs" />
     <Compile Include="UserBL.cs" />
   </ItemGroup>

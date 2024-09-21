@@ -144,6 +144,7 @@
     <Compile Include="Prototipo.cs" />
     <Compile Include="Proveedor.cs" />
     <Compile Include="Reporte.cs" />
+    <Compile Include="SolicitudProyectos.cs" />
     <Compile Include="TipoMaterial.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

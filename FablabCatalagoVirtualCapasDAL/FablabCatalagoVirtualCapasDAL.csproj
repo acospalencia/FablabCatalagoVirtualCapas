@@ -145,6 +145,7 @@
     <Compile Include="PrototipoDAL.cs" />
     <Compile Include="ProveedorDAL.cs" />
     <Compile Include="ReporteDAL.cs" />
+    <Compile Include="SolicitudProyectosDAL.cs" />
     <Compile Include="TipoMaterialDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>
