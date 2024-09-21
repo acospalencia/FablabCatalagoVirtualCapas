@@ -211,6 +211,7 @@
     <Content Include="Views\Prototipos\PTecnologicos.cshtml" />
     <Content Include="Views\Prototipos\Testing.cshtml" />
     <Content Include="Views\Prototipos\PLPIT.cshtml" />
+    <Content Include="Views\SoliProyectos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -218,7 +219,6 @@
     <Folder Include="Views\Autores\" />
     <Folder Include="Views\Clubs\" />
     <Folder Include="Views\InscripClubs\" />
-    <Folder Include="Views\SoliProyectos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

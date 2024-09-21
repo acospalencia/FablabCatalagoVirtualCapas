@@ -699,7 +699,7 @@ END
 GO
 
 CREATE PROCEDURE SPModiCompra
-@Id int,
+@Id INT,
 @IdMaterial INT,
 @IdProveedor INT,
 @CantidadCompra NVARCHAR(20),
@@ -785,5 +785,50 @@ Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
 Inner Join Estados on Prototipos.IdEstado = Estados.Id
 Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
 WHERE Prototipos.IdCategoria = 3
+END
+GO
+
+CREATE PROCEDURE spAggSoliProyecto
+@TipoProyecto NVARCHAR(50),
+@Descripcion NVARCHAR(MAX),
+@Integrantes INT,
+@Fecha DATE,
+@IdAutor INT
+AS
+BEGIN
+INSERT INTO SolicitudProyectos Values
+(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @IdAutor)
+END
+GO
+
+CREATE PROCEDURE spModiSoliProyecto
+@Id INT,
+@TipoProyecto NVARCHAR(50),
+@Descripcion NVARCHAR(MAX),
+@Integrantes INT,
+@Fecha DATE,
+@IdAutor INT
+AS
+BEGIN
+UPDATE SolicitudProyectos
+SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes,
+Fecha = @Fecha, IdAutor = @IdAutor
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spDelSoliProyecto
+@Id INT
+AS
+BEGIN
+DELETE FROM SolicitudProyectos 
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spShowSoliProyecto
+AS
+BEGIN
+SELECT * FROM SolicitudProyectos
 END
 GO
