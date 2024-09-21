@@ -740,16 +740,50 @@ ORDER BY CantidadPrototipos DESC;
 END
 GO
 
-CREATE PROCEDURE SPMostrarInfoWEB
+CREATE PROCEDURE SPMostrarInfoCat1
 AS
 BEGIN
-Select Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
 Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
-Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
 from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
 Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
 Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
 Inner Join Estados on Prototipos.IdEstado = Estados.Id
 Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 1
+END
+GO
+
+CREATE PROCEDURE SPMostrarInfoCat2
+AS
+BEGIN
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
+from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
+Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
+Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
+Inner Join Estados on Prototipos.IdEstado = Estados.Id
+Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 2
+END
+GO
+
+CREATE PROCEDURE SPMostrarInfoCat3
+AS
+BEGIN
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
+from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
+Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
+Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
+Inner Join Estados on Prototipos.IdEstado = Estados.Id
+Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 3
 END
 GO
