@@ -17,6 +17,9 @@
 	margin: auto;
 }
 
+.spacingtext {
+	padding-left: 600px;
+}
 .size {
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
@@ -26,8 +29,6 @@
 	max-height: 3em;
 }
 
-.Spacing{
-	padding-left: 600px;
-}
+
 
 

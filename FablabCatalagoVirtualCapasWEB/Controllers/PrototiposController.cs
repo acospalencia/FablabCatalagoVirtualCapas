@@ -18,5 +18,20 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
             var modelos = modelo2BL.MostrarInfoCat1();
             return View(modelos);
         }
-    }
+		public ActionResult PTecnologicos()
+		{
+			var modelos = modelo2BL.MostrarInfoCat1();
+			return View(modelos);
+		}
+		public ActionResult Testing()
+		{
+			var modelos = modelo2BL.MostrarInfoCat2();
+			return View(modelos);
+		}
+		public ActionResult PLPIT()
+		{
+			var modelos = modelo2BL.MostrarInfoCat3();
+			return View(modelos);
+		}
+	}
 }
