@@ -33,7 +33,8 @@ namespace FablabCatalagoVirtualCapasDAL
 					Nombres = reader.GetString(1),
 					Apellidos = reader.GetString(2),
 					CorreElectronico = reader.GetString(3),
-					FechaRegistro = reader.GetDateTime(4)
+					Password = reader.GetString(4),
+					FechaRegistro = reader.GetDateTime(5)
 				};
 
 				ListaAutores.Add(autor);
@@ -55,6 +56,8 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Apellidos", pAutor.Apellidos);
 			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
+			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+
 			return ComunBD.EjecutarComand(cmd);
 		}
 
