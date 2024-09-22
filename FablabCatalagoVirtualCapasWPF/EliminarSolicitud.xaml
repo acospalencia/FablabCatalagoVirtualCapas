@@ -6,13 +6,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FablabCatalagoVirtualCapasWPF"
         mc:Ignorable="d"
-        Title="EliminarSolicitud" Height="450" Width="800">
+        Title="EliminarSolicitud" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
     <Grid>
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/Recursos/Fondos/Fondo1.jpg"/>
+                <ImageBrush ImageSource="recursos/Fondos/Fondo6.jpeg"/>
             </Grid.Background>
-            <Label Content="Eliminar Proveedores" HorizontalAlignment="Left" Margin="279,40,0,0" VerticalAlignment="Top" Width="264" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="36"/>
+            <Label Content="Eliminar Solicitud " HorizontalAlignment="Left" Margin="279,40,0,0" VerticalAlignment="Top" Width="264" FontSize="25" Foreground="#FFF9F9F9" FontFamily="Times New Roman" FontWeight="Bold" Height="36"/>
             <DataGrid x:Name="dgVer" HorizontalAlignment="Left" Height="245" Margin="24,126,0,0" VerticalAlignment="Top" Width="673" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="dgVer_SelectionChanged"/>
             <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Margin="279,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="304" Height="26" TextChanged="txtBuscar_TextChanged" />
             <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Height="40 " Margin="219,77,0,0" VerticalAlignment="Top" Width="40">

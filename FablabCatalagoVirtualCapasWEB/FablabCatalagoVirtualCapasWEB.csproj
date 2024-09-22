@@ -212,6 +212,7 @@
     <Content Include="Views\Prototipos\Testing.cshtml" />
     <Content Include="Views\Prototipos\PLPIT.cshtml" />
     <Content Include="Views\SoliProyectos\Index.cshtml" />
+    <Content Include="Views\SoliProyectos\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

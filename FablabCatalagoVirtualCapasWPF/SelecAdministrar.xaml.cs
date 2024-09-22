@@ -119,5 +119,12 @@ namespace Fablab.esfe
 			document.Save(rutaArchivo);
 			Process.Start(new ProcessStartInfo(rutaArchivo) { UseShellExecute = true });
 		}
-	}
+
+		private void btnSolic_Click(object sender, RoutedEventArgs e)
+		{
+			var ScClubs = new EliminarSolicitud();
+			ScClubs.Show();
+			this.Close();
+		}
+    }
 }

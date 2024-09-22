@@ -1,4 +1,5 @@
 ﻿using FablabCatalagoVirtualCapasBL;
+using FablabCatalagoVirtualCapasEN;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,23 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
             var ListasSolis = solisBL.RegresarLista();
             return View(ListasSolis);
         }
-    }
+		public ActionResult Create()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Create(SolicitudProyectos soli)
+		{
+			if (ModelState.IsValid)
+			{
+				solisBL.GuardarSoli(soli);
+
+				return RedirectToAction("Index");
+			}
+
+			return View(soli);
+		}
+	}
 }
