@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoresDAL.cs" />
+    <Compile Include="CategoriasDAL.cs" />
     <Compile Include="ClubDAL.cs" />
     <Compile Include="CompraMateDAl.cs" />
     <Compile Include="ComunBD.cs" />

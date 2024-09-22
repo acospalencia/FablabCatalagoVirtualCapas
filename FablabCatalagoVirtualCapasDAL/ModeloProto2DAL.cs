@@ -42,6 +42,8 @@ namespace FablabCatalagoVirtualCapasDAL
 					TiempoFabricado = reader.GetString(8),
 					NombreEstado = reader.GetString(9),
 					Nombre = reader.GetString(10),
+					CatNombre = reader.GetString(12),
+
 				};
 
 				if (!reader.IsDBNull(11))

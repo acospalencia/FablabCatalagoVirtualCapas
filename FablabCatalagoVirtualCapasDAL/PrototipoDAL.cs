@@ -96,20 +96,21 @@ namespace FablabCatalagoVirtualCapasDAL
 				{
 					Id = reader.GetInt32(0),
 					NombrePrototipo = reader.GetString(1),
-					IdMaterial = reader.GetInt32(2),
-					X = reader.GetString(3),
-					Y = reader.GetString(4),
-					Z = reader.GetString(5),
-					Descripcion = reader.GetString(6),
-					IdDuracion = reader.GetInt32(8),
-					IdEstado = reader.GetInt32(9),
-					IdMaquinaria = reader.GetInt32(10)
+					IdCategoria = reader.GetInt32(2),
+					IdMaterial = reader.GetInt32(3),
+					X = reader.GetString(4),
+					Y = reader.GetString(5),
+					Z = reader.GetString(6),
+					Descripcion = reader.GetString(7),
+					IdDuracion = reader.GetInt32(9),
+					IdEstado = reader.GetInt32(10),
+					IdMaquinaria = reader.GetInt32(11)
 				};
-				if (!reader.IsDBNull(7))
+				if (!reader.IsDBNull(8))
 				{
-					long length = reader.GetBytes(7, 0, null, 0, 0);
+					long length = reader.GetBytes(8, 0, null, 0, 0);
 					byte[] buffer = new byte[length];
-					reader.GetBytes(7, 0, buffer, 0, (int)length);
+					reader.GetBytes(8, 0, buffer, 0, (int)length);
 					prototipo.Imagen = buffer;
 				}
 

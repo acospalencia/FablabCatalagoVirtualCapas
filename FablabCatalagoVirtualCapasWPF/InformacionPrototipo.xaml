@@ -37,6 +37,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Label x:Name="lblIdCatego" Content="Tipo de Proyecto: " HorizontalAlignment="Left" Margin="46,478,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
 
     </Grid>
 </Controls:MetroWindow>

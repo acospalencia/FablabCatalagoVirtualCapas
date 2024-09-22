@@ -81,6 +81,7 @@ namespace Fablab.esfe
 				formInfo.lblArmado.Content += prototipos.TiempoArmado;
 				formInfo.lblEstado.Content += prototipos.NombreEstado;
 				formInfo.lblMaquina.Content += prototipos.Nombre;
+				formInfo.lblIdCatego.Content += prototipos.CatNombre;
 
 				byte[] imagenBytes = (byte[])prototipos.Imagen;
 				using (MemoryStream ms = new MemoryStream(imagenBytes))

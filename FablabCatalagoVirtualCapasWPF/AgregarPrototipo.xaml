@@ -61,6 +61,7 @@
         <Image x:Name="imgPrototipo" HorizontalAlignment="Left" Height="343" Margin="727,72,0,0" VerticalAlignment="Top" Width="318"/>
         <Label Content="Ingresar un nuevo prototipo" HorizontalAlignment="Center" Margin="0,39.8,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold"/>
         <Button x:Name="btnAddFoto" Cursor="Hand" Content="Agregar Foto" HorizontalAlignment="Left" Margin="777,452,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnAddFoto_Click"/>
+        <ComboBox x:Name="cbCategoria" HorizontalAlignment="Left" Margin="71,61,0,0" Text="" VerticalAlignment="Top" Width="255" FontWeight="Bold" FontFamily="Arial" FontSize="18" Height="31"/>
 
     </Grid>
 </Controls:MetroWindow>
