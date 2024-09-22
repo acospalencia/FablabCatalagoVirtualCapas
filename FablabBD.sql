@@ -445,14 +445,15 @@ Where Usuario = @Usuario and [Password] = @Contra
 END
 GO
 
-CREATE PROCEDURE SPMostrarInfo
+ALTER PROCEDURE SPMostrarInfo
 @NombrePrototipo NVARCHAR(30)
 AS
 BEGIN
-Select Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+SELECT Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
 Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
-Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
 from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
 Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
 Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
 Inner Join Estados on Prototipos.IdEstado = Estados.Id
@@ -830,5 +831,12 @@ CREATE PROCEDURE spShowSoliProyecto
 AS
 BEGIN
 SELECT * FROM SolicitudProyectos
+END
+GO
+
+CREATE PROCEDURE spShowCategorias
+AS
+BEGIN
+SELECT * FROM Categorias
 END
 GO
