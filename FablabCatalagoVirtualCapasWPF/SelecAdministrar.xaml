@@ -32,6 +32,7 @@
         </Button>
         <Button Content="Usuarios" Name="btnUsuarios" HorizontalAlignment="Left" Margin="93,316,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnUsuarios_Click" Cursor="Hand"/>
         <Button Content="Reporte" x:Name="btnReportes" HorizontalAlignment="Left" Margin="471,316,0,0" VerticalAlignment="Top" Height="38" Width="215" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Click="btnReportes_Click" Cursor="Hand" />
+        <Button Content="Solicitudes" x:Name="btnSolic" HorizontalAlignment="Left" Margin="282,373,0,0" VerticalAlignment="Top" Height="38" Width="216" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Cursor="Hand" />
 
     </Grid>
 </Controls:MetroWindow>

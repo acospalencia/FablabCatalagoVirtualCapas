@@ -48,7 +48,11 @@ namespace prototipos
 			var materialBL = new MaterialesBL();
 			var EstadosBL = new EstadosBL();
 			var maquinariaBL = new MaquinariaBL();
+			var categoriasBL = new CategoriasBL();
 
+			cbCategoria.ItemsSource = categoriasBL.ListaCatego();
+			cbCategoria.DisplayMemberPath = "Nombre";
+			cbCategoria.SelectedValuePath = "Id";
 			cbMaterial.ItemsSource = materialBL.regresarLista();
 			cbMaterial.DisplayMemberPath = "NombreMaterial";
 			cbMaterial.SelectedValuePath = "Id";
@@ -65,6 +69,7 @@ namespace prototipos
 
 				txtId.IsEnabled = true;
 				txtNombre.IsEnabled = true;
+				cbCategoria.IsEnabled = true;
 				cbMaterial.IsEnabled = true;
 				txtX.IsEnabled = true;
 				txtY.IsEnabled = true;
@@ -78,6 +83,7 @@ namespace prototipos
 
 				txtId.Text = row.Id.ToString();
 				txtNombre.Text = row.NombrePrototipo;
+				cbCategoria.SelectedValue = row.IdCategoria;
 				cbMaterial.SelectedValue = row.IdMaterial;
 				txtX.Text = row.X.ToString();
 				txtY.Text = row.Y.ToString();
@@ -145,6 +151,7 @@ namespace prototipos
 				{
 					Id = int.Parse(txtId.Text),
 					NombrePrototipo = txtNombre.Text,
+					IdCategoria = Convert.ToInt32(cbCategoria.SelectedValue),
 					IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
 					X = txtX.Text,
 					Y = txtX.Text,
@@ -161,7 +168,8 @@ namespace prototipos
 					modifyDura.ActualizarDuraciones(duracionesModify);
 					var modificarLista = new PrototipoBL();
 					modificarLista.Modificar(modificar);
-					
+
+					cbCategoria.Text = null;
 					cbMaterial.Text = null;
 					txtId.Text = null;
 					txtNombre.Text = null;
@@ -178,6 +186,7 @@ namespace prototipos
 					cbMaquinaria.Text = null;
 					txtId.IsEnabled = false;
 					txtNombre.IsEnabled = false;
+					cbCategoria.IsEnabled = false;
 					cbMaterial.IsEnabled = false;
 					txtX.IsEnabled = false;
 					txtY.IsEnabled = false;

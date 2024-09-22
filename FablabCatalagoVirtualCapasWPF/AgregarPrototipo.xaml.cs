@@ -89,6 +89,7 @@ namespace prototipos
 					var Guardardatos = new Prototipo
 					{
 						NombrePrototipo = txtNombre.Text,
+						IdCategoria = Convert.ToInt32(cbCategoria.SelectedValue),
 						IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
 						X = txtX.Text,
 						Y = txtY.Text,
