@@ -840,3 +840,42 @@ BEGIN
 SELECT * FROM Categorias
 END
 GO
+
+
+CREATE PROCEDURE spNewAutor
+@Nombres NVARCHAR(20),
+@Apellidos NVARCHAR(20),
+@CorreElectronico NVARCHAR(100),
+@Contrasena NVARCHAR(MAX),
+@FechaRegistro DATE,
+@Registrado BIT OUTPUT,
+@Mensaje VARCHAR(100) OUTPUT
+AS
+BEGIN
+	IF(NOT EXISTS(SELECT * FROM Autores WHERE CorreElectronico = @CorreElectronico))
+	BEGIN
+		INSERT INTO Autores
+		VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contrasena, @FechaRegistro)
+		SET @Registrado = 1
+		SET @Mensaje = 'Autor Registrado'
+	END
+	ELSE
+		BEGIN
+		SET @Registrado = 0
+		SET @Mensaje = 'Correo actualmente registrado'
+	END
+END
+GO
+
+CREATE PROCEDURE spValidacion
+@CorreElectronico NVARCHAR(100),
+@Contrasena NVARCHAR(MAX)
+AS
+BEGIN
+	if(EXISTS (SELECT * FROM Autores WHERE CorreElectronico = @CorreElectronico 
+	and [Password] = @Contrasena))
+		SELECT * FROM Autores WHERE CorreElectronico = @CorreElectronico and [Password] = @Contrasena
+	ELSE
+		SELECT '0'
+END
+GO
