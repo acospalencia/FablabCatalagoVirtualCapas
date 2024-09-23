@@ -92,6 +92,52 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Id", pAutor.Id);
 			return ComunBD.EjecutarComand(cmd);
 		}
-	}
 
+		public (bool, string) RegistrarAutor(Autores pAutor)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spNewAutor";
+			cmd.Parameters.AddWithValue("@Nombres", pAutor.Nombres);
+			cmd.Parameters.AddWithValue("@Apellidos", pAutor.Apellidos);
+			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
+			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
+			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+			cmd.Parameters.Add("@Registrado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+			cmd.Parameters.Add("@Mensaje", SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
+
+			ComunBD.EjecutarComand(cmd);
+
+			bool registrado = Convert.ToBoolean(cmd.Parameters["@Registrado"].Value);
+			string mensaje = cmd.Parameters["@Mensaje"].Value.ToString();
+
+			return (registrado, mensaje);
+		}
+
+		public Autores IniciarSesion(Autores pAutor)
+		{
+			Autores InfoAutor = new Autores();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spValidacion";
+			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
+			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				Autores autor = new Autores
+				{
+					Id = reader.GetInt32(0),
+					Nombres = reader.GetString(1),
+					Apellidos = reader.GetString(2),
+					CorreElectronico = reader.GetString(3),
+					Password = reader.GetString(4),
+					FechaRegistro = reader.GetDateTime(5)
+				};
+				InfoAutor = autor;
+
+			}
+			return InfoAutor;
+		}
+	}
 }

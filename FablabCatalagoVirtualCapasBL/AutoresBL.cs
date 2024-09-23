@@ -54,5 +54,15 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return proveedorDAL.EliminarAutor(pAutor);
 		}
+
+		public (bool, string) RegistrarAutor(Autores pAutor)
+		{
+			return proveedorDAL.RegistrarAutor(pAutor);
+
+		}
+		public Autores IniciarSesion(Autores pAutor)
+		{
+			return proveedorDAL.IniciarSesion(pAutor);
+		}
 	}
 }
