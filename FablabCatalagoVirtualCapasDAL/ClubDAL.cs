@@ -25,6 +25,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "SPAddClubs";
 			cmd.Parameters.AddWithValue("@NombreClub", pClub.NombreClub);
+			cmd.Parameters.AddWithValue("@Detalle", pClub.Detalle);
 			return ComunBD.EjecutarComand(cmd);
 		}
 
@@ -44,7 +45,8 @@ namespace FablabCatalagoVirtualCapasDAL
 				Club club = new Club
 				{
 					Id = reader.GetInt32(0),
-					NombreClub = reader.GetString(1)
+					NombreClub = reader.GetString(1),
+					Detalle = reader.GetString(2)
 				};
 
 				ListaClubs.Add(club);
