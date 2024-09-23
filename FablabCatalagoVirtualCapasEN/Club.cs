@@ -20,6 +20,7 @@ namespace FablabCatalagoVirtualCapasEN
 		/// Nombre del club.
 		/// </summary>
 		public string NombreClub { get; set; }
+		public string Detalle { get; set; }
 	}
 
 }
