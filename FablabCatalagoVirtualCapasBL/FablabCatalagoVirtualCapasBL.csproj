@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoresBL.cs" />
+    <Compile Include="CategoriasBL.cs" />
     <Compile Include="ClubBL.cs" />
     <Compile Include="CompraMateBL.cs" />
     <Compile Include="CreacionProtoBL.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="PrototipoBL.cs" />
     <Compile Include="ProveedorBL.cs" />
     <Compile Include="ReporteBL.cs" />
+    <Compile Include="SolicitudProyectosBL.cs" />
     <Compile Include="TipoMaterialBL.cs" />
     <Compile Include="UserBL.cs" />
   </ItemGroup>

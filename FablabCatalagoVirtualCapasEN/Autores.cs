@@ -32,6 +32,7 @@ namespace FablabCatalagoVirtualCapasEN
 		public string CorreElectronico { get; set; }
 
 		public string Password { get; set; }
+
 		/// <summary>
 		/// Fecha en la que el autor fue registrado.
 		/// </summary>

@@ -129,6 +129,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Permisos\ValidarSesionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +209,12 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Prototipos\Index.cshtml" />
+    <Content Include="Views\Prototipos\PTecnologicos.cshtml" />
+    <Content Include="Views\Prototipos\Testing.cshtml" />
+    <Content Include="Views\Prototipos\PLPIT.cshtml" />
+    <Content Include="Views\SoliProyectos\Index.cshtml" />
+    <Content Include="Views\SoliProyectos\Create.cshtml" />
+
 
     <Content Include="Views\Clubs\Details.cshtml" />
     <Content Include="Views\Clubs\Create.cshtml" />
@@ -222,14 +229,13 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Stylo\" />
 
+    <Folder Include="Stylo\" />
     <Folder Include="Views\Autores\" />
 
     <Folder Include="Views\Clubs\" />
 
     <Folder Include="Views\InscripClubs\" />
-    <Folder Include="Views\SoliProyectos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

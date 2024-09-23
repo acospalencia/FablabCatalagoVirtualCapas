@@ -66,10 +66,18 @@ CREATE TABLE Maquinarias
 	Detalle NVARCHAR (250) NOT NULL,
 	IdEstado INT NOT NULL FOREIGN KEY REFERENCES Estados(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE Categorias
+(
+	Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre VARCHAR (50) NOT NULL
+);
+
 CREATE TABLE Prototipos
 (
     Id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
     NombrePrototipo NVARCHAR(50) NOT NULL,
+	IdCategoria INT NOT NULL FOREIGN KEY REFERENCES Categorias(Id) ON DELETE CASCADE ON UPDATE CASCADE,
     IdMaterial INT NOT NULL FOREIGN KEY REFERENCES Materiales(Id) ON DELETE CASCADE ON UPDATE CASCADE,
     X NVARCHAR(10) NOT NULL,
 	Y NVARCHAR(10) NOT NULL,
@@ -200,6 +208,7 @@ GO
 --Procesos para agregar nuevos registros a cada tabla
 CREATE PROCEDURE spAgregarPrototipo
 @NombrePrototipo NVARCHAR(30),
+@IdCategoria INT,
 @IdMaterial INT,
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
@@ -212,7 +221,7 @@ CREATE PROCEDURE spAgregarPrototipo
 AS
 BEGIN
 INSERT INTO Prototipos
-VALUES(@NombrePrototipo, @IdMaterial, @X, @Y, @Z, @Descripcion, @Imagen, @IdDuracion, @IdEstado, @IdMaquinaria )
+VALUES(@NombrePrototipo, @IdCategoria, @IdMaterial, @X, @Y, @Z, @Descripcion, @Imagen, @IdDuracion, @IdEstado, @IdMaquinaria )
 END
 GO
 
@@ -256,12 +265,12 @@ GO
 --Metodos para Actualizar un registro de las tablas basado en su Id
 CREATE PROCEDURE spActualizarPrototipo
 @NombrePrototipo NVARCHAR(30),
+@IdCategoria INT, 
 @IdMaterial INT,
 @X NVARCHAR(10),
 @Y NVARCHAR(10),
 @Z NVARCHAR(10),
 @Descripcion VARCHAR(MAX),
-
 @IdDuracion INT,
 @IdEstado INT,
 @IdMaquinaria INT,
@@ -269,7 +278,7 @@ CREATE PROCEDURE spActualizarPrototipo
 AS
 BEGIN
 UPDATE Prototipos
-SET NombrePrototipo = @NombrePrototipo, IdMaterial = @IdMaterial, X = @X, Y = @Y, Z = @Z,
+SET NombrePrototipo = @NombrePrototipo, IdCategoria = @IdCategoria, IdMaterial = @IdMaterial, X = @X, Y = @Y, Z = @Z,
 Descripcion = @Descripcion, IdDuracion = @IdDuracion, IdEstado = @IdEstado, IdMaquinaria = @IdMaquinaria
 WHERE Id = @Id
 END
@@ -436,14 +445,15 @@ Where Usuario = @Usuario and [Password] = @Contra
 END
 GO
 
-CREATE PROCEDURE SPMostrarInfo
+ALTER PROCEDURE SPMostrarInfo
 @NombrePrototipo NVARCHAR(30)
 AS
 BEGIN
-Select Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+SELECT Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
 Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
-Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
 from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
 Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
 Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
 Inner Join Estados on Prototipos.IdEstado = Estados.Id
@@ -561,12 +571,12 @@ CREATE PROCEDURE SPAggAutor
 @Nombres NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
-@Contraseña NVARCHAR(MAX),
+@Contrasena NVARCHAR(MAX),
 @FechaRegistro DATE
 AS
 BEGIN
 INSERT INTO Autores
-VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contraseña, @FechaRegistro)
+VALUES (@Nombres, @Apellidos, @CorreElectronico, @Contrasena, @FechaRegistro)
 END
 GO
 
@@ -574,13 +584,13 @@ CREATE PROCEDURE SPModiAutor
 @Nombre NVARCHAR(20),
 @Apellidos NVARCHAR(20),
 @CorreElectronico NVARCHAR(100),
-@Contraseña NVARCHAR(MAX),
+@Contrasena NVARCHAR(MAX),
 @FechaRegistro DATE,
 @Id INT
 AS
 BEGIN
 UPDATE Autores
-SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, [Password] = @Contraseña,
+SET Nombres = @Nombre, Apellidos = @Apellidos, CorreElectronico = @CorreElectronico, [Password] = @Contrasena,
 FechaRegistro = @FechaRegistro 
 WHERE Id = @Id
 END
@@ -690,7 +700,7 @@ END
 GO
 
 CREATE PROCEDURE SPModiCompra
-@Id int,
+@Id INT,
 @IdMaterial INT,
 @IdProveedor INT,
 @CantidadCompra NVARCHAR(20),
@@ -731,16 +741,102 @@ ORDER BY CantidadPrototipos DESC;
 END
 GO
 
-CREATE PROCEDURE SPMostrarInfoWEB
+CREATE PROCEDURE SPMostrarInfoCat1
 AS
 BEGIN
-Select Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
 Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
-Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
 from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
 Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
 Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
 Inner Join Estados on Prototipos.IdEstado = Estados.Id
 Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 1
+END
+GO
+
+CREATE PROCEDURE SPMostrarInfoCat2
+AS
+BEGIN
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
+from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
+Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
+Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
+Inner Join Estados on Prototipos.IdEstado = Estados.Id
+Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 2
+END
+GO
+
+CREATE PROCEDURE SPMostrarInfoCat3
+AS
+BEGIN
+SELECT Prototipos.Id, Prototipos.NombrePrototipo, Materiales.NombreMaterial, Prototipos.X,
+Prototipos.Y, Prototipos.Z, Prototipos.Descripcion, Duraciones.TiempoArmado, Duraciones.TiempoDiseno,
+Duraciones.TiempoFabricado, Estados.NombreEstado, Maquinarias.Nombre, Prototipos.Imagen, Categorias.Nombre
+from Prototipos
+Inner Join Categorias on Prototipos.IdCategoria = Categorias.Id
+Inner Join Materiales on Prototipos.IdMaterial = Materiales.Id
+Inner Join Maquinarias on Prototipos.IdMaquinaria = Maquinarias.Id
+Inner Join Estados on Prototipos.IdEstado = Estados.Id
+Inner Join duraciones on Prototipos.IdDuracion = Duraciones.Id
+WHERE Prototipos.IdCategoria = 3
+END
+GO
+
+CREATE PROCEDURE spAggSoliProyecto
+@TipoProyecto NVARCHAR(50),
+@Descripcion NVARCHAR(MAX),
+@Integrantes INT,
+@Fecha DATE,
+@IdAutor INT
+AS
+BEGIN
+INSERT INTO SolicitudProyectos Values
+(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @IdAutor)
+END
+GO
+
+CREATE PROCEDURE spModiSoliProyecto
+@Id INT,
+@TipoProyecto NVARCHAR(50),
+@Descripcion NVARCHAR(MAX),
+@Integrantes INT,
+@Fecha DATE,
+@IdAutor INT
+AS
+BEGIN
+UPDATE SolicitudProyectos
+SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes,
+Fecha = @Fecha, IdAutor = @IdAutor
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spDelSoliProyecto
+@Id INT
+AS
+BEGIN
+DELETE FROM SolicitudProyectos 
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spShowSoliProyecto
+AS
+BEGIN
+SELECT * FROM SolicitudProyectos
+END
+GO
+
+CREATE PROCEDURE spShowCategorias
+AS
+BEGIN
+SELECT * FROM Categorias
 END
 GO

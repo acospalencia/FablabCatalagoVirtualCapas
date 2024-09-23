@@ -178,6 +178,9 @@
     <Compile Include="EliminarPrototipo.xaml.cs">
       <DependentUpon>EliminarPrototipo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EliminarSolicitud.xaml.cs">
+      <DependentUpon>EliminarSolicitud.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EliminarUsuario.xaml.cs">
       <DependentUpon>EliminarUsuario.xaml</DependentUpon>
     </Compile>
@@ -276,6 +279,10 @@
     <Page Include="EliminarPrototipo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EliminarSolicitud.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EliminarUsuario.xaml">
       <Generator>MSBuild:Compile</Generator>

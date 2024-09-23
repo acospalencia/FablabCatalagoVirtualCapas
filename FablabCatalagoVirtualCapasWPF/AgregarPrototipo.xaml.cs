@@ -89,6 +89,7 @@ namespace prototipos
 					var Guardardatos = new Prototipo
 					{
 						NombrePrototipo = txtNombre.Text,
+						IdCategoria = Convert.ToInt32(cbCategoria.SelectedValue),
 						IdMaterial = Convert.ToInt32(cbMaterial.SelectedValue),
 						X = txtX.Text,
 						Y = txtY.Text,
@@ -135,6 +136,10 @@ namespace prototipos
 			var materialBL = new MaterialesBL();
 			var EstadosBL = new EstadosBL();
 			var maquinariaBL = new MaquinariaBL();
+			var categoriasBL = new CategoriasBL();
+			cbCategoria.ItemsSource = categoriasBL.ListaCatego();
+			cbCategoria.DisplayMemberPath = "Nombre";
+			cbCategoria.SelectedValuePath = "Id";
 			cbMaterial.ItemsSource = materialBL.regresarLista();
 			cbMaterial.DisplayMemberPath = "NombreMaterial";
 			cbMaterial.SelectedValuePath = "Id";

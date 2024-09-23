@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoresDAL.cs" />
+    <Compile Include="CategoriasDAL.cs" />
     <Compile Include="ClubDAL.cs" />
     <Compile Include="CompraMateDAl.cs" />
     <Compile Include="ComunBD.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="PrototipoDAL.cs" />
     <Compile Include="ProveedorDAL.cs" />
     <Compile Include="ReporteDAL.cs" />
+    <Compile Include="SolicitudProyectosDAL.cs" />
     <Compile Include="TipoMaterialDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>

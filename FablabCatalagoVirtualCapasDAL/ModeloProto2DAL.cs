@@ -42,6 +42,8 @@ namespace FablabCatalagoVirtualCapasDAL
 					TiempoFabricado = reader.GetString(8),
 					NombreEstado = reader.GetString(9),
 					Nombre = reader.GetString(10),
+					CatNombre = reader.GetString(12),
+
 				};
 
 				if (!reader.IsDBNull(11))
@@ -56,12 +58,12 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return test;
 		}
-		public List<ModeloProto2> MostrarInfoWEB()
+		public List<ModeloProto2> MostrarInfoCat1()
 		{
-			List<ModeloProto2> test = new List<ModeloProto2> ();
+			List<ModeloProto2> Lista = new List<ModeloProto2> ();
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
-			cmd.CommandText = "SPMostrarInfoWEB";
+			cmd.CommandText = "SPMostrarInfoCat1";
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
@@ -79,9 +81,10 @@ namespace FablabCatalagoVirtualCapasDAL
 					TiempoFabricado = reader.GetString(9),
 					NombreEstado = reader.GetString(10),
 					Nombre = reader.GetString(11),
+					CatNombre = reader.GetString(13),
 				};
 
-				if (!reader.IsDBNull(11))
+				if (!reader.IsDBNull(12))
 				{
 					long length = reader.GetBytes(12, 0, null, 0, 0);
 					byte[] buffer = new byte[length];
@@ -89,9 +92,85 @@ namespace FablabCatalagoVirtualCapasDAL
 					prototipo.Imagen = buffer;
 				}
 
-				test.Add(prototipo);
+				Lista.Add(prototipo);
 			}
-			return test;
+			return Lista;
+		}
+		public List<ModeloProto2> MostrarInfoCat2()
+		{
+			List<ModeloProto2> Lista = new List<ModeloProto2>();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarInfoCat2";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				ModeloProto2 prototipo = new ModeloProto2
+				{
+					Id = reader.GetInt32(0),
+					NombrePrototipo = reader.GetString(1),
+					NombreMaterial = reader.GetString(2),
+					X = reader.GetString(3),
+					Y = reader.GetString(4),
+					Z = reader.GetString(5),
+					Descripcion = reader.GetString(6),
+					TiempoArmado = reader.GetString(7),
+					TiempoDiseno = reader.GetString(8),
+					TiempoFabricado = reader.GetString(9),
+					NombreEstado = reader.GetString(10),
+					Nombre = reader.GetString(11),
+					CatNombre = reader.GetString(13),
+				};
+
+				if (!reader.IsDBNull(12))
+				{
+					long length = reader.GetBytes(12, 0, null, 0, 0);
+					byte[] buffer = new byte[length];
+					reader.GetBytes(12, 0, buffer, 0, (int)length);
+					prototipo.Imagen = buffer;
+				}
+
+				Lista.Add(prototipo);
+			}
+			return Lista;
+		}
+		public List<ModeloProto2> MostrarInfoCat3()
+		{
+			List<ModeloProto2> Lista = new List<ModeloProto2>();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarInfoCat3";
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				ModeloProto2 prototipo = new ModeloProto2
+				{
+					Id = reader.GetInt32(0),
+					NombrePrototipo = reader.GetString(1),
+					NombreMaterial = reader.GetString(2),
+					X = reader.GetString(3),
+					Y = reader.GetString(4),
+					Z = reader.GetString(5),
+					Descripcion = reader.GetString(6),
+					TiempoArmado = reader.GetString(7),
+					TiempoDiseno = reader.GetString(8),
+					TiempoFabricado = reader.GetString(9),
+					NombreEstado = reader.GetString(10),
+					Nombre = reader.GetString(11),
+					CatNombre = reader.GetString(13),
+				};
+
+				if (!reader.IsDBNull(12))
+				{
+					long length = reader.GetBytes(12, 0, null, 0, 0);
+					byte[] buffer = new byte[length];
+					reader.GetBytes(12, 0, buffer, 0, (int)length);
+					prototipo.Imagen = buffer;
+				}
+
+				Lista.Add(prototipo);
+			}
+			return Lista;
 		}
 	}
 

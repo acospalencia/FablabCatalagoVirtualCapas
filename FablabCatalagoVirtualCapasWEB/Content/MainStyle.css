@@ -4,8 +4,33 @@
 	height: 400px;
 }
 
-img {
+.imgcard {
 	height: 200px;
 	width: 200px;
 	margin: auto;
 }
+
+.imgmodal {
+	float: right;
+	height: 300px;
+	width: 300px;
+	margin: auto;
+}
+
+.spacingtext {
+	margin-left: auto;
+	float: right;
+
+}
+.size {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 3em;
+}
+
+
+
+
