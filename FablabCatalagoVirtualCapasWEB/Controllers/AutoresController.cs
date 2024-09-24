@@ -93,7 +93,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 
             if (Registrado)
             {
-				return RedirectToAction("Registrarse", "Autores");
+				return RedirectToAction("InciarSesion", "Autores");
             }
             else
             {
@@ -107,7 +107,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 
 			Autores InfoAutor = autorBL.IniciarSesion(pAutor);
 
-            if (pAutor.Id !=0)
+            if (InfoAutor.Id != 0)
             {
 				Session["Autor"] = InfoAutor;
 				return RedirectToAction("Index", "Home");

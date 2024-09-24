@@ -13,7 +13,7 @@ namespace FablabCatalagoVirtualCapasWEB.Permisos
 		{
             if (HttpContext.Current.Session["Autor"] == null)
             {
-				filterContext.Result = new RedirectResult("/Home/Index");
+				filterContext.Result = new RedirectResult("/Autores/Registrarse");
             }
 
             base.OnActionExecuting(filterContext);

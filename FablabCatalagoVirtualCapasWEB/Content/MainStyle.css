@@ -1,4 +1,10 @@
-﻿
+﻿.centertext {
+	text-align: center;
+	margin: auto;
+
+}
+
+
 .fixed-size-card {
 	width: 300px;
 	height: 400px;

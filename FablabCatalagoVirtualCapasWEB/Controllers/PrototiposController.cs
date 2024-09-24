@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasWEB.Permisos;
 
-
 namespace FablabCatalagoVirtualCapasWEB.Controllers
 {
 	public class PrototiposController : Controller

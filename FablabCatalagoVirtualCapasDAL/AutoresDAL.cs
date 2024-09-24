@@ -109,6 +109,7 @@ namespace FablabCatalagoVirtualCapasDAL
 		public (bool, string) RegistrarAutor(Autores pAutor)
 		{
 			pAutor.Password = Encrypt(pAutor.Password);
+			pAutor.FechaRegistro = DateTime.Now;
 
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
