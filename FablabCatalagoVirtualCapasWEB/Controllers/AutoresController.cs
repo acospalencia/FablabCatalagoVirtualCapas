@@ -14,16 +14,6 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
     public class AutoresController : Controller
     {
 		private AutoresBL autorBL = new AutoresBL();
-		public static string Encrypt(string str)
-		{
-			SHA256 sha256 = SHA256Managed.Create();
-			ASCIIEncoding encoding = new ASCIIEncoding();
-			byte[] stream = null;
-			StringBuilder sb = new StringBuilder();
-			stream = sha256.ComputeHash(encoding.GetBytes(str));
-			for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-			return sb.ToString();
-		}
 
 		// GET: Autores
 		public ActionResult Index()
@@ -96,7 +86,6 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		[HttpPost]
 		public ActionResult RegistrarNew (Autores pAutor)
 		{
-			pAutor.Password = Encrypt(pAutor.Password);
 
 			(bool Registrado, string mensaje) = autorBL.RegistrarAutor(pAutor);
 
@@ -115,7 +104,6 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		[HttpPost]
 		public ActionResult InciarSesion(Autores pAutor)
 		{
-			pAutor.Password = Encrypt(pAutor.Password);
 
 			Autores InfoAutor = autorBL.IniciarSesion(pAutor);
 

@@ -806,7 +806,8 @@ progress {
 }
 
 .col {
-  flex: 1 0 0%;
+width: 320px;
+
 }
 
 .row-cols-auto > * {

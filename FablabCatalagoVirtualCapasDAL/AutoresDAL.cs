@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace FablabCatalagoVirtualCapasDAL
 {
@@ -56,7 +57,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Apellidos", pAutor.Apellidos);
 			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
-			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+			cmd.Parameters.AddWithValue("@Contrasena", pAutor.Password);
 
 			return ComunBD.EjecutarComand(cmd);
 		}
@@ -76,6 +77,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Apellidos", pAutor.Apellidos);
 			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
+			cmd.Parameters.AddWithValue("@Contrasena", pAutor.Password);
 			return ComunBD.EjecutarComand(cmd);
 		}
 
@@ -93,8 +95,21 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
+		public static string Encrypt(string str)
+		{
+			SHA256 sha256 = SHA256Managed.Create();
+			ASCIIEncoding encoding = new ASCIIEncoding();
+			byte[] stream = null;
+			StringBuilder sb = new StringBuilder();
+			stream = sha256.ComputeHash(encoding.GetBytes(str));
+			for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+			return sb.ToString();
+		}
+
 		public (bool, string) RegistrarAutor(Autores pAutor)
 		{
+			pAutor.Password = Encrypt(pAutor.Password);
+
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spNewAutor";
@@ -102,7 +117,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Apellidos", pAutor.Apellidos);
 			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
 			cmd.Parameters.AddWithValue("@FechaRegistro", pAutor.FechaRegistro);
-			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+			cmd.Parameters.AddWithValue("@Contrasena", pAutor.Password);
 			cmd.Parameters.Add("@Registrado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 			cmd.Parameters.Add("@Mensaje", SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
 
@@ -116,12 +131,14 @@ namespace FablabCatalagoVirtualCapasDAL
 
 		public Autores IniciarSesion(Autores pAutor)
 		{
+			pAutor.Password = Encrypt(pAutor.Password);
+
 			Autores InfoAutor = new Autores();
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spValidacion";
 			cmd.Parameters.AddWithValue("@CorreElectronico", pAutor.CorreElectronico);
-			cmd.Parameters.AddWithValue("@Contraseña", pAutor.Password);
+			cmd.Parameters.AddWithValue("@Contrasena", pAutor.Password);
 			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
 			while (reader.Read())
 			{
