@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using FablabCatalagoVirtualCapasWEB.Permisos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,16 @@ using System.Web.Services.Description;
 
 namespace FablabCatalagoVirtualCapasWEB.Controllers
 {
-    public class AutoresController : Controller
-    {
+	public class AutoresController : Controller
+	{
 		private AutoresBL autorBL = new AutoresBL();
 
 		// GET: Autores
 		public ActionResult Index()
-        {
+		{
 			var autores = autorBL.RegresarLista();
 			return View(autores);
-        }
+		}
 
 		public ActionResult Registrarse()
 		{
@@ -32,7 +33,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 			return View();
 		}
 
-
+		[ValidarSesion]
 		// GET: Autores/Details
 		public ActionResult Details(int Id)
 		{
@@ -43,6 +44,8 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 			}
 			return View(autor);
 		}
+
+		[ValidarSesion]
 		//GET: Autores/Create
 		public ActionResult Create()
 		{
@@ -60,6 +63,8 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 			}
 			return View(autor);
 		}
+
+		[ValidarSesion]
 		// GET: Autores/Edit
 		public ActionResult Edit(int id)
 		{
@@ -84,7 +89,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult RegistrarNew (Autores pAutor)
+		public ActionResult Registrarse(Autores pAutor)
 		{
 
 			(bool Registrado, string mensaje) = autorBL.RegistrarAutor(pAutor);

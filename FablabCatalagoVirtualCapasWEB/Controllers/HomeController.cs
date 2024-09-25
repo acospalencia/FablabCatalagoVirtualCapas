@@ -26,5 +26,11 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 
 			return View();
 		}
+		public ActionResult CerrarSesion()
+		{
+			Session["Autor"] = null;
+
+			return RedirectToAction("InciarSesion", "Autores");
+		}
 	}
 }

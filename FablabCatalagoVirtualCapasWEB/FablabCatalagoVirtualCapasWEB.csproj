@@ -229,7 +229,6 @@
     <Content Include="Views\Clubs\Index.cshtml" />
     <Content Include="Views\Autores\Details.cshtml" />
     <Content Include="Views\Autores\Edit.cshtml" />
-    <Content Include="Views\Autores\Index.cshtml" />
     <Content Include="Views\Autores\Create.cshtml" />
     <Content Include="Views\Autores\Registrarse.cshtml" />
     <Content Include="Views\Autores\InciarSesion.cshtml" />

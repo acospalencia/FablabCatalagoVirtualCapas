@@ -7,6 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>@ViewBag.Title - FabLab/ESFE</title>
 	<link href="~/Content/MainStyle.css" rel="stylesheet" />
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
@@ -58,30 +59,38 @@
 					<img src="~/images/LogoFablab.png">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form action="@Url.Action("InciarSesion","Autores")" method="post" class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Login
+						Iniciar Sesion
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+					<div class="wrap-input100 validate-input" data-validate="Correo Electronico Obligatorio: ex@abc.xyz">
+						<input class="input100" type="text" name="CorreElectronico" placeholder="Correo Electronico">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+					<div class="wrap-input100 validate-input" data-validate="Contraseña obligatoria">
+						<input class="input100" type="password" name="Password" placeholder="Contraseña">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 
+					@if (ViewData["Mensaje"] != null)
+					{
+						<div class="alert alert-danger" role="alert">
+							@ViewData["Mensaje"]
+						</div>
+					}
+
+
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
+						<button class="login100-form-btn" type="submit">
+							Iniciar Sesion
 						</button>
 					</div>
 					<div class="text-center p-t-136">
