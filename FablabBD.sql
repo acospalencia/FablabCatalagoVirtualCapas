@@ -445,7 +445,7 @@ Where Usuario = @Usuario and [Password] = @Contra
 END
 GO
 
-ALTER PROCEDURE SPMostrarInfo
+CREATE PROCEDURE SPMostrarInfo
 @NombrePrototipo NVARCHAR(30)
 AS
 BEGIN
