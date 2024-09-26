@@ -128,9 +128,9 @@ CREATE TABLE SolicitudProyectos
 	Id INT PRIMARY KEY NOT NULL IDENTITY (1,1),
 	TipoProyecto NVARCHAR(50) NOT NULL,
 	Descripcion NVARCHAR(MAX) NOT NULL,
-	Integrantes INT NOT NULL,
-	Fecha DATE NOT NULL,
-	Aprovado BIT,
+	Integrantes NVARCHAR(20) NOT NULL,
+	Fecha NVARCHAR(50) NOT NULL,
+	Estado NVARCHAR(50) NOT NULL,
 	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) 
 );
 GO
@@ -793,9 +793,9 @@ GO
 CREATE PROCEDURE spAggSoliProyecto
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
-@Integrantes INT,
+@Integrantes NVARCHAR(20),
 @Fecha DATE,
-@Aprovado BIT,
+@Aprovado NVARCHAR(50),
 @IdAutor INT
 AS
 BEGIN
@@ -808,7 +808,7 @@ CREATE PROCEDURE spModiSoliProyecto
 @Id INT,
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
-@Integrantes INT
+@Integrantes NVARCHAR(20)
 AS
 BEGIN
 UPDATE SolicitudProyectos
@@ -890,11 +890,11 @@ GO
 
 CREATE PROCEDURE spModiSoliAprobacion
 @Id INT,
-@Aprovado BIT
+@Aprovado NVARCHAR(50)
 AS
 BEGIN
 UPDATE SolicitudProyectos
-SET Aprovado = @Aprovado
+SET Estado = @Aprovado
 WHERE Id = @Id
 END
 GO

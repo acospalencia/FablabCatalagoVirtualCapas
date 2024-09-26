@@ -32,8 +32,6 @@ INSERT INTO Duraciones (TiempoDiseno, TiempoFabricado, TiempoArmado) VALUES
 ('2 días', '4 Horas', '2 Horas');
 GO
 
-
-
 INSERT INTO Estados (NombreEstado, Detalle) VALUES
 ('Existente', 'El prototipo está disponible y listo para ser utilizado.'),
 ('No Existente', 'El prototipo no está disponible o no existe actualmente.'),
@@ -64,11 +62,20 @@ INSERT INTO Prototipos (NombrePrototipo, IdCategoria, IdMaterial, X, Y, Z, Descr
 GO
 
 INSERT INTO Autores VALUES
-('Alexis Eduardo','Tadeo Mendez','alexistadeomendez@gmail.com','2023/04/12'),
-('Carlos Alexander','Acosta Palencia','alexanderacostapalencia@gmail.com','2024/03/23'),
-('Nicol Nohemy','Sanchez Menjivar','nicolnohemysanchez@gmail.com','2023/11/30'),
-('Adriana Marisol','Sosa Lipe','adrianamarisolsosalipe@gmail.com','2023/08/16'),
-('Maria Fernanda','Alvarez Guzman','mariafernandaalvarezguzman@gmail.com','2024/04/11')
+('Alexis Eduardo','Tadeo Mendez','alexistadeomendez@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2023/04/12'),
+('Carlos Alexander','Acosta Palencia','alexanderacostapalencia@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2024/03/23'),
+('Nicol Nohemy','Sanchez Menjivar','nicolnohemysanchez@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2023/11/30'),
+('Adriana Marisol','Sosa Lipe','adrianamarisolsosalipe@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2023/08/16'),
+('Maria Fernanda','Alvarez Guzman','mariafernandaalvarezguzman@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2024/04/11')
 GO
+
+INSERT INTO SolicitudProyectos(TipoProyecto, Descripcion, Integrantes, Fecha, Estado, IdAutor)
+VALUES
+('Investigacion institucional', 'Estudio sobre la mejora de procesos administrativos dentro de la universidad.', 5, '2024-06-15', 'En espera de aprobacion', 1),
+('Investigacion tecnologica', 'Desarrollo de un prototipo de sistema de control automatizado para laboratorios.', 3, '2023-11-23', 'En espera de aprobacion', 2),
+('Investigacion de catedra', 'Análisis comparativo de metodologías de enseñanza aplicadas a ciencias exactas.', 2, '2024-02-10', 'En espera de aprobacion', 3),
+('Investigacion institucional', 'Evaluación del impacto de la digitalización en la gestión de archivos académicos.', 4, '2023-09-05', 'En espera de aprobacion', 4),
+('Investigacion tecnologica', 'Creación de un dispositivo de monitoreo remoto de parámetros ambientales.', 6, '2024-05-12', 'En espera de aprobacion', 1),
+('Investigacion de catedra', 'Estudio sobre la implementación de tecnologías de aprendizaje asistido por IA en el aula.', 3, '2024-01-28', 'En espera de aprobacion', 2);
 
 
