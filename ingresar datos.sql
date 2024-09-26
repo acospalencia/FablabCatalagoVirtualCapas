@@ -78,4 +78,12 @@ VALUES
 ('Investigacion tecnologica', 'Creación de un dispositivo de monitoreo remoto de parámetros ambientales.', 6, '2024-05-12', 'En espera de aprobacion', 1),
 ('Investigacion de catedra', 'Estudio sobre la implementación de tecnologías de aprendizaje asistido por IA en el aula.', 3, '2024-01-28', 'En espera de aprobacion', 2);
 
+INSERT INTO Clubs (NombreClub, Detalle)
+VALUES
+('Club de Robótica', 'Grupo dedicado al desarrollo de proyectos de robótica y automatización.'),
+('Club de Programación', 'Equipo enfocado en competencias de programación y desarrollo de software.'),
+('Club de Emprendimiento', 'Iniciativa para fomentar el espíritu emprendedor y crear startups tecnológicas.'),
+('Club de Astronomía', 'Grupo para la observación y estudio de fenómenos astronómicos.'),
+('Club de Medio Ambiente', 'Equipo que organiza actividades para la preservación del medio ambiente y la sostenibilidad.'),
+('Club de Debate', 'Espacio para el desarrollo de habilidades de oratoria y debates sobre temas de actualidad.');
 
