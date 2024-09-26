@@ -28,7 +28,16 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		}
 		public ActionResult CerrarSesion()
 		{
-			Session["Autor"] = null;
+			// Limpiar la sesión
+			Session.Clear();
+			Session.Abandon();
+
+			// Evitar el caché en la página
+			HttpContext.Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+			HttpContext.Response.Cache.SetValidUntilExpires(false);
+			HttpContext.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
+			HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+			HttpContext.Response.Cache.SetNoStore();
 
 			return RedirectToAction("InciarSesion", "Autores");
 		}

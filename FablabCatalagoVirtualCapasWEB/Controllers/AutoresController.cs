@@ -37,6 +37,10 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		// GET: Autores/Details
 		public ActionResult Details(int Id)
 		{
+			if (Session["Autor"] == null)
+			{
+				return RedirectToAction("Login", "Account");
+			}
 			var autor = autorBL.RegresarLista().FirstOrDefault(c => c.Id == Id);
 			if (autor == null)
 			{

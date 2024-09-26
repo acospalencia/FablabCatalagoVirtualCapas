@@ -13,7 +13,7 @@ namespace FablabCatalagoVirtualCapasDAL
 	{
 		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
-			pSoli.Fecha = DateTime.Now.ToString();
+			pSoli.Fecha = DateTime.Today.ToString();
 			pSoli.Estado = "En espera de aprobacion";
 
 			SqlCommand cmd = ComunBD.ObtenerComan();
