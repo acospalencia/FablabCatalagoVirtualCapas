@@ -29,10 +29,10 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <CheckBox x:Name="ckAprovado" Content="Aprovado" HorizontalAlignment="Left" Margin="264,276,0,0" VerticalAlignment="Top" Height="47" Width="142" FontFamily="Arial" FontSize="16"/>
-        <CheckBox x:Name="ckAprovado_Copy" Content="No Aprovado" HorizontalAlignment="Left" Margin="264,300,0,0" VerticalAlignment="Top" Height="46" Width="142" FontFamily="Arial" FontSize="16"/>
+        <CheckBox x:Name="ckAprovado" Content="Aprovado" HorizontalAlignment="Left" Margin="264,272,0,0" VerticalAlignment="Top" Height="47" Width="142" FontFamily="Arial" FontSize="16" Checked="chkAprobar_Checked"/>
+        <CheckBox x:Name="ckNoAprovado" Content="No Aprovado" HorizontalAlignment="Left" Margin="264,308,0,0" VerticalAlignment="Top" Height="46" Width="142" FontFamily="Arial" FontSize="16" Checked="chkNoAprobar_Checked"/>
         <Button Content="Guardar Cambios" x:Name="btnGuardar" HorizontalAlignment="Center" Margin="0,464,0,0" VerticalAlignment="Top" Height="38" Width="216" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Cursor="Hand" Click="btnInfo_Click"  />
-        <Label x:Name="lblId" Content="" HorizontalAlignment="Left" Margin="920,98,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontFamily="Arial" FontSize="16"/>
+        <Label x:Name="lblId" Content="" HorizontalAlignment="Left" Margin="920,98,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontFamily="Arial" FontSize="16" Visibility="Hidden"/>
         <Label x:Name="lblAutor" Content="Autor que lo registro: " HorizontalAlignment="Left" Margin="439,98,0,0" VerticalAlignment="Top" Foreground="#FFF3E8E8" FontWeight="Bold" FontSize="16" FontFamily="Arial"/>
         <ComboBox x:Name="cbIdAutor" HorizontalAlignment="Left" Margin="439,144,0,0" VerticalAlignment="Top" Width="290" FontFamily="Arial" FontSize="18" FontWeight="Bold" IsReadOnly="True" IsEnabled="False"/>
 

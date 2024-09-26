@@ -1,4 +1,5 @@
 ﻿using FablabCatalagoVirtualCapasBL;
+using FablabCatalagoVirtualCapasEN;
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
@@ -39,12 +40,44 @@ namespace FablabCatalagoVirtualCapasWPF
 		{
 			var ScBack = new EliminarSolicitud();
 			ScBack.Show();
-			ScBack.Close();
+			this.Close();
+		}
+
+		private void chkAprobar_Checked(object sender, RoutedEventArgs e)
+		{
+			ckNoAprovado.IsChecked = false;
+		}
+
+		private void chkNoAprobar_Checked(object sender, RoutedEventArgs e)
+		{
+			ckAprovado.IsChecked = false;
 		}
 
 		private void btnInfo_Click(object sender, RoutedEventArgs e)
 		{
+			bool aprovado;
 
+			if (ckAprovado.IsChecked == true)
+            {
+				 aprovado = true;
+            }
+            else
+            {
+				 aprovado = false;
+			}
+
+			var soliAprova = new SolicitudProyectos
+			{
+				Id = Convert.ToInt32(lblId.Content),
+				Aprovado = aprovado
+			};
+
+			var soliBL = new SolicitudProyectosBL();
+			soliBL.ModificarAprobacion(soliAprova);
+
+			var ScBack = new EliminarSolicitud();
+			ScBack.Show();
+			this.Close();
 		}
 	}
 }

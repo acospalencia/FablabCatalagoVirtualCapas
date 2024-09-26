@@ -11,7 +11,7 @@ namespace FablabCatalagoVirtualCapasDAL
 {
 	public class SolicitudProyectosDAL
 	{
-		public int ModificarSoli(SolicitudProyectos pSoli)
+		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -24,7 +24,17 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
-		public int DeleteSoli(SolicitudProyectos pSoli)
+		public int ModificarAprobacion(SolicitudProyectos pSoli)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spModiSoliAprobacion";
+			cmd.Parameters.AddWithValue("@Id", pSoli.Id);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Aprovado);
+			return ComunBD.EjecutarComand(cmd);
+		}
+
+		public int ModificarSoli(SolicitudProyectos pSoli)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -38,7 +48,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
-		public int GuardarSoli(SolicitudProyectos pSoli)
+		public int DeleteSoli(SolicitudProyectos pSoli)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -64,7 +74,8 @@ namespace FablabCatalagoVirtualCapasDAL
 					Descripcion	 = reader.GetString(2),
 					Integrantes = reader.GetInt32(3),
 					Fecha = reader.GetDateTime(4),
-					IdAutor = reader.GetInt32(5)
+					Aprovado = reader.GetBoolean(5),
+					IdAutor = reader.GetInt32(6)
 				};
 
 				ListaSolis.Add(club);

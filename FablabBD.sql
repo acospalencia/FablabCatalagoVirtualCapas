@@ -131,7 +131,7 @@ CREATE TABLE SolicitudProyectos
 	Integrantes INT NOT NULL,
 	Fecha DATE NOT NULL,
 	Aprovado BIT,
-	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) ON DELETE CASCADE ON UPDATE CASCADE
+	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) 
 );
 GO
 
@@ -808,15 +808,11 @@ CREATE PROCEDURE spModiSoliProyecto
 @Id INT,
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
-@Integrantes INT,
-@Fecha DATE,
-@Aprovado BIT,
-@IdAutor INT
+@Integrantes INT
 AS
 BEGIN
 UPDATE SolicitudProyectos
-SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes,
-Fecha = @Fecha, Aprovado = @Aprovado, IdAutor = @IdAutor
+SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes
 WHERE Id = @Id
 END
 GO
@@ -888,6 +884,17 @@ CREATE PROCEDURE spMostrarInfoSoli
 AS
 BEGIN 
 SELECT * FROM SolicitudProyectos 
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spModiSoliAprobacion
+@Id INT,
+@Aprovado BIT
+AS
+BEGIN
+UPDATE SolicitudProyectos
+SET Aprovado = @Aprovado
 WHERE Id = @Id
 END
 GO

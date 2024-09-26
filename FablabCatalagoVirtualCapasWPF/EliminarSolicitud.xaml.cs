@@ -84,6 +84,7 @@ namespace FablabCatalagoVirtualCapasWPF
 			dgVer.ItemsSource = SoliBL.RegresarLista();
 
 			btnEliminar.Visibility = Visibility.Hidden;
+			btnInfo.Visibility = Visibility.Hidden;
 
 			MessageBox.Show("Los datos se han eliminado con exito", "Correcto");
 		}
@@ -112,7 +113,15 @@ namespace FablabCatalagoVirtualCapasWPF
 				formInfo.lblFecha.Content += mostrarSoli.Fecha.ToString();
 				formInfo.lblDescripcion.Content += mostrarSoli.Descripcion;
 				formInfo.cbIdAutor.SelectedValue = mostrarSoli.IdAutor;
-			}
+                if (mostrarSoli.Aprovado == true)
+                {
+					formInfo.ckAprovado.IsChecked = true;
+                }
+                else
+                {
+					formInfo.ckNoAprovado.IsChecked = true;
+				}
+            }
 
 
 		}
