@@ -13,6 +13,9 @@ namespace FablabCatalagoVirtualCapasDAL
 	{
 		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
+			pSoli.Fecha = DateTime.Now;
+			pSoli.Aprovado = false;
+
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spAggSoliProyecto";
@@ -20,6 +23,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Descripcion", pSoli.Descripcion);
 			cmd.Parameters.AddWithValue("@Integrantes", pSoli.Integrantes);
 			cmd.Parameters.AddWithValue("@Fecha", pSoli.Fecha);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Aprovado);
 			cmd.Parameters.AddWithValue("@IdAutor", pSoli.IdAutor);
 			return ComunBD.EjecutarComand(cmd);
 		}

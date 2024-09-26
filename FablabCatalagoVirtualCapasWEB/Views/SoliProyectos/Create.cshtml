@@ -1,73 +1,84 @@
 ﻿@model FablabCatalagoVirtualCapasEN.SolicitudProyectos
 
 @{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
-
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>SolicitudProyectos</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.TipoProyecto, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TipoProyecto, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TipoProyecto, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	@Html.AntiForgeryToken()
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
-            </div>
-        </div>
+<div class="form-horizontal">
+	<h4> Agregar nueva Solicitud de Proyecto</h4>
+	<hr />
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Integrantes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Integrantes, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Integrantes, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	<form class="row g-3 needs-validation" novalidate>
+		<div class="row g-2">
+			<div class="col-md">
+				<div class="form-floating">
+					<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+						<option selected>Selecciona una opcion</option>
+						<option value="1">Investigación Institucional</option>
+						<option value="2">Investigación Tecnológica</option>
+						<option value="3">Investigación de Cátedra</option>
+					</select>
+					<label for="floatingSelect">Tipo de Proyecto</label>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="input-group has-validation">
+					<div class="form-floating is-invalid">
+						<input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required>
+						<label for="floatingInputGroup2">Descripcion</label>
+					</div>
+					<div class="invalid-feedback">
+						Porfavor rellena el campo obligatorio.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12">
+			<button class="btn btn-primary" type="submit">Submit form</button>
+		</div>
+	</form>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	<div class="form-group">
+		@Html.LabelFor(model => model.TipoProyecto, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.TipoProyecto, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.TipoProyecto, "", new { @class = "text-danger" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IdAutor, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.IdAutor, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.IdAutor, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	<div class="form-group">
+		@Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+		</div>
+	</div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+	<div class="form-group">
+		@Html.LabelFor(model => model.Integrantes, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.Integrantes, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.Integrantes, "", new { @class = "text-danger" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Create" class="btn btn-default" />
+		</div>
+	</div>
+</div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jqueryval")
 }

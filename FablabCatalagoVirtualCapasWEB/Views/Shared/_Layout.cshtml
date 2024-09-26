@@ -34,7 +34,7 @@
 							<li><a class="dropdown-item" href="/Prototipos/PLPIT">Prototipos del programa LPIT</a></li>
 						</ul>
 					</li>
-					
+
 					@if (Session["Autor"] == null)
 					{
 
@@ -52,8 +52,16 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="/Autores/Details/@autor.Id">Mi informacion</a></li>
-								<li><a class="dropdown-item" href="#">Iniciar una Solicitud de Proyecto</a></li>
 								<li><a class="dropdown-item" href="/Home/CerrarSesion">Cerrar Sesion</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Solicitudes de Proyecto
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/SoliProyectos/Create">Iniciar una nueva Solicitud de Proyecto</a></li>
+								<li><a class="dropdown-item" href="#">Mis solicitudes</a></li>
 							</ul>
 						</li>
 					}
