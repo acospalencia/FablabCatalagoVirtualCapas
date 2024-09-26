@@ -13,8 +13,8 @@ namespace FablabCatalagoVirtualCapasDAL
 	{
 		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
-			pSoli.Fecha = DateTime.Now;
-			pSoli.Aprovado = false;
+			pSoli.Fecha = DateTime.Now.ToString();
+			pSoli.Estado = "En espera de aprobacion";
 
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -23,7 +23,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Descripcion", pSoli.Descripcion);
 			cmd.Parameters.AddWithValue("@Integrantes", pSoli.Integrantes);
 			cmd.Parameters.AddWithValue("@Fecha", pSoli.Fecha);
-			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Aprovado);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Estado);
 			cmd.Parameters.AddWithValue("@IdAutor", pSoli.IdAutor);
 			return ComunBD.EjecutarComand(cmd);
 		}
@@ -34,7 +34,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spModiSoliAprobacion";
 			cmd.Parameters.AddWithValue("@Id", pSoli.Id);
-			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Aprovado);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Estado);
 			return ComunBD.EjecutarComand(cmd);
 		}
 
@@ -76,9 +76,9 @@ namespace FablabCatalagoVirtualCapasDAL
 					Id = reader.GetInt32(0),
 					TipoProyecto = reader.GetString(1),
 					Descripcion	 = reader.GetString(2),
-					Integrantes = reader.GetInt32(3),
-					Fecha = reader.GetDateTime(4),
-					Aprovado = reader.GetBoolean(5),
+					Integrantes = reader.GetString(3),
+					Fecha = reader.GetString(4),
+					Estado = reader.GetString(5),
 					IdAutor = reader.GetInt32(6)
 				};
 
@@ -101,9 +101,9 @@ namespace FablabCatalagoVirtualCapasDAL
 					Id = reader.GetInt32(0),
 					TipoProyecto = reader.GetString(1),
 					Descripcion = reader.GetString(2),
-					Integrantes = reader.GetInt32(3),
-					Fecha = reader.GetDateTime(4),
-					Aprovado = reader.GetBoolean(5),
+					Integrantes = reader.GetString(3),
+					Fecha = reader.GetString(4),
+					Estado = reader.GetString(5),
 					IdAutor = reader.GetInt32(6)
 
 				};

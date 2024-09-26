@@ -113,11 +113,11 @@ namespace FablabCatalagoVirtualCapasWPF
 				formInfo.lblFecha.Content += mostrarSoli.Fecha.ToString();
 				formInfo.lblDescripcion.Content += mostrarSoli.Descripcion;
 				formInfo.cbIdAutor.SelectedValue = mostrarSoli.IdAutor;
-                if (mostrarSoli.Aprovado == true)
+                if (mostrarSoli.Estado == "Aprovado")
                 {
 					formInfo.ckAprovado.IsChecked = true;
                 }
-                else
+                else if(mostrarSoli.Estado == "No Aprovado")
                 {
 					formInfo.ckNoAprovado.IsChecked = true;
 				}

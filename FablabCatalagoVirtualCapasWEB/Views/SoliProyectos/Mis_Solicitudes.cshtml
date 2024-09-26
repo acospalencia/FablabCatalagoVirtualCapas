@@ -1,0 +1,37 @@
+﻿@model List<FablabCatalagoVirtualCapasEN.SolicitudProyectos>
+
+@{
+	ViewBag.Title = "Mis Solicitudes";
+}
+
+<h2>Mis Solicitudes</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Tipo de Proyecto
+			</th>
+			<th>
+				Descripción
+			</th>
+			<th>
+				Fecha en que se registro
+			</th>
+			<th>
+				Estado
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.TipoProyecto</td>
+				<td>@item.Descripcion</td>
+				<td>@item.Fecha</td>
+				<td>@item.Estado</td>
+			</tr>
+		}
+	</tbody>
+</table>

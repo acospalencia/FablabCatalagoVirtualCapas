@@ -1,5 +1,6 @@
 ﻿using FablabCatalagoVirtualCapasBL;
 using FablabCatalagoVirtualCapasEN;
+using FablabCatalagoVirtualCapasWEB.Permisos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace FablabCatalagoVirtualCapasWEB.Controllers
 {
+	[ValidarSesion]
 	public class ClubsController : Controller
 	{
 		private ClubBL clubsBL = new ClubBL();

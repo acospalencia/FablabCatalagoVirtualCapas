@@ -55,21 +55,21 @@ namespace FablabCatalagoVirtualCapasWPF
 
 		private void btnInfo_Click(object sender, RoutedEventArgs e)
 		{
-			bool aprovado;
+			string aprovado;
 
 			if (ckAprovado.IsChecked == true)
             {
-				 aprovado = true;
+				 aprovado = "Aprovado";
             }
             else
             {
-				 aprovado = false;
+				 aprovado = "No Aprovado";
 			}
 
 			var soliAprova = new SolicitudProyectos
 			{
 				Id = Convert.ToInt32(lblId.Content),
-				Aprovado = aprovado
+				Estado = aprovado
 			};
 
 			var soliBL = new SolicitudProyectosBL();
