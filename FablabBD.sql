@@ -130,6 +130,7 @@ CREATE TABLE SolicitudProyectos
 	Descripcion NVARCHAR(MAX) NOT NULL,
 	Integrantes INT NOT NULL,
 	Fecha DATE NOT NULL,
+	Aprovado BIT,
 	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 GO
@@ -794,11 +795,12 @@ CREATE PROCEDURE spAggSoliProyecto
 @Descripcion NVARCHAR(MAX),
 @Integrantes INT,
 @Fecha DATE,
+@Aprovado BIT,
 @IdAutor INT
 AS
 BEGIN
 INSERT INTO SolicitudProyectos Values
-(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @IdAutor)
+(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @Aprovado, @IdAutor)
 END
 GO
 
@@ -808,12 +810,13 @@ CREATE PROCEDURE spModiSoliProyecto
 @Descripcion NVARCHAR(MAX),
 @Integrantes INT,
 @Fecha DATE,
+@Aprovado BIT,
 @IdAutor INT
 AS
 BEGIN
 UPDATE SolicitudProyectos
 SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes,
-Fecha = @Fecha, IdAutor = @IdAutor
+Fecha = @Fecha, Aprovado = @Aprovado, IdAutor = @IdAutor
 WHERE Id = @Id
 END
 GO
@@ -877,5 +880,14 @@ BEGIN
 		SELECT * FROM Autores WHERE CorreElectronico = @CorreElectronico and [Password] = @Contrasena
 	ELSE
 		SELECT '0'
+END
+GO
+
+CREATE PROCEDURE spMostrarInfoSoli
+@Id INT
+AS
+BEGIN 
+SELECT * FROM SolicitudProyectos 
+WHERE Id = @Id
 END
 GO
