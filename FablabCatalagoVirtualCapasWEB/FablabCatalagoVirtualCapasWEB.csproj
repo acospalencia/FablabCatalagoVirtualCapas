@@ -214,28 +214,22 @@
     <Content Include="Views\Prototipos\PLPIT.cshtml" />
     <Content Include="Views\SoliProyectos\Index.cshtml" />
     <Content Include="Views\SoliProyectos\Create.cshtml" />
-
-
     <Content Include="Views\Clubs\Details.cshtml" />
     <Content Include="Views\Clubs\Create.cshtml" />
     <Content Include="Views\Clubs\Index.cshtml" />
-
     <Content Include="Views\Autores\Details.cshtml" />
     <Content Include="Views\Autores\Edit.cshtml" />
     <Content Include="Views\Autores\Index.cshtml" />
     <Content Include="Views\Autores\Create.cshtml" />
-
+    <Content Include="Views\InscripClubs\Index.cshtml" />
+    <Content Include="Views\InscripClubs\Details.cshtml" />
+    <Content Include="Views\InscripClubs\Create.cshtml" />
+    <Content Include="Views\InscripClubs\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-
     <Folder Include="Stylo\" />
-    <Folder Include="Views\Autores\" />
-
-    <Folder Include="Views\Clubs\" />
-
-    <Folder Include="Views\InscripClubs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

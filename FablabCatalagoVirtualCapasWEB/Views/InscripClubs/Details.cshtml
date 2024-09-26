@@ -1,0 +1,51 @@
+﻿@model FablabCatalagoVirtualCapasEN.InscripcionClub
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InscripcionClub</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAutor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAutor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdClub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdClub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInscripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInscripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detalle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
