@@ -71,5 +71,31 @@ namespace FablabCatalagoVirtualCapasDAL
 			}
 			return ListaSolis;
 		}
+		public SolicitudProyectos MostrarInfo(SolicitudProyectos pSoli)
+		{
+			var test = new SolicitudProyectos();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarInfoSoli";
+			cmd.Parameters.AddWithValue("@Id", pSoli.Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				SolicitudProyectos Solicitud = new SolicitudProyectos
+				{
+					Id = reader.GetInt32(0),
+					TipoProyecto = reader.GetString(1),
+					Descripcion = reader.GetString(2),
+					Integrantes = reader.GetInt32(3),
+					Fecha = reader.GetDateTime(4),
+					Aprovado = reader.GetBoolean(5),
+					IdAutor = reader.GetInt32(6)
+
+				};
+
+				test = Solicitud;
+			}
+			return test;
+		}
 	}
 }

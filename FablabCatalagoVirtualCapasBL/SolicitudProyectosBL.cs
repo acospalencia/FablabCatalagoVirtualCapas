@@ -27,5 +27,9 @@ namespace FablabCatalagoVirtualCapasBL
 		{
 			return solisDAL.RegresarLista();
 		}
+		public SolicitudProyectos MostrarInfo(SolicitudProyectos pSoli)
+		{
+			return solisDAL.MostrarInfo(pSoli);
+		}
 	}
 }

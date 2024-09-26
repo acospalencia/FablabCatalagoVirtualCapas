@@ -29,6 +29,8 @@ namespace FablabCatalagoVirtualCapasWPF
 			InitializeComponent();
 		}
 
+		public InfoSoli formInfo = new InfoSoli();
+
 		private void btnRegresar_Click(object sender, RoutedEventArgs e)
 		{
 			var ScBack = new SelecAdministrar();
@@ -90,6 +92,43 @@ namespace FablabCatalagoVirtualCapasWPF
 		{
 			var soliBL = new SolicitudProyectosBL();
 			dgVer.ItemsSource = soliBL.RegresarLista();
+		}
+
+		private void btnInfo_Click(object sender, RoutedEventArgs e)
+		{
+			formInfo.Show();
+			this.Close();
+			var infoSoli = new SolicitudProyectos
+			{
+				Id = Convert.ToInt32(txtId.Text)
+			};
+			SolicitudProyectosBL solisbl = new SolicitudProyectosBL();
+			SolicitudProyectos mostrarSoli = solisbl.MostrarInfo(infoSoli);
+			if (infoSoli != null)
+			{
+				formInfo.lblId.Content = mostrarSoli.Id;
+				formInfo.lblTipo.Content += mostrarSoli.TipoProyecto;
+				formInfo.lblIntegrates.Content += mostrarSoli.Integrantes.ToString();
+				formInfo.lblFecha.Content += mostrarSoli.Fecha.ToString();
+				formInfo.lblDescripcion.Content += mostrarSoli.Descripcion;
+				formInfo.cbIdAutor.SelectedValue = mostrarSoli.IdAutor;
+			}
+
+
+		}
+
+		private void txtId_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			if (dgVer.SelectedItem != null)
+			{
+				var row = (SolicitudProyectos)dgVer.SelectedItem;
+
+				if (row != null)
+				{
+					txtId.Text = row.Id.ToString();
+					btnInfo.Visibility = Visibility.Visible;
+				}
+			}
 		}
 	}
 }

@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FablabCatalagoVirtualCapasWPF"
         mc:Ignorable="d"
-        Title="EliminarSolicitud" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
+        Title="EliminarSolicitud" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
     <Grid>
         <Grid>
             <Grid.Background>
@@ -48,7 +48,8 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="668,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+            <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="668,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" TextChanged="txtId_TextChanged"/>
+            <Button Content="Ver informacion" x:Name="btnInfo" HorizontalAlignment="Left" Margin="323,414,0,0" VerticalAlignment="Top" Height="38" Width="216" FontWeight="Bold" FontFamily="Arial" FontSize="16" BorderBrush="#FF707070" Background="#FF614D86" Cursor="Hand" Click="btnInfo_Click"  />
 
         </Grid>
 

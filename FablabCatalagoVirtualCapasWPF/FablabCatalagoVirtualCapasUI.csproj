@@ -184,6 +184,9 @@
     <Compile Include="EliminarUsuario.xaml.cs">
       <DependentUpon>EliminarUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InfoSoli.xaml.cs">
+      <DependentUpon>InfoSoli.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IngresarAutores.xaml.cs">
       <DependentUpon>IngresarAutores.xaml</DependentUpon>
     </Compile>
@@ -291,6 +294,10 @@
     <Page Include="InformacionPrototipo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InfoSoli.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IngresarAutores.xaml">
       <Generator>MSBuild:Compile</Generator>
