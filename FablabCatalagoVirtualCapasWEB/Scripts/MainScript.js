@@ -1,17 +1,5 @@
 ﻿
 
-window.history.pushState(null, "", window.location.href);
-window.onpopstate = function () {
-    window.history.pushState(null, "", window.location.href);
-    alert("No puedes usar la flecha de atrás después de cerrar sesión.");
-    window.location.href = '@Url.Action("Login", "Account")'; // Redirigir a la página de login
-};
-
-
-
-
-
-
 
 /*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */
 !function (a, b) { "use strict"; "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function (a) { if (!a.document) throw new Error("jQuery requires a window with a document"); return b(a) } : b(a) }("undefined" != typeof window ? window : this, function (a, b) {

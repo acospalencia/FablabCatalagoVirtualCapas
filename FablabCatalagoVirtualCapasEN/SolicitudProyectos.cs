@@ -12,7 +12,7 @@ namespace FablabCatalagoVirtualCapasEN
 		public string TipoProyecto { get; set; }
 		public string Descripcion { get; set; }
 		public string Integrantes { get; set; }
-		public string Fecha { get; set; }
+		public DateTime Fecha { get; set; }
 		public string Estado { get; set; }
 		public int IdAutor { get; set; }
 	}

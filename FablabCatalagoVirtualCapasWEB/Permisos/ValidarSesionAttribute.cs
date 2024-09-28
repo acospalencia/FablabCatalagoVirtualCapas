@@ -11,12 +11,18 @@ namespace FablabCatalagoVirtualCapasWEB.Permisos
 
 		public override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
-            if (HttpContext.Current.Session["Autor"] == null)
-            {
-				filterContext.Result = new RedirectResult("/Autores/InciarSesion");
-            }
+			// Deshabilitar cache para que no se pueda acceder a las páginas mediante el botón de atrás
+			filterContext.HttpContext.Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+			filterContext.HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+			filterContext.HttpContext.Response.Cache.SetNoStore();
 
-            base.OnActionExecuting(filterContext);
+			// Verificar si hay sesión activa
+			if (HttpContext.Current.Session["Autor"] == null)
+			{
+				filterContext.Result = new RedirectResult("/Autores/InciarSesion");
+			}
+
+			base.OnActionExecuting(filterContext);
 		}
 
 	}

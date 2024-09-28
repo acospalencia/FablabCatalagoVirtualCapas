@@ -13,7 +13,7 @@ namespace FablabCatalagoVirtualCapasDAL
 	{
 		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
-			pSoli.Fecha = DateTime.Today.ToString();
+			pSoli.Fecha = DateTime.Today;
 			pSoli.Estado = "En espera de aprobacion";
 
 			SqlCommand cmd = ComunBD.ObtenerComan();
@@ -77,7 +77,7 @@ namespace FablabCatalagoVirtualCapasDAL
 					TipoProyecto = reader.GetString(1),
 					Descripcion	 = reader.GetString(2),
 					Integrantes = reader.GetString(3),
-					Fecha = reader.GetString(4),
+					Fecha = reader.GetDateTime(4),
 					Estado = reader.GetString(5),
 					IdAutor = reader.GetInt32(6)
 				};
@@ -102,7 +102,7 @@ namespace FablabCatalagoVirtualCapasDAL
 					TipoProyecto = reader.GetString(1),
 					Descripcion = reader.GetString(2),
 					Integrantes = reader.GetString(3),
-					Fecha = reader.GetString(4),
+					Fecha = reader.GetDateTime(4),
 					Estado = reader.GetString(5),
 					IdAutor = reader.GetInt32(6)
 
