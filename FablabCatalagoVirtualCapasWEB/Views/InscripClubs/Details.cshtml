@@ -1,0 +1,64 @@
+﻿@model FablabCatalagoVirtualCapasEN.InscripcionClub
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles {
+    <link rel="stylesheet" href="@Url.Content("~/Content/inscripcionClub.css")" />
+}
+
+<h2>Detalles de Inscripcion</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">
+            @Html.DisplayNameFor(model => model.IdAutor)
+        </label>
+        <div class="col-md-10">
+            <p class="form-control-static">
+                @Html.DisplayFor(model => model.IdAutor)
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">
+            @Html.DisplayNameFor(model => model.IdClub)
+        </label>
+        <div class="col-md-10">
+            <p class="form-control-static">
+                @Html.DisplayFor(model => model.IdClub)
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">
+            @Html.DisplayNameFor(model => model.FechaInscripcion)
+        </label>
+        <div class="col-md-10">
+            <p class="form-control-static">
+                @Html.DisplayFor(model => model.FechaInscripcion)
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">
+            @Html.DisplayNameFor(model => model.Detalle)
+        </label>
+        <div class="col-md-10">
+            <p class="form-control-static">
+                @Html.DisplayFor(model => model.Detalle)
+            </p>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "details-link" })
+    @Html.ActionLink("Volver a la Lista", "Index", null, new { @class = "details-link" })
+</p>

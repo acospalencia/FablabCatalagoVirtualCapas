@@ -28,7 +28,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		public ActionResult Details(int id)
 		{
 			// Busca la inscripción por ID en la lista.
-			var inscripcion = inscrpBL.RegresarLista().FirstOrDefault(i => i.InscripcionID == id);
+			var inscripcion = inscrpBL.RegresarLista().FirstOrDefault(i => i.Id == id);
 
 			// Si no se encuentra la inscripción, retorna un error 404.
 			if (inscripcion == null)
@@ -70,7 +70,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		public ActionResult Edit(int id)
 		{
 			// Busca la inscripción por ID.
-			var inscripcion = inscrpBL.RegresarLista().FirstOrDefault(i => i.InscripcionID == id);
+			var inscripcion = inscrpBL.RegresarLista().FirstOrDefault(i => i.Id == id);
 
 			// Si no se encuentra la inscripción, retorna un error 404.
 			if (inscripcion == null)
