@@ -1,0 +1,136 @@
+﻿@using FablabCatalagoVirtualCapasEN
+
+@{
+	ViewBag.Title = "InciarSesion";
+	Layout = null;
+}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>@ViewBag.Title - FabLab/ESFE</title>
+	<link href="~/Content/MainStyle.css" rel="stylesheet" />
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/Home">FabLab/ESFE</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/Home">Inicio</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Catalogo de Prototipos
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/Prototipos/PTecnologicos">Prototipos de proyectos tecnologicos</a></li>
+							<li><a class="dropdown-item" href="/Prototipos/Testing">Prototipos de testing</a></li>
+							<li><a class="dropdown-item" href="/Prototipos/PLPIT">Prototipos del programa LPIT</a></li>
+						</ul>
+					</li>
+
+					@if (Session["Autor"] == null)
+					{
+
+						<li class="nav-item">
+							<a class="nav-link" href="/Autores/InciarSesion">Inciar Sesion</a>
+						</li>
+					}
+					else
+					{
+						var autor = Session["Autor"] as Autores;
+
+						<li class="nav-item dropdown ">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Autor: @autor.Nombres
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/Autores/Details/@autor.Id">Mi informacion</a></li>
+								<li><a class="dropdown-item" href="/Clubs/Index">Clubes</a></li>
+								<li><a class="dropdown-item" href="/Home/CerrarSesion">Cerrar Sesion</a></li>
+
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Solicitudes de Proyecto
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/SoliProyectos/Create">Iniciar una nueva Solicitud de Proyecto</a></li>
+								<li><a class="dropdown-item" href="/SoliProyectos/Mis_Solicitudes">Mis solicitudes</a></li>
+							</ul>
+						</li>
+
+					}
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="limiter ">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div>
+					<img src="~/images/LogoFablab.png">
+				</div>
+
+				<form action="@Url.Action("InciarSesion","Autores")" method="post" class="login100-form validate-form">
+					<span class="login100-form-title">
+						Iniciar Sesion
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Correo Electronico Obligatorio: ex@abc.xyz">
+						<input class="input100" type="text" name="CorreElectronico" placeholder="Correo Electronico">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Contraseña obligatoria">
+						<input class="input100" type="password" name="Password" placeholder="Contraseña">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					@if (ViewData["Mensaje"] != null)
+					{
+						<div class="alert alert-danger" role="alert">
+							@ViewData["Mensaje"]
+						</div>
+					}
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Iniciar Sesion
+						</button>
+					</div>
+					<div class="text-center p-t-136">
+						<a class="txt2" href="/Autores/Registrarse">
+							¿No tienes una cuenta? Creala.
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/Scripts/MainScript.js"></script>
+</body>
+

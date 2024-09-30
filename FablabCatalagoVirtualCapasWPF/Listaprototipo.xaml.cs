@@ -66,8 +66,8 @@ namespace Fablab.esfe
 			{
 				NombrePrototipo = txtNombre.Text
 			};
-			ModeloProto2BL MaquinariaBL = new ModeloProto2BL();
-			ModeloProto2 prototipos = MaquinariaBL.MostrarPrototi(protoinfo);
+			ModeloProto2BL ModeloProto = new ModeloProto2BL();
+			ModeloProto2 prototipos = ModeloProto.MostrarPrototi(protoinfo);
 			if (protoinfo != null)
 			{
 				formInfo.lblNombre.Content += prototipos.NombrePrototipo;

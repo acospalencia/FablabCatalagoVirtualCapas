@@ -1,51 +1,44 @@
 ﻿@model FablabCatalagoVirtualCapasEN.Autores
+@using FablabCatalagoVirtualCapasEN
 
 @{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	var autor = Session["Autor"] as Autores;
+	ViewBag.Title = "Mi Infromacion";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Mi informacion</h2>
 
 <div>
-    <h4>Autores</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombres)
-        </dt>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Nombres)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nombres)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Nombres)
+		</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
+		<dt>
+			@Html.DisplayNameFor(model => model.Apellidos)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Apellidos)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Apellidos)
+		</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CorreElectronico)
-        </dt>
+		<dt>
+			@Html.DisplayNameFor(model => model.CorreElectronico)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CorreElectronico)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.CorreElectronico)
+		</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FechaRegistro)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FechaRegistro)
-        </dd>
-
-    </dl>
+	</dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+	<a type="button" href="/Autores/Edit/@autor.Id" class="btn btn-success">Edit</a>
+
 </p>

@@ -11,8 +11,11 @@ namespace FablabCatalagoVirtualCapasDAL
 {
 	public class SolicitudProyectosDAL
 	{
-		public int ModificarSoli(SolicitudProyectos pSoli)
+		public int GuardarSoli(SolicitudProyectos pSoli)
 		{
+			pSoli.Fecha = DateTime.Today;
+			pSoli.Estado = "En espera de aprobacion";
+
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "spAggSoliProyecto";
@@ -20,11 +23,22 @@ namespace FablabCatalagoVirtualCapasDAL
 			cmd.Parameters.AddWithValue("@Descripcion", pSoli.Descripcion);
 			cmd.Parameters.AddWithValue("@Integrantes", pSoli.Integrantes);
 			cmd.Parameters.AddWithValue("@Fecha", pSoli.Fecha);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Estado);
 			cmd.Parameters.AddWithValue("@IdAutor", pSoli.IdAutor);
 			return ComunBD.EjecutarComand(cmd);
 		}
 
-		public int DeleteSoli(SolicitudProyectos pSoli)
+		public int ModificarAprobacion(SolicitudProyectos pSoli)
+		{
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "spModiSoliAprobacion";
+			cmd.Parameters.AddWithValue("@Id", pSoli.Id);
+			cmd.Parameters.AddWithValue("@Aprovado", pSoli.Estado);
+			return ComunBD.EjecutarComand(cmd);
+		}
+
+		public int ModificarSoli(SolicitudProyectos pSoli)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -38,7 +52,7 @@ namespace FablabCatalagoVirtualCapasDAL
 			return ComunBD.EjecutarComand(cmd);
 		}
 
-		public int GuardarSoli(SolicitudProyectos pSoli)
+		public int DeleteSoli(SolicitudProyectos pSoli)
 		{
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
@@ -62,14 +76,41 @@ namespace FablabCatalagoVirtualCapasDAL
 					Id = reader.GetInt32(0),
 					TipoProyecto = reader.GetString(1),
 					Descripcion	 = reader.GetString(2),
-					Integrantes = reader.GetInt32(3),
+					Integrantes = reader.GetString(3),
 					Fecha = reader.GetDateTime(4),
-					IdAutor = reader.GetInt32(5)
+					Estado = reader.GetString(5),
+					IdAutor = reader.GetInt32(6)
 				};
 
 				ListaSolis.Add(club);
 			}
 			return ListaSolis;
+		}
+		public SolicitudProyectos MostrarInfo(SolicitudProyectos pSoli)
+		{
+			var test = new SolicitudProyectos();
+			SqlCommand cmd = ComunBD.ObtenerComan();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "SPMostrarInfoSoli";
+			cmd.Parameters.AddWithValue("@Id", pSoli.Id);
+			SqlDataReader reader = ComunBD.EjecutarReader(cmd);
+			while (reader.Read())
+			{
+				SolicitudProyectos Solicitud = new SolicitudProyectos
+				{
+					Id = reader.GetInt32(0),
+					TipoProyecto = reader.GetString(1),
+					Descripcion = reader.GetString(2),
+					Integrantes = reader.GetString(3),
+					Fecha = reader.GetDateTime(4),
+					Estado = reader.GetString(5),
+					IdAutor = reader.GetInt32(6)
+
+				};
+
+				test = Solicitud;
+			}
+			return test;
 		}
 	}
 }

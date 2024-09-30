@@ -128,9 +128,10 @@ CREATE TABLE SolicitudProyectos
 	Id INT PRIMARY KEY NOT NULL IDENTITY (1,1),
 	TipoProyecto NVARCHAR(50) NOT NULL,
 	Descripcion NVARCHAR(MAX) NOT NULL,
-	Integrantes INT NOT NULL,
+	Integrantes NVARCHAR(20) NOT NULL,
 	Fecha DATE NOT NULL,
-	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) ON DELETE CASCADE ON UPDATE CASCADE
+	Estado NVARCHAR(50) NOT NULL,
+	IdAutor INT NOT NULL FOREIGN KEY REFERENCES Autores(Id) 
 );
 GO
 
@@ -789,16 +790,17 @@ WHERE Prototipos.IdCategoria = 3
 END
 GO
 
-CREATE PROCEDURE spAggSoliProyecto
+ALTER PROCEDURE spAggSoliProyecto
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
-@Integrantes INT,
+@Integrantes NVARCHAR(20),
 @Fecha DATE,
+@Aprovado NVARCHAR(50),
 @IdAutor INT
 AS
 BEGIN
 INSERT INTO SolicitudProyectos Values
-(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @IdAutor)
+(@TipoProyecto, @Descripcion, @Integrantes,CAST(@Fecha as date), @Aprovado, @IdAutor)
 END
 GO
 
@@ -806,14 +808,11 @@ CREATE PROCEDURE spModiSoliProyecto
 @Id INT,
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
-@Integrantes INT,
-@Fecha DATE,
-@IdAutor INT
+@Integrantes NVARCHAR(20)
 AS
 BEGIN
 UPDATE SolicitudProyectos
-SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes,
-Fecha = @Fecha, IdAutor = @IdAutor
+SET TipoProyecto = @TipoProyecto, Descripcion = @Descripcion, Integrantes = @Integrantes
 WHERE Id = @Id
 END
 GO
@@ -879,3 +878,26 @@ BEGIN
 		SELECT '0'
 END
 GO
+
+CREATE PROCEDURE spMostrarInfoSoli
+@Id INT
+AS
+BEGIN 
+SELECT * FROM SolicitudProyectos 
+WHERE Id = @Id
+END
+GO
+
+CREATE PROCEDURE spModiSoliAprobacion
+@Id INT,
+@Aprovado NVARCHAR(50)
+AS
+BEGIN
+UPDATE SolicitudProyectos
+SET Estado = @Aprovado
+WHERE Id = @Id
+END
+GO
+
+--todo de aqui para arriba esta ejecutado en el servidor porfavor anotar 
+--los cambios que no se han reflejado en la base de datos y poder ser no modificar tablas 

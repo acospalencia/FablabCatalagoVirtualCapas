@@ -1,0 +1,92 @@
+﻿@model List<FablabCatalagoVirtualCapasEN.SolicitudProyectos>
+
+@{
+	ViewBag.Title = "Mis Solicitudes";
+	bool aprova = false;
+	bool noaprova = false;
+
+	foreach (var item in Model)
+	{
+		if (item.Estado == "Aprobado")
+		{
+			aprova = true;
+			break;
+		}
+	}
+	foreach (var item in Model)
+	{
+		if (item.Estado == "No Aprobado")
+		{
+			noaprova = true;
+			break;
+		}
+	}
+}
+
+<h2 class="txt">Mis Solicitudes</h2>
+<hr />
+
+<div id="alert-message" class="alert alert-primary" role="alert">
+	En este apartado se te notificará si tu solicitud ha sido aprobada o no. Ten en cuenta que es un proceso largo y no te desanimes
+	si no ves una respuesta rápida. ¡Ten paciencia!
+</div>
+
+@if (aprova)
+{
+	<div id="alert-message-success" class="alert alert-success alert-dismissible fade show" role="alert">
+		Tienes una solicitud aprobada. Revisa cuál es y acércate al FabLab/ESFE para obtener más información
+		sobre cómo seguirás todo el proceso de tu proyecto para sacarlo adelante. ¡ÁNIMO!
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+@if (noaprova)
+{
+	<div id="alert-message-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+		Tienes una solicitud rechazada. Revisa cuál es y acércate a las instalaciones del FabLab/ESFE para hablar con el personal administrativo y obtener más información sobre el rechazo.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+
+
+<div class="alert alert-secondary">
+	<table class="table alert alert-secondary">
+		<thead>
+			<tr>
+				<th>Tipo de Proyecto</th>
+				<th>Descripción</th>
+				<th>Fecha de Registro</th>
+				<th>Estado</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>@item.TipoProyecto</td>
+					<td>@item.Descripcion</td>
+					<td>@item.Fecha</td>
+					<td>
+						@if (item.Estado == "Aprobado")
+						{
+							<span class="badge bg-success">Aprobado</span>
+						}
+						else if (item.Estado == "No Aprobado")
+						{
+							<span class="badge bg-danger">Rechazado</span>
+						}
+						else if (item.Estado == "En espera de aprobacion")
+						{
+							<span class="badge bg-warning">Pendiente</span>
+						}
+						else
+						{
+							@item.Estado
+						}
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

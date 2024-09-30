@@ -1,33 +1,141 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Home Page";
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+	<p class="txt">
+		<b>FabLab/ESFE Pagina Principal</b>
+	</p>
+	<section class="flex-container">
+		<article class="text-content">
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
-    </div>
+
+			<p class="txtsize">
+				<b>FABLAB ESFE/AGAPE:</b>
+				Laboratorio de Innovación e Investigación que promueve un entorno con espacios, equipos para formar y promover en los jóvenes y personal académico, el desarrollo de competencias de Innovación e Investigación requeridas por la currícula de cada una de las carreras que se imparten en la institución, facilitando el desarrollo de prototipos de soluciones vinculadas a proyectos educativos, Innovación y Desarrollo (I+D).
+				Este laboratorio se convertirá en un espacio que facilite a los estudiantes y docentes el aprendizaje cooperativo en la búsqueda de soluciones a situaciones problemáticas a través del desarrollo de soluciones innovadoras.
+			</p>
+		</article>
+
+		<article class="carousel-content">
+			<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="~/images/ft1.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft2.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft3.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft4.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft5.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft6.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft7.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft8.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft9.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft10.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="~/images/ft11.png" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</article>
+	</section>
+	<section class="objective-section alert alert-secondary">
+		<h2>
+			<b>Objetivos-Valores</b>
+		</h2>
+
+		<div class="objective-container">
+			<div class="objective-card">
+				<img src="~/images/ftobj.png" alt="Imagen Objetivo" class="objective-img">
+				<p class="objective-text">
+					<strong>Objetivo General:</strong>
+					Promover la Innovación e Investigación en la comunidad educativa ESFE a través de facilitar espacios equipados con recursos tecnológicos y materiales para el desarrollo de nuevos conocimientos, competencias tecnológicas y de innovación a través de acciones y proyectos.
+				</p>
+			</div>
+
+			<div class="objective-card">
+				<img src="~/images/ftval.png" alt="Imagen Valores" class="objective-img">
+				<p class="objective-text">
+					<strong>Valores:</strong>
+					Educación, Creatividad, Diseño, Innovación y Emprendimiento.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>
+			<b>Equipos y herramientas</b>
+		</h2>
+		<div class="equipos-container">
+			<div class="cards">
+				<img src="~/images/ftimpre.png" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Impresora 3D</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ftcnc.png" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">CNC Routers</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ft5eje.png" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">CNC 5 Ejes</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ftlaser.png" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Laser</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ftscan.png" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">3D Scanner</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ftardui.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">KIT'S ARDUINO</h5>
+				</div>
+			</div>
+			<div class="cards">
+				<img src="~/images/ftenerge.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Equipo de Eficiencia Energética</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </main>

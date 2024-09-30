@@ -5,7 +5,7 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Prototipos de proyectos tecnologicos</h2>
+<h2 class="txt">Prototipos de proyectos tecnologicos</h2>
 
 <div class="row">
 	@foreach (var item in Model)
@@ -19,7 +19,7 @@
 
 		var modalId = "modal-" + item.Id;
 
-		<div class="col-md-4">
+		<div class="col">
 			<div class="card fixed-size-card">
 				<img src="@imageBase64" class="imgcard" alt="@item.NombrePrototipo" />
 
@@ -44,12 +44,12 @@
 					</div>
 					<div class="modal-body">
 						<img src="@imageBase64" class="imgmodal" alt="@item.NombrePrototipo" />
-						<p><strong>Dimensiones:</strong> @item.X cm x @item.Y cm x @item.Z cm</p>
+						<p><strong>Dimensiones:</strong> @item.X  x @item.Y  x @item.Z </p>
 						<p><strong>Material:</strong> @item.NombreMaterial</p>
 						<p><strong>Maquinaria:</strong> @item.Nombre</p>
 						<p><strong>Tiempo de armado:</strong> @item.TiempoArmado</p>
 						<p><strong>Tiempo de diseño:</strong> @item.TiempoDiseno</p>
-						<p><strong>tiempo de fabricación:</strong> @item.TiempoFabricado</p>
+						<p><strong>Tiempo de fabricación:</strong> @item.TiempoFabricado</p>
 						<p><strong>Estado:</strong> @item.NombreEstado</p>
 						<p><strong>TIpo de Prototipo:</strong> @item.CatNombre</p>
 						<p><strong>Descripción:</strong> @item.Descripcion</p>

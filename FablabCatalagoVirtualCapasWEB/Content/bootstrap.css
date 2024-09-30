@@ -744,13 +744,14 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: 90px;
+    margin-left: 90px;
+    width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -770,7 +771,7 @@ progress {
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 1400px) {
@@ -806,7 +807,8 @@ progress {
 }
 
 .col {
-  flex: 1 0 0%;
+ width: 320px;
+
 }
 
 .row-cols-auto > * {
@@ -4381,36 +4383,38 @@ textarea.form-control-lg {
 }
 
 .card {
-  --bs-card-spacer-y: 1rem;
-  --bs-card-spacer-x: 1rem;
-  --bs-card-title-spacer-y: 0.5rem;
-  --bs-card-title-color: ;
-  --bs-card-subtitle-color: ;
-  --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: var(--bs-border-color-translucent);
-  --bs-card-border-radius: var(--bs-border-radius);
-  --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
-  --bs-card-cap-padding-y: 0.5rem;
-  --bs-card-cap-padding-x: 1rem;
-  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
-  --bs-card-cap-color: ;
-  --bs-card-height: ;
-  --bs-card-color: ;
-  --bs-card-bg: var(--bs-body-bg);
-  --bs-card-img-overlay-padding: 1rem;
-  --bs-card-group-margin: 0.75rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: var(--bs-card-height);
-  color: var(--bs-body-color);
-  word-wrap: break-word;
-  background-color: var(--bs-card-bg);
-  background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
-  border-radius: var(--bs-card-border-radius);
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color:;
+    --bs-card-subtitle-color:;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow:;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color:;
+    --bs-card-height:;
+    --bs-card-color:;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .card > hr {
   margin-right: 0;

@@ -1,6 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@using FablabCatalagoVirtualCapasEN
+<!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+	<title>@ViewBag.Title - FabLab/ESFE</title>
+	<link href="~/Content/MainStyle.css" rel="stylesheet" />
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +36,7 @@
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="/Home">Inicio</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Features</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Pricing</a>
-					</li>
+
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Catalogo de Prototipos
@@ -40,16 +47,48 @@
 							<li><a class="dropdown-item" href="/Prototipos/PLPIT">Prototipos del programa LPIT</a></li>
 						</ul>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Inciar Sesion</a>
-					</li>
+
+					@if (Session["Autor"] == null)
+					{
+
+						<li class="nav-item">
+							<a class="nav-link" href="/Autores/InciarSesion">Inciar Sesion</a>
+						</li>
+					}
+					else
+					{
+						var autor = Session["Autor"] as Autores;
+
+						<li class="nav-item dropdown ">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Autor: @autor.Nombres
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/Autores/Details/@autor.Id">Mi informacion</a></li>
+								<li><a class="dropdown-item" href="/Clubs/Index">Clubes</a></li>
+								<li><a class="dropdown-item" href="/Home/CerrarSesion">Cerrar Sesion</a></li>
+
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Solicitudes de Proyecto
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/SoliProyectos/Create">Iniciar una nueva Solicitud de Proyecto</a></li>
+								<li><a class="dropdown-item" href="/SoliProyectos/Mis_Solicitudes">Mis solicitudes</a></li>
+							</ul>
+						</li>
+
+					}
+
 
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<div class="container body-content ">
+	<div class="container body-content body-color">
 		@RenderBody()
 		<hr />
 		<footer>
@@ -61,6 +100,6 @@
 	@Scripts.Render("~/bundles/bootstrap")
 	@RenderSection("scripts", required: false)
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+	<script src="~/Scripts/MainScript.js"></script>
 </body>
 </html>
