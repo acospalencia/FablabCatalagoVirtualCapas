@@ -1,5 +1,6 @@
+--agregados en servidor
 INSERT INTO Usuarios VALUES
-('ulices','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
+('ulises','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
 ('corona','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92')
 GO
 --la contraseña que esta encryptada es 123456
@@ -15,7 +16,9 @@ GO
 INSERT INTO TipoMaterial VALUES
 ('Plástico', 'Material sintético que puede moldearse fácilmente y se utiliza en una amplia gama de aplicaciones.'),
 ('Metal', 'Material duro y resistente que se utiliza en la fabricación de herramientas y estructuras.'),
-('Madera', 'Material natural que proviene de los árboles y se utiliza en carpintería y construcción.')
+('Madera', 'Material natural que proviene de los árboles y se utiliza en carpintería y construcción.'),
+('Acrilico', 'Material para dar cabados acrilicos en plasticos.'),
+('Circuitos', 'Conjunto de circuitos que haran que una placa funcione.')
 GO
 
 INSERT INTO Materiales  VALUES
@@ -32,6 +35,7 @@ INSERT INTO Duraciones (TiempoDiseno, TiempoFabricado, TiempoArmado) VALUES
 ('2 días', '4 Horas', '2 Horas');
 GO
 
+--agregados en servidor
 INSERT INTO Estados (NombreEstado, Detalle) VALUES
 ('Existente', 'El prototipo está disponible y listo para ser utilizado.'),
 ('No Existente', 'El prototipo no está disponible o no existe actualmente.'),
@@ -41,13 +45,15 @@ INSERT INTO Estados (NombreEstado, Detalle) VALUES
 ('En reparación', 'La maquinaria está siendo reparada.');
 GO
 
+--agregados en servidor
 INSERT INTO Maquinarias (Nombre, Marca, Detalle, IdEstado) VALUES
 ('Impresoras 3D', 'Marca A', 'Impresora 3D de alta precisión.',  3), 
-('CNC Routers', 'Marca B', 'Router CNC para corte de materiales.',  4), 
+('CNC Routers', 'Marca B', 'Router CNC para corte de materiales.',  3), 
 ('CNC 5 EJES', 'Marca C', 'Máquina CNC avanzada con 5 ejes de movimiento.',  3), 
-('Laser', 'Marca D', 'Maquina de corte por láser.',  5)
+('Cortadora Laser', 'Marca D', 'Maquina de corte por láser.',  3)
 GO
 
+--agregados en servidor
 INSERT INTO Categorias(Nombre) VALUES
 ('Proyecto Tecnologico'),
 ('Testing'),
@@ -86,4 +92,3 @@ VALUES
 ('Club de Astronomía', 'Grupo para la observación y estudio de fenómenos astronómicos.'),
 ('Club de Medio Ambiente', 'Equipo que organiza actividades para la preservación del medio ambiente y la sostenibilidad.'),
 ('Club de Debate', 'Espacio para el desarrollo de habilidades de oratoria y debates sobre temas de actualidad.');
-

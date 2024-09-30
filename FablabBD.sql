@@ -898,3 +898,6 @@ SET Estado = @Aprovado
 WHERE Id = @Id
 END
 GO
+
+--todo de aqui para arriba esta ejecutado en el servidor porfavor anotar 
+--los cambios que no se han reflejado en la base de datos y poder ser no modificar tablas 

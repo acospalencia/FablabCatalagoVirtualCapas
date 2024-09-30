@@ -14,7 +14,10 @@ namespace FablabCatalagoVirtualCapasDAL
 	public class ComunBD
 	{
 		// Cadena de conexión a la base de datos
-		const string strConexion = @"Data Source=DESKTOP-0H8BTTE;Initial Catalog=FablabBD;Integrated Security=True";
+
+		//const string strConexion = @"Data Source=DESKTOP-0H8BTTE;Initial Catalog=FablabBD;Integrated Security=True";
+
+		const string strConexion = @"workstation id=FabLabBD.mssql.somee.com;packet size=4096;user id=carlosacosta_SQLLogin_1;pwd=2y2ahzu6up;data source=FabLabBD.mssql.somee.com;persist security info=False;initial catalog=FabLabBD;TrustServerCertificate=True";
 
 
 		/// <summary>
