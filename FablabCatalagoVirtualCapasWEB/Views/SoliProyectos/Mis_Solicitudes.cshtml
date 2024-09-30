@@ -50,42 +50,43 @@
 
 
 
-
-<table class="table">
-	<thead>
-		<tr>
-			<th>Tipo de Proyecto</th>
-			<th>Descripción</th>
-			<th>Fecha de Registro</th>
-			<th>Estado</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model)
-		{
+<div class="alert alert-secondary">
+	<table class="table alert alert-secondary">
+		<thead>
 			<tr>
-				<td>@item.TipoProyecto</td>
-				<td>@item.Descripcion</td>
-				<td>@item.Fecha</td>
-				<td>
-					@if (item.Estado == "Aprobado")
-					{
-						<span class="badge bg-success">Aprobado</span>
-					}
-					else if (item.Estado == "No Aprobado")
-					{
-						<span class="badge bg-danger">Rechazado</span>
-					}
-					else if (item.Estado == "En espera de aprobacion")
-					{
-						<span class="badge bg-warning">Pendiente</span>
-					}
-					else
-					{
-						@item.Estado
-					}
-				</td>
+				<th>Tipo de Proyecto</th>
+				<th>Descripción</th>
+				<th>Fecha de Registro</th>
+				<th>Estado</th>
 			</tr>
-		}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>@item.TipoProyecto</td>
+					<td>@item.Descripcion</td>
+					<td>@item.Fecha</td>
+					<td>
+						@if (item.Estado == "Aprobado")
+						{
+							<span class="badge bg-success">Aprobado</span>
+						}
+						else if (item.Estado == "No Aprobado")
+						{
+							<span class="badge bg-danger">Rechazado</span>
+						}
+						else if (item.Estado == "En espera de aprobacion")
+						{
+							<span class="badge bg-warning">Pendiente</span>
+						}
+						else
+						{
+							@item.Estado
+						}
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

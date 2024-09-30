@@ -5,14 +5,16 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
 @using (Html.BeginForm())
 {
 	@Html.AntiForgeryToken()
 
-	<div class="form-horizontal">
-		<h2 class="txt">Agregar nueva Solicitud de Proyecto</h2>
-		<hr />
-
+<div class="form-horizontal ">
+	<h2 class="txt">Agregar nueva Solicitud de Proyecto</h2>
+	<hr />
+	<div class="alert alert-secondary">
 		<div class="row g-2">
 			<div class="col-md">
 				<div class="form-floating">
@@ -66,16 +68,16 @@
 				<button class="btn btn-danger" type="submit">Guardar Información de la solicitud</button>
 			</div>
 		</div>
-
+		</div>
 	</div>
-}
-<div class="alert alert-primary spacing" role="alert">
-	Recordar que al registrar una nueva solicitud de proyecto entrara en proceso la aceptacion la cual la realizaran personal administrativo
-	de la institucion.
-	Puedes estar pendiente en la seccion de mis solicitudes para estar al tanto del estado de tu solicitud ya que ahi te notificara si tu
-	solictud fue aprobada o no.
-</div>
+	}
+	<div class="alert alert-primary spacing" role="alert">
+		Recordar que al registrar una nueva solicitud de proyecto entrara en proceso la aceptacion la cual la realizaran personal administrativo
+		de la institucion.
+		Puedes estar pendiente en la seccion de mis solicitudes para estar al tanto del estado de tu solicitud ya que ahi te notificara si tu
+		solictud fue aprobada o no.
+	</div>
 
-@section Scripts {
-	@Scripts.Render("~/bundles/jqueryval")
-}
+	@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+	}
