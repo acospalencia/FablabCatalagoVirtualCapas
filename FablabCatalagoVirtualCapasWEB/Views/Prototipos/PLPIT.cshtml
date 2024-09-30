@@ -5,7 +5,7 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Prototipos de programa LPIT</h2>
+<h2 class="txt">Prototipos de programa LPIT</h2>
 
 <div class="row">
 	@foreach (var item in Model)
@@ -28,7 +28,7 @@
 					<p class="card-text size">
 						Descripcion: @item.Descripcion<br />
 					</p>
-					<button type="button" class="btn btn-primary btnalign" data-bs-toggle="modal" data-bs-target="#@modalId">
+					<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#@modalId">
 						Ver detalles
 					</button>
 				</div>

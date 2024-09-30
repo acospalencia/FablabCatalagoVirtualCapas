@@ -17,21 +17,16 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		// GET: SoliProyectos
 		public ActionResult Mis_Solicitudes()
 		{
-			// Recupera el autor desde la sesión
 			var autor = Session["Autor"] as Autores;
 
-			// Verifica si el autor existe en la sesión
 			if (autor != null)
 			{
-				// Filtra las solicitudes del autor
 				var ListasSolis = solisBL.RegresarLista().Where(c => c.IdAutor == autor.Id).ToList();
 
-				// Retorna la vista con la lista de solicitudes del autor
 				return View(ListasSolis);
 			}
 			else
 			{
-				// Si no hay autor en la sesión, redirige al inicio de sesión
 				return RedirectToAction("InciarSesion", "Autores");
 			}
 		}
@@ -54,14 +49,13 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 				if (ModelState.IsValid)
 				{
 					solisBL.GuardarSoli(soli);  
-					return RedirectToAction("Index", "Home");  
+					return RedirectToAction("Mis_Solicitudes");  
 				}
 
 				return View(soli);  
 			}
 			else
 			{
-				// Si no hay autor en la sesión, redirige a la página de inicio de sesión
 				return RedirectToAction("InciarSesion", "Autores");
 			}
 		}

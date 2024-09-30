@@ -59,11 +59,11 @@ namespace FablabCatalagoVirtualCapasWPF
 
 			if (ckAprovado.IsChecked == true)
             {
-				 aprovado = "Aprovado";
+				 aprovado = "Aprobado";
             }
             else
             {
-				 aprovado = "No Aprovado";
+				 aprovado = "No Aprobado";
 			}
 
 			var soliAprova = new SolicitudProyectos

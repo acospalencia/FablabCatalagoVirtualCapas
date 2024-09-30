@@ -1,7 +1,36 @@
-﻿.centertext {
+﻿.flex-container {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center; 
+}
+
+.text-content {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.carousel-content {
+	flex: 1; 
+}
+
+.carousel-content img {
+	width: 100%; 
+	height: auto;
+}
+
+.centertext {
 	text-align: center;
 	margin: auto;
+}
 
+.txtsize{
+	font-size: 20px;
+}
+
+.txt {
+	color: black;
+	text-align: center;
+	font-size: 50px;
 }
 
 .spaciado{
@@ -26,10 +55,13 @@
 	margin: auto;
 }
 
+.spacing{
+	margin-top: 35px;
+}
+
 .spacingtext {
 	margin-left: auto;
 	float: right;
-
 }
 .size {
 	display: -webkit-box;
@@ -39,6 +71,34 @@
 	text-overflow: ellipsis;
 	max-height: 3em;
 }
+
+.colorsito {
+	background-color: #e3e3e3;
+}
+
+
+.equipos-container {
+	display: flex;
+	flex-wrap: wrap; /* Permite que las tarjetas se ajusten a varias filas si no caben en una sola */
+	justify-content: space-between; /* Espacio entre las tarjetas */
+	gap: 20px; /* Añade un espacio entre las tarjetas */
+}
+
+.cards {
+	width: 30%; /* Cada tarjeta ocupa alrededor del 30% del ancho del contenedor */
+	margin-bottom: 20px; /* Espacio inferior entre las tarjetas */
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
+}
+
+@media (max-width: 768px) {
+	.card {
+		width: 100%; /* En pantallas pequeñas, las tarjetas ocuparán todo el ancho */
+	}
+}
+
 
 /*del login y sing up*/
 /*!
@@ -59,6 +119,57 @@
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
+}
+
+.objective-section {
+	margin: 20px 0;
+}
+
+.objective-section h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.objective-container {
+	display: flex;
+	justify-content: space-around; 
+	align-items: flex-start;
+	gap: 10px; 
+	padding: 0 20px;
+}
+
+.objective-card {
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	width: 45%; 
+	padding: 20px;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.objective-img {
+	width: 140px;
+	height: 200px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.objective-text {
+	text-align: justify;
+	width: 320px;
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #555;
+}
+
+.objective-text strong {
+	font-size: 1.1rem;
+	color: #000;
+
 }
 
 .fa-lg {
