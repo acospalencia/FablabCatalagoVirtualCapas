@@ -33,19 +33,21 @@
 
 @if (aprova)
 {
-	<div class="alert alert-success" role="alert">
+	<div id="alert-message-success" class="alert alert-success alert-dismissible fade show" role="alert">
 		Tienes una solicitud aprobada. Revisa cuál es y acércate al FabLab/ESFE para obtener más información
 		sobre cómo seguirás todo el proceso de tu proyecto para sacarlo adelante. ¡ÁNIMO!
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 }
-@if(noaprova)
+
+@if (noaprova)
 {
-	<div class="alert alert-danger" role="alert">
-		Tienes una solicitud rechazada, revisa cual es y revisa la informacion acerca de ella y 
-		puedes acercarte las instalaciones del FabLab/ESFE para hablar con el personal administrativo y tener mas informacion
-		acerca de por que te rechazaron.
+	<div id="alert-message-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+		Tienes una solicitud rechazada. Revisa cuál es y acércate a las instalaciones del FabLab/ESFE para hablar con el personal administrativo y obtener más información sobre el rechazo.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 }
+
 
 
 

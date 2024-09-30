@@ -1,12 +1,17 @@
 ﻿
-
 setTimeout(function () {
+    
     var alert = document.getElementById('alert-message');
+
     if (alert) {
         var bootstrapAlert = new bootstrap.Alert(alert);
         bootstrapAlert.close();
     }
+
 }, 15000); 
+
+
+
 
 
 /*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */
