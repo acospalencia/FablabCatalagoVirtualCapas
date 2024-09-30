@@ -73,7 +73,29 @@ INSERT INTO Autores VALUES
 ('Nicol Nohemy','Sanchez Menjivar','nicolnohemysanchez@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2023/11/30'),
 ('Adriana Marisol','Sosa Lipe','adrianamarisolsosalipe@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2023/08/16'),
 ('Maria Fernanda','Alvarez Guzman','mariafernandaalvarezguzman@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2024/04/11')
+
 GO
+INSERT INTO Clubs (NombreClub, Detalle)
+VALUES 
+('Club de Lectura', 'Un club dedicado a la lectura de libros clásicos y contemporáneos.'),
+('Club de Arte', 'Este club reúne a amantes del arte para explorar pintura, escultura, y más.'),
+('Club de Tecnología', 'Un grupo enfocado en la tecnología moderna, desde programación hasta IA.'),
+('Club de Cine', 'Discusión y análisis de películas de todos los géneros y épocas.'),
+('Club de Deportes', 'Fomenta la actividad física a través de distintos deportes como fútbol y baloncesto.'),
+('Club de Ciencia Ficción', 'Club centrado en novelas, películas y teorías sobre ciencia ficción.'),
+('Club de Jardinería', 'Los miembros comparten técnicas y conocimientos sobre la jardinería y el cultivo.'),
+('Club de Astronomía', 'Estudio y observación del espacio exterior, las estrellas y los planetas.');
+INSERT INTO InscripcionClubs (IdAutor, IdClub, FechaInscripcion, Detalle)
+VALUES 
+(1, 2, '2023-08-15', 'Inscripción al club de lectura'),
+(2, 1, '2023-07-22', 'Participación en el club de arte'),
+(3, 3, '2023-09-01', 'Inscripción al club de tecnología'),
+(4, 1, '2023-10-05', 'Inscripción en el club de ciencia ficción'),
+(1, 3, '2023-06-10', 'Miembro del club de cine'),
+(2, 2, '2023-11-12', 'Reingreso al club de deportes'),
+(3, 1, '2023-05-18', 'Inscripción al club de jardinería'),
+(4, 2, '2023-07-28', 'Inscripción en el club de astronomía');
+
 
 INSERT INTO SolicitudProyectos(TipoProyecto, Descripcion, Integrantes, Fecha, Estado, IdAutor)
 VALUES

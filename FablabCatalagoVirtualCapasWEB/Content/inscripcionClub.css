@@ -1,0 +1,118 @@
+﻿/* Fondo general de la página */
+body {
+background-color: #56008c; /* Morado */
+color: white; /* Color de texto en blanco */
+}
+
+/* Estilos para el contenedor del formulario */
+.inscripcion-form {
+background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+padding: 20px; /* Espaciado interno */
+border-radius: 8px; /* Bordes redondeados */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+/* Títulos del formulario */
+.inscripcion-form h4 {
+color: #56008c; /* Color del título */
+}
+
+/* Estilos para las etiquetas y los inputs */
+.control-label {
+color: #56008c; /* Color de las etiquetas */
+}
+
+.form-control {
+border: 1px solid #56008c; /* Borde de los inputs */
+border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de envío */
+.btn {
+background-color: #56008c; /* Fondo del botón */
+color: white; /* Color del texto del botón */
+border: none; /* Sin borde */
+padding: 10px 20px; /* Espaciado interno */
+border-radius: 4px; /* Bordes redondeados */
+cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+margin-top: 20px; /* Añade espacio encima del botón */
+}
+
+.btn:hover {
+background-color: #4b0077; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo para los mensajes de error */
+.text-danger {
+color: #ff4c4c; /* Color rojo para mensajes de error */
+}
+/* Estilo para la tabla */
+.table {
+width: 100%; /* Ancho completo */
+margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilo para las celdas de la tabla */
+.table th, .table td {
+padding: 15px; /* Espaciado interno */
+text-align: left; /* Alineación del texto */
+border: 1px solid #56008c; /* Borde morado */
+}
+
+/* Fondo de las celdas */
+.table th {
+background-color: #f0f0f0; /* Fondo gris claro para los encabezados */
+color: #56008c; /* Color del texto de los encabezados */
+}
+    /* Estilo para los enlaces en la tabla */
+.table a {
+color: #56008c; /* Color de texto morado para los enlaces */
+text-decoration: none; /* Sin subrayado */
+padding: 5px 10px; /* Espaciado interno */
+border: 1px solid transparent; /* Sin borde inicialmente */
+border-radius: 8px; /* Bordes redondeados */
+transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.table a:hover {
+background-color: #56008c; /* Fondo morado al pasar el mouse */
+color: white; /* Texto blanco al pasar el mouse */
+}
+
+.btn-white {
+background-color: white; /* Fondo blanco */
+color: #56008c; /* Texto morado para contraste */
+border: 1px solid #56008c; /* Borde morado */
+}
+
+.btn-white:hover {
+background-color: #e6e6e6; /* Color claro al pasar el ratón */
+}
+/* Etiquetas moradas en la vista de crear */
+.create-view .control-label {
+color: #56008c; /* Morado */
+}
+
+/* Etiquetas blancas en la vista de editar */
+.edit-view .control-label {
+color: white; /* Blanco */
+}
+
+/* Estilo para el botón "Save" */
+.btn-custom {
+background-color: white; /* Fondo blanco */
+color: purple; /* Texto morado */
+border: 1px solid purple; /* Borde morado */
+}
+
+.btn-custom:hover {
+background-color: purple; /* Fondo morado al pasar el ratón */
+color: white; /* Texto blanco al pasar el ratón */
+}
+.text-purple {
+color: purple; /* Cambia el color a morado */
+}
+
+
+
+
