@@ -23,7 +23,8 @@
 	margin: auto;
 }
 
-.txtsize{
+.txtsize {
+	text-align: justify;
 	font-size: 20px;
 }
 

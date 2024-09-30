@@ -790,7 +790,7 @@ WHERE Prototipos.IdCategoria = 3
 END
 GO
 
-CREATE PROCEDURE spAggSoliProyecto
+ALTER PROCEDURE spAggSoliProyecto
 @TipoProyecto NVARCHAR(50),
 @Descripcion NVARCHAR(MAX),
 @Integrantes NVARCHAR(20),
@@ -800,7 +800,7 @@ CREATE PROCEDURE spAggSoliProyecto
 AS
 BEGIN
 INSERT INTO SolicitudProyectos Values
-(@TipoProyecto, @Descripcion, @Integrantes, @Fecha, @Aprovado, @IdAutor)
+(@TipoProyecto, @Descripcion, @Integrantes,CAST(@Fecha as date), @Aprovado, @IdAutor)
 END
 GO
 
