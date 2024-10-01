@@ -1,67 +1,71 @@
 ﻿@model FablabCatalagoVirtualCapasEN.Autores
+@using FablabCatalagoVirtualCapasEN
 
 @{
-    ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Editar mi información personal";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-
+<h2 class="txt">Editar mi informacion personal</h2>
 
 @using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Autores</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+	@Html.AntiForgeryToken()
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	<div class="form-horizontal">
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		@Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Apellidos, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
-            </div>
-        </div>
+		<div class=" mt-4">
+			<div class="row">
+				<div class="col-12">
+					<div class="card shadow-sm">
+						<div class="card-body colorsito">
+							<h5 class="card-title"></h5>
+							<hr />
+							<dl class="row">
+								<dt class="col-sm-3 h4">Nombres</dt>
+								<dd class="col-sm-9 h4">
+									@Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control", style = "width: 100%;" } })
+									@Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+								</dd>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CorreElectronico, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CorreElectronico, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CorreElectronico, "", new { @class = "text-danger" })
-            </div>
-        </div>
+								<dt class="col-sm-3 h4">Apellidos</dt>
+								<dd class="col-sm-9 h4">
+									@Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control",  style = "width: 100%;" } })
+									@Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
+								</dd>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaRegistro, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaRegistro, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaRegistro, "", new { @class = "text-danger" })
-            </div>
-        </div>
+								<dt class="col-sm-3 h4">Correo Electrónico</dt>
+								<dd class="col-sm-9 h4">
+									@Html.EditorFor(model => model.CorreElectronico, new { htmlAttributes = new { @class = "form-control",  style = "width: 100%;" } })
+									@Html.ValidationMessageFor(model => model.CorreElectronico, "", new { @class = "text-danger" })
+								</dd>
+							</dl>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+							<div class="text-center ">
+								<div class="col-md-12 ">
+									<input type="submit" value="Guardar Cambios" class="btn btn-success" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@Html.HiddenFor(model => model.FechaRegistro)  <!-- Campo oculto de FechaRegistro -->
+
+		@Html.HiddenFor(model => model.Password)  <!-- Campo oculto de Password -->
+
+
+	</div>
+
+
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jqueryval")
 }

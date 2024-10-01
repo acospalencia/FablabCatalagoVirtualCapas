@@ -1,26 +1,37 @@
 ﻿using FablabCatalagoVirtualCapasBL; // Lógica de negocio
 using FablabCatalagoVirtualCapasEN; // Entidades
+using FablabCatalagoVirtualCapasWEB.Permisos;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace FablabCatalagoVirtualCapasWEB.Controllers
 {
+	[ValidarSesion]
+
 	public class InscripClubsController : Controller
 	{
 		// Instancia de la lógica de negocio para interactuar con los datos de inscripción.
 		private InscripcionClubBL inscrpBL = new InscripcionClubBL();
+		private ClubBL clubBL = new ClubBL(); // Lógica de negocio para Club
 
 		// GET: InscripClubs
 		// Método para listar todas las inscripciones.
 		public ActionResult Index()
 		{
-			// Llama al método de la lógica de negocio para obtener todas las inscripciones.
-			var inscripciones = inscrpBL.RegresarLista();
-			// Retorna la vista con la lista de inscripciones.
-			return View(inscripciones);
+			var autor = Session["Autor"] as Autores;
+			if (autor != null)
+			{
+				// Llama al método de la lógica de negocio para obtener todas las inscripciones.
+				var inscripciones = inscrpBL.RegresarLista().Where(c => c.IdAutor == autor.Id).ToList();
+
+				return View(inscripciones);
+			}
+			else
+			{
+				return RedirectToAction("InciarSesion", "Autores");
+			}
+			
 		}
 
 		// GET: InscripClubs/Details/5
@@ -44,7 +55,26 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		// Método que muestra el formulario para crear una nueva inscripción.
 		public ActionResult Create()
 		{
-			return View();
+			// Obtener el autor de la sesión
+			if (Session["Autor"] is Autores autor) // Asegurarse que "Autor" es del tipo correcto
+			{
+				// Cargar la lista de clubes
+				var clubes = clubBL.RegresarLista();
+
+				// Pasar la lista de clubes a la vista
+				ViewBag.Clubes = new SelectList(clubes, "Id", "NombreClub");
+
+				// Crear un modelo para la vista
+				var model = new InscripcionClub
+				{
+					IdAutor = autor.Id // Asignar el ID del autor al modelo
+				};
+
+				return View(model);
+			}
+
+			// Si la sesión no es válida, redirigir a la página de inicio de sesión
+			return RedirectToAction("Login", "Account"); // Cambia esto según tu lógica
 		}
 
 		// POST: InscripClubs/Create
@@ -61,7 +91,11 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 				return RedirectToAction("Index");
 			}
 
-			// Si el modelo no es válido, retorna la misma vista para mostrar errores.
+			// Si el modelo no es válido, recarga la lista de clubes
+			var clubes = clubBL.RegresarLista();
+			ViewBag.Clubes = new SelectList(clubes, "Id", "NombreClub", inscripcion.IdClub);
+
+			// Retorna la misma vista para mostrar errores
 			return View(inscripcion);
 		}
 
@@ -77,6 +111,10 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 			{
 				return HttpNotFound();
 			}
+
+			// Cargar la lista de clubes
+			var clubes = clubBL.RegresarLista();
+			ViewBag.Clubes = new SelectList(clubes, "Id", "NombreClub", inscripcion.IdClub);
 
 			// Retorna la vista de edición con los datos de la inscripción.
 			return View(inscripcion);
@@ -96,9 +134,12 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 				return RedirectToAction("Index");
 			}
 
-			// Si el modelo no es válido, retorna la misma vista para mostrar errores.
+			// Si el modelo no es válido, recarga la lista de clubes
+			var clubes = clubBL.RegresarLista();
+			ViewBag.Clubes = new SelectList(clubes, "Id", "NombreClub", inscripcion.IdClub);
+
+			// Retorna la misma vista para mostrar errores
 			return View(inscripcion);
 		}
 	}
 }
-

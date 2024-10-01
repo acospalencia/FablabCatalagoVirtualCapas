@@ -1,33 +1,43 @@
 ﻿@model IEnumerable<FablabCatalagoVirtualCapasEN.Club>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="txt">Clubes Disponibles</h2>
+<hr />
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NombreClub)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Detalle)
-        </th>
-        <th></th>
-    </tr>
+<!-- Botón para generar una nueva inscripción -->
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombreClub)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Detalle)
-        </td>
-        
-    </tr>
-}
 
-</table>
+<div class="alert alert-secondary" role="alert">
+	<table class="table">
+		<tr>
+			<th>
+				Nombre del Club
+			</th>
+			<th>
+				Detalle
+			</th>
+		</tr>
+
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.NombreClub)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Detalle)
+				</td>
+			</tr>
+		}
+	</table>
+	
+</div>
+<div class="text-center">
+	<div class="mb-3">
+		<a href="@Url.Action("Create", "InscripClubs")" class="btn btn-success">Inscribirme en un club</a>
+	</div>
+</div>

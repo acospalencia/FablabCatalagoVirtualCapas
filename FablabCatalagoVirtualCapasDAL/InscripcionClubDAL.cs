@@ -21,6 +21,8 @@ namespace FablabCatalagoVirtualCapasDAL
 		/// <returns>El número de filas afectadas por la operación.</returns>
 		public int GuardarInscripcion(InscripcionClub pInscr)
 		{
+			pInscr.FechaInscripcion = DateTime.Now;
+
 			SqlCommand cmd = ComunBD.ObtenerComan();
 			cmd.CommandType = CommandType.StoredProcedure;
 			cmd.CommandText = "SPAddInscripcion";

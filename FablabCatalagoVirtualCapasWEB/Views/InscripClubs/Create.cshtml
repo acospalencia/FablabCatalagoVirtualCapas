@@ -1,65 +1,43 @@
 ﻿@model FablabCatalagoVirtualCapasEN.InscripcionClub
 
 @{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section styles {
-    <link rel="stylesheet" href="@Url.Content("~/Content/inscripcionClub.css")" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/inscripcionClub.css")" />
 }
 
-<h2>Clubs</h2>
+<h2 class="txt">Inscribirme en un club</h2>
 
 @using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
+	@Html.AntiForgeryToken()
+	@Html.HiddenFor(m => m.IdAutor) <!-- Campo oculto para el ID del autor -->
 
-    <div class="inscripcion-form">
-        <h4>Inscripción Clubs</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        
-        <div class="form-group">
-            @Html.LabelFor(model => model.IdAutor, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.IdAutor, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.IdAutor, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	<div class="inscripcion-form">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IdClub, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.IdClub, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.IdClub, "", new { @class = "text-danger" })
-            </div>
-        </div>
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaInscripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaInscripcion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaInscripcion, "", new { @class = "text-danger" })
-            </div>
-        </div>
+		<div class="form-group">
+			@Html.LabelFor(m => m.IdClub, "Selecciona un Club", new { @class = "inscripcion-form-txt" })
+			@Html.DropDownListFor(m => m.IdClub, (SelectList)ViewBag.Clubes, "Selecciona un Club", new { @class = "form-control" })
+			@Html.ValidationMessageFor(m => m.IdClub, "", new { @class = "text-danger" })
+		</div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Detalle, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Detalle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Detalle, "", new { @class = "text-danger" })
-            </div>
-        </div>
+		<div class="form-group">
+			@Html.LabelFor(m => m.Detalle, new { @class = "inscripcion-form-txt" })
+			@Html.TextBoxFor(m => m.Detalle, new { @class = "form-control" })
+			@Html.ValidationMessageFor(m => m.Detalle, "", new { @class = "text-danger" })
+		</div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Create" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

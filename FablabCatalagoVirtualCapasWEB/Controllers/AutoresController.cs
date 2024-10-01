@@ -16,6 +16,7 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 	{
 		private AutoresBL autorBL = new AutoresBL();
 
+
 		// GET: Autores
 		public ActionResult Index()
 		{
@@ -84,10 +85,11 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		[ValidateAntiForgeryToken]
 		public ActionResult Edit(Autores autor)
 		{
+
 			if (ModelState.IsValid)
 			{
 				autorBL.ModificarAutor(autor);
-				return RedirectToAction("Index");
+				return RedirectToAction("Details", new { id = autor.Id });
 			}
 			return View(autor);
 		}

@@ -8,9 +8,18 @@ setTimeout(function () {
         bootstrapAlert.close();
     }
 
-}, 15000); 
+}, 10000); 
 
+document.querySelector("form").addEventListener("submit", function (event) {
+    var nombres = document.getElementById("Nombres").value.trim();
+    var apellidos = document.getElementById("Apellidos").value.trim();
+    var correo = document.getElementById("CorreElectronico").value.trim();
 
+    if (!nombres || !apellidos || !correo) {
+        alert("Por favor, complete todos los campos.");
+        event.preventDefault();  // Evita que se envíe el formulario si hay campos vacíos
+    }
+});
 
 
 

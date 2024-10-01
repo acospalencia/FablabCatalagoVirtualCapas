@@ -3,42 +3,36 @@
 
 @{
 	var autor = Session["Autor"] as Autores;
-	ViewBag.Title = "Mi Infromacion";
+	ViewBag.Title = "Mi Información";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Mi informacion</h2>
+<h2 class="txt text-center">Mi Información</h2>
 
-<div>
-	<hr />
-	<dl class="dl-horizontal">
-		<dt>
-			@Html.DisplayNameFor(model => model.Nombres)
-		</dt>
+<div class=" mt-4">
+	<div class="row">
+		<div class="col-12">
+			<div class="card shadow-sm">
+				<div class="card-body colorsito">
+					<h5 class="card-title"></h5>
+					<hr />
+					<dl class="row">
+						<dt class="col-sm-3 h4">Nombres</dt>
+						<dd class="col-sm-9 h4">@Html.DisplayFor(model => model.Nombres)</dd>
 
-		<dd>
-			@Html.DisplayFor(model => model.Nombres)
-		</dd>
+						<dt class="col-sm-3 h4">Apellidos</dt>
+						<dd class="col-sm-9 h4">@Html.DisplayFor(model => model.Apellidos)</dd>
 
-		<dt>
-			@Html.DisplayNameFor(model => model.Apellidos)
-		</dt>
+						<dt class="col-sm-3 h4">Correo Electrónico</dt>
+						<dd class="col-sm-9 h4">@Html.DisplayFor(model => model.CorreElectronico)</dd>
+					</dl>
 
-		<dd>
-			@Html.DisplayFor(model => model.Apellidos)
-		</dd>
-
-		<dt>
-			@Html.DisplayNameFor(model => model.CorreElectronico)
-		</dt>
-
-		<dd>
-			@Html.DisplayFor(model => model.CorreElectronico)
-		</dd>
-
-	</dl>
+					<div class="text-center">
+						<a type="button" href="/Autores/Edit/@autor.Id" class="btn btn-primary btn-lg">Editar mi informacion</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<p>
-	<a type="button" href="/Autores/Edit/@autor.Id" class="btn btn-success">Edit</a>
 
-</p>

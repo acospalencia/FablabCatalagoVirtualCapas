@@ -901,3 +901,21 @@ GO
 
 --todo de aqui para arriba esta ejecutado en el servidor porfavor anotar 
 --los cambios que no se han reflejado en la base de datos y poder ser no modificar tablas 
+
+Alter PROCEDURE spShowInscrip
+@IdAutor INT
+AS
+BEGIN
+SELECT 
+    i.IdAutor,
+    c.Id,
+    c.NombreClub AS NombreClub,
+    c.Detalle,
+    i.FechaInscripcion
+FROM 
+    InscripcionClubs i
+JOIN 
+    Clubs c ON i.IdClub = c.Id
+WHERE 
+    i.IdAutor = @IdAutor
+END

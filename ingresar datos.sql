@@ -75,26 +75,28 @@ INSERT INTO Autores VALUES
 ('Maria Fernanda','Alvarez Guzman','mariafernandaalvarezguzman@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92','2024/04/11')
 
 GO
-INSERT INTO Clubs (NombreClub, Detalle)
-VALUES 
-('Club de Lectura', 'Un club dedicado a la lectura de libros clásicos y contemporáneos.'),
-('Club de Arte', 'Este club reúne a amantes del arte para explorar pintura, escultura, y más.'),
-('Club de Tecnología', 'Un grupo enfocado en la tecnología moderna, desde programación hasta IA.'),
-('Club de Cine', 'Discusión y análisis de películas de todos los géneros y épocas.'),
-('Club de Deportes', 'Fomenta la actividad física a través de distintos deportes como fútbol y baloncesto.'),
-('Club de Ciencia Ficción', 'Club centrado en novelas, películas y teorías sobre ciencia ficción.'),
-('Club de Jardinería', 'Los miembros comparten técnicas y conocimientos sobre la jardinería y el cultivo.'),
-('Club de Astronomía', 'Estudio y observación del espacio exterior, las estrellas y los planetas.');
+--INSERT INTO Clubs (NombreClub, Detalle)
+--VALUES 
+--('Club de Lectura', 'Un club dedicado a la lectura de libros clásicos y contemporáneos.'),
+--('Club de Arte', 'Este club reúne a amantes del arte para explorar pintura, escultura, y más.'),
+--('Club de Tecnología', 'Un grupo enfocado en la tecnología moderna, desde programación hasta IA.'),
+--('Club de Cine', 'Discusión y análisis de películas de todos los géneros y épocas.'),
+--('Club de Deportes', 'Fomenta la actividad física a través de distintos deportes como fútbol y baloncesto.'),
+--('Club de Ciencia Ficción', 'Club centrado en novelas, películas y teorías sobre ciencia ficción.'),
+--('Club de Jardinería', 'Los miembros comparten técnicas y conocimientos sobre la jardinería y el cultivo.'),
+--('Club de Astronomía', 'Estudio y observación del espacio exterior, las estrellas y los planetas.');
+
 INSERT INTO InscripcionClubs (IdAutor, IdClub, FechaInscripcion, Detalle)
-VALUES 
-(1, 2, '2023-08-15', 'Inscripción al club de lectura'),
-(2, 1, '2023-07-22', 'Participación en el club de arte'),
-(3, 3, '2023-09-01', 'Inscripción al club de tecnología'),
-(4, 1, '2023-10-05', 'Inscripción en el club de ciencia ficción'),
-(1, 3, '2023-06-10', 'Miembro del club de cine'),
-(2, 2, '2023-11-12', 'Reingreso al club de deportes'),
-(3, 1, '2023-05-18', 'Inscripción al club de jardinería'),
-(4, 2, '2023-07-28', 'Inscripción en el club de astronomía');
+VALUES
+(1, 1, '2024-09-01', 'Interesado en aprender sobre robótica básica.'), -- Autor 1 en Club de Robótica
+(2, 1, '2024-09-02', 'Interesado en colaborar en el desarrollo de drones.'), -- Autor 2 en Club de Robótica
+(1, 2, '2024-09-03', 'Quiere mejorar en algoritmos competitivos.'), -- Autor 1 en Club de Programación
+(2, 2, '2024-09-05', 'Interesado en desarrollo web y móvil.'), -- Autor 2 en Club de Programación
+(1, 3, '2024-09-06', 'Apasionado por la observación de estrellas y planetas.'), -- Autor 1 en Club de Astronomía
+(2, 4, '2024-09-07', 'Le interesa participar en proyectos de reforestación.'), -- Autor 2 en Club de Medio Ambiente
+(1, 4, '2024-09-08', 'Desea organizar eventos para limpiar playas.'), -- Autor 1 en Club de Medio Ambiente
+(2, 3, '2024-09-10', 'Quiere estudiar sobre galaxias y agujeros negros.') -- Autor 2 en Club de Astronomía
+;
 
 
 INSERT INTO SolicitudProyectos(TipoProyecto, Descripcion, Integrantes, Fecha, Estado, IdAutor)
@@ -110,7 +112,6 @@ INSERT INTO Clubs (NombreClub, Detalle)
 VALUES
 ('Club de Robótica', 'Grupo dedicado al desarrollo de proyectos de robótica y automatización.'),
 ('Club de Programación', 'Equipo enfocado en competencias de programación y desarrollo de software.'),
-('Club de Emprendimiento', 'Iniciativa para fomentar el espíritu emprendedor y crear startups tecnológicas.'),
 ('Club de Astronomía', 'Grupo para la observación y estudio de fenómenos astronómicos.'),
-('Club de Medio Ambiente', 'Equipo que organiza actividades para la preservación del medio ambiente y la sostenibilidad.'),
-('Club de Debate', 'Espacio para el desarrollo de habilidades de oratoria y debates sobre temas de actualidad.');
+('Club de Medio Ambiente', 'Equipo que organiza actividades para la preservación del medio ambiente y la sostenibilidad.')
+
