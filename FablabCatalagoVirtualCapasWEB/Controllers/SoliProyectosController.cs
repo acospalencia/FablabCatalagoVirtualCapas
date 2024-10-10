@@ -59,11 +59,5 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 				return RedirectToAction("InciarSesion", "Autores");
 			}
 		}
-
-
-
-
-
-
 	}
 }
