@@ -8,6 +8,9 @@ using FablabCatalagoVirtualCapasWEB.Permisos;
 
 namespace FablabCatalagoVirtualCapasWEB.Controllers
 {
+
+
+
 	public class PrototiposController : Controller
     {
 		private ModeloProto2BL modelo2BL = new ModeloProto2BL();
