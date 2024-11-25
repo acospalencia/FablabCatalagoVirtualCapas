@@ -7,6 +7,10 @@
 
 
 <head>
+	<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="~/Content/MainStyle.css" rel="stylesheet" />
@@ -17,7 +21,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg txtsize2 bg-dark" data-bs-theme="dark">
+	<nav class="navbar navbar-expand-lg txtsize2 NavColor" data-bs-theme="dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/Home">FabLab/ESFE</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +95,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Debes ingresar tus nombres">
-						<input class="input100" type="text" name="Nombres" placeholder="Nombres">
+						<input class="input100" type="text" name="Nombres" value="" placeholder="Nombres">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user-o" aria-hidden="true"></i>
@@ -99,7 +103,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Debes ingresar tus Apellidos">
-						<input class="input100" type="text" name="Apellidos" placeholder="Apellidos">
+						<input class="input100" type="text" name="Apellidos" value="" placeholder="Apellidos">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user-o" aria-hidden="true"></i>
@@ -107,7 +111,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Correo Electronico Obligatorio: ex@abc.xyz">
-						<input class="input100" type="text" name="CorreElectronico" placeholder="Correo Electronico">
+						<input class="input100" type="text" name="CorreElectronico" value="" placeholder="Correo Electronico">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -115,7 +119,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Contraseña obligatoria">
-						<input class="input100" type="password" name="Password" placeholder="Contraseña">
+						<input class="input100" type="password" name="Password" value="" placeholder="Contraseña">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -144,6 +148,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	@Scripts.Render("~/bundles/jquery")
 	@Scripts.Render("~/bundles/bootstrap")

@@ -26,7 +26,10 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 
 		public ActionResult Registrarse()
 		{
-			return View();
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.UtcNow.AddHours(-1));
+            Response.Cache.SetNoStore();
+            return View();
 		}
 
 		public ActionResult InciarSesion()
