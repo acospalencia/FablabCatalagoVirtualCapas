@@ -51,7 +51,10 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 				return HttpNotFound();
 			}
 			return View(autor);
+			
+
 		}
+
 
 		[ValidarSesion]
 		//GET: Autores/Create
@@ -75,8 +78,8 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		[ValidarSesion]
 		// GET: Autores/Edit
 		public ActionResult Edit(int id)
-		{
-			var autor = autorBL.RegresarLista().FirstOrDefault(c => c.Id == id);
+        {
+            var autor = autorBL.RegresarLista().FirstOrDefault(c => c.Id == id);
 			if (autor == null)
 			{
 				return HttpNotFound();
@@ -100,8 +103,13 @@ namespace FablabCatalagoVirtualCapasWEB.Controllers
 		[HttpPost]
 		public ActionResult Registrarse(Autores pAutor)
 		{
+            if (!pAutor.CorreElectronico.EndsWith("@esfe.agape.edu.sv"))
+            {
+                ViewData["Mensaje"] = "El correo electrónico debe ser el institucional para crear tu cuenta";
+                return View();
+            }
 
-			(bool Registrado, string mensaje) = autorBL.RegistrarAutor(pAutor);
+            (bool Registrado, string mensaje) = autorBL.RegistrarAutor(pAutor);
 
 			ViewData["Mensaje"] = mensaje;
 

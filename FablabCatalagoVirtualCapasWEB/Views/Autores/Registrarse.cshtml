@@ -61,6 +61,7 @@
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="/Autores/Details/@autor.Id">Mi informacion</a></li>
 								<li><a class="dropdown-item" href="/Clubs/Index">Clubes</a></li>
+								<li><a class="dropdown-item" href="/InscripClubs/Index">Mis Inscripciones</a></li>
 								<li><a class="dropdown-item" href="/Home/CerrarSesion">Cerrar Sesion</a></li>
 
 							</ul>
@@ -111,7 +112,10 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Correo Electronico Obligatorio: ex@abc.xyz">
-						<input class="input100" type="text" name="CorreElectronico" value="" placeholder="Correo Electronico">
+						<input class="input100" type="text" name="CorreElectronico" value=""
+							   placeholder="Correo Electronico"
+							   pattern="^[a-zA-Z0-9._%+-]+esfe\.agape\.edu\.sv$"
+							   title="El correo electrónico debe ser el institucional para crear tu cuenta" />
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>

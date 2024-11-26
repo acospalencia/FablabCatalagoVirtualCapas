@@ -4,6 +4,7 @@
 @{
 	ViewBag.Title = "Editar mi información personal";
 	Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <h2 class="txt">Editar mi informacion personal</h2>
@@ -12,54 +13,59 @@
 {
 	@Html.AntiForgeryToken()
 
-	<div class="form-horizontal">
-		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-		@Html.HiddenFor(model => model.Id)
+<div class="form-horizontal">
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	@Html.HiddenFor(model => model.Id)
 
-		<div class=" mt-4">
-			<div class="row">
-				<div class="col-12">
-					<div class="card shadow-sm">
-						<div class="card-body colorsito">
-							<h5 class="card-title"></h5>
-							<hr />
-							<dl class="row">
-								<dt class="col-sm-3 h4">Nombres</dt>
-								<dd class="col-sm-9 h4">
-									@Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control", style = "width: 100%;" } })
-									@Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
-								</dd>
 
-								<dt class="col-sm-3 h4">Apellidos</dt>
-								<dd class="col-sm-9 h4">
-									@Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control",  style = "width: 100%;" } })
-									@Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
-								</dd>
+	<div class=" mt-4">
+		<div class="row">
+			<div class="col-12">
+				<div class="card shadow-sm">
+					<div class="card-body colorsito">
+						<h5 class="card-title"></h5>
+						<hr />
+						<dl class="row">
+							<dt class="col-sm-3 h4">Nombres</dt>
+							<dd class="col-sm-9 h4">
+								@Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control", style = "width: 100%;" } })
+								@Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+							</dd>
 
-								<dt class="col-sm-3 h4">Correo Electrónico</dt>
-								<dd class="col-sm-9 h4">
-									@Html.EditorFor(model => model.CorreElectronico, new { htmlAttributes = new { @class = "form-control",  style = "width: 100%;" } })
-									@Html.ValidationMessageFor(model => model.CorreElectronico, "", new { @class = "text-danger" })
-								</dd>
-							</dl>
+							<dt class="col-sm-3 h4">Apellidos</dt>
+							<dd class="col-sm-9 h4">
+								@Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control", style = "width: 100%;" } })
+								@Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
+							</dd>
 
-							<div class="text-center ">
-								<div class="col-md-12 ">
-									<input type="submit" value="Guardar Cambios" class="btn btn-success" />
-								</div>
+							<dt class="col-sm-3 h4">Correo Electrónico</dt>
+							<dd class="col-sm-9 h4">
+								@Html.EditorFor(model => model.CorreElectronico, new { htmlAttributes = new { @class = "form-control", style = "width: 100%;", disabled = "disabled" } })
+								@Html.ValidationMessageFor(model => model.CorreElectronico, "", new { @class = "text-danger " })
+							</dd>
+
+						</dl>
+
+						<div class="text-center ">
+							<div class="col-md-12 ">
+								<input type="submit" value="Guardar Cambios" class="btn btn-success" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		@Html.HiddenFor(model => model.FechaRegistro)  <!-- Campo oculto de FechaRegistro -->
-
-		@Html.HiddenFor(model => model.Password)  <!-- Campo oculto de Password -->
-
-
 	</div>
+
+	@Html.HiddenFor(model => model.FechaRegistro)  <!-- Campo oculto de FechaRegistro -->
+
+	@Html.HiddenFor(model => model.Password)  <!-- Campo oculto de Password -->
+
+	@Html.HiddenFor(model => model.CorreElectronico)  
+
+
+
+</div>
 
 
 }
